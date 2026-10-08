@@ -5,9 +5,9 @@ description: BarkCoreのナレッジを使って会社HP・コーポレートサ
 # HP制作
 作業場所のAGENTS.mdと01_knowledgeの指示に従う。このスキルは手順、料金・ブランド・好みはナレッジが正本。顧客案件の情報を優先し、BarkCoreの自己紹介・実績を顧客に流用しない。
 ## 進め方：各工程の「作る前」に、指定の資料を必ず開く
-作業場所のAGENTS.mdに従い、01_knowledgeは基礎知識として読んでおく。そのうえで、下の各工程は**作り始める前に、指定のファイルを実際に開く**。開いたら、工程の終わりに「読んだ資料：…」を1行で報告する。ここに書いたことを他のファイルへ複製しない。
-1. **案件を受け取る。** 先に `02_projects/案件名/` と `01_knowledge/01_brand/brand_summary.md` と `06_workflow/hp-workflow.md` を開く。既知・不足・矛盾を整理。不足があれば `06_workflow/intake/hp.md` を開き、不足を1つずつ質問して回答を待つ。属性を推測で埋めない。重要な未確認が残れば制作を進めない。
-2. **構成・主要原稿を作る。** 先に `06_workflow/design-basics.md`（1〜3章）と `05_winning_feedback/checklists/visual-quality.md`（2章）を開く。セクションごとの役割表を作り、構成と主要原稿を示して確認を待つ。商品条件が絡むときは `02_product/offer/hp-plan.md` を開く。
+作業場所のAGENTS.mdに従い、01_knowledgeは**全ファイルを最初に読む**（`brand_summary.md` は入口であって、それだけで済ませない）。そのうえで、下の各工程は**作り始める前に、指定のファイルを実際に開く**。開いたら、工程の終わりに「読んだ資料：…」を1行で報告する。ここに書いたことを他のファイルへ複製しない。
+1. **案件を受け取る。** 先に `02_projects/案件名/` と `01_knowledge/01_brand/brand_summary.md` と `06_workflow/hp-workflow.md` を開く。あわせて、後の工程で使う `04_skills/frontend-design`・`barkcore-design-improve`・`baseline-ui` が存在することを確認する。既知・不足・矛盾を整理。`03_outputs/` に同じ案件の成果物（構成案・デザイン画像など）が既にあれば、再利用するか作り直すかを先に本人へ確認する。不足があれば `06_workflow/intake/hp.md` を開き、不足を1つずつ質問して回答を待つ。属性を推測で埋めない。重要な未確認が残れば制作を進めない。
+2. **構成・主要原稿を作る。** 先に `06_workflow/design-basics.md`（まず1〜3章）と `05_winning_feedback/checklists/visual-quality.md`（まず2章）を開く。章の指定は最低限で、他の章も必要になったら読む。セクションごとの役割表を作り、構成と主要原稿を示して確認を待つ。商品条件が絡むときは `02_product/offer/hp-plan.md` を開く。
 3. **参考を探して2〜3方向を提案する。** 先に `04_assets_references/inspiration_moodboard/index.md` と `research-rules.md`、`design-basics.md`（5章）を開く。一覧に合うものがなければ、research-rulesの4サイトを調べる。理由・取り入れる部分・画像方向を添える。色違いだけの案にしない。
 4. **デザイン案を画像で作る。** 先に `04_skills/frontend-design/SKILL.md`、`05_winning_feedback/checklists/ai-look-avoidance.md`、`visual-quality.md`（4〜6章）、`01_brand/colors_fonts/rules.md`、`01_brand/tone_voice/rules.md` を開く。設計メモを作り、定番になっていないか自己点検する。提示前に visual-quality の品質条件で確認し、問題があれば直してから見せる。
 5. **本人が1案を選んだら、実装前に審美眼。** 先に `04_skills/barkcore-design-improve/SKILL.md` を開く。45項目診断→最優先3点修正→前後比較→再診断を一巡し、本人に見せて確認を受ける（下の「審美眼」参照）。

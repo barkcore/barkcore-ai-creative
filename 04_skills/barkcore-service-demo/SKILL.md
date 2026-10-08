@@ -5,7 +5,7 @@ description: BarkCoreの自社サービス・業務システム・アプリ案�
 # 自社サービス・業務デモ制作
 作業場所のAGENTS.mdと01_knowledgeの指示を守る。自社企画・共通業務サービス・個別受託・依頼アプリを区別する。料金・保守・納品の条件を混ぜない。
 ## 進め方：各工程の「作る前」に、指定の資料を必ず開く
-01_knowledgeは基礎知識として読んでおく。そのうえで、各工程は**作り始める前に、指定のファイルを実際に開く**。工程の終わりに「読んだ資料：…」を1行で報告する。案件固有の回答は02_projectsを優先する。
+01_knowledgeは**全ファイルを最初に読む**（`brand_summary.md` は入口であって、それだけで済ませない）。そのうえで、各工程は**作り始める前に、指定のファイルを実際に開く**。工程の終わりに「読んだ資料：…」を1行で報告する。案件固有の回答は02_projectsを優先する。
 1. **現状を確認する。** 先に `06_workflow/service-workflow.md`、`06_workflow/intake/service.md`、`02_product/offer/service-models.md`、`03_customer/customer_summary.md` を開く。誰が・どの作業で・何に困るか、残す部分、端末、目指す変化を確認し、不足だけ1つずつ質問。基本はITに不慣れな人にも小学生にも分かる言葉と操作。
 2. **類似サービスを調べる。** 先に `04_assets_references/references_summary.md` を開く。既存でできることと作る意味を説明し、MVPの機能と作らない範囲を確認。
 3. **UIUXを1案提案する。** 先に `06_workflow/design-basics.md`（特に6章）、`05_winning_feedback/checklists/ai-look-avoidance.md`、`04_skills/frontend-design/SKILL.md` を開く。重視点を質問してから、画面イメージ・通常とエラー等の状態・操作の流れを提案。戻る・訂正も設計。
