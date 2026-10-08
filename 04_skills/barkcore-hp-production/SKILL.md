@@ -23,3 +23,6 @@ HPはデザイン案2〜3案から本人が選んだ1案、自社サービスは
 
 ## 共通デザイン基礎の適用
 設計前に `01_knowledge/06_workflow/design-basics.md` を必ず読む。文字・配色・余白・参考分析・端末別設計をHPに適用し、ページ構成とナビゲーションはHPの目的に合わせる。広告専用の案数・受付・文字数は適用しない。
+
+## 品質スキルの自動呼び出し
+設計前・実装直後・最終確認で、依頼がなくても `01_knowledge/06_workflow/quality-skills.md` の表のスキル（frontend-design / baseline-ui / fixing-motion-performance / fixing-accessibility）を読んで使う。案件の指示書が優先。使ったスキルは報告に書く。

@@ -63,3 +63,6 @@ Q1のジャンル選択だけでは制作を開始しない。Q1〜Q5それぞ�
 
 ## この作業場所の共通デザイン基礎
 設計前に `01_knowledge/06_workflow/design-basics.md` を必ず読む。共通基礎の正本は同文書。referencesの設計資料は広告・LPへの具体的な適用と参考例として併用する。この追加は既存の5問受付・広告3案・確認手順を変更しない。
+
+## LP実装時の品質スキル
+LPをHTMLで実装するとき（手順5）は、`01_knowledge/06_workflow/quality-skills.md` の表に従い、設計前にfrontend-design、実装直後にbaseline-ui、動きがあればfixing-motion-performance、ボタン・フォームがあればfixing-accessibilityを自動で使う。ヒアリングの回答とHarukaze参考ルールが優先。
