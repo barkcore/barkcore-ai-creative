@@ -1,0 +1,15 @@
+{
+  "status": "applied",
+  "files": 7,
+  "backup": "/Users/sudama/AI-Creative/03_outputs/knowledge-backups/2026-10-08_121352_審美眼組み込み前",
+  "timing": "1案の選択・方向確認後、実装前",
+  "checks": [
+    "反映後ハッシュ一致",
+    "3スキルの基本形式",
+    "審美眼資料リンク"
+  ],
+  "not_tested": [
+    "実デザインでの一巡",
+    "標準validator（PyYAML不足）"
+  ]
+}

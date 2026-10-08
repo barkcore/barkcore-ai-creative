@@ -1,0 +1,3570 @@
+[
+  {
+    "id": 1,
+    "category": "EC商品画像",
+    "title": "速乾ゲア",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/001.jpg",
+    "prompt_file": "prompts/1.json",
+    "image_local": null
+  },
+  {
+    "id": 2,
+    "category": "EC商品画像",
+    "title": "熱ダメージに配慮",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/002.jpg",
+    "prompt_file": "prompts/2.json",
+    "image_local": null
+  },
+  {
+    "id": 3,
+    "category": "EC商品画像",
+    "title": "軽くて",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/003.jpg",
+    "prompt_file": "prompts/3.json",
+    "image_local": null
+  },
+  {
+    "id": 4,
+    "category": "EC商品画像",
+    "title": "選べるモード",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/004.jpg",
+    "prompt_file": "prompts/4.json",
+    "image_local": null
+  },
+  {
+    "id": 5,
+    "category": "EC商品画像",
+    "title": "自宅で、",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/005.jpg",
+    "prompt_file": "prompts/5.json",
+    "image_local": null
+  },
+  {
+    "id": 6,
+    "category": "EC商品画像",
+    "title": "毎日のドライを、",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/006.jpg",
+    "prompt_file": "prompts/6.json",
+    "image_local": null
+  },
+  {
+    "id": 7,
+    "category": "EC商品画像",
+    "title": "パワフルな風で、すばやく乾かす",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/007.jpg",
+    "prompt_file": "prompts/7.json",
+    "image_local": null
+  },
+  {
+    "id": 8,
+    "category": "EC商品画像",
+    "title": "熱に頼りすぎない、",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/008.jpg",
+    "prompt_file": "prompts/8.json",
+    "image_local": null
+  },
+  {
+    "id": 9,
+    "category": "EC商品画像",
+    "title": "朝も夜も、使いやすい",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/009.jpg",
+    "prompt_file": "prompts/9.json",
+    "image_local": null
+  },
+  {
+    "id": 10,
+    "category": "EC商品画像",
+    "title": "購入前に確認したいポイント",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/010.jpg",
+    "prompt_file": "prompts/10.json",
+    "image_local": null
+  },
+  {
+    "id": 11,
+    "category": "EC商品画像",
+    "title": "旅も仕事も。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/011.jpg",
+    "prompt_file": "prompts/11.json",
+    "image_local": null
+  },
+  {
+    "id": 12,
+    "category": "EC商品画像",
+    "title": "選べる3カラー",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/012.jpg",
+    "prompt_file": "prompts/12.json",
+    "image_local": null
+  },
+  {
+    "id": 13,
+    "category": "EC商品画像",
+    "title": "3WAYで使い分け",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/013.jpg",
+    "prompt_file": "prompts/13.json",
+    "image_local": null
+  },
+  {
+    "id": 14,
+    "category": "EC商品画像",
+    "title": "35Lの大容量、すっきり整理",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/014.jpg",
+    "prompt_file": "prompts/14.json",
+    "image_local": null
+  },
+  {
+    "id": 15,
+    "category": "EC商品画像",
+    "title": "さまざまなシーンで活躍",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/015.jpg",
+    "prompt_file": "prompts/15.json",
+    "image_local": null
+  },
+  {
+    "id": 16,
+    "category": "EC商品画像",
+    "title": "こんなお悩みに",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/016.jpg",
+    "prompt_file": "prompts/16.json",
+    "image_local": null
+  },
+  {
+    "id": 17,
+    "category": "EC商品画像",
+    "title": "細部までこだわった機能性",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/017.jpg",
+    "prompt_file": "prompts/17.json",
+    "image_local": null
+  },
+  {
+    "id": 18,
+    "category": "EC商品画像",
+    "title": "よくあるご質問",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/018.jpg",
+    "prompt_file": "prompts/18.json",
+    "image_local": null
+  },
+  {
+    "id": 19,
+    "category": "EC商品画像",
+    "title": "旅も、仕事も、スマートに持ち運ぶ。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/019.jpg",
+    "prompt_file": "prompts/19.json",
+    "image_local": null
+  },
+  {
+    "id": 20,
+    "category": "EC商品画像",
+    "title": "高反発まくら",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/020.jpg",
+    "prompt_file": "prompts/20.json",
+    "image_local": null
+  },
+  {
+    "id": 21,
+    "category": "EC商品画像",
+    "title": "朝の不調、枕が原因かも。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/021.jpg",
+    "prompt_file": "prompts/21.json",
+    "image_local": null
+  },
+  {
+    "id": 22,
+    "category": "EC商品画像",
+    "title": "寝返りしやすいと、眠りが変わる。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/022.jpg",
+    "prompt_file": "prompts/22.json",
+    "image_local": null
+  },
+  {
+    "id": 23,
+    "category": "EC商品画像",
+    "title": "仰向けも、横向きもフィット。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/023.jpg",
+    "prompt_file": "prompts/23.json",
+    "image_local": null
+  },
+  {
+    "id": 24,
+    "category": "EC商品画像",
+    "title": "合う枕で、朝はここまで変わる。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/024.jpg",
+    "prompt_file": "prompts/24.json",
+    "image_local": null
+  },
+  {
+    "id": 25,
+    "category": "EC商品画像",
+    "title": "目覚めが変わる",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/025.jpg",
+    "prompt_file": "prompts/25.json",
+    "image_local": null
+  },
+  {
+    "id": 26,
+    "category": "EC商品画像",
+    "title": "朝の不調、枕が原因かる。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/026.jpg",
+    "prompt_file": "prompts/26.json",
+    "image_local": null
+  },
+  {
+    "id": 27,
+    "category": "EC商品画像",
+    "title": "寝返りしやすいと、眠りが変わる。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/027.jpg",
+    "prompt_file": "prompts/27.json",
+    "image_local": null
+  },
+  {
+    "id": 28,
+    "category": "EC商品画像",
+    "title": "仰向けも、横向きもフィット。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/028.jpg",
+    "prompt_file": "prompts/28.json",
+    "image_local": null
+  },
+  {
+    "id": 29,
+    "category": "EC商品画像",
+    "title": "合う枕で、朝はここまで変わる。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/029.jpg",
+    "prompt_file": "prompts/29.json",
+    "image_local": null
+  },
+  {
+    "id": 30,
+    "category": "EC商品画像",
+    "title": "小さく持てて、",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/030.jpg",
+    "prompt_file": "prompts/30.json",
+    "image_local": null
+  },
+  {
+    "id": 31,
+    "category": "EC商品画像",
+    "title": "きれいに残せる。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/031.jpg",
+    "prompt_file": "prompts/31.json",
+    "image_local": null
+  },
+  {
+    "id": 32,
+    "category": "EC商品画像",
+    "title": "軽いから、",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/032.jpg",
+    "prompt_file": "prompts/32.json",
+    "image_local": null
+  },
+  {
+    "id": 33,
+    "category": "EC商品画像",
+    "title": "軽いから、",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/033.jpg",
+    "prompt_file": "prompts/33.json",
+    "image_local": null
+  },
+  {
+    "id": 34,
+    "category": "EC商品画像",
+    "title": "撮った写真を、すぐスマホへ。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/034.jpg",
+    "prompt_file": "prompts/34.json",
+    "image_local": null
+  },
+  {
+    "id": 35,
+    "category": "EC商品画像",
+    "title": "撮った写真を、",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/035.jpg",
+    "prompt_file": "prompts/35.json",
+    "image_local": null
+  },
+  {
+    "id": 36,
+    "category": "EC商品画像",
+    "title": "スマホより、雰囲気のある一枚に。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/036.jpg",
+    "prompt_file": "prompts/36.json",
+    "image_local": null
+  },
+  {
+    "id": 37,
+    "category": "EC商品画像",
+    "title": "スマホより、雰囲気のある一枚に。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/037.jpg",
+    "prompt_file": "prompts/37.json",
+    "image_local": null
+  },
+  {
+    "id": 38,
+    "category": "EC商品画像",
+    "title": "使い方は、かんたん3ステップ。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/038.jpg",
+    "prompt_file": "prompts/38.json",
+    "image_local": null
+  },
+  {
+    "id": 39,
+    "category": "EC商品画像",
+    "title": "使い方は、かんたん3ステップ。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/039.jpg",
+    "prompt_file": "prompts/39.json",
+    "image_local": null
+  },
+  {
+    "id": 40,
+    "category": "EC商品画像",
+    "title": "すぐ撮れる。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/040.jpg",
+    "prompt_file": "prompts/40.json",
+    "image_local": null
+  },
+  {
+    "id": 41,
+    "category": "ホームページ",
+    "title": "越える。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/041.jpg",
+    "prompt_file": "prompts/41.json",
+    "image_local": null
+  },
+  {
+    "id": 42,
+    "category": "ホームページ",
+    "title": "自由が、加速する。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/042.jpg",
+    "prompt_file": "prompts/42.json",
+    "image_local": null
+  },
+  {
+    "id": 43,
+    "category": "ホームページ",
+    "title": "北アルプスの恵みを、",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/043.jpg",
+    "prompt_file": "prompts/43.json",
+    "image_local": null
+  },
+  {
+    "id": 44,
+    "category": "ホームページ",
+    "title": "毎日に余白を。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/044.jpg",
+    "prompt_file": "prompts/44.json",
+    "image_local": null
+  },
+  {
+    "id": 45,
+    "category": "ホームページ",
+    "title": "本質の一皿に。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/045.jpg",
+    "prompt_file": "prompts/45.json",
+    "image_local": null
+  },
+  {
+    "id": 46,
+    "category": "ホームページ",
+    "title": "日常を、",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/046.jpg",
+    "prompt_file": "prompts/46.json",
+    "image_local": null
+  },
+  {
+    "id": 47,
+    "category": "ホームページ",
+    "title": "OMOTESANDO / TOKYO",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/047.jpg",
+    "prompt_file": "prompts/47.json",
+    "image_local": null
+  },
+  {
+    "id": 48,
+    "category": "ホームページ",
+    "title": "海と余白に、",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/048.jpg",
+    "prompt_file": "prompts/48.json",
+    "image_local": null
+  },
+  {
+    "id": 49,
+    "category": "ホームページ",
+    "title": "Tag",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/049.jpg",
+    "prompt_file": "prompts/49.json",
+    "image_local": null
+  },
+  {
+    "id": 50,
+    "category": "ホームページ",
+    "title": "MOVE",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/050.jpg",
+    "prompt_file": "prompts/50.json",
+    "image_local": null
+  },
+  {
+    "id": 51,
+    "category": "ホームページ",
+    "title": "その人らしさが、",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/051.jpg",
+    "prompt_file": "prompts/51.json",
+    "image_local": null
+  },
+  {
+    "id": 52,
+    "category": "ホームページ",
+    "title": "上質な美しさへ。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/052.jpg",
+    "prompt_file": "prompts/52.json",
+    "image_local": null
+  },
+  {
+    "id": 53,
+    "category": "ホームページ",
+    "title": "住まいが変わると、",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/053.jpg",
+    "prompt_file": "prompts/53.json",
+    "image_local": null
+  },
+  {
+    "id": 54,
+    "category": "ホームページ",
+    "title": "Be your",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/054.jpg",
+    "prompt_file": "prompts/54.json",
+    "image_local": null
+  },
+  {
+    "id": 55,
+    "category": "ホームページ",
+    "title": "小さな特別を。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/055.jpg",
+    "prompt_file": "prompts/55.json",
+    "image_local": null
+  },
+  {
+    "id": 56,
+    "category": "ホームページ",
+    "title": "最適な税務パートナーに。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/056.jpg",
+    "prompt_file": "prompts/56.json",
+    "image_local": null
+  },
+  {
+    "id": 57,
+    "category": "ホームページ",
+    "title": "FURNITURE & INTERIOR",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/057.jpg",
+    "prompt_file": "prompts/57.json",
+    "image_local": null
+  },
+  {
+    "id": 60,
+    "category": "ホームページ",
+    "title": "やさしく確かな医療を。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/060.jpg",
+    "prompt_file": "prompts/60.json",
+    "image_local": null
+  },
+  {
+    "id": 62,
+    "category": "ホームページ",
+    "title": "地域の健康を、",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/062.jpg",
+    "prompt_file": "prompts/62.json",
+    "image_local": null
+  },
+  {
+    "id": 63,
+    "category": "ホームページ",
+    "title": "今日の気分を盛る。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/063.jpg",
+    "prompt_file": "prompts/63.json",
+    "image_local": null
+  },
+  {
+    "id": 64,
+    "category": "ホームページ",
+    "title": "今日の気分を盛る！",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/064.jpg",
+    "prompt_file": "prompts/64.json",
+    "image_local": null
+  },
+  {
+    "id": 65,
+    "category": "ホームページ",
+    "title": "季節の抹茶を、",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/065.jpg",
+    "prompt_file": "prompts/65.json",
+    "image_local": null
+  },
+  {
+    "id": 66,
+    "category": "ホームページ",
+    "title": "花でやさしく。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/066.jpg",
+    "prompt_file": "prompts/66.json",
+    "image_local": null
+  },
+  {
+    "id": 67,
+    "category": "ホームページ",
+    "title": "ずっと相談できる場所に。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/067.jpg",
+    "prompt_file": "prompts/67.json",
+    "image_local": null
+  },
+  {
+    "id": 68,
+    "category": "ホームページ",
+    "title": "美しさを、更新する。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/068.jpg",
+    "prompt_file": "prompts/68.json",
+    "image_local": null
+  },
+  {
+    "id": 69,
+    "category": "ホームページ",
+    "title": "あたたかい毎日を。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/069.jpg",
+    "prompt_file": "prompts/69.json",
+    "image_local": null
+  },
+  {
+    "id": 71,
+    "category": "Instagram",
+    "title": "定食5選",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/071.jpg",
+    "prompt_file": "prompts/71.json",
+    "image_local": null
+  },
+  {
+    "id": 72,
+    "category": "Instagram",
+    "title": "いま行きたい",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/072.jpg",
+    "prompt_file": "prompts/72.json",
+    "image_local": null
+  },
+  {
+    "id": 73,
+    "category": "Instagram",
+    "title": "秋に食べたい",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/073.jpg",
+    "prompt_file": "prompts/73.json",
+    "image_local": null
+  },
+  {
+    "id": 74,
+    "category": "Instagram",
+    "title": "秋スイッ7選",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/074.jpg",
+    "prompt_file": "prompts/74.json",
+    "image_local": null
+  },
+  {
+    "id": 75,
+    "category": "Instagram",
+    "title": "東京カフェ7選",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/075.jpg",
+    "prompt_file": "prompts/75.json",
+    "image_local": null
+  },
+  {
+    "id": 76,
+    "category": "Instagram",
+    "title": "あかりのある",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/076.jpg",
+    "prompt_file": "prompts/76.json",
+    "image_local": null
+  },
+  {
+    "id": 77,
+    "category": "Instagram",
+    "title": "プロテイン",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/077.jpg",
+    "prompt_file": "prompts/77.json",
+    "image_local": null
+  },
+  {
+    "id": 78,
+    "category": "Instagram",
+    "title": "マルチビタミン＆",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/078.jpg",
+    "prompt_file": "prompts/78.json",
+    "image_local": null
+  },
+  {
+    "id": 79,
+    "category": "Instagram",
+    "title": "肌を守る",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/079.jpg",
+    "prompt_file": "prompts/79.json",
+    "image_local": null
+  },
+  {
+    "id": 80,
+    "category": "Instagram",
+    "title": "1手肌を整える",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/080.jpg",
+    "prompt_file": "prompts/80.json",
+    "image_local": null
+  },
+  {
+    "id": 81,
+    "category": "Instagram",
+    "title": "淡色ワントーンコーデ",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/081.jpg",
+    "prompt_file": "prompts/81.json",
+    "image_local": null
+  },
+  {
+    "id": 82,
+    "category": "Instagram",
+    "title": "1週末カフェコーデ",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/082.jpg",
+    "prompt_file": "prompts/82.json",
+    "image_local": null
+  },
+  {
+    "id": 83,
+    "category": "Instagram",
+    "title": "睡眠の質を下げる習慣とは？",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/083.jpg",
+    "prompt_file": "prompts/83.json",
+    "image_local": null
+  },
+  {
+    "id": 84,
+    "category": "Instagram",
+    "title": "朝ごはんの選び方",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/084.jpg",
+    "prompt_file": "prompts/84.json",
+    "image_local": null
+  },
+  {
+    "id": 85,
+    "category": "Instagram",
+    "title": "125日",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/085.jpg",
+    "prompt_file": "prompts/85.json",
+    "image_local": null
+  },
+  {
+    "id": 86,
+    "category": "Instagram",
+    "title": "月0n",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/086.jpg",
+    "prompt_file": "prompts/86.json",
+    "image_local": null
+  },
+  {
+    "id": 87,
+    "category": "Instagram",
+    "title": "今月のおすすめ",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/087.jpg",
+    "prompt_file": "prompts/87.json",
+    "image_local": null
+  },
+  {
+    "id": 88,
+    "category": "Instagram",
+    "title": "新作入荷+",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/088.jpg",
+    "prompt_file": "prompts/88.json",
+    "image_local": null
+  },
+  {
+    "id": 89,
+    "category": "Instagram",
+    "title": "20選",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/089.jpg",
+    "prompt_file": "prompts/89.json",
+    "image_local": null
+  },
+  {
+    "id": 90,
+    "category": "Instagram",
+    "title": "習い事",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/090.jpg",
+    "prompt_file": "prompts/90.json",
+    "image_local": null
+  },
+  {
+    "id": 91,
+    "category": "Instagram",
+    "title": "育児グッズ",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/091.jpg",
+    "prompt_file": "prompts/91.json",
+    "image_local": null
+  },
+  {
+    "id": 92,
+    "category": "Instagram",
+    "title": "5",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/092.jpg",
+    "prompt_file": "prompts/92.json",
+    "image_local": null
+  },
+  {
+    "id": 93,
+    "category": "Instagram",
+    "title": "仕事ができる人が",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/093.jpg",
+    "prompt_file": "prompts/93.json",
+    "image_local": null
+  },
+  {
+    "id": 94,
+    "category": "Instagram",
+    "title": "文房具12選",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/094.jpg",
+    "prompt_file": "prompts/94.json",
+    "image_local": null
+  },
+  {
+    "id": 95,
+    "category": "Instagram",
+    "title": "7月に買ってよかった",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/095.jpg",
+    "prompt_file": "prompts/95.json",
+    "image_local": null
+  },
+  {
+    "id": 96,
+    "category": "Instagram",
+    "title": "家族で出かけたい",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/096.jpg",
+    "prompt_file": "prompts/96.json",
+    "image_local": null
+  },
+  {
+    "id": 97,
+    "category": "Instagram",
+    "title": "占いテーマ",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/097.jpg",
+    "prompt_file": "prompts/97.json",
+    "image_local": null
+  },
+  {
+    "id": 98,
+    "category": "Instagram",
+    "title": "投資のコツ",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/098.jpg",
+    "prompt_file": "prompts/98.json",
+    "image_local": null
+  },
+  {
+    "id": 99,
+    "category": "Instagram",
+    "title": "屋習慣",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/099.jpg",
+    "prompt_file": "prompts/99.json",
+    "image_local": null
+  },
+  {
+    "id": 100,
+    "category": "Instagram",
+    "title": "続けやすさが結果を変える。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/100.jpg",
+    "prompt_file": "prompts/100.json",
+    "image_local": null
+  },
+  {
+    "id": 101,
+    "category": "Instagram",
+    "title": "習慣",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/101.jpg",
+    "prompt_file": "prompts/101.json",
+    "image_local": null
+  },
+  {
+    "id": 102,
+    "category": "Instagram",
+    "title": "貯金の",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/102.jpg",
+    "prompt_file": "prompts/102.json",
+    "image_local": null
+  },
+  {
+    "id": 103,
+    "category": "Instagram",
+    "title": "選び方",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/103.jpg",
+    "prompt_file": "prompts/103.json",
+    "image_local": null
+  },
+  {
+    "id": 104,
+    "category": "Instagram",
+    "title": "Instagramデザイン 104",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/104.jpg",
+    "prompt_file": "prompts/104.json",
+    "image_local": null
+  },
+  {
+    "id": 105,
+    "category": "Instagram",
+    "title": "Instagramデザイン 105",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/105.jpg",
+    "prompt_file": "prompts/105.json",
+    "image_local": null
+  },
+  {
+    "id": 106,
+    "category": "Instagram",
+    "title": "Instagramデザイン 106",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/106.jpg",
+    "prompt_file": "prompts/106.json",
+    "image_local": null
+  },
+  {
+    "id": 107,
+    "category": "Instagram",
+    "title": "Instagramデザイン 107",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/107.jpg",
+    "prompt_file": "prompts/107.json",
+    "image_local": null
+  },
+  {
+    "id": 108,
+    "category": "Instagram",
+    "title": "続けるコツ",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/108.jpg",
+    "prompt_file": "prompts/108.json",
+    "image_local": null
+  },
+  {
+    "id": 109,
+    "category": "Instagram",
+    "title": "上手に貯める",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/109.jpg",
+    "prompt_file": "prompts/109.json",
+    "image_local": null
+  },
+  {
+    "id": 110,
+    "category": "Instagram",
+    "title": "SPOT",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/110.jpg",
+    "prompt_file": "prompts/110.json",
+    "image_local": null
+  },
+  {
+    "id": 111,
+    "category": "Instagram",
+    "title": "冒険家",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/111.jpg",
+    "prompt_file": "prompts/111.json",
+    "image_local": null
+  },
+  {
+    "id": 112,
+    "category": "Instagram",
+    "title": "まず道具を整える",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/112.jpg",
+    "prompt_file": "prompts/112.json",
+    "image_local": null
+  },
+  {
+    "id": 114,
+    "category": "Instagram",
+    "title": "週末旅行",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/114.jpg",
+    "prompt_file": "prompts/114.json",
+    "image_local": null
+  },
+  {
+    "id": 115,
+    "category": "Instagram",
+    "title": "ダイエットにおすすめ",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/115.jpg",
+    "prompt_file": "prompts/115.json",
+    "image_local": null
+  },
+  {
+    "id": 116,
+    "category": "Instagram",
+    "title": "料理レシピ",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/116.jpg",
+    "prompt_file": "prompts/116.json",
+    "image_local": null
+  },
+  {
+    "id": 117,
+    "category": "Instagram",
+    "title": "副業アイデア",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/117.jpg",
+    "prompt_file": "prompts/117.json",
+    "image_local": null
+  },
+  {
+    "id": 118,
+    "category": "Instagram",
+    "title": "小鉢レシピ4選",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/118.jpg",
+    "prompt_file": "prompts/118.json",
+    "image_local": null
+  },
+  {
+    "id": 119,
+    "category": "Instagram",
+    "title": "注目機能3選",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/119.jpg",
+    "prompt_file": "prompts/119.json",
+    "image_local": null
+  },
+  {
+    "id": 120,
+    "category": "LINE",
+    "title": "来場予約",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/120.jpg",
+    "prompt_file": "prompts/120.json",
+    "image_local": null
+  },
+  {
+    "id": 121,
+    "category": "LINE",
+    "title": "Web予約",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/121.jpg",
+    "prompt_file": "prompts/121.json",
+    "image_local": null
+  },
+  {
+    "id": 122,
+    "category": "LINE",
+    "title": "◎",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/122.jpg",
+    "prompt_file": "prompts/122.json",
+    "image_local": null
+  },
+  {
+    "id": 123,
+    "category": "LINE",
+    "title": "商品を見る",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/123.jpg",
+    "prompt_file": "prompts/123.json",
+    "image_local": null
+  },
+  {
+    "id": 124,
+    "category": "LINE",
+    "title": "症例を見る",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/124.jpg",
+    "prompt_file": "prompts/124.json",
+    "image_local": null
+  },
+  {
+    "id": 125,
+    "category": "LINE",
+    "title": "宿泊予約",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/125.jpg",
+    "prompt_file": "prompts/125.json",
+    "image_local": null
+  },
+  {
+    "id": 126,
+    "category": "LINE",
+    "title": "店舗を探す",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/126.jpg",
+    "prompt_file": "prompts/126.json",
+    "image_local": null
+  },
+  {
+    "id": 127,
+    "category": "LINE",
+    "title": "サービス＞",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/127.jpg",
+    "prompt_file": "prompts/127.json",
+    "image_local": null
+  },
+  {
+    "id": 128,
+    "category": "LINE",
+    "title": "お役立ち情報",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/128.jpg",
+    "prompt_file": "prompts/128.json",
+    "image_local": null
+  },
+  {
+    "id": 129,
+    "category": "LINE",
+    "title": "体験予約",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/129.jpg",
+    "prompt_file": "prompts/129.json",
+    "image_local": null
+  },
+  {
+    "id": 130,
+    "category": "LINE",
+    "title": "Web受付",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/130.jpg",
+    "prompt_file": "prompts/130.json",
+    "image_local": null
+  },
+  {
+    "id": 131,
+    "category": "LINE",
+    "title": "フェア予約",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/131.jpg",
+    "prompt_file": "prompts/131.json",
+    "image_local": null
+  },
+  {
+    "id": 132,
+    "category": "LINE",
+    "title": "宿泊予約",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/132.jpg",
+    "prompt_file": "prompts/132.json",
+    "image_local": null
+  },
+  {
+    "id": 133,
+    "category": "LINE",
+    "title": "見積もり",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/133.jpg",
+    "prompt_file": "prompts/133.json",
+    "image_local": null
+  },
+  {
+    "id": 134,
+    "category": "LINE",
+    "title": "ツアーを探す",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/134.jpg",
+    "prompt_file": "prompts/134.json",
+    "image_local": null
+  },
+  {
+    "id": 135,
+    "category": "LINE",
+    "title": "処方せん受付",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/135.jpg",
+    "prompt_file": "prompts/135.json",
+    "image_local": null
+  },
+  {
+    "id": 136,
+    "category": "LINE",
+    "title": "Web予約",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/136.jpg",
+    "prompt_file": "prompts/136.json",
+    "image_local": null
+  },
+  {
+    "id": 137,
+    "category": "LINE",
+    "title": "店舗検索",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/137.jpg",
+    "prompt_file": "prompts/137.json",
+    "image_local": null
+  },
+  {
+    "id": 138,
+    "category": "LINE",
+    "title": "マイページ",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/138.jpg",
+    "prompt_file": "prompts/138.json",
+    "image_local": null
+  },
+  {
+    "id": 139,
+    "category": "LINE",
+    "title": "Web予約",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/139.jpg",
+    "prompt_file": "prompts/139.json",
+    "image_local": null
+  },
+  {
+    "id": 140,
+    "category": "LINE",
+    "title": "物件を探す",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/140.jpg",
+    "prompt_file": "prompts/140.json",
+    "image_local": null
+  },
+  {
+    "id": 141,
+    "category": "LINE",
+    "title": "ショップカード",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/141.jpg",
+    "prompt_file": "prompts/141.json",
+    "image_local": null
+  },
+  {
+    "id": 142,
+    "category": "LINE",
+    "title": "オンラインストア",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/142.jpg",
+    "prompt_file": "prompts/142.json",
+    "image_local": null
+  },
+  {
+    "id": 143,
+    "category": "LINE",
+    "title": "一杯",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/143.jpg",
+    "prompt_file": "prompts/143.json",
+    "image_local": null
+  },
+  {
+    "id": 144,
+    "category": "LINE",
+    "title": "大切な家族に、",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/144.jpg",
+    "prompt_file": "prompts/144.json",
+    "image_local": null
+  },
+  {
+    "id": 145,
+    "category": "LINE",
+    "title": "マイページ",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/145.jpg",
+    "prompt_file": "prompts/145.json",
+    "image_local": null
+  },
+  {
+    "id": 146,
+    "category": "LINE",
+    "title": "Web予約",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/146.jpg",
+    "prompt_file": "prompts/146.json",
+    "image_local": null
+  },
+  {
+    "id": 147,
+    "category": "LINE",
+    "title": "空き状況",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/147.jpg",
+    "prompt_file": "prompts/147.json",
+    "image_local": null
+  },
+  {
+    "id": 148,
+    "category": "LINE",
+    "title": "Web予約",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/148.jpg",
+    "prompt_file": "prompts/148.json",
+    "image_local": null
+  },
+  {
+    "id": 149,
+    "category": "LINE",
+    "title": "Web予約",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/149.jpg",
+    "prompt_file": "prompts/149.json",
+    "image_local": null
+  },
+  {
+    "id": 150,
+    "category": "LINE",
+    "title": "無料体験を予約",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/150.jpg",
+    "prompt_file": "prompts/150.json",
+    "image_local": null
+  },
+  {
+    "id": 151,
+    "category": "LINE",
+    "title": "季節のメニュー",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/151.jpg",
+    "prompt_file": "prompts/151.json",
+    "image_local": null
+  },
+  {
+    "id": 152,
+    "category": "LINE",
+    "title": "導入事例",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/152.jpg",
+    "prompt_file": "prompts/152.json",
+    "image_local": null
+  },
+  {
+    "id": 153,
+    "category": "LINE",
+    "title": "理想の住まいを見つける",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/153.jpg",
+    "prompt_file": "prompts/153.json",
+    "image_local": null
+  },
+  {
+    "id": 154,
+    "category": "LINE",
+    "title": "季節のプラン",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/154.jpg",
+    "prompt_file": "prompts/154.json",
+    "image_local": null
+  },
+  {
+    "id": 155,
+    "category": "LINE",
+    "title": "今月のショコラ",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/155.jpg",
+    "prompt_file": "prompts/155.json",
+    "image_local": null
+  },
+  {
+    "id": 156,
+    "category": "LINE",
+    "title": "会員メニュー",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/156.jpg",
+    "prompt_file": "prompts/156.json",
+    "image_local": null
+  },
+  {
+    "id": 157,
+    "category": "LINE",
+    "title": "新作コレクション",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/157.jpg",
+    "prompt_file": "prompts/157.json",
+    "image_local": null
+  },
+  {
+    "id": 158,
+    "category": "LINE",
+    "title": "新作クリーム",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/158.jpg",
+    "prompt_file": "prompts/158.json",
+    "image_local": null
+  },
+  {
+    "id": 159,
+    "category": "LINE",
+    "title": "SUMMER EDIT",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/159.jpg",
+    "prompt_file": "prompts/159.json",
+    "image_local": null
+  },
+  {
+    "id": 160,
+    "category": "LINE",
+    "title": "予約確認",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/160.jpg",
+    "prompt_file": "prompts/160.json",
+    "image_local": null
+  },
+  {
+    "id": 161,
+    "category": "LINE",
+    "title": "今月のジュエリー",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/161.jpg",
+    "prompt_file": "prompts/161.json",
+    "image_local": null
+  },
+  {
+    "id": 162,
+    "category": "LINE",
+    "title": "暮らしを整える",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/162.jpg",
+    "prompt_file": "prompts/162.json",
+    "image_local": null
+  },
+  {
+    "id": 163,
+    "category": "LINE",
+    "title": "施術メニュー",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/163.jpg",
+    "prompt_file": "prompts/163.json",
+    "image_local": null
+  },
+  {
+    "id": 164,
+    "category": "LINE",
+    "title": "住まいを探す",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/164.jpg",
+    "prompt_file": "prompts/164.json",
+    "image_local": null
+  },
+  {
+    "id": 165,
+    "category": "LINE",
+    "title": "無料相談",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/165.jpg",
+    "prompt_file": "prompts/165.json",
+    "image_local": null
+  },
+  {
+    "id": 166,
+    "category": "LINE",
+    "title": "おすすめ",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/166.jpg",
+    "prompt_file": "prompts/166.json",
+    "image_local": null
+  },
+  {
+    "id": 167,
+    "category": "LINE",
+    "title": "無料資料",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/167.jpg",
+    "prompt_file": "prompts/167.json",
+    "image_local": null
+  },
+  {
+    "id": 168,
+    "category": "LINE",
+    "title": "WEB予約",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/168.jpg",
+    "prompt_file": "prompts/168.json",
+    "image_local": null
+  },
+  {
+    "id": 169,
+    "category": "LINE",
+    "title": "講義ライブラリ",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/169.jpg",
+    "prompt_file": "prompts/169.json",
+    "image_local": null
+  },
+  {
+    "id": 170,
+    "category": "LP",
+    "title": "90日で",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/170.jpg",
+    "prompt_file": "prompts/170.json",
+    "image_local": "images/170.jpg"
+  },
+  {
+    "id": 171,
+    "category": "LP",
+    "title": "こんなお悩み、",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/171.jpg",
+    "prompt_file": "prompts/171.json",
+    "image_local": "images/171.jpg"
+  },
+  {
+    "id": 172,
+    "category": "LP",
+    "title": "結果を出せないのか？",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/172.jpg",
+    "prompt_file": "prompts/172.json",
+    "image_local": "images/172.jpg"
+  },
+  {
+    "id": 173,
+    "category": "LP",
+    "title": "Al Design Academyで",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/173.jpg",
+    "prompt_file": "prompts/173.json",
+    "image_local": "images/173.jpg"
+  },
+  {
+    "id": 174,
+    "category": "LP",
+    "title": "90日で進む",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/174.jpg",
+    "prompt_file": "prompts/174.json",
+    "image_local": "images/174.jpg"
+  },
+  {
+    "id": 175,
+    "category": "LP",
+    "title": "サポート体制",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/175.jpg",
+    "prompt_file": "prompts/175.json",
+    "image_local": "images/175.jpg"
+  },
+  {
+    "id": 176,
+    "category": "LP",
+    "title": "受講生の変化・実績",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/176.jpg",
+    "prompt_file": "prompts/176.json",
+    "image_local": "images/176.jpg"
+  },
+  {
+    "id": 177,
+    "category": "LP",
+    "title": "選ばれる理由",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/177.jpg",
+    "prompt_file": "prompts/177.json",
+    "image_local": "images/177.jpg"
+  },
+  {
+    "id": 178,
+    "category": "LP",
+    "title": "29,800円",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/178.jpg",
+    "prompt_file": "prompts/178.json",
+    "image_local": "images/178.jpg"
+  },
+  {
+    "id": 179,
+    "category": "LP",
+    "title": "Al Design Academy",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/179.jpg",
+    "prompt_file": "prompts/179.json",
+    "image_local": "images/179.jpg"
+  },
+  {
+    "id": 191,
+    "category": "LP",
+    "title": "1,980円",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/191.jpg",
+    "prompt_file": "prompts/191.json",
+    "image_local": "images/191.jpg"
+  },
+  {
+    "id": 192,
+    "category": "LP",
+    "title": "解決します！",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/192.jpg",
+    "prompt_file": "prompts/192.json",
+    "image_local": "images/192.jpg"
+  },
+  {
+    "id": 193,
+    "category": "LP",
+    "title": "第1位",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/193.jpg",
+    "prompt_file": "prompts/193.json",
+    "image_local": "images/193.jpg"
+  },
+  {
+    "id": 194,
+    "category": "LP",
+    "title": "ぎゅっと凝縮",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/194.jpg",
+    "prompt_file": "prompts/194.json",
+    "image_local": "images/194.jpg"
+  },
+  {
+    "id": 195,
+    "category": "LP",
+    "title": "うるおい・ハリ・透明感",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/195.jpg",
+    "prompt_file": "prompts/195.json",
+    "image_local": "images/195.jpg"
+  },
+  {
+    "id": 196,
+    "category": "LP",
+    "title": "よくあるご質問",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/196.jpg",
+    "prompt_file": "prompts/196.json",
+    "image_local": "images/196.jpg"
+  },
+  {
+    "id": 197,
+    "category": "LP",
+    "title": "まれ前人気No.1美容液】",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/197.jpg",
+    "prompt_file": "prompts/197.json",
+    "image_local": "images/197.jpg"
+  },
+  {
+    "id": 198,
+    "category": "LP",
+    "title": "980円",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/198.jpg",
+    "prompt_file": "prompts/198.json",
+    "image_local": "images/198.jpg"
+  },
+  {
+    "id": 199,
+    "category": "LP",
+    "title": "こんなお悩み、",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/199.jpg",
+    "prompt_file": "prompts/199.json",
+    "image_local": "images/199.jpg"
+  },
+  {
+    "id": 200,
+    "category": "LP",
+    "title": "睡眠の“悪循環”が",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/200.jpg",
+    "prompt_file": "prompts/200.json",
+    "image_local": "images/200.jpg"
+  },
+  {
+    "id": 201,
+    "category": "LP",
+    "title": "“夜の新習慣”に",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/201.jpg",
+    "prompt_file": "prompts/201.json",
+    "image_local": "images/201.jpg"
+  },
+  {
+    "id": 202,
+    "category": "LP",
+    "title": "選ばれる3つの理由",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/202.jpg",
+    "prompt_file": "prompts/202.json",
+    "image_local": "images/202.jpg"
+  },
+  {
+    "id": 203,
+    "category": "LP",
+    "title": "かんたん3ステップ。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/203.jpg",
+    "prompt_file": "prompts/203.json",
+    "image_local": "images/203.jpg"
+  },
+  {
+    "id": 204,
+    "category": "LP",
+    "title": "ご愛用者さまの声",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/204.jpg",
+    "prompt_file": "prompts/204.json",
+    "image_local": "images/204.jpg"
+  },
+  {
+    "id": 205,
+    "category": "LP",
+    "title": "よくあるご質問",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/205.jpg",
+    "prompt_file": "prompts/205.json",
+    "image_local": "images/205.jpg"
+  },
+  {
+    "id": 206,
+    "category": "LP",
+    "title": "2980円",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/206.jpg",
+    "prompt_file": "prompts/206.json",
+    "image_local": "images/206.jpg"
+  },
+  {
+    "id": 207,
+    "category": "LP",
+    "title": "朝の重だるさ、",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/207.jpg",
+    "prompt_file": "prompts/207.json",
+    "image_local": "images/207.jpg"
+  },
+  {
+    "id": 208,
+    "category": "LP",
+    "title": "眠りの質の低下が原因かも。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/208.jpg",
+    "prompt_file": "prompts/208.json",
+    "image_local": "images/208.jpg"
+  },
+  {
+    "id": 209,
+    "category": "LP",
+    "title": "睡眠の“悪循環”が",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/209.jpg",
+    "prompt_file": "prompts/209.json",
+    "image_local": "images/209.jpg"
+  },
+  {
+    "id": 210,
+    "category": "LP",
+    "title": "Luna Resetは“夜の新習慣”に",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/210.jpg",
+    "prompt_file": "prompts/210.json",
+    "image_local": "images/210.jpg"
+  },
+  {
+    "id": 211,
+    "category": "LP",
+    "title": "選ばれる3つの理由",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/211.jpg",
+    "prompt_file": "prompts/211.json",
+    "image_local": "images/211.jpg"
+  },
+  {
+    "id": 212,
+    "category": "LP",
+    "title": "かんたん3ステップ。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/212.jpg",
+    "prompt_file": "prompts/212.json",
+    "image_local": "images/212.jpg"
+  },
+  {
+    "id": 213,
+    "category": "LP",
+    "title": "ご愛用者さまの声",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/213.jpg",
+    "prompt_file": "prompts/213.json",
+    "image_local": "images/213.jpg"
+  },
+  {
+    "id": 214,
+    "category": "LP",
+    "title": "980円",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/214.jpg",
+    "prompt_file": "prompts/214.json",
+    "image_local": "images/214.jpg"
+  },
+  {
+    "id": 215,
+    "category": "LP",
+    "title": "広げる。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/215.jpg",
+    "prompt_file": "prompts/215.json",
+    "image_local": "images/215.jpg"
+  },
+  {
+    "id": 216,
+    "category": "LP",
+    "title": "こんな違和感はありませんか？",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/216.jpg",
+    "prompt_file": "prompts/216.json",
+    "image_local": "images/216.jpg"
+  },
+  {
+    "id": 217,
+    "category": "LP",
+    "title": "迷っているだけでは、",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/217.jpg",
+    "prompt_file": "prompts/217.json",
+    "image_local": "images/217.jpg"
+  },
+  {
+    "id": 218,
+    "category": "LP",
+    "title": "無料相談で、",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/218.jpg",
+    "prompt_file": "prompts/218.json",
+    "image_local": "images/218.jpg"
+  },
+  {
+    "id": 219,
+    "category": "LP",
+    "title": "ハイクラス転職に、",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/219.jpg",
+    "prompt_file": "prompts/219.json",
+    "image_local": "images/219.jpg"
+  },
+  {
+    "id": 220,
+    "category": "LP",
+    "title": "一人ひとりに合わせて伴走。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/220.jpg",
+    "prompt_file": "prompts/220.json",
+    "image_local": "images/220.jpg"
+  },
+  {
+    "id": 221,
+    "category": "LP",
+    "title": "次の一手が",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/221.jpg",
+    "prompt_file": "prompts/221.json",
+    "image_local": "images/221.jpg"
+  },
+  {
+    "id": 222,
+    "category": "LP",
+    "title": "おすすめです。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/222.jpg",
+    "prompt_file": "prompts/222.json",
+    "image_local": "images/222.jpg"
+  },
+  {
+    "id": 223,
+    "category": "LP",
+    "title": "次の選択肢。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/223.jpg",
+    "prompt_file": "prompts/223.json",
+    "image_local": "images/223.jpg"
+  },
+  {
+    "id": 224,
+    "category": "LP",
+    "title": "丁寧に伴走。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/224.jpg",
+    "prompt_file": "prompts/224.json",
+    "image_local": "images/224.jpg"
+  },
+  {
+    "id": 225,
+    "category": "LP",
+    "title": "かんたん3ステップ。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/225.jpg",
+    "prompt_file": "prompts/225.json",
+    "image_local": "images/225.jpg"
+  },
+  {
+    "id": 226,
+    "category": "LP",
+    "title": "相談前の不安に、",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/226.jpg",
+    "prompt_file": "prompts/226.json",
+    "image_local": "images/226.jpg"
+  },
+  {
+    "id": 227,
+    "category": "LP",
+    "title": "今日から。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/227.jpg",
+    "prompt_file": "prompts/227.json",
+    "image_local": "images/227.jpg"
+  },
+  {
+    "id": 228,
+    "category": "LP",
+    "title": "光を。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/228.jpg",
+    "prompt_file": "prompts/228.json",
+    "image_local": "images/228.jpg"
+  },
+  {
+    "id": 229,
+    "category": "LP",
+    "title": "こんなお悩み、ありませんか？",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/229.jpg",
+    "prompt_file": "prompts/229.json",
+    "image_local": "images/229.jpg"
+  },
+  {
+    "id": 230,
+    "category": "LP",
+    "title": "透明感ケアで。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/230.jpg",
+    "prompt_file": "prompts/230.json",
+    "image_local": "images/230.jpg"
+  },
+  {
+    "id": 231,
+    "category": "LP",
+    "title": "選ばれる3つの理由",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/231.jpg",
+    "prompt_file": "prompts/231.json",
+    "image_local": "images/231.jpg"
+  },
+  {
+    "id": 232,
+    "category": "LP",
+    "title": "美容成分",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/232.jpg",
+    "prompt_file": "prompts/232.json",
+    "image_local": "images/232.jpg"
+  },
+  {
+    "id": 233,
+    "category": "LP",
+    "title": "だから、毎日使いやすい",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/233.jpg",
+    "prompt_file": "prompts/233.json",
+    "image_local": "images/233.jpg"
+  },
+  {
+    "id": 234,
+    "category": "LP",
+    "title": "ご使用方法",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/234.jpg",
+    "prompt_file": "prompts/234.json",
+    "image_local": "images/234.jpg"
+  },
+  {
+    "id": 235,
+    "category": "LP",
+    "title": "お客様の声",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/235.jpg",
+    "prompt_file": "prompts/235.json",
+    "image_local": "images/235.jpg"
+  },
+  {
+    "id": 236,
+    "category": "LP",
+    "title": "よくあるご質問",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/236.jpg",
+    "prompt_file": "prompts/236.json",
+    "image_local": "images/236.jpg"
+  },
+  {
+    "id": 237,
+    "category": "LP",
+    "title": "2,980円",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/237.jpg",
+    "prompt_file": "prompts/237.json",
+    "image_local": "images/237.jpg"
+  },
+  {
+    "id": 238,
+    "category": "LP",
+    "title": "相場を確認",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/238.jpg",
+    "prompt_file": "prompts/238.json",
+    "image_local": "images/238.jpg"
+  },
+  {
+    "id": 239,
+    "category": "LP",
+    "title": "まず不安を整理",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/239.jpg",
+    "prompt_file": "prompts/239.json",
+    "image_local": "images/239.jpg"
+  },
+  {
+    "id": 240,
+    "category": "LP",
+    "title": "なぜ複数社比較が必要なのか？",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/240.jpg",
+    "prompt_file": "prompts/240.json",
+    "image_local": "images/240.jpg"
+  },
+  {
+    "id": 241,
+    "category": "LP",
+    "title": "損する人の",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/241.jpg",
+    "prompt_file": "prompts/241.json",
+    "image_local": "images/241.jpg"
+  },
+  {
+    "id": 242,
+    "category": "LP",
+    "title": "”査定価格は何で決まる？",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/242.jpg",
+    "prompt_file": "prompts/242.json",
+    "image_local": "images/242.jpg"
+  },
+  {
+    "id": 243,
+    "category": "LP",
+    "title": "売却の準備から成約まで、まとめてサポート",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/243.jpg",
+    "prompt_file": "prompts/243.json",
+    "image_local": "images/243.jpg"
+  },
+  {
+    "id": 244,
+    "category": "LP",
+    "title": "94%",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/244.jpg",
+    "prompt_file": "prompts/244.json",
+    "image_local": "images/244.jpg"
+  },
+  {
+    "id": 245,
+    "category": "LP",
+    "title": "実際のご相談事例",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/245.jpg",
+    "prompt_file": "prompts/245.json",
+    "image_local": "images/245.jpg"
+  },
+  {
+    "id": 246,
+    "category": "LP",
+    "title": "よくあるご質問！",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/246.jpg",
+    "prompt_file": "prompts/246.json",
+    "image_local": "images/246.jpg"
+  },
+  {
+    "id": 247,
+    "category": "LP",
+    "title": "\\不動産売却を考え始めたら、！！",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/247.jpg",
+    "prompt_file": "prompts/247.json",
+    "image_local": "images/247.jpg"
+  },
+  {
+    "id": 274,
+    "category": "スライド",
+    "title": "業務変革を、",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/274.jpg",
+    "prompt_file": "prompts/274.json",
+    "image_local": null
+  },
+  {
+    "id": 275,
+    "category": "スライド",
+    "title": "次の成長をつくる。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/275.jpg",
+    "prompt_file": "prompts/275.json",
+    "image_local": null
+  },
+  {
+    "id": 276,
+    "category": "スライド",
+    "title": "業務変革における現状の課題",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/276.jpg",
+    "prompt_file": "prompts/276.json",
+    "image_local": null
+  },
+  {
+    "id": 277,
+    "category": "スライド",
+    "title": "“成果が回る”業務体制です。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/277.jpg",
+    "prompt_file": "prompts/277.json",
+    "image_local": null
+  },
+  {
+    "id": 278,
+    "category": "スライド",
+    "title": "業務診断・戦略設計",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/278.jpg",
+    "prompt_file": "prompts/278.json",
+    "image_local": null
+  },
+  {
+    "id": 279,
+    "category": "スライド",
+    "title": "提案全体像・支援フロー",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/279.jpg",
+    "prompt_file": "prompts/279.json",
+    "image_local": null
+  },
+  {
+    "id": 280,
+    "category": "スライド",
+    "title": "業務変革を、",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/280.jpg",
+    "prompt_file": "prompts/280.json",
+    "image_local": null
+  },
+  {
+    "id": 281,
+    "category": "スライド",
+    "title": "次の成長をつくる。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/281.jpg",
+    "prompt_file": "prompts/281.json",
+    "image_local": null
+  },
+  {
+    "id": 282,
+    "category": "スライド",
+    "title": "業務変革における現状の課題",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/282.jpg",
+    "prompt_file": "prompts/282.json",
+    "image_local": null
+  },
+  {
+    "id": 283,
+    "category": "スライド",
+    "title": "“成果が回る”業務体制です。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/283.jpg",
+    "prompt_file": "prompts/283.json",
+    "image_local": null
+  },
+  {
+    "id": 284,
+    "category": "スライド",
+    "title": "提案全体像・支援フロー",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/284.jpg",
+    "prompt_file": "prompts/284.json",
+    "image_local": null
+  },
+  {
+    "id": 285,
+    "category": "スライド",
+    "title": "未来の企業価値をつくる。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/285.jpg",
+    "prompt_file": "prompts/285.json",
+    "image_local": null
+  },
+  {
+    "id": 286,
+    "category": "スライド",
+    "title": "働き方を変える、",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/286.jpg",
+    "prompt_file": "prompts/286.json",
+    "image_local": null
+  },
+  {
+    "id": 287,
+    "category": "スライド",
+    "title": "現状の課題",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/287.jpg",
+    "prompt_file": "prompts/287.json",
+    "image_local": null
+  },
+  {
+    "id": 288,
+    "category": "スライド",
+    "title": "現状の業務動線とボトルネック",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/288.jpg",
+    "prompt_file": "prompts/288.json",
+    "image_local": null
+  },
+  {
+    "id": 289,
+    "category": "スライド",
+    "title": "集まる理由のある、",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/289.jpg",
+    "prompt_file": "prompts/289.json",
+    "image_local": null
+  },
+  {
+    "id": 290,
+    "category": "スライド",
+    "title": "ワークプレイス戦略・ゾーニング設計",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/290.jpg",
+    "prompt_file": "prompts/290.json",
+    "image_local": null
+  },
+  {
+    "id": 291,
+    "category": "スライド",
+    "title": "空間デザイン・体験設計",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/291.jpg",
+    "prompt_file": "prompts/291.json",
+    "image_local": null
+  },
+  {
+    "id": 292,
+    "category": "スライド",
+    "title": "プロジェクト全体の進め方",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/292.jpg",
+    "prompt_file": "prompts/292.json",
+    "image_local": null
+  },
+  {
+    "id": 293,
+    "category": "スライド",
+    "title": "導入スケジュール・推進体制",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/293.jpg",
+    "prompt_file": "prompts/293.json",
+    "image_local": null
+  },
+  {
+    "id": 294,
+    "category": "スライド",
+    "title": "費用・期待効果",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/294.jpg",
+    "prompt_file": "prompts/294.json",
+    "image_local": null
+  },
+  {
+    "id": 295,
+    "category": "スライド",
+    "title": "業務DX・生産性向上 提案書",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/295.jpg",
+    "prompt_file": "prompts/295.json",
+    "image_local": null
+  },
+  {
+    "id": 296,
+    "category": "スライド",
+    "title": "期待効果・次アクション",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/296.jpg",
+    "prompt_file": "prompts/296.json",
+    "image_local": null
+  },
+  {
+    "id": 297,
+    "category": "スライド",
+    "title": "現状課題",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/297.jpg",
+    "prompt_file": "prompts/297.json",
+    "image_local": null
+  },
+  {
+    "id": 298,
+    "category": "スライド",
+    "title": "現場の時間が、",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/298.jpg",
+    "prompt_file": "prompts/298.json",
+    "image_local": null
+  },
+  {
+    "id": 299,
+    "category": "スライド",
+    "title": "可視化・標準化・自動化の3っで、",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/299.jpg",
+    "prompt_file": "prompts/299.json",
+    "image_local": null
+  },
+  {
+    "id": 300,
+    "category": "スライド",
+    "title": "提案ソリューション全体像",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/300.jpg",
+    "prompt_file": "prompts/300.json",
+    "image_local": null
+  },
+  {
+    "id": 301,
+    "category": "スライド",
+    "title": "導入ステップ",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/301.jpg",
+    "prompt_file": "prompts/301.json",
+    "image_local": null
+  },
+  {
+    "id": 302,
+    "category": "スライド",
+    "title": "40%削減",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/302.jpg",
+    "prompt_file": "prompts/302.json",
+    "image_local": null
+  },
+  {
+    "id": 303,
+    "category": "スライド",
+    "title": "支援体制・ご提案範囲",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/303.jpg",
+    "prompt_file": "prompts/303.json",
+    "image_local": null
+  },
+  {
+    "id": 304,
+    "category": "スライド",
+    "title": "次の一歩を、成果につながる改善へ。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/304.jpg",
+    "prompt_file": "prompts/304.json",
+    "image_local": null
+  },
+  {
+    "id": 305,
+    "category": "スライド",
+    "title": "3分でわかる",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/305.jpg",
+    "prompt_file": "prompts/305.json",
+    "image_local": null
+  },
+  {
+    "id": 306,
+    "category": "スライド",
+    "title": "Index",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/306.jpg",
+    "prompt_file": "prompts/306.json",
+    "image_local": null
+  },
+  {
+    "id": 307,
+    "category": "スライド",
+    "title": "もっとスムーズに。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/307.jpg",
+    "prompt_file": "prompts/307.json",
+    "image_local": null
+  },
+  {
+    "id": 308,
+    "category": "スライド",
+    "title": "市場背景と現状課題",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/308.jpg",
+    "prompt_file": "prompts/308.json",
+    "image_local": null
+  },
+  {
+    "id": 309,
+    "category": "スライド",
+    "title": "法人向け会計・経費精算",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/309.jpg",
+    "prompt_file": "prompts/309.json",
+    "image_local": null
+  },
+  {
+    "id": 310,
+    "category": "スライド",
+    "title": "もっと効率的に。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/310.jpg",
+    "prompt_file": "prompts/310.json",
+    "image_local": null
+  },
+  {
+    "id": 311,
+    "category": "スライド",
+    "title": "主な機能",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/311.jpg",
+    "prompt_file": "prompts/311.json",
+    "image_local": null
+  },
+  {
+    "id": 312,
+    "category": "スライド",
+    "title": "実績・導入効果",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/312.jpg",
+    "prompt_file": "prompts/312.json",
+    "image_local": null
+  },
+  {
+    "id": 313,
+    "category": "スライド",
+    "title": "導入までの流れ",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/313.jpg",
+    "prompt_file": "prompts/313.json",
+    "image_local": null
+  },
+  {
+    "id": 314,
+    "category": "スライド",
+    "title": "料金プラン",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/314.jpg",
+    "prompt_file": "prompts/314.json",
+    "image_local": null
+  },
+  {
+    "id": 315,
+    "category": "スライド",
+    "title": "働く時間をもっと豊かに。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/315.jpg",
+    "prompt_file": "prompts/315.json",
+    "image_local": null
+  },
+  {
+    "id": 316,
+    "category": "スライド",
+    "title": "続けられるサポート体制。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/316.jpg",
+    "prompt_file": "prompts/316.json",
+    "image_local": null
+  },
+  {
+    "id": 317,
+    "category": "スライド",
+    "title": "Contents",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/317.jpg",
+    "prompt_file": "prompts/317.json",
+    "image_local": null
+  },
+  {
+    "id": 318,
+    "category": "スライド",
+    "title": "満足度や生産性に影響しています。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/318.jpg",
+    "prompt_file": "prompts/318.json",
+    "image_local": null
+  },
+  {
+    "id": 319,
+    "category": "スライド",
+    "title": "職場価値を高めます。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/319.jpg",
+    "prompt_file": "prompts/319.json",
+    "image_local": null
+  },
+  {
+    "id": 320,
+    "category": "スライド",
+    "title": "運用までトータルサポート。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/320.jpg",
+    "prompt_file": "prompts/320.json",
+    "image_local": null
+  },
+  {
+    "id": 321,
+    "category": "スライド",
+    "title": "最適なコーヒー体験を設計します。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/321.jpg",
+    "prompt_file": "prompts/321.json",
+    "image_local": null
+  },
+  {
+    "id": 322,
+    "category": "スライド",
+    "title": "満足度と職場体験が向上。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/322.jpg",
+    "prompt_file": "prompts/322.json",
+    "image_local": null
+  },
+  {
+    "id": 323,
+    "category": "スライド",
+    "title": "スムーズに導入可能です。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/323.jpg",
+    "prompt_file": "prompts/323.json",
+    "image_local": null
+  },
+  {
+    "id": 324,
+    "category": "スライド",
+    "title": "体験価値に見合う投資です。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/324.jpg",
+    "prompt_file": "prompts/324.json",
+    "image_local": null
+  },
+  {
+    "id": 325,
+    "category": "スライド",
+    "title": "AI外観検査SaaS",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/325.jpg",
+    "prompt_file": "prompts/325.json",
+    "image_local": null
+  },
+  {
+    "id": 326,
+    "category": "スライド",
+    "title": "目次",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/326.jpg",
+    "prompt_file": "prompts/326.json",
+    "image_local": null
+  },
+  {
+    "id": 327,
+    "category": "スライド",
+    "title": "現状課題",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/327.jpg",
+    "prompt_file": "prompts/327.json",
+    "image_local": null
+  },
+  {
+    "id": 328,
+    "category": "スライド",
+    "title": "ともに、精度ある品質改善へ。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/328.jpg",
+    "prompt_file": "prompts/328.json",
+    "image_local": null
+  },
+  {
+    "id": 329,
+    "category": "スライド",
+    "title": "市場環境と機会",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/329.jpg",
+    "prompt_file": "prompts/329.json",
+    "image_local": null
+  },
+  {
+    "id": 330,
+    "category": "スライド",
+    "title": "継続改善につながる品質基盤をつくる。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/330.jpg",
+    "prompt_file": "prompts/330.json",
+    "image_local": null
+  },
+  {
+    "id": 331,
+    "category": "スライド",
+    "title": "施策11 Al外観検査基盤の導入",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/331.jpg",
+    "prompt_file": "prompts/331.json",
+    "image_local": null
+  },
+  {
+    "id": 332,
+    "category": "スライド",
+    "title": "施策2|現場運用・教育設計",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/332.jpg",
+    "prompt_file": "prompts/332.json",
+    "image_local": null
+  },
+  {
+    "id": 333,
+    "category": "スライド",
+    "title": "実施スケジュール",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/333.jpg",
+    "prompt_file": "prompts/333.json",
+    "image_local": null
+  },
+  {
+    "id": 334,
+    "category": "スライド",
+    "title": "期待成果",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/334.jpg",
+    "prompt_file": "prompts/334.json",
+    "image_local": null
+  },
+  {
+    "id": 335,
+    "category": "スライド",
+    "title": "ホームページリニューアルご提案書",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/335.jpg",
+    "prompt_file": "prompts/335.json",
+    "image_local": null
+  },
+  {
+    "id": 336,
+    "category": "スライド",
+    "title": "リニューアルご提案書",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/336.jpg",
+    "prompt_file": "prompts/336.json",
+    "image_local": null
+  },
+  {
+    "id": 337,
+    "category": "スライド",
+    "title": "ご提案書",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/337.jpg",
+    "prompt_file": "prompts/337.json",
+    "image_local": null
+  },
+  {
+    "id": 338,
+    "category": "スライド",
+    "title": "く）（<）（",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/338.jpg",
+    "prompt_file": "prompts/338.json",
+    "image_local": null
+  },
+  {
+    "id": 339,
+    "category": "スライド",
+    "title": "「信頼形成」「問い合わせ導線」「更新運用」を同時に見直す必要があります。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/339.jpg",
+    "prompt_file": "prompts/339.json",
+    "image_local": null
+  },
+  {
+    "id": 340,
+    "category": "スライド",
+    "title": "ご提案の全体像",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/340.jpg",
+    "prompt_file": "prompts/340.json",
+    "image_local": null
+  },
+  {
+    "id": 341,
+    "category": "スライド",
+    "title": "ご提案内容",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/341.jpg",
+    "prompt_file": "prompts/341.json",
+    "image_local": null
+  },
+  {
+    "id": 342,
+    "category": "スライド",
+    "title": "制作物イメージ",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/342.jpg",
+    "prompt_file": "prompts/342.json",
+    "image_local": null
+  },
+  {
+    "id": 343,
+    "category": "スライド",
+    "title": "進行体制・フロー",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/343.jpg",
+    "prompt_file": "prompts/343.json",
+    "image_local": null
+  },
+  {
+    "id": 344,
+    "category": "スライド",
+    "title": "スケジュール",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/344.jpg",
+    "prompt_file": "prompts/344.json",
+    "image_local": null
+  },
+  {
+    "id": 345,
+    "category": "スライド",
+    "title": "65万円",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/345.jpg",
+    "prompt_file": "prompts/345.json",
+    "image_local": null
+  },
+  {
+    "id": 346,
+    "category": "スライド",
+    "title": "1.8倍",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/346.jpg",
+    "prompt_file": "prompts/346.json",
+    "image_local": null
+  },
+  {
+    "id": 347,
+    "category": "スライド",
+    "title": "次回お打ち合わせで、範囲・費用・公開希望日を確定します。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/347.jpg",
+    "prompt_file": "prompts/347.json",
+    "image_local": null
+  },
+  {
+    "id": 348,
+    "category": "チラシ",
+    "title": "BtoB業務効率化クラウドの縦型チラシ",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/348.jpg",
+    "prompt_file": "prompts/348.json",
+    "image_local": null
+  },
+  {
+    "id": 349,
+    "category": "チラシ",
+    "title": "春のインテリアフェア告知チラシ",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/349.jpg",
+    "prompt_file": "prompts/349.json",
+    "image_local": null
+  },
+  {
+    "id": 350,
+    "category": "チラシ",
+    "title": "暮らしのインテリア",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/350.jpg",
+    "prompt_file": "prompts/350.json",
+    "image_local": null
+  },
+  {
+    "id": 351,
+    "category": "チラシ",
+    "title": "フルーツ",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/351.jpg",
+    "prompt_file": "prompts/351.json",
+    "image_local": null
+  },
+  {
+    "id": 352,
+    "category": "チラシ",
+    "title": "（季節の",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/352.jpg",
+    "prompt_file": "prompts/352.json",
+    "image_local": null
+  },
+  {
+    "id": 353,
+    "category": "チラシ",
+    "title": "海と街の",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/353.jpg",
+    "prompt_file": "prompts/353.json",
+    "image_local": null
+  },
+  {
+    "id": 354,
+    "category": "チラシ",
+    "title": "海と街のトラベルフェア。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/354.jpg",
+    "prompt_file": "prompts/354.json",
+    "image_local": null
+  },
+  {
+    "id": 355,
+    "category": "チラシ",
+    "title": "ひろば",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/355.jpg",
+    "prompt_file": "prompts/355.json",
+    "image_local": null
+  },
+  {
+    "id": 356,
+    "category": "チラシ",
+    "title": "わくわくこども科学ひろば",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/356.jpg",
+    "prompt_file": "prompts/356.json",
+    "image_local": null
+  },
+  {
+    "id": 357,
+    "category": "チラシ",
+    "title": "香りと",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/357.jpg",
+    "prompt_file": "prompts/357.json",
+    "image_local": null
+  },
+  {
+    "id": 358,
+    "category": "チラシ",
+    "title": "香りと整える時間",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/358.jpg",
+    "prompt_file": "prompts/358.json",
+    "image_local": null
+  },
+  {
+    "id": 359,
+    "category": "チラシ",
+    "title": "シェフズ",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/359.jpg",
+    "prompt_file": "prompts/359.json",
+    "image_local": null
+  },
+  {
+    "id": 360,
+    "category": "チラシ",
+    "title": "シェフズテーブルウィーク",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/360.jpg",
+    "prompt_file": "prompts/360.json",
+    "image_local": null
+  },
+  {
+    "id": 361,
+    "category": "チラシ",
+    "title": "焼きたて",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/361.jpg",
+    "prompt_file": "prompts/361.json",
+    "image_local": null
+  },
+  {
+    "id": 362,
+    "category": "チラシ",
+    "title": "夏まつり",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/362.jpg",
+    "prompt_file": "prompts/362.json",
+    "image_local": null
+  },
+  {
+    "id": 363,
+    "category": "チラシ",
+    "title": "QFAIR",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/363.jpg",
+    "prompt_file": "prompts/363.json",
+    "image_local": null
+  },
+  {
+    "id": 364,
+    "category": "チラシ",
+    "title": "職人へ。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/364.jpg",
+    "prompt_file": "prompts/364.json",
+    "image_local": null
+  },
+  {
+    "id": 365,
+    "category": "チラシ",
+    "title": "相続の不安、",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/365.jpg",
+    "prompt_file": "prompts/365.json",
+    "image_local": null
+  },
+  {
+    "id": 366,
+    "category": "チラシ",
+    "title": "開院",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/366.jpg",
+    "prompt_file": "prompts/366.json",
+    "image_local": null
+  },
+  {
+    "id": 367,
+    "category": "チラシ",
+    "title": "夫特価セール！",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/367.jpg",
+    "prompt_file": "prompts/367.json",
+    "image_local": null
+  },
+  {
+    "id": 368,
+    "category": "チラシ",
+    "title": "夏までに、変わる。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/368.jpg",
+    "prompt_file": "prompts/368.json",
+    "image_local": null
+  },
+  {
+    "id": 369,
+    "category": "チラシ",
+    "title": "BOTANICAL LIVING FAIR",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/369.jpg",
+    "prompt_file": "prompts/369.json",
+    "image_local": null
+  },
+  {
+    "id": 370,
+    "category": "チラシ",
+    "title": "花とハーブの心地よい暮らし展",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/370.jpg",
+    "prompt_file": "prompts/370.json",
+    "image_local": null
+  },
+  {
+    "id": 371,
+    "category": "チラシ",
+    "title": "1,180円",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/371.jpg",
+    "prompt_file": "prompts/371.json",
+    "image_local": null
+  },
+  {
+    "id": 372,
+    "category": "チラシ",
+    "title": "大掃除",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/372.jpg",
+    "prompt_file": "prompts/372.json",
+    "image_local": null
+  },
+  {
+    "id": 373,
+    "category": "チラシ",
+    "title": "入園児募集",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/373.jpg",
+    "prompt_file": "prompts/373.json",
+    "image_local": null
+  },
+  {
+    "id": 374,
+    "category": "チラシ",
+    "title": "中古車大決算",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/374.jpg",
+    "prompt_file": "prompts/374.json",
+    "image_local": null
+  },
+  {
+    "id": 375,
+    "category": "チラシ",
+    "title": "9,800円",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/375.jpg",
+    "prompt_file": "prompts/375.json",
+    "image_local": null
+  },
+  {
+    "id": 376,
+    "category": "チラシ",
+    "title": "OPEN",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/376.jpg",
+    "prompt_file": "prompts/376.json",
+    "image_local": null
+  },
+  {
+    "id": 377,
+    "category": "チラシ",
+    "title": "18,700円～",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/377.jpg",
+    "prompt_file": "prompts/377.json",
+    "image_local": null
+  },
+  {
+    "id": 378,
+    "category": "広告バナー",
+    "title": "A業務を、",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/378.jpg",
+    "prompt_file": "prompts/378.json",
+    "image_local": "images/378.jpg"
+  },
+  {
+    "id": 379,
+    "category": "広告バナー",
+    "title": "選び直す。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/379.jpg",
+    "prompt_file": "prompts/379.json",
+    "image_local": "images/379.jpg"
+  },
+  {
+    "id": 380,
+    "category": "広告バナー",
+    "title": "軽いのに、",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/380.jpg",
+    "prompt_file": "prompts/380.json",
+    "image_local": "images/380.jpg"
+  },
+  {
+    "id": 381,
+    "category": "広告バナー",
+    "title": "幸せ。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/381.jpg",
+    "prompt_file": "prompts/381.json",
+    "image_local": "images/381.jpg"
+  },
+  {
+    "id": 382,
+    "category": "広告バナー",
+    "title": "ラクつま",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/382.jpg",
+    "prompt_file": "prompts/382.json",
+    "image_local": "images/382.jpg"
+  },
+  {
+    "id": 383,
+    "category": "広告バナー",
+    "title": "眠りを、整える。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/383.jpg",
+    "prompt_file": "prompts/383.json",
+    "image_local": "images/383.jpg"
+  },
+  {
+    "id": 384,
+    "category": "広告バナー",
+    "title": "無料で相談する＞",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/384.jpg",
+    "prompt_file": "prompts/384.json",
+    "image_local": "images/384.jpg"
+  },
+  {
+    "id": 385,
+    "category": "広告バナー",
+    "title": "透明感、",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/385.jpg",
+    "prompt_file": "prompts/385.json",
+    "image_local": "images/385.jpg"
+  },
+  {
+    "id": 386,
+    "category": "広告バナー",
+    "title": "持ち歩く。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/386.jpg",
+    "prompt_file": "prompts/386.json",
+    "image_local": "images/386.jpg"
+  },
+  {
+    "id": 387,
+    "category": "広告バナー",
+    "title": "30",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/387.jpg",
+    "prompt_file": "prompts/387.json",
+    "image_local": "images/387.jpg"
+  },
+  {
+    "id": 388,
+    "category": "広告バナー",
+    "title": "300",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/388.jpg",
+    "prompt_file": "prompts/388.json",
+    "image_local": "images/388.jpg"
+  },
+  {
+    "id": 389,
+    "category": "広告バナー",
+    "title": "無料相談",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/389.jpg",
+    "prompt_file": "prompts/389.json",
+    "image_local": "images/389.jpg"
+  },
+  {
+    "id": 390,
+    "category": "広告バナー",
+    "title": "初回限定",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/390.jpg",
+    "prompt_file": "prompts/390.json",
+    "image_local": "images/390.jpg"
+  },
+  {
+    "id": 391,
+    "category": "広告バナー",
+    "title": "1.000円",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/391.jpg",
+    "prompt_file": "prompts/391.json",
+    "image_local": "images/391.jpg"
+  },
+  {
+    "id": 392,
+    "category": "広告バナー",
+    "title": "無料相談",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/392.jpg",
+    "prompt_file": "prompts/392.json",
+    "image_local": "images/392.jpg"
+  },
+  {
+    "id": 393,
+    "category": "広告バナー",
+    "title": "初口限定",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/393.jpg",
+    "prompt_file": "prompts/393.json",
+    "image_local": "images/393.jpg"
+  },
+  {
+    "id": 394,
+    "category": "広告バナー",
+    "title": "初月0円",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/394.jpg",
+    "prompt_file": "prompts/394.json",
+    "image_local": "images/394.jpg"
+  },
+  {
+    "id": 395,
+    "category": "広告バナー",
+    "title": "相談0円",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/395.jpg",
+    "prompt_file": "prompts/395.json",
+    "image_local": "images/395.jpg"
+  },
+  {
+    "id": 396,
+    "category": "広告バナー",
+    "title": "体験0』",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/396.jpg",
+    "prompt_file": "prompts/396.json",
+    "image_local": "images/396.jpg"
+  },
+  {
+    "id": 397,
+    "category": "広告バナー",
+    "title": "時給UP",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/397.jpg",
+    "prompt_file": "prompts/397.json",
+    "image_local": "images/397.jpg"
+  },
+  {
+    "id": 398,
+    "category": "広告バナー",
+    "title": "0円",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/398.jpg",
+    "prompt_file": "prompts/398.json",
+    "image_local": "images/398.jpg"
+  },
+  {
+    "id": 399,
+    "category": "広告バナー",
+    "title": "デザインを、",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/399.jpg",
+    "prompt_file": "prompts/399.json",
+    "image_local": "images/399.jpg"
+  },
+  {
+    "id": 400,
+    "category": "広告バナー",
+    "title": "次の仕事を、",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/400.jpg",
+    "prompt_file": "prompts/400.json",
+    "image_local": "images/400.jpg"
+  },
+  {
+    "id": 401,
+    "category": "広告バナー",
+    "title": "似合う色を",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/401.jpg",
+    "prompt_file": "prompts/401.json",
+    "image_local": "images/401.jpg"
+  },
+  {
+    "id": 402,
+    "category": "広告バナー",
+    "title": "軽く",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/402.jpg",
+    "prompt_file": "prompts/402.json",
+    "image_local": "images/402.jpg"
+  },
+  {
+    "id": 403,
+    "category": "広告バナー",
+    "title": "写真が",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/403.jpg",
+    "prompt_file": "prompts/403.json",
+    "image_local": "images/403.jpg"
+  },
+  {
+    "id": 404,
+    "category": "広告バナー",
+    "title": "週末",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/404.jpg",
+    "prompt_file": "prompts/404.json",
+    "image_local": "images/404.jpg"
+  },
+  {
+    "id": 405,
+    "category": "広告バナー",
+    "title": "週末",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/405.jpg",
+    "prompt_file": "prompts/405.json",
+    "image_local": "images/405.jpg"
+  },
+  {
+    "id": 406,
+    "category": "広告バナー",
+    "title": "経理のモヤモヤ、見える化。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/406.jpg",
+    "prompt_file": "prompts/406.json",
+    "image_local": "images/406.jpg"
+  },
+  {
+    "id": 407,
+    "category": "広告バナー",
+    "title": "割れた画面を、今日中に。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/407.jpg",
+    "prompt_file": "prompts/407.json",
+    "image_local": "images/407.jpg"
+  },
+  {
+    "id": 408,
+    "category": "広告バナー",
+    "title": "応募する",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/408.jpg",
+    "prompt_file": "prompts/408.json",
+    "image_local": "images/408.jpg"
+  },
+  {
+    "id": 409,
+    "category": "広告バナー",
+    "title": "3ステップで公開。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/409.jpg",
+    "prompt_file": "prompts/409.json",
+    "image_local": "images/409.jpg"
+  },
+  {
+    "id": 410,
+    "category": "広告バナー",
+    "title": "3ステップで完了。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/410.jpg",
+    "prompt_file": "prompts/410.json",
+    "image_local": "images/410.jpg"
+  },
+  {
+    "id": 411,
+    "category": "広告バナー",
+    "title": "英会話体験、",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/411.jpg",
+    "prompt_file": "prompts/411.json",
+    "image_local": "images/411.jpg"
+  },
+  {
+    "id": 412,
+    "category": "広告バナー",
+    "title": "自言を。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/412.jpg",
+    "prompt_file": "prompts/412.json",
+    "image_local": "images/412.jpg"
+  },
+  {
+    "id": 413,
+    "category": "広告バナー",
+    "title": "やさしい余白を。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/413.jpg",
+    "prompt_file": "prompts/413.json",
+    "image_local": "images/413.jpg"
+  },
+  {
+    "id": 414,
+    "category": "広告バナー",
+    "title": "静かな芯を。",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/414.jpg",
+    "prompt_file": "prompts/414.json",
+    "image_local": "images/414.jpg"
+  },
+  {
+    "id": 415,
+    "category": "広告バナー",
+    "title": "領収書、",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/415.jpg",
+    "prompt_file": "prompts/415.json",
+    "image_local": "images/415.jpg"
+  },
+  {
+    "id": 416,
+    "category": "広告バナー",
+    "title": "「レシピ通りなのに、",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/416.jpg",
+    "prompt_file": "prompts/416.json",
+    "image_local": "images/416.jpg"
+  },
+  {
+    "id": 417,
+    "category": "広告バナー",
+    "title": "66「英語、",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/417.jpg",
+    "prompt_file": "prompts/417.json",
+    "image_local": "images/417.jpg"
+  },
+  {
+    "id": 418,
+    "category": "広告バナー",
+    "title": "980円",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/418.jpg",
+    "prompt_file": "prompts/418.json",
+    "image_local": "images/418.jpg"
+  },
+  {
+    "id": 419,
+    "category": "広告バナー",
+    "title": "980円",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/419.jpg",
+    "prompt_file": "prompts/419.json",
+    "image_local": "images/419.jpg"
+  },
+  {
+    "id": 420,
+    "category": "広告バナー",
+    "title": "980円",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/420.jpg",
+    "prompt_file": "prompts/420.json",
+    "image_local": "images/420.jpg"
+  },
+  {
+    "id": 421,
+    "category": "広告バナー",
+    "title": "10/22",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/421.jpg",
+    "prompt_file": "prompts/421.json",
+    "image_local": "images/421.jpg"
+  },
+  {
+    "id": 422,
+    "category": "広告バナー",
+    "title": "チームで支える仕事",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/422.jpg",
+    "prompt_file": "prompts/422.json",
+    "image_local": "images/422.jpg"
+  },
+  {
+    "id": 423,
+    "category": "広告バナー",
+    "title": "仕事につながる力へ",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/423.jpg",
+    "prompt_file": "prompts/423.json",
+    "image_local": "images/423.jpg"
+  },
+  {
+    "id": 424,
+    "category": "広告バナー",
+    "title": "人に寄り添う",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/424.jpg",
+    "prompt_file": "prompts/424.json",
+    "image_local": "images/424.jpg"
+  },
+  {
+    "id": 425,
+    "category": "広告バナー",
+    "title": "不安をほどく",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/425.jpg",
+    "prompt_file": "prompts/425.json",
+    "image_local": "images/425.jpg"
+  },
+  {
+    "id": 426,
+    "category": "YouTube",
+    "title": "帰宅後10分ごはん",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/youtube-TH001.png",
+    "prompt_file": "prompts/426.json",
+    "image_local": null
+  },
+  {
+    "id": 427,
+    "category": "YouTube",
+    "title": "貯金と投資",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/youtube-TH002.png",
+    "prompt_file": "prompts/427.json",
+    "image_local": null
+  },
+  {
+    "id": 428,
+    "category": "YouTube",
+    "title": "空中庭園を育てる",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/youtube-TH003.png",
+    "prompt_file": "prompts/428.json",
+    "image_local": null
+  },
+  {
+    "id": 429,
+    "category": "YouTube",
+    "title": "朝5分の肌支度",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/youtube-TH004.png",
+    "prompt_file": "prompts/429.json",
+    "image_local": null
+  },
+  {
+    "id": 430,
+    "category": "YouTube",
+    "title": "伝わるスライド",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/youtube-TH005.png",
+    "prompt_file": "prompts/430.json",
+    "image_local": null
+  },
+  {
+    "id": 441,
+    "category": "YouTube",
+    "title": "AI導入が現場で止まる本当の理由",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/youtube-TH016.png",
+    "prompt_file": "prompts/441.json",
+    "image_local": null
+  },
+  {
+    "id": 444,
+    "category": "YouTube",
+    "title": "採用しても定着しない組織の共通点",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/youtube-TH019.png",
+    "prompt_file": "prompts/444.json",
+    "image_local": null
+  },
+  {
+    "id": 445,
+    "category": "YouTube",
+    "title": "障害が起きても止まらない仕組み",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/youtube-TH020.png",
+    "prompt_file": "prompts/445.json",
+    "image_local": null
+  },
+  {
+    "id": 447,
+    "category": "YouTube",
+    "title": "不動産・住宅ローン",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/youtube-TH022.png",
+    "prompt_file": "prompts/447.json",
+    "image_local": null
+  },
+  {
+    "id": 448,
+    "category": "YouTube",
+    "title": "カフェ・小規模店舗",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/youtube-TH023.png",
+    "prompt_file": "prompts/448.json",
+    "image_local": null
+  },
+  {
+    "id": 452,
+    "category": "YouTube",
+    "title": "企業のAI導入",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/youtube-TH027.png",
+    "prompt_file": "prompts/452.json",
+    "image_local": null
+  },
+  {
+    "id": 453,
+    "category": "YouTube",
+    "title": "採用面接",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/youtube-TH028.png",
+    "prompt_file": "prompts/453.json",
+    "image_local": null
+  },
+  {
+    "id": 456,
+    "category": "YouTube",
+    "title": "海辺の小旅行",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/youtube-TH031.png",
+    "prompt_file": "prompts/456.json",
+    "image_local": null
+  },
+  {
+    "id": 457,
+    "category": "YouTube",
+    "title": "親子の散歩",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/youtube-TH032.png",
+    "prompt_file": "prompts/457.json",
+    "image_local": null
+  },
+  {
+    "id": 458,
+    "category": "YouTube",
+    "title": "雨の街で撮影",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/youtube-TH033.png",
+    "prompt_file": "prompts/458.json",
+    "image_local": null
+  },
+  {
+    "id": 460,
+    "category": "YouTube",
+    "title": "部屋の模様替え",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/youtube-TH035.png",
+    "prompt_file": "prompts/460.json",
+    "image_local": null
+  },
+  {
+    "id": 461,
+    "category": "YouTube",
+    "title": "仕事道具、何を選ぶ？",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/youtube-TH036.png",
+    "prompt_file": "prompts/461.json",
+    "image_local": null
+  },
+  {
+    "id": 465,
+    "category": "YouTube",
+    "title": "広告費の見直し方",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/youtube-TH043.png",
+    "prompt_file": "prompts/465.json",
+    "image_local": null
+  },
+  {
+    "id": 466,
+    "category": "YouTube",
+    "title": "次の仕事を選ぶ",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/youtube-TH044.png",
+    "prompt_file": "prompts/466.json",
+    "image_local": null
+  },
+  {
+    "id": 469,
+    "category": "YouTube",
+    "title": "週末キャンプの持ち物",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/youtube-TH050.png",
+    "prompt_file": "prompts/469.json",
+    "image_local": null
+  },
+  {
+    "id": 472,
+    "category": "YouTube",
+    "title": "犬と暮らす週末",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/youtube-TH054.png",
+    "prompt_file": "prompts/472.json",
+    "image_local": null
+  },
+  {
+    "id": 474,
+    "category": "YouTube",
+    "title": "親子で科学実験",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/youtube-TH056.png",
+    "prompt_file": "prompts/474.json",
+    "image_local": null
+  },
+  {
+    "id": 475,
+    "category": "YouTube",
+    "title": "夜の絵本時間",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/youtube-TH057.png",
+    "prompt_file": "prompts/475.json",
+    "image_local": null
+  },
+  {
+    "id": 477,
+    "category": "YouTube",
+    "title": "話しながら考える",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/youtube-TH059.png",
+    "prompt_file": "prompts/477.json",
+    "image_local": null
+  },
+  {
+    "id": 478,
+    "category": "YouTube",
+    "title": "技術を 次の世代へ 町工場の継承",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/youtube-TH061.png",
+    "prompt_file": "prompts/478.json",
+    "image_local": null
+  },
+  {
+    "id": 479,
+    "category": "YouTube",
+    "title": "黒字なのに 現金がない 資金繰りの見方",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/youtube-TH062.png",
+    "prompt_file": "prompts/479.json",
+    "image_local": null
+  },
+  {
+    "id": 480,
+    "category": "YouTube",
+    "title": "古い家は どう直す？ 耐震改修の考え方",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/youtube-TH063.png",
+    "prompt_file": "prompts/480.json",
+    "image_local": null
+  },
+  {
+    "id": 481,
+    "category": "YouTube",
+    "title": "待ち時間を 見直す クリニックの動線",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/youtube-TH064.png",
+    "prompt_file": "prompts/481.json",
+    "image_local": null
+  },
+  {
+    "id": 482,
+    "category": "YouTube",
+    "title": "売り場は 入口で変わる 店舗設計の基本",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/youtube-TH065.png",
+    "prompt_file": "prompts/482.json",
+    "image_local": null
+  },
+  {
+    "id": 483,
+    "category": "YouTube",
+    "title": "解約理由は 数字の外にある 顧客の声の読み方",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/youtube-TH066.png",
+    "prompt_file": "prompts/483.json",
+    "image_local": null
+  },
+  {
+    "id": 484,
+    "category": "YouTube",
+    "title": "荷物より先に 動線を変える 倉庫改善の視点",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/youtube-TH067.png",
+    "prompt_file": "prompts/484.json",
+    "image_local": null
+  },
+  {
+    "id": 485,
+    "category": "YouTube",
+    "title": "畑の先の 売り方を考える 農家の直販",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/youtube-TH068.png",
+    "prompt_file": "prompts/485.json",
+    "image_local": null
+  },
+  {
+    "id": 487,
+    "category": "YouTube",
+    "title": "守る順番を 間違えない セキュリティ設計",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/youtube-TH070.png",
+    "prompt_file": "prompts/487.json",
+    "image_local": null
+  },
+  {
+    "id": 488,
+    "category": "YouTube",
+    "title": "不良を減らす 現場の観察",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/youtube-TH071.png",
+    "prompt_file": "prompts/488.json",
+    "image_local": null
+  },
+  {
+    "id": 489,
+    "category": "YouTube",
+    "title": "面談の質は 質問で変わる 1on1の設計",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/youtube-TH072.png",
+    "prompt_file": "prompts/489.json",
+    "image_local": null
+  },
+  {
+    "id": 490,
+    "category": "YouTube",
+    "title": "空室の理由を 部屋から読む 賃貸の見直し",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/youtube-TH073.png",
+    "prompt_file": "prompts/490.json",
+    "image_local": null
+  },
+  {
+    "id": 491,
+    "category": "YouTube",
+    "title": "契約書は ここから読む 初めての確認手順",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/youtube-TH074.png",
+    "prompt_file": "prompts/491.json",
+    "image_local": null
+  },
+  {
+    "id": 492,
+    "category": "YouTube",
+    "title": "声を聞く前に 問いを作る 顧客調査の基本",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/youtube-TH075.png",
+    "prompt_file": "prompts/492.json",
+    "image_local": null
+  },
+  {
+    "id": 493,
+    "category": "YouTube",
+    "title": "やめる判断も 経営の仕事 新規事業の見極め",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/youtube-TH076.png",
+    "prompt_file": "prompts/493.json",
+    "image_local": null
+  },
+  {
+    "id": 494,
+    "category": "YouTube",
+    "title": "季節を包む 小さな菓子 和菓子の手仕事",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/youtube-TH077.png",
+    "prompt_file": "prompts/494.json",
+    "image_local": null
+  },
+  {
+    "id": 495,
+    "category": "YouTube",
+    "title": "終点の先に ある風景 ローカル線の旅",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/youtube-TH078.png",
+    "prompt_file": "prompts/495.json",
+    "image_local": null
+  },
+  {
+    "id": 496,
+    "category": "YouTube",
+    "title": "はじめての 低山歩き 装備と歩き方",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/youtube-TH079.png",
+    "prompt_file": "prompts/496.json",
+    "image_local": null
+  },
+  {
+    "id": 497,
+    "category": "YouTube",
+    "title": "散歩がもっと 楽しくなる 犬との暮らし",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/youtube-TH080.png",
+    "prompt_file": "prompts/497.json",
+    "image_local": null
+  },
+  {
+    "id": 498,
+    "category": "YouTube",
+    "title": "一場面で 心をつかむ 映画の見方",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/youtube-TH081.png",
+    "prompt_file": "prompts/498.json",
+    "image_local": null
+  },
+  {
+    "id": 499,
+    "category": "YouTube",
+    "title": "音の違いを 弾き比べ ギター入門",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/youtube-TH082.png",
+    "prompt_file": "prompts/499.json",
+    "image_local": null
+  },
+  {
+    "id": 500,
+    "category": "YouTube",
+    "title": "短編から 読む文学 はじめの一冊",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/youtube-TH083.png",
+    "prompt_file": "prompts/500.json",
+    "image_local": null
+  },
+  {
+    "id": 501,
+    "category": "YouTube",
+    "title": "小さな庭を 育てよう ベランダ園芸",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/youtube-TH084.png",
+    "prompt_file": "prompts/501.json",
+    "image_local": null
+  },
+  {
+    "id": 502,
+    "category": "YouTube",
+    "title": "月の裏側は どう見える？ 宇宙の疑問",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/youtube-TH085.png",
+    "prompt_file": "prompts/502.json",
+    "image_local": null
+  },
+  {
+    "id": 503,
+    "category": "YouTube",
+    "title": "石垣に残る 築城の知恵 城を歩く",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/youtube-TH086.png",
+    "prompt_file": "prompts/503.json",
+    "image_local": null
+  },
+  {
+    "id": 504,
+    "category": "YouTube",
+    "title": "逆光を味方に 撮ってみる 写真の基本",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/youtube-TH087.png",
+    "prompt_file": "prompts/504.json",
+    "image_local": null
+  },
+  {
+    "id": 505,
+    "category": "YouTube",
+    "title": "一針ずつ 模様になる 刺繍のはじめ方",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/youtube-TH088.png",
+    "prompt_file": "prompts/505.json",
+    "image_local": null
+  },
+  {
+    "id": 506,
+    "category": "YouTube",
+    "title": "味噌を仕込む 休日の台所 発酵の基本",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/youtube-TH089.png",
+    "prompt_file": "prompts/506.json",
+    "image_local": null
+  },
+  {
+    "id": 507,
+    "category": "YouTube",
+    "title": "前髪で変わる 顔まわり ヘアセットのコツ",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/youtube-TH090.png",
+    "prompt_file": "prompts/507.json",
+    "image_local": null
+  },
+  {
+    "id": 508,
+    "category": "YouTube",
+    "title": "走りはじめは ゆっくりでいい ランニング入門",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/youtube-TH091.png",
+    "prompt_file": "prompts/508.json",
+    "image_local": null
+  },
+  {
+    "id": 509,
+    "category": "YouTube",
+    "title": "紙だけで作る 週末の工作 親子の遊び",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/youtube-TH092.png",
+    "prompt_file": "prompts/509.json",
+    "image_local": null
+  },
+  {
+    "id": 510,
+    "category": "YouTube",
+    "title": "色を重ねて 生まれる景色 抽象画の見方",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/youtube-TH093.png",
+    "prompt_file": "prompts/510.json",
+    "image_local": null
+  },
+  {
+    "id": 511,
+    "category": "YouTube",
+    "title": "朝まずめを 楽しむ準備 海釣りの基本",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/youtube-TH094.png",
+    "prompt_file": "prompts/511.json",
+    "image_local": null
+  },
+  {
+    "id": 512,
+    "category": "YouTube",
+    "title": "古い机を 直して使う 家具のリメイク",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/youtube-TH095.png",
+    "prompt_file": "prompts/512.json",
+    "image_local": null
+  },
+  {
+    "id": 513,
+    "category": "YouTube",
+    "title": "地図で歩く 知らない街 街歩きの楽しみ",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/youtube-TH096.png",
+    "prompt_file": "prompts/513.json",
+    "image_local": null
+  },
+  {
+    "id": 514,
+    "category": "YouTube",
+    "title": "家族で決める 避難の約束 備えの基本",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/youtube-TH097.png",
+    "prompt_file": "prompts/514.json",
+    "image_local": null
+  },
+  {
+    "id": 515,
+    "category": "YouTube",
+    "title": "聞き取れないを 変える練習 英語リスニング",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/youtube-TH098.png",
+    "prompt_file": "prompts/515.json",
+    "image_local": null
+  },
+  {
+    "id": 516,
+    "category": "YouTube",
+    "title": "香りを選ぶ 小さな時間 フレグランス入門",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/youtube-TH099.png",
+    "prompt_file": "prompts/516.json",
+    "image_local": null
+  },
+  {
+    "id": 517,
+    "category": "YouTube",
+    "title": "この街の 移動を考える 交通の未来",
+    "image_url": "https://harukaze-catalog.pages.dev/assets/youtube-TH100.png",
+    "prompt_file": "prompts/517.json",
+    "image_local": null
+  }
+]

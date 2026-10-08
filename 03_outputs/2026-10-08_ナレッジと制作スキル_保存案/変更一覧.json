@@ -1,0 +1,242 @@
+[
+  {
+    "path": "01_knowledge/01_brand/company_profile.md",
+    "action": "update",
+    "before_sha256": "712b455132e4c35a3fd4daafc00fd6dfcc995a44062e9ece2924c74ca3a2725e",
+    "after_sha256": "07478080f175e8ec987566ab2d3622b3d4f318819396be7605dab0fd827774f2"
+  },
+  {
+    "path": "01_knowledge/01_brand/colors_fonts/rules.md",
+    "action": "update",
+    "before_sha256": "a10c37f46dd2fc8d715b9c7875efe5b96e687210d3122bbfd1b04e069ec8fb16",
+    "after_sha256": "23bd4e7642aaf93e2b687379dae8902bfd858648fdd783684d256eae42ea26d1"
+  },
+  {
+    "path": "01_knowledge/01_brand/tone_voice/rules.md",
+    "action": "update",
+    "before_sha256": "f6c041ae614d051928904ffb0b71fdd340b566f5b7c3c9d1ff47857afd16bdbd",
+    "after_sha256": "d6494dca46f09f030c22270093929eafb96de2e15ab009ba6d467e0d0e04152f"
+  },
+  {
+    "path": "01_knowledge/01_brand/ng_rules/rules.md",
+    "action": "update",
+    "before_sha256": "ddbb2bf495748caa83307a41dc7a297ef5824e8bbeebcf2a3ff1a1de5a04639f",
+    "after_sha256": "54a050e6d99671a03312557830edef205875f38e7ceb19cb0db3d7dfd838ab21"
+  },
+  {
+    "path": "01_knowledge/01_brand/brand_summary.md",
+    "action": "update",
+    "before_sha256": "170acb0ab1334a8c70bb576e3c2eedb3cb184e0d084cfd49828d938dd84ebe8c",
+    "after_sha256": "363633e52cd6b641cadf1b48f19fe979d5cb2760eaf87d4794b4e781a45c4db9"
+  },
+  {
+    "path": "01_knowledge/01_brand/missing-info.md",
+    "action": "update",
+    "before_sha256": "b45b371fce9bc5d380603c48581ab068b50ece545615c20cfcb4edbcee265188",
+    "after_sha256": "0a8ccd47f6d45f91e795fee947fd7403b57c0d09d604aadf13ec8ff327e7c4e8"
+  },
+  {
+    "path": "01_knowledge/01_brand/source-map.md",
+    "action": "update",
+    "before_sha256": "f3c8e31afced80c4cc9bab6ac7654d476b277a6a66c6e79a3b795d7158e25c98",
+    "after_sha256": "6e1e17223810a93a11640efb700a2ae33a63d3569c1b37bab6b5995468f9cb90"
+  },
+  {
+    "path": "01_knowledge/01_brand/change-log.md",
+    "action": "update",
+    "before_sha256": "92204bdeb83ee4330e28a15594e6a16cad05d057de2ef5d7d3a49a506b95df0b",
+    "after_sha256": "808b557048d0047e9109b369a3963d44c13fccee7b9cb9e2800dfa21b7d53f48"
+  },
+  {
+    "path": "01_knowledge/02_product/product_summary.md",
+    "action": "update",
+    "before_sha256": "3886becf8375ed49a008c7055a536b66844392c9cab0ee8a84fc23fa4e2a4131",
+    "after_sha256": "deb5e00b8c10bfda8899c9c1696f91c68a2039c4a26cf76cfa0b28ddc4ba33ba"
+  },
+  {
+    "path": "01_knowledge/02_product/offer/service-models.md",
+    "action": "create",
+    "before_sha256": null,
+    "after_sha256": "e8f4de308c2a03c13e254901db587a03d44f733e65504fd16f1939937823cc94"
+  },
+  {
+    "path": "01_knowledge/02_product/offer/hp-plan.md",
+    "action": "create",
+    "before_sha256": null,
+    "after_sha256": "2dbbfa4b73ce58b7248668a5116a437780b5870355fe36fc2d3c9d001376bef1"
+  },
+  {
+    "path": "01_knowledge/02_product/offer/own-services.md",
+    "action": "create",
+    "before_sha256": null,
+    "after_sha256": "ecf1173d4acce8289cf6e59370a56a435fdb070d4267728081233cc4c8c9aae7"
+  },
+  {
+    "path": "01_knowledge/02_product/proof_faq/status.md",
+    "action": "create",
+    "before_sha256": null,
+    "after_sha256": "97bcf00fcbb30190634f65adfa7e7976e19141dcf69c5bd984cbc6d52ad63302"
+  },
+  {
+    "path": "01_knowledge/03_customer/customer_summary.md",
+    "action": "update",
+    "before_sha256": "a3cba2487dad2fe76bc05a39c082cd3751113354d3b060f61c33bea152e18f23",
+    "after_sha256": "f498d9fb7d71d7d0014e271e2872fa0d1d56521a662a3e7f4c62f2d89e285aa1"
+  },
+  {
+    "path": "01_knowledge/03_customer/persona_pains/audience.md",
+    "action": "create",
+    "before_sha256": null,
+    "after_sha256": "7f144e9e5c0f5ca25fbd429fd3889bcfcaa853d4c47f673e209ebe5a357a00b2"
+  },
+  {
+    "path": "01_knowledge/03_customer/voice_objections/heard-voices.md",
+    "action": "create",
+    "before_sha256": null,
+    "after_sha256": "0f200d8d89e661d03b6598e65b64c5d136fa963fc40cf42fdfec4af9eaa61699"
+  },
+  {
+    "path": "01_knowledge/04_assets_references/references_summary.md",
+    "action": "update",
+    "before_sha256": "8a8ffb4841e7ce9373d4e0b377ddf4788da0a4fbf20bf2ec6e7cae476981de81",
+    "after_sha256": "4277c6058943e9baee4bea24e242521f2f2494a832fb011a169bd9cca514449f"
+  },
+  {
+    "path": "01_knowledge/04_assets_references/inspiration_moodboard/index.md",
+    "action": "create",
+    "before_sha256": null,
+    "after_sha256": "31c29d4a0a07f3d8d24f4641669d8ffa4b9dd9e62683f963244018be4ee49016"
+  },
+  {
+    "path": "01_knowledge/04_assets_references/inspiration_moodboard/research-rules.md",
+    "action": "create",
+    "before_sha256": null,
+    "after_sha256": "81fdc0e1339c268942fc1785dd8ef0afc31f17ff341798226b100cd748849a9c"
+  },
+  {
+    "path": "01_knowledge/04_assets_references/owned_assets/status.md",
+    "action": "create",
+    "before_sha256": null,
+    "after_sha256": "537d0437e12f4a710a59cd53f8b8ede7e99d895c7dc7aa09d51c2ebc4648ba7b"
+  },
+  {
+    "path": "01_knowledge/04_assets_references/public_research_notes/verification.md",
+    "action": "create",
+    "before_sha256": null,
+    "after_sha256": "391df637edfa5c915a25174a680e7d316d2c04d00bb21fe4a58951a2f8e4b380"
+  },
+  {
+    "path": "01_knowledge/05_winning_feedback/feedback_summary.md",
+    "action": "update",
+    "before_sha256": "1d108f548b74a60f4524ac56b07f59c8f2c113cd06f794f19e063e14bf592027",
+    "after_sha256": "b6d0b7e129ba8f6544f10bd1aab2d049cbef206eaba4d8446b57794ead46f4d7"
+  },
+  {
+    "path": "01_knowledge/05_winning_feedback/checklists/review.md",
+    "action": "create",
+    "before_sha256": null,
+    "after_sha256": "ea7f03cdaae343700698040300e036b3acc95a2a6edbd593c31cadfa8cbfbb9e"
+  },
+  {
+    "path": "01_knowledge/05_winning_feedback/revision_logs/record-rules.md",
+    "action": "create",
+    "before_sha256": null,
+    "after_sha256": "9bef2caf4df7d3c90c3235b7d74f2f6cdb01f8f8adef152b77dba484f4988440"
+  },
+  {
+    "path": "01_knowledge/05_winning_feedback/winning_creatives/index.md",
+    "action": "create",
+    "before_sha256": null,
+    "after_sha256": "c1c65aa069ccda767a6cca3dce53043ba7f69c63a889bcdcbc8d4debf73ceab7"
+  },
+  {
+    "path": "01_knowledge/06_workflow/workflow_summary.md",
+    "action": "update",
+    "before_sha256": "02284c26a50baf7e7554cf13c22f604b86982a75cbd9e9fca25088f4b5fcc02c",
+    "after_sha256": "ed8114a7a30dc87012e91f84c9755f0be53b09b4aab139560d8ba78947a7ec19"
+  },
+  {
+    "path": "01_knowledge/06_workflow/hp-workflow.md",
+    "action": "create",
+    "before_sha256": null,
+    "after_sha256": "b09274f4135c2edea050b4cd649244b69f168c69b2a352f1e6809d75cdbb5854"
+  },
+  {
+    "path": "01_knowledge/06_workflow/service-workflow.md",
+    "action": "create",
+    "before_sha256": null,
+    "after_sha256": "bf3bfe18fa64bc6da8a97375b22370ae595f51516bb7983a0c490ef419fa4600"
+  },
+  {
+    "path": "01_knowledge/06_workflow/design-spec.md",
+    "action": "create",
+    "before_sha256": null,
+    "after_sha256": "e8ef8808982d602f618ac09184b925deb4ea975e30cbf9fe0b4993e17b1a4570"
+  },
+  {
+    "path": "01_knowledge/06_workflow/sales-handoff.md",
+    "action": "create",
+    "before_sha256": null,
+    "after_sha256": "bf9daf54b24d387675cb17e0f6f096549c35fc15d577ffb6e51374fb2e771557"
+  },
+  {
+    "path": "01_knowledge/06_workflow/intake/hp.md",
+    "action": "create",
+    "before_sha256": null,
+    "after_sha256": "1399e8803c64b8ef4be0c276dd742638e99b918b229c172285ed42ee66e87e0b"
+  },
+  {
+    "path": "01_knowledge/06_workflow/intake/service.md",
+    "action": "create",
+    "before_sha256": null,
+    "after_sha256": "7ad32aa4c86fcc14f98a2a7d3f4a007d0972e8777ebb9a9492157104f39529b5"
+  },
+  {
+    "path": "01_knowledge/06_workflow/intake/revision.md",
+    "action": "create",
+    "before_sha256": null,
+    "after_sha256": "6c09ef8d7def86319ef55f23ef5ab9e765fbb87da4bf38ec00ddeb2f293910c3"
+  },
+  {
+    "path": "01_knowledge/01_社内情報.md",
+    "action": "update",
+    "before_sha256": "0569c3faf69ae854bd49fb034fa04ae10f5cc1988384a04fc69acc219c11fb86",
+    "after_sha256": "bb428af9f17c846429e317c19a0f85f66c37fb1e2b6b604e2cfac8133504ba84"
+  },
+  {
+    "path": "01_knowledge/04_商品情報.md",
+    "action": "update",
+    "before_sha256": "0aaebee487d9a7de072793e24faa2a0befd28c0de5849f36b72addf625cac2ab",
+    "after_sha256": "6bc067f2348146d0aab3c7548f206371d4279110eee2e0a0496e795e447dc7b1"
+  },
+  {
+    "path": "01_knowledge/05_過去のコンテンツ.md",
+    "action": "update",
+    "before_sha256": "a5a4b83b80c77dd68383a6dfbd904024161335487af3501364dc0fb21d3f5211",
+    "after_sha256": "90d9a369197bf06d49b8b4fde29ddd8bcbdcc0d8e07b989da2dc2416fd736bd8"
+  },
+  {
+    "path": "01_knowledge/08_ブランドルール.md",
+    "action": "update",
+    "before_sha256": "515f8e2e5e37ce1b889e778a055793d487494cdb3966c7c0bfd53aa47f081575",
+    "after_sha256": "c4ae95c4ad1bf326e3d00309abe1528459ede5b60244cff6dbfe160edcc5777e"
+  },
+  {
+    "path": "AGENTS.md",
+    "action": "update",
+    "before_sha256": "e7cd3d648d5e80e35d855a0c8e0a12a4184de2de69f204964cd1b244893991b5",
+    "after_sha256": "92cac6c17045e200d06aa79d31cb153e687d6848a40538f432164b59d0324305"
+  },
+  {
+    "path": "04_skills/barkcore-hp-production/SKILL.md",
+    "action": "create",
+    "before_sha256": null,
+    "after_sha256": "e9cc70edf8c2df1ce4f11a0df1e1dad53d196d3a09324b2676d5e224130932e5"
+  },
+  {
+    "path": "04_skills/barkcore-service-demo/SKILL.md",
+    "action": "create",
+    "before_sha256": null,
+    "after_sha256": "1b06fd30e473a774400ac5c1df3bf062271d613bb1cbd295e4c5ce2c6687c200"
+  }
+]

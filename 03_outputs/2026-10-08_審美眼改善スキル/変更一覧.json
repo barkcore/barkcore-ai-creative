@@ -1,0 +1,32 @@
+[
+  {
+    "path": "AGENTS.md",
+    "before_sha256": "d5eae4dbb742774587b81f95fc451937de15ed63f687fd4094c36a5d00563494",
+    "after_sha256": "4aeebb4476ae6d826539dc2c70852c7d39ae45eba29b1859a7eaedb36154440f"
+  },
+  {
+    "path": "04_skills/barkcore-hp-production/SKILL.md",
+    "before_sha256": "e9cc70edf8c2df1ce4f11a0df1e1dad53d196d3a09324b2676d5e224130932e5",
+    "after_sha256": "7ceadf83fd154861d45ea36ed1e7405128a48177ba55d1c57a0a7715a1c2ea3e"
+  },
+  {
+    "path": "04_skills/barkcore-service-demo/SKILL.md",
+    "before_sha256": "1b06fd30e473a774400ac5c1df3bf062271d613bb1cbd295e4c5ce2c6687c200",
+    "after_sha256": "1f9e00c088953d44103380819d1e9297c559d8d2588e2aff6d61b5d643243ee5"
+  },
+  {
+    "path": "01_knowledge/06_workflow/hp-workflow.md",
+    "before_sha256": "c9e7f827d79bf716a7347fab9daf6be18e602e2928fc318db7f6ca24717aaf3f",
+    "after_sha256": "16b90c58a04cad173d474b907060452d32b3085bcabf28baa490a5edd5f9dbf1"
+  },
+  {
+    "path": "01_knowledge/06_workflow/service-workflow.md",
+    "before_sha256": "2d340f1a595b0ded9bf72983ed134e234c114f1c0fdc3e657c9e8042af88280f",
+    "after_sha256": "68f55cc4feacc2ce65739dfe9926b5344b03bc32548dae10aeaed0cb2ebb6a3a"
+  },
+  {
+    "path": "01_knowledge/05_winning_feedback/checklists/review.md",
+    "before_sha256": "945173a46013f0d820f8c5759ead3e7f9319057594a6f5de0d868dbdc18d8c6a",
+    "after_sha256": "80923df774bc72e9cb606577529ea4963e172bec88a3ce9719edade5576b1c87"
+  }
+]

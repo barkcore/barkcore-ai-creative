@@ -1,0 +1,14 @@
+{
+  "status": "applied",
+  "backup": "/Users/sudama/AI-Creative/03_outputs/knowledge-backups/2026-10-08_001815_ナレッジと制作スキル反映前",
+  "files": 41,
+  "updated": 18,
+  "created": 23,
+  "authorization": "本チャットの2026-10-08保存案反映への本人回答「はい」",
+  "manifest": "/Users/sudama/AI-Creative/03_outputs/2026-10-08_ナレッジと制作スキル_保存案/変更一覧_最終.json",
+  "notes": [
+    "標準スキル検証はPyYAML未導入で未実施。基本形式確認済み。",
+    "実案件の動作確認・参考スクショ取得・定期実行設定は未実施。",
+    "保存案の状態表記は元案の記録として保持。実際の反映状態はこの記録が正本。"
+  ]
+}

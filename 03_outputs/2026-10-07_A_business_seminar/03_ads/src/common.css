@@ -1,0 +1,20 @@
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1080px;overflow:hidden}
+body{font-family:"Noto Sans JP","Hiragino Sans","Hiragino Kaku Gothic ProN",sans-serif;color:#0B1F4B;position:relative;background:#fff}
+.abs{position:absolute}
+.brand{position:absolute;left:56px;top:48px;font-weight:800;font-size:26px;letter-spacing:.12em;color:#1F6BFF}
+.brand span{color:#0B1F4B;letter-spacing:.04em;font-weight:700;margin-left:14px;font-size:24px}
+.band{position:absolute;left:0;right:0;bottom:0;height:230px;background:#0B1F4B}
+.cta{position:absolute;left:44px;right:44px;bottom:36px;height:118px;border-radius:24px;background:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:58px;color:#1F6BFF;letter-spacing:.06em}
+.cta i{position:absolute;right:34px;width:64px;height:64px;border-radius:50%;background:#1F6BFF;color:#fff;font-style:normal;font-size:40px;display:flex;align-items:center;justify-content:center}
+.chips{position:absolute;left:44px;right:44px;bottom:172px;display:flex;gap:14px}
+.chip{flex:1;height:70px;border-radius:16px;background:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:30px;color:#0B1F4B;box-shadow:0 3px 0 rgba(0,0,0,.18)}
+.chip b{color:#1F6BFF;margin-right:8px}
+.note{position:absolute;font-size:18px;color:#5b6b8c;font-weight:500}
+.doc{background:#fff;border-radius:18px;box-shadow:0 14px 40px rgba(11,31,75,.22);border:2px solid #D5E0F5;overflow:hidden}
+.doc h4{background:#0B1F4B;color:#fff;font-size:26px;font-weight:800;padding:16px 24px;letter-spacing:.06em}
+.doc .row{padding:14px 24px;border-bottom:2px dashed #D5E0F5}
+.doc .row small{display:block;font-size:19px;font-weight:700;color:#1F6BFF;margin-bottom:6px}
+.doc .row p{font-size:24px;font-weight:700;line-height:1.35}
+.doc .row p.empty{color:#B5C0D8;font-weight:500}
+.rule{position:absolute;height:8px;width:160px;background:#1F6BFF;border-radius:4px}

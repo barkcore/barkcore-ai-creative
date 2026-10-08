@@ -1,0 +1,8 @@
+{
+  "status": "generated",
+  "purpose": "BarkCoreの事業紹介ホームページ用PC版FV",
+  "image": "fv.png",
+  "description": "design-notes.md",
+  "attempts": 1,
+  "verification": "生成画像を目視確認。主見出し・社名の誤字、文字切れ、架空実績、NG表現なし。"
+}

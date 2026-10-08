@@ -1,0 +1,31 @@
+{
+  "version": 2,
+  "session_id": "initial-2026-10-07",
+  "status": "completed",
+  "limit": 10,
+  "asked": [],
+  "updates": [
+    {
+      "session_id": "update-2026-10-07-brand-meaning",
+      "status": "completed",
+      "limit": 10,
+      "asked": [
+        {
+          "number": 1,
+          "topic": "impression_priority",
+          "question": "BarkCoreを見た人に、いちばん感じてほしいのはどれですか？",
+          "status": "answered",
+          "answer": "1>3って感じかな"
+        },
+        {
+          "number": 2,
+          "topic": "overwrite_permission",
+          "question": "この内容で、元の資料と今回作ったナレッジの関連箇所を更新してよいですか？",
+          "status": "answered",
+          "answer": "はい。"
+        }
+      ],
+      "record_note": "既に行った更新会話の質問履歴を追記。初回の台帳は保持。"
+    }
+  ]
+}

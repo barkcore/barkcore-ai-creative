@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>セットアップ完了カード</title>
+<style>
+  :root{
+    --o1:#ff8a1f; --o2:#ffb25c; --o3:#ffe3c2; --o4:#fff5e8;
+    --ink:#3a2a1c; --sub:#8a6a4c;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:#fdf1e3;}
+  body{
+    min-height:100vh; display:flex; align-items:center; justify-content:center; padding:16px;
+    font-family:"Hiragino Kaku Gothic ProN","Hiragino Kaku Gothic Pro","ヒラギノ角ゴ ProN W3","Hiragino Sans",sans-serif;
+    color:var(--ink);
+  }
+  .card{
+    container-type:inline-size;
+    position:relative; width:min(100%,1200px); aspect-ratio:3/2; overflow:hidden;
+    border-radius:2.2cqw;
+    background:
+      radial-gradient(60cqw 45cqw at 85% 10%, rgba(255,178,92,.38), transparent 70%),
+      radial-gradient(50cqw 40cqw at 0% 100%, rgba(255,214,170,.55), transparent 70%),
+      linear-gradient(160deg,#ffffff 0%,#fff8ef 100%);
+    box-shadow:0 20px 60px rgba(255,138,31,.25), 0 0 0 .25cqw var(--o3) inset;
+  }
+  .bg{position:absolute;inset:0;width:100%;height:100%}
+  .glow{animation:pulse 3s ease-in-out infinite}
+  @keyframes pulse{50%{opacity:.35}}
+  .conf{animation:fall 6s linear infinite}
+  @keyframes fall{from{transform:translateY(-40px)}to{transform:translateY(40px)}}
+  @media (prefers-reduced-motion:reduce){.glow,.conf,.mascot{animation:none!important}}
+
+  .content{position:absolute;inset:0;padding:3.6cqw 5cqw 3.2cqw 5cqw;display:flex;flex-direction:column}
+  .badge{
+    align-self:flex-start; display:inline-flex; align-items:center; gap:1cqw;
+    font-weight:900; font-size:2.1cqw; letter-spacing:.2em; color:#fff;
+    background:linear-gradient(90deg,var(--o1),var(--o2)); padding:.7cqw 2.2cqw .7cqw 1.8cqw; border-radius:10cqw;
+    box-shadow:0 .6cqw 1.6cqw rgba(255,138,31,.35);
+  }
+  .badge i{width:1.2cqw;height:1.2cqw;border-radius:50%;background:#fff;box-shadow:0 0 1cqw #fff}
+  h1{font-size:7.4cqw;line-height:1.1;font-weight:900;margin-top:1.4cqw;letter-spacing:.02em;
+     background:linear-gradient(90deg,#ff7a00,#ffb25c 60%,#ff8a1f);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .info{margin-top:1.8cqw;width:64cqw;display:grid;gap:1cqw}
+  .row{
+    background:rgba(255,255,255,.82); border:.2cqw solid var(--o3); border-radius:1.4cqw;
+    padding:.9cqw 1.8cqw; display:grid; grid-template-columns:19cqw 1fr; align-items:center; column-gap:1.4cqw;
+    box-shadow:0 .5cqw 1.6cqw rgba(255,138,31,.10); backdrop-filter:blur(2px);
+  }
+  .row dt{white-space:nowrap;font-size:1.7cqw;font-weight:700;color:var(--o1);display:flex;align-items:center;gap:.8cqw}
+  .row dt::before{content:"";width:.9cqw;height:.9cqw;border-radius:50%;background:var(--o1);box-shadow:0 0 .9cqw var(--o2)}
+  .row dd{font-size:2.3cqw;font-weight:800;line-height:1.35}
+  .row.name dd{font-size:3.6cqw;letter-spacing:.06em}
+  .row.date dd{font-size:2.3cqw;letter-spacing:.12em;font-variant-numeric:tabular-nums}
+  .msg{margin-top:auto;padding-top:1cqw;font-size:3cqw;font-weight:900;color:var(--ink);letter-spacing:.04em}
+  .msg span{background:linear-gradient(transparent 62%,var(--o3) 62%);padding:0 .6cqw}
+
+  .mascot{position:absolute;right:2cqw;bottom:1.5cqw;width:30cqw;height:auto;animation:float 3.6s ease-in-out infinite}
+  @keyframes float{50%{transform:translateY(-1.2cqw)}}
+
+  /* 狭い画面：縦並びにして崩れないようにする */
+  @container (max-width:640px){
+    .card{}
+  }
+  @media (max-width:640px){
+    body{padding:10px}
+  }
+
+  @media print{
+    @page{size:1200px 800px;margin:0}
+    html,body{background:#fff!important;width:1200px;height:800px;padding:0;margin:0;display:block;min-height:0}
+    .card{width:1200px;height:800px;border-radius:0;box-shadow:none;print-color-adjust:exact;-webkit-print-color-adjust:exact}
+    .glow,.conf,.mascot{animation:none!important}
+  }
+</style>
+</head>
+<body>
+<main class="card" role="img" aria-label="セットアップ完了カード">
+
+  <!-- 背景：回路・つながる点・ホログラム・紙吹雪 -->
+  <svg class="bg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs>
+      <linearGradient id="holo" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#ffd2a0" stop-opacity=".0"/>
+        <stop offset=".35" stop-color="#ffe9c9" stop-opacity=".9"/>
+        <stop offset=".6" stop-color="#ffc7e0" stop-opacity=".55"/>
+        <stop offset=".85" stop-color="#bfe9ff" stop-opacity=".55"/>
+        <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+      </linearGradient>
+      <radialGradient id="halo"><stop offset="0" stop-color="#ffb25c" stop-opacity=".55"/><stop offset="1" stop-color="#ffb25c" stop-opacity="0"/></radialGradient>
+    </defs>
+    <!-- ホログラムの光 -->
+    <ellipse cx="985" cy="470" rx="250" ry="250" fill="url(#halo)"/>
+    <ellipse cx="985" cy="700" rx="190" ry="34" fill="url(#holo)"/>
+    <ellipse cx="985" cy="700" rx="130" ry="20" fill="none" stroke="#ff9a3c" stroke-opacity=".5" stroke-width="2"/>
+    <polygon points="760,120 1160,60 1190,300 820,360" fill="url(#holo)" opacity=".5"/>
+    <!-- 光る回路 -->
+    <g fill="none" stroke="#ff9a3c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity=".55" class="glow">
+      <path d="M700 60 H800 L840 100 H960 L990 70 H1140"/>
+      <path d="M1200 210 H1100 L1070 240 H930 L900 210 H820"/>
+      <path d="M700 760 H820 L860 720 H1000 L1030 750 H1200"/>
+      <path d="M0 120 H60 L90 150 H200"/>
+      <path d="M0 700 H90 L120 730 H260 L290 760 H400"/>
+      <path d="M640 330 V250 L680 210 V150"/>
+    </g>
+    <g fill="#ff8a1f" opacity=".85">
+      <circle cx="700" cy="60" r="5"/><circle cx="1140" cy="70" r="5"/><circle cx="820" cy="210" r="5"/>
+      <circle cx="1200" cy="210" r="4"/><circle cx="700" cy="760" r="5"/><circle cx="1200" cy="750" r="4"/>
+      <circle cx="200" cy="150" r="4"/><circle cx="400" cy="760" r="4"/><circle cx="680" cy="150" r="5"/>
+    </g>
+    <!-- つながる点 -->
+    <g stroke="#ffb25c" stroke-width="1.5" opacity=".7" class="glow">
+      <line x1="720" y1="420" x2="790" y2="380"/><line x1="790" y1="380" x2="860" y2="430"/>
+      <line x1="860" y1="430" x2="900" y2="340"/><line x1="900" y1="340" x2="790" y2="380"/>
+      <line x1="1090" y1="360" x2="1150" y2="410"/><line x1="1150" y1="410" x2="1110" y2="480"/>
+      <line x1="1110" y1="480" x2="1090" y2="360"/><line x1="1150" y1="410" x2="1180" y2="330"/>
+    </g>
+    <g fill="#fff" stroke="#ff8a1f" stroke-width="2.5">
+      <circle cx="720" cy="420" r="6"/><circle cx="790" cy="380" r="7"/><circle cx="860" cy="430" r="6"/><circle cx="900" cy="340" r="6"/>
+      <circle cx="1090" cy="360" r="6"/><circle cx="1150" cy="410" r="7"/><circle cx="1110" cy="480" r="6"/><circle cx="1180" cy="330" r="5"/>
+    </g>
+    <!-- 紙吹雪 -->
+    <g class="conf">
+      <rect x="690" y="110" width="16" height="8" rx="2" fill="#ff8a1f" transform="rotate(25 690 110)"/>
+      <rect x="1040" y="130" width="14" height="7" rx="2" fill="#ffb25c" transform="rotate(-30 1040 130)"/>
+      <rect x="880" y="60" width="12" height="12" rx="6" fill="#ffd34d"/>
+      <rect x="1120" y="190" width="16" height="8" rx="2" fill="#ff6f91" transform="rotate(50 1120 190)"/>
+      <rect x="760" y="250" width="14" height="7" rx="2" fill="#5ec8ff" transform="rotate(-15 760 250)"/>
+      <rect x="1170" y="540" width="14" height="7" rx="2" fill="#ff8a1f" transform="rotate(35 1170 540)"/>
+      <rect x="700" y="560" width="12" height="12" rx="6" fill="#ffb25c"/>
+      <rect x="930" y="170" width="10" height="10" rx="5" fill="#ff6f91"/>
+      <rect x="1010" y="230" width="16" height="8" rx="2" fill="#ffd34d" transform="rotate(70 1010 230)"/>
+      <rect x="660" y="330" width="14" height="7" rx="2" fill="#5ec8ff" transform="rotate(20 660 330)"/>
+      <rect x="1060" y="40" width="12" height="12" rx="6" fill="#ff8a1f"/>
+      <rect x="820" y="640" width="14" height="7" rx="2" fill="#ff6f91" transform="rotate(-40 820 640)"/>
+      <path d="M1100 600 l8 14 l-16 0z" fill="#ffd34d"/>
+      <path d="M740 80 l8 14 l-16 0z" fill="#5ec8ff"/>
+      <path d="M1000 520 l8 14 l-16 0z" fill="#ff8a1f"/>
+    </g>
+  </svg>
+
+  <!-- マスコット -->
+  <svg class="mascot" viewBox="0 0 300 380" aria-hidden="true">
+    <defs>
+      <linearGradient id="body" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#ffeedd"/></linearGradient>
+      <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffb25c"/><stop offset="1" stop-color="#ff7a00"/></linearGradient>
+    </defs>
+    <ellipse cx="150" cy="365" rx="95" ry="12" fill="#ff8a1f" opacity=".18"/>
+    <!-- 足 -->
+    <ellipse cx="112" cy="352" rx="27" ry="14" fill="#fff" stroke="#ffcf9d" stroke-width="3"/>
+    <ellipse cx="188" cy="352" rx="27" ry="14" fill="#fff" stroke="#ffcf9d" stroke-width="3"/>
+    <!-- 体 -->
+    <ellipse cx="150" cy="275" rx="82" ry="78" fill="url(#body)" stroke="#ffcf9d" stroke-width="4"/>
+    <ellipse cx="150" cy="290" rx="40" ry="38" fill="#fff" opacity=".8"/>
+    <circle cx="150" cy="268" r="9" fill="#ff8a1f"/><circle cx="150" cy="268" r="4" fill="#fff"/>
+    <!-- 左腕（下げている） -->
+    <path d="M78 265 Q52 290 62 320" fill="none" stroke="#ffcf9d" stroke-width="22" stroke-linecap="round"/>
+    <path d="M78 265 Q52 290 62 320" fill="none" stroke="#fff" stroke-width="15" stroke-linecap="round"/>
+    <!-- 右腕＋グッド（親指） -->
+    <path d="M222 262 Q262 250 252 205" fill="none" stroke="#ffcf9d" stroke-width="22" stroke-linecap="round"/>
+    <path d="M222 262 Q262 250 252 205" fill="none" stroke="#fff" stroke-width="15" stroke-linecap="round"/>
+    <g stroke="#ffcf9d" stroke-width="3" stroke-linejoin="round">
+      <!-- 握りこぶし -->
+      <rect x="226" y="176" width="52" height="40" rx="16" fill="#fff"/>
+      <!-- 親指 -->
+      <rect x="244" y="132" width="20" height="52" rx="10" fill="#fff"/>
+    </g>
+    <g fill="none" stroke="#ffcf9d" stroke-width="2.5" stroke-linecap="round">
+      <path d="M232 192 H272"/><path d="M234 203 H270"/>
+    </g>
+    <!-- キラキラ -->
+    <g fill="#ffd34d">
+      <path d="M284 110 l4 12 12 4 -12 4 -4 12 -4 -12 -12 -4 12 -4z"/>
+      <path d="M222 120 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3z"/>
+    </g>
+    <!-- 首 -->
+    <rect x="132" y="190" width="36" height="18" rx="6" fill="#ffcf9d"/>
+    <!-- アンテナ -->
+    <line x1="150" y1="22" x2="150" y2="46" stroke="#ffcf9d" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="150" cy="18" r="9" fill="#ff8a1f"/><circle cx="150" cy="18" r="16" fill="#ff8a1f" opacity=".2"/>
+    <!-- 頭（モニター） -->
+    <rect x="42" y="44" width="216" height="154" rx="30" fill="#fff" stroke="#ffcf9d" stroke-width="5"/>
+    <rect x="58" y="60" width="184" height="122" rx="20" fill="url(#screen)"/>
+    <rect x="66" y="66" width="168" height="40" rx="14" fill="#fff" opacity=".22"/>
+    <text x="150" y="146" text-anchor="middle" font-family="Arial Black,Helvetica,sans-serif" font-weight="900" font-size="64" fill="#fff" letter-spacing="3">AI</text>
+    <!-- ほっぺ -->
+    <circle cx="74" cy="170" r="7" fill="#fff" opacity=".35"/><circle cx="226" cy="170" r="7" fill="#fff" opacity=".35"/>
+    <!-- 耳 -->
+    <rect x="30" y="100" width="14" height="38" rx="7" fill="#ffcf9d"/>
+    <rect x="256" y="100" width="14" height="38" rx="7" fill="#ffcf9d"/>
+  </svg>
+
+  <!-- 文字 -->
+  <div class="content">
+    <div class="badge"><i></i>セットアップ完了</div>
+    <h1>おめでとう！</h1>
+    <dl class="info">
+      <div class="row name"><dt>お名前</dt><dd>すだま</dd></div>
+      <div class="row"><dt>今後の目標</dt><dd>AIでデザイン制作を効率化して、デザインの正解を出す</dd></div>
+      <div class="row"><dt>大切にしていること</dt><dd>お客さんの言葉にならない思いまで読み取って、つくる。</dd></div>
+      <div class="row date"><dt>日付</dt><dd>2026.10.07</dd></div>
+    </dl>
+    <p class="msg"><span>ここから、AIと一緒に作ろう。</span></p>
+  </div>
+</main>
+</body>
+</html>

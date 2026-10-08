@@ -1,0 +1,6072 @@
+[
+  {
+    "id": 170,
+    "category": "LP",
+    "image_local": "images/170.jpg",
+    "prompt_file": "prompts/170.json",
+    "layout_signals": [
+      "large-type",
+      "photo-person",
+      "speech-bubble",
+      "steps",
+      "offer",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "90日で",
+        "characters": 4
+      },
+      {
+        "text": "90",
+        "characters": 2
+      },
+      {
+        "text": "日で",
+        "characters": 2
+      },
+      {
+        "text": "AIデザイン副業マスター講座",
+        "characters": 14
+      },
+      {
+        "text": "AI Design Academy",
+        "characters": 15
+      },
+      {
+        "text": "＼ AIで加速する、あなただけの「稼ぐデザイン力",
+        "characters": 23
+      },
+      {
+        "text": "動画で学ぶ／オンライン完結",
+        "characters": 13
+      },
+      {
+        "text": "いつでも学べる／自分のペースでOK",
+        "characters": 17
+      },
+      {
+        "text": "質問し放題の／サポート付き",
+        "characters": 13
+      },
+      {
+        "text": "すぐに使える／素材・テンプレ付き",
+        "characters": 16
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 171,
+    "category": "LP",
+    "image_local": "images/171.jpg",
+    "prompt_file": "prompts/171.json",
+    "layout_signals": [
+      "large-type",
+      "photo-person",
+      "speech-bubble",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "こんなお悩み、",
+        "characters": 7
+      },
+      {
+        "text": "こんな",
+        "characters": 3
+      },
+      {
+        "text": "お悩み",
+        "characters": 3
+      },
+      {
+        "text": "ありませんか？",
+        "characters": 7
+      },
+      {
+        "text": "その悩み、センス不足ではなく",
+        "characters": 14
+      },
+      {
+        "text": "“学ぶ順番”の",
+        "characters": 7
+      },
+      {
+        "text": "の",
+        "characters": 1
+      },
+      {
+        "text": "問題かもしれません。",
+        "characters": 10
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 172,
+    "category": "LP",
+    "image_local": "images/172.jpg",
+    "prompt_file": "prompts/172.json",
+    "layout_signals": [
+      "large-type",
+      "comparison",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "なぜ多くの人が",
+        "characters": 7
+      },
+      {
+        "text": "結果を出せないのか？",
+        "characters": 10
+      },
+      {
+        "text": "理由",
+        "characters": 2
+      },
+      {
+        "text": "1",
+        "characters": 1
+      },
+      {
+        "text": "「作ること",
+        "characters": 5
+      },
+      {
+        "text": "作ること",
+        "characters": 4
+      },
+      {
+        "text": "学んでいる",
+        "characters": 5
+      },
+      {
+        "text": "見た目は整っても、売れる導線設計が抜けている。",
+        "characters": 23
+      },
+      {
+        "text": "売れる導線設計",
+        "characters": 7
+      },
+      {
+        "text": "独学と成果につながる学びの違い",
+        "characters": 15
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 173,
+    "category": "LP",
+    "image_local": "images/173.jpg",
+    "prompt_file": "prompts/173.json",
+    "layout_signals": [
+      "large-type",
+      "speech-bubble",
+      "sans",
+      "handwritten"
+    ],
+    "headline_candidates": [
+      {
+        "text": "AI Design Academyで",
+        "characters": 16
+      },
+      {
+        "text": "で",
+        "characters": 1
+      },
+      {
+        "text": "身につくこと",
+        "characters": 6
+      },
+      {
+        "text": "学ぶだけで終わらず、",
+        "characters": 10
+      },
+      {
+        "text": "“仕事にする”ための力まで身につく。",
+        "characters": 18
+      },
+      {
+        "text": "“仕事にする”",
+        "characters": 7
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 174,
+    "category": "LP",
+    "image_local": "images/174.jpg",
+    "prompt_file": "prompts/174.json",
+    "layout_signals": [
+      "large-type",
+      "speech-bubble",
+      "steps"
+    ],
+    "headline_candidates": [
+      {
+        "text": "未経験から",
+        "characters": 5
+      },
+      {
+        "text": "90日で進む",
+        "characters": 6
+      },
+      {
+        "text": "90",
+        "characters": 2
+      },
+      {
+        "text": "日で進む",
+        "characters": 4
+      },
+      {
+        "text": "3STEPロードマップ",
+        "characters": 11
+      },
+      {
+        "text": "3STEP",
+        "characters": 5
+      },
+      {
+        "text": "ロードマップ",
+        "characters": 6
+      },
+      {
+        "text": "STEP",
+        "characters": 4
+      },
+      {
+        "text": "1",
+        "characters": 1
+      },
+      {
+        "text": "期間の目安",
+        "characters": 5
+      },
+      {
+        "text": "1~30日目",
+        "characters": 6
+      },
+      {
+        "text": "基礎を整える",
+        "characters": 6
+      },
+      {
+        "text": "AIツールの使い方",
+        "characters": 9
+      },
+      {
+        "text": "デザインの土台",
+        "characters": 7
+      },
+      {
+        "text": "売れる構成の基本",
+        "characters": 8
+      },
+      {
+        "text": "AIとデザインの基礎をインプットし、土台を固めます。",
+        "characters": 26
+      },
+      {
+        "text": "土台を固めます",
+        "characters": 7
+      },
+      {
+        "text": "2",
+        "characters": 1
+      },
+      {
+        "text": "31~60日目",
+        "characters": 7
+      },
+      {
+        "text": "作って身につける",
+        "characters": 8
+      },
+      {
+        "text": "LP・バナー・SNS",
+        "characters": 10
+      },
+      {
+        "text": "クリエイティブ制作演習",
+        "characters": 11
+      },
+      {
+        "text": "フィードバック",
+        "characters": 7
+      },
+      {
+        "text": "実践演習で手を動かし、プロからのフィードバックで成長加速。",
+        "characters": 29
+      },
+      {
+        "text": "成長加速",
+        "characters": 4
+      },
+      {
+        "text": "3",
+        "characters": 1
+      },
+      {
+        "text": "61~90日目",
+        "characters": 7
+      },
+      {
+        "text": "案件化する",
+        "characters": 5
+      },
+      {
+        "text": "ポートフォリオ",
+        "characters": 7
+      },
+      {
+        "text": "提案文",
+        "characters": 3
+      },
+      {
+        "text": "受注導線",
+        "characters": 4
+      },
+      {
+        "text": "初案件チャレンジ",
+        "characters": 8
+      },
+      {
+        "text": "案件獲得に必要な準備を整え、初案件の受注にチャレンジ！",
+        "characters": 27
+      },
+      {
+        "text": "初案件の受注にチャレンジ！",
+        "characters": 13
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 175,
+    "category": "LP",
+    "image_local": "images/175.jpg",
+    "prompt_file": "prompts/175.json",
+    "layout_signals": [
+      "large-type",
+      "photo-person",
+      "speech-bubble",
+      "offer",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "挫折させない",
+        "characters": 6
+      },
+      {
+        "text": "サポート体制",
+        "characters": 6
+      },
+      {
+        "text": "質問し放題",
+        "characters": 5
+      },
+      {
+        "text": "チャットサポート",
+        "characters": 8
+      },
+      {
+        "text": "提出課題への",
+        "characters": 6
+      },
+      {
+        "text": "フィードバック",
+        "characters": 7
+      },
+      {
+        "text": "いつでも見返せる",
+        "characters": 8
+      },
+      {
+        "text": "動画講義",
+        "characters": 4
+      },
+      {
+        "text": "案件獲得",
+        "characters": 4
+      },
+      {
+        "text": "テンプレート配布",
+        "characters": 8
+      },
+      {
+        "text": "今だけの参加特典",
+        "characters": 8
+      },
+      {
+        "text": "参加特典",
+        "characters": 4
+      },
+      {
+        "text": "LP構成",
+        "characters": 4
+      },
+      {
+        "text": "テンプレート集",
+        "characters": 7
+      },
+      {
+        "text": "そのまま使える構成案で",
+        "characters": 11
+      },
+      {
+        "text": "制作時間を大幅短縮！",
+        "characters": 10
+      },
+      {
+        "text": "提案文・営業文",
+        "characters": 7
+      },
+      {
+        "text": "テンプレート",
+        "characters": 6
+      },
+      {
+        "text": "クライアントに響く",
+        "characters": 9
+      },
+      {
+        "text": "提案文の型をプレゼント！",
+        "characters": 12
+      },
+      {
+        "text": "SNS投稿",
+        "characters": 5
+      },
+      {
+        "text": "デザイン素材",
+        "characters": 6
+      },
+      {
+        "text": "すぐに使えるおしゃれな",
+        "characters": 11
+      },
+      {
+        "text": "投稿素材を多数ご用意！",
+        "characters": 11
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 176,
+    "category": "LP",
+    "image_local": "images/176.jpg",
+    "prompt_file": "prompts/176.json",
+    "layout_signals": [
+      "large-type",
+      "photo-person",
+      "steps",
+      "offer",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "受講生の変化・実績",
+        "characters": 9
+      },
+      {
+        "text": "Section",
+        "characters": 7
+      },
+      {
+        "text": "7",
+        "characters": 1
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 177,
+    "category": "LP",
+    "image_local": "images/177.jpg",
+    "prompt_file": "prompts/177.json",
+    "layout_signals": [
+      "large-type",
+      "speech-bubble",
+      "steps",
+      "offer",
+      "comparison",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "選ばれる理由",
+        "characters": 6
+      },
+      {
+        "text": "選ばれる",
+        "characters": 4
+      },
+      {
+        "text": "理由",
+        "characters": 2
+      },
+      {
+        "text": "AIとデザインを",
+        "characters": 8
+      },
+      {
+        "text": "同時に学べる",
+        "characters": 6
+      },
+      {
+        "text": "AI",
+        "characters": 2
+      },
+      {
+        "text": "デザイン",
+        "characters": 4
+      },
+      {
+        "text": "学習だけでなく",
+        "characters": 7
+      },
+      {
+        "text": "案件化までサポート",
+        "characters": 9
+      },
+      {
+        "text": "案件化",
+        "characters": 3
+      },
+      {
+        "text": "未経験でも",
+        "characters": 5
+      },
+      {
+        "text": "続けやすい設計",
+        "characters": 7
+      },
+      {
+        "text": "一般的な動画講座との違い",
+        "characters": 12
+      },
+      {
+        "text": "“学ぶ”から“稼ぐ”までをつなぐから、",
+        "characters": 19
+      },
+      {
+        "text": "学ぶ",
+        "characters": 2
+      },
+      {
+        "text": "稼ぐ",
+        "characters": 2
+      },
+      {
+        "text": "結果につながる。",
+        "characters": 8
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 178,
+    "category": "LP",
+    "image_local": "images/178.jpg",
+    "prompt_file": "prompts/178.json",
+    "layout_signals": [
+      "large-type",
+      "speech-bubble",
+      "steps",
+      "offer",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "充実のカリキュラムと特典で",
+        "characters": 13
+      },
+      {
+        "text": "特典",
+        "characters": 2
+      },
+      {
+        "text": "最短で“稼ぐデザイナー”へ",
+        "characters": 13
+      },
+      {
+        "text": "稼ぐデザイナー",
+        "characters": 7
+      },
+      {
+        "text": "動画講義",
+        "characters": 4
+      },
+      {
+        "text": "いつでも学べる",
+        "characters": 7
+      },
+      {
+        "text": "分かりやすい解説",
+        "characters": 8
+      },
+      {
+        "text": "課題添削",
+        "characters": 4
+      },
+      {
+        "text": "現役デザイナーが",
+        "characters": 8
+      },
+      {
+        "text": "丁寧にフィードバック",
+        "characters": 10
+      },
+      {
+        "text": "チャット",
+        "characters": 4
+      },
+      {
+        "text": "サポート",
+        "characters": 4
+      },
+      {
+        "text": "質問し放題で",
+        "characters": 6
+      },
+      {
+        "text": "つまずきを解消",
+        "characters": 7
+      },
+      {
+        "text": "テンプレート集",
+        "characters": 7
+      },
+      {
+        "text": "すぐに使える",
+        "characters": 6
+      },
+      {
+        "text": "デザイン素材を提供",
+        "characters": 9
+      },
+      {
+        "text": "特典3種",
+        "characters": 4
+      },
+      {
+        "text": "豪華特典で",
+        "characters": 5
+      },
+      {
+        "text": "学習を加速！",
+        "characters": 6
+      },
+      {
+        "text": "期間限定キャンペーン",
+        "characters": 10
+      },
+      {
+        "text": "通常価格",
+        "characters": 4
+      },
+      {
+        "text": "69,800円（税込）",
+        "characters": 11
+      },
+      {
+        "text": "円（税込）",
+        "characters": 5
+      },
+      {
+        "text": "期間限定",
+        "characters": 4
+      },
+      {
+        "text": "29,800円",
+        "characters": 7
+      },
+      {
+        "text": "円",
+        "characters": 1
+      },
+      {
+        "text": "（税込）",
+        "characters": 4
+      },
+      {
+        "text": "先着",
+        "characters": 2
+      },
+      {
+        "text": "50名",
+        "characters": 3
+      },
+      {
+        "text": "限定",
+        "characters": 2
+      },
+      {
+        "text": "今月末まで",
+        "characters": 5
+      },
+      {
+        "text": "お得なこの機会を",
+        "characters": 8
+      },
+      {
+        "text": "お見逃しなく！",
+        "characters": 7
+      },
+      {
+        "text": "分割払いOK",
+        "characters": 6
+      },
+      {
+        "text": "月々2,767円〜※",
+        "characters": 10
+      },
+      {
+        "text": "無理なく始められます",
+        "characters": 10
+      },
+      {
+        "text": "完全オンライン",
+        "characters": 7
+      },
+      {
+        "text": "どこからでも学べる",
+        "characters": 9
+      },
+      {
+        "text": "スマホ・PC対応",
+        "characters": 8
+      },
+      {
+        "text": "スキマ時間でOK",
+        "characters": 8
+      },
+      {
+        "text": "未経験歓迎",
+        "characters": 5
+      },
+      {
+        "text": "初心者からプロへ",
+        "characters": 8
+      },
+      {
+        "text": "※分割払いはクレジットカード決済（3回・6回・12回）でのお支払い例です。",
+        "characters": 37
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 179,
+    "category": "LP",
+    "image_local": "images/179.jpg",
+    "prompt_file": "prompts/179.json",
+    "layout_signals": [
+      "large-type",
+      "photo-person",
+      "speech-bubble",
+      "offer",
+      "faq",
+      "serif",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "次に変わるのは、",
+        "characters": 8
+      },
+      {
+        "text": "あなたです。",
+        "characters": 6
+      },
+      {
+        "text": "＼ 未経験から90日でデザインスキルと案件獲得へ ／",
+        "characters": 24
+      },
+      {
+        "text": "90日",
+        "characters": 3
+      },
+      {
+        "text": "AI Design Academy",
+        "characters": 15
+      },
+      {
+        "text": "LINE登録で3大特典プレゼント",
+        "characters": 16
+      },
+      {
+        "text": "3",
+        "characters": 1
+      },
+      {
+        "text": "無料説明動画を受け取る",
+        "characters": 11
+      },
+      {
+        "text": "未経験歓迎",
+        "characters": 5
+      },
+      {
+        "text": "オンライン完結",
+        "characters": 7
+      },
+      {
+        "text": "質問サポート付き",
+        "characters": 8
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 191,
+    "category": "LP",
+    "image_local": "images/191.jpg",
+    "prompt_file": "prompts/191.json",
+    "layout_signals": [
+      "large-type",
+      "photo-person",
+      "product-hero",
+      "speech-bubble",
+      "offer",
+      "serif"
+    ],
+    "headline_candidates": [
+      {
+        "text": "No.1",
+        "characters": 4
+      },
+      {
+        "text": "売れ筋人気",
+        "characters": 5
+      },
+      {
+        "text": "美容液",
+        "characters": 3
+      },
+      {
+        "text": "累計販売本数",
+        "characters": 6
+      },
+      {
+        "text": "120万本",
+        "characters": 5
+      },
+      {
+        "text": "突破！",
+        "characters": 3
+      },
+      {
+        "text": "※2",
+        "characters": 2
+      },
+      {
+        "text": "うるおいに満ちた",
+        "characters": 8
+      },
+      {
+        "text": "透明感",
+        "characters": 3
+      },
+      {
+        "text": "のある",
+        "characters": 3
+      },
+      {
+        "text": "ハリ美肌へ",
+        "characters": 5
+      },
+      {
+        "text": "※3",
+        "characters": 2
+      },
+      {
+        "text": "忙しい朝も、疲れた夜も",
+        "characters": 11
+      },
+      {
+        "text": "これ1本の",
+        "characters": 5
+      },
+      {
+        "text": "簡単オールインワンケア",
+        "characters": 11
+      },
+      {
+        "text": "本日限定！",
+        "characters": 5
+      },
+      {
+        "text": "24時間限定！特別キャンペーン実施中！",
+        "characters": 19
+      },
+      {
+        "text": "500円OFFクーポン配布中！",
+        "characters": 15
+      },
+      {
+        "text": "500",
+        "characters": 3
+      },
+      {
+        "text": "OFF",
+        "characters": 3
+      },
+      {
+        "text": "クーポンは自動適用されます",
+        "characters": 13
+      },
+      {
+        "text": "初回限定",
+        "characters": 4
+      },
+      {
+        "text": "お1人様",
+        "characters": 4
+      },
+      {
+        "text": "1点限り",
+        "characters": 4
+      },
+      {
+        "text": "RICHMOIST VC セラム",
+        "characters": 14
+      },
+      {
+        "text": "〈美容液〉内容量：50mL（約1ヶ月分）",
+        "characters": 20
+      },
+      {
+        "text": "通常価格",
+        "characters": 4
+      },
+      {
+        "text": "6,980円（税込）",
+        "characters": 10
+      },
+      {
+        "text": "64% OFF",
+        "characters": 6
+      },
+      {
+        "text": "1,980円",
+        "characters": 6
+      },
+      {
+        "text": "（税込）",
+        "characters": 4
+      },
+      {
+        "text": "たっぷり",
+        "characters": 4
+      },
+      {
+        "text": "約1ヶ月分",
+        "characters": 5
+      },
+      {
+        "text": "簡単",
+        "characters": 2
+      },
+      {
+        "text": "1分",
+        "characters": 2
+      },
+      {
+        "text": "今すぐ購入する",
+        "characters": 7
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 192,
+    "category": "LP",
+    "image_local": "images/192.jpg",
+    "prompt_file": "prompts/192.json",
+    "layout_signals": [
+      "large-type",
+      "speech-bubble",
+      "serif"
+    ],
+    "headline_candidates": [
+      {
+        "text": "こんな",
+        "characters": 3
+      },
+      {
+        "text": "お悩み",
+        "characters": 3
+      },
+      {
+        "text": "ありませんか？",
+        "characters": 7
+      },
+      {
+        "text": "まとめて",
+        "characters": 4
+      },
+      {
+        "text": "解決します！",
+        "characters": 6
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 193,
+    "category": "LP",
+    "image_local": "images/193.jpg",
+    "prompt_file": "prompts/193.json",
+    "layout_signals": [
+      "large-type",
+      "product-hero",
+      "serif"
+    ],
+    "headline_candidates": [
+      {
+        "text": "これ1本で簡単！",
+        "characters": 8
+      },
+      {
+        "text": "6つのケアが",
+        "characters": 6
+      },
+      {
+        "text": "が",
+        "characters": 1
+      },
+      {
+        "text": "これ1本のオールインワン",
+        "characters": 12
+      },
+      {
+        "text": "これ1本",
+        "characters": 4
+      },
+      {
+        "text": "美容液部門",
+        "characters": 5
+      },
+      {
+        "text": "週間ランキング",
+        "characters": 7
+      },
+      {
+        "text": "第1位",
+        "characters": 3
+      },
+      {
+        "text": "※1",
+        "characters": 2
+      },
+      {
+        "text": "多数のご支持に感謝！",
+        "characters": 10
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 194,
+    "category": "LP",
+    "image_local": "images/194.jpg",
+    "prompt_file": "prompts/194.json",
+    "layout_signals": [
+      "large-type",
+      "product-hero",
+      "serif"
+    ],
+    "headline_candidates": [
+      {
+        "text": "美容成分を",
+        "characters": 5
+      },
+      {
+        "text": "ぎゅっと凝縮",
+        "characters": 6
+      },
+      {
+        "text": "厳選した美容成分が、うるおいとハリにアプローチ",
+        "characters": 23
+      },
+      {
+        "text": "3つの注目美容成分",
+        "characters": 9
+      },
+      {
+        "text": "3",
+        "characters": 1
+      },
+      {
+        "text": "透明感",
+        "characters": 3
+      },
+      {
+        "text": "ハリ・弾力",
+        "characters": 5
+      },
+      {
+        "text": "ケア",
+        "characters": 2
+      },
+      {
+        "text": "ビタミンC誘導体※1",
+        "characters": 10
+      },
+      {
+        "text": "くすみ※4にアプローチし、",
+        "characters": 13
+      },
+      {
+        "text": "透明感のある明るい肌へ。",
+        "characters": 12
+      },
+      {
+        "text": "ハリ・弾力のある肌をサポートします。",
+        "characters": 18
+      },
+      {
+        "text": "整肌・保湿成分",
+        "characters": 7
+      },
+      {
+        "text": "肌あれ",
+        "characters": 3
+      },
+      {
+        "text": "予防",
+        "characters": 2
+      },
+      {
+        "text": "ナイアシンアミド※2",
+        "characters": 10
+      },
+      {
+        "text": "肌あれを防ぎ、キメを整え、",
+        "characters": 13
+      },
+      {
+        "text": "うるおいに満ちたなめらかな",
+        "characters": 13
+      },
+      {
+        "text": "肌へ導きます。",
+        "characters": 7
+      },
+      {
+        "text": "うるおい",
+        "characters": 4
+      },
+      {
+        "text": "バリア",
+        "characters": 3
+      },
+      {
+        "text": "サポート",
+        "characters": 4
+      },
+      {
+        "text": "セラミド※3",
+        "characters": 6
+      },
+      {
+        "text": "角質層のすみずみまでうるおいを",
+        "characters": 15
+      },
+      {
+        "text": "届け、乾燥から肌を守る",
+        "characters": 11
+      },
+      {
+        "text": "バリア機能をサポートします。",
+        "characters": 14
+      },
+      {
+        "text": "保湿成分",
+        "characters": 4
+      },
+      {
+        "text": "角質層のすみずみまで",
+        "characters": 10
+      },
+      {
+        "text": "うるおいを届け、逃さない",
+        "characters": 12
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 195,
+    "category": "LP",
+    "image_local": "images/195.jpg",
+    "prompt_file": "prompts/195.json",
+    "layout_signals": [
+      "large-type",
+      "photo-person",
+      "product-hero",
+      "steps",
+      "serif"
+    ],
+    "headline_candidates": [
+      {
+        "text": "たった3STEPで",
+        "characters": 9
+      },
+      {
+        "text": "3STEP",
+        "characters": 5
+      },
+      {
+        "text": "ハリ・うるおいに満ちた肌へ",
+        "characters": 13
+      },
+      {
+        "text": "ハリ・うるおい",
+        "characters": 7
+      },
+      {
+        "text": "適量を手に取る",
+        "characters": 7
+      },
+      {
+        "text": "適量",
+        "characters": 2
+      },
+      {
+        "text": "洗顔後、2〜3プッシュを",
+        "characters": 12
+      },
+      {
+        "text": "手のひらに取ります。",
+        "characters": 10
+      },
+      {
+        "text": "こんなシーンで毎日ケア",
+        "characters": 11
+      },
+      {
+        "text": "朝のスキンケアに",
+        "characters": 8
+      },
+      {
+        "text": "メイク前のうるおい補給で、",
+        "characters": 13
+      },
+      {
+        "text": "化粧ノリUP！",
+        "characters": 7
+      },
+      {
+        "text": "お風呂上がりに",
+        "characters": 7
+      },
+      {
+        "text": "乾燥しやすいお風呂上がりに、",
+        "characters": 14
+      },
+      {
+        "text": "すぐにうるおいチャージ！",
+        "characters": 12
+      },
+      {
+        "text": "メイク前のベースケアに",
+        "characters": 11
+      },
+      {
+        "text": "肌をなめらかに整えて、",
+        "characters": 11
+      },
+      {
+        "text": "メイク崩れを防ぐ！",
+        "characters": 9
+      },
+      {
+        "text": "毎日のシンプルケアで、",
+        "characters": 11
+      },
+      {
+        "text": "うるおい・ハリ・透明感",
+        "characters": 11
+      },
+      {
+        "text": "のある美肌へ！",
+        "characters": 7
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 196,
+    "category": "LP",
+    "image_local": "images/196.jpg",
+    "prompt_file": "prompts/196.json",
+    "layout_signals": [
+      "large-type",
+      "product-hero",
+      "offer",
+      "faq",
+      "serif"
+    ],
+    "headline_candidates": [
+      {
+        "text": "よくあるご質問",
+        "characters": 7
+      },
+      {
+        "text": "RICHMOIST VC セラムについて",
+        "characters": 18
+      },
+      {
+        "text": "多くいただくご質問にお答えします。",
+        "characters": 17
+      },
+      {
+        "text": "30日間返品保証",
+        "characters": 8
+      },
+      {
+        "text": "お肌に合わない場合は",
+        "characters": 10
+      },
+      {
+        "text": "30日間返品保証付きで安心",
+        "characters": 13
+      },
+      {
+        "text": "全国どこでも送料無料",
+        "characters": 10
+      },
+      {
+        "text": "追加送料は一切かかりません",
+        "characters": 13
+      },
+      {
+        "text": "※ポスト投函でお届けします",
+        "characters": 13
+      },
+      {
+        "text": "簡単・安心ご注文",
+        "characters": 8
+      },
+      {
+        "text": "会員登録不要で",
+        "characters": 7
+      },
+      {
+        "text": "すぐにご注文いただけます",
+        "characters": 12
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 197,
+    "category": "LP",
+    "image_local": "images/197.jpg",
+    "prompt_file": "prompts/197.json",
+    "layout_signals": [
+      "large-type",
+      "product-hero",
+      "speech-bubble",
+      "offer",
+      "serif",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "売れ筋人気",
+        "characters": 5
+      },
+      {
+        "text": "No.1",
+        "characters": 4
+      },
+      {
+        "text": "美容液",
+        "characters": 3
+      },
+      {
+        "text": "※1",
+        "characters": 2
+      },
+      {
+        "text": "累計販売本数",
+        "characters": 6
+      },
+      {
+        "text": "120万本",
+        "characters": 5
+      },
+      {
+        "text": "突破！",
+        "characters": 3
+      },
+      {
+        "text": "※2",
+        "characters": 2
+      },
+      {
+        "text": "うるおいに満ちた",
+        "characters": 8
+      },
+      {
+        "text": "透明感",
+        "characters": 3
+      },
+      {
+        "text": "のある",
+        "characters": 3
+      },
+      {
+        "text": "ハリ美肌へ",
+        "characters": 5
+      },
+      {
+        "text": "※3",
+        "characters": 2
+      },
+      {
+        "text": "忙しい朝も、疲れた夜も",
+        "characters": 11
+      },
+      {
+        "text": "これ1本の",
+        "characters": 5
+      },
+      {
+        "text": "簡単オールインワンケア",
+        "characters": 11
+      },
+      {
+        "text": "本日",
+        "characters": 2
+      },
+      {
+        "text": "限定！",
+        "characters": 3
+      },
+      {
+        "text": "24時間限定！特別キャンペーン実施中！",
+        "characters": 19
+      },
+      {
+        "text": "500円OFFクーポン配布中！",
+        "characters": 15
+      },
+      {
+        "text": "クーポンは自動適用されます",
+        "characters": 13
+      },
+      {
+        "text": "初回限定",
+        "characters": 4
+      },
+      {
+        "text": "お1人様",
+        "characters": 4
+      },
+      {
+        "text": "1点限り",
+        "characters": 4
+      },
+      {
+        "text": "RICHMOIST VC セラム",
+        "characters": 14
+      },
+      {
+        "text": "〈美容液〉内容量：50mL（約1ヶ月分）",
+        "characters": 20
+      },
+      {
+        "text": "通常価格",
+        "characters": 4
+      },
+      {
+        "text": "6,980円（税込）",
+        "characters": 10
+      },
+      {
+        "text": "64% OFF",
+        "characters": 6
+      },
+      {
+        "text": "1,980円",
+        "characters": 6
+      },
+      {
+        "text": "（税込）",
+        "characters": 4
+      },
+      {
+        "text": "たっぷり",
+        "characters": 4
+      },
+      {
+        "text": "約1ヶ月分",
+        "characters": 5
+      },
+      {
+        "text": "簡単",
+        "characters": 2
+      },
+      {
+        "text": "1分",
+        "characters": 2
+      },
+      {
+        "text": "今すぐ購入する",
+        "characters": 7
+      },
+      {
+        "text": "ご注文はSSLで保護されています",
+        "characters": 16
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 198,
+    "category": "LP",
+    "image_local": "images/198.jpg",
+    "prompt_file": "prompts/198.json",
+    "layout_signals": [
+      "large-type",
+      "photo-person",
+      "offer",
+      "serif",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "朝の重だるさ、",
+        "characters": 7
+      },
+      {
+        "text": "もう",
+        "characters": 2
+      },
+      {
+        "text": "引きずらない。",
+        "characters": 7
+      },
+      {
+        "text": "初回",
+        "characters": 2
+      },
+      {
+        "text": "限定",
+        "characters": 2
+      },
+      {
+        "text": "約66%OFF",
+        "characters": 7
+      },
+      {
+        "text": "通常価格",
+        "characters": 4
+      },
+      {
+        "text": "2,980円（税込）",
+        "characters": 10
+      },
+      {
+        "text": "980円",
+        "characters": 4
+      },
+      {
+        "text": "（税込）",
+        "characters": 4
+      },
+      {
+        "text": "初回限定",
+        "characters": 4
+      },
+      {
+        "text": "お一人様",
+        "characters": 4
+      },
+      {
+        "text": "1回限り",
+        "characters": 4
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 199,
+    "category": "LP",
+    "image_local": "images/199.jpg",
+    "prompt_file": "prompts/199.json",
+    "layout_signals": [
+      "large-type",
+      "photo-person",
+      "serif",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "こんな",
+        "characters": 3
+      },
+      {
+        "text": "お悩み",
+        "characters": 3
+      },
+      {
+        "text": "、",
+        "characters": 1
+      },
+      {
+        "text": "ありませんか？",
+        "characters": 7
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 200,
+    "category": "LP",
+    "image_local": "images/200.jpg",
+    "prompt_file": "prompts/200.json",
+    "layout_signals": [
+      "large-type",
+      "photo-person",
+      "steps",
+      "serif",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "その不調、",
+        "characters": 5
+      },
+      {
+        "text": "睡眠の“悪循環”が",
+        "characters": 9
+      },
+      {
+        "text": "睡眠の",
+        "characters": 3
+      },
+      {
+        "text": "が",
+        "characters": 1
+      },
+      {
+        "text": "原因かもしれません。",
+        "characters": 10
+      },
+      {
+        "text": "眠りの質が下がると、翌日のコンディションにも影響が。",
+        "characters": 26
+      },
+      {
+        "text": "寝つきが悪い・",
+        "characters": 7
+      },
+      {
+        "text": "眠りが浅い",
+        "characters": 5
+      },
+      {
+        "text": "なかなか寝つけない、",
+        "characters": 10
+      },
+      {
+        "text": "夜中に何度も目が覚める",
+        "characters": 11
+      },
+      {
+        "text": "朝すっきり",
+        "characters": 5
+      },
+      {
+        "text": "起きられない",
+        "characters": 6
+      },
+      {
+        "text": "疲れが抜けず、",
+        "characters": 7
+      },
+      {
+        "text": "だるさや眠気を引きずる",
+        "characters": 11
+      },
+      {
+        "text": "日中の集中力・",
+        "characters": 7
+      },
+      {
+        "text": "気分が下がる",
+        "characters": 6
+      },
+      {
+        "text": "仕事や家事がはかどらず、",
+        "characters": 12
+      },
+      {
+        "text": "イライラしがちに",
+        "characters": 8
+      },
+      {
+        "text": "夜もリラックス",
+        "characters": 7
+      },
+      {
+        "text": "できず、また",
+        "characters": 6
+      },
+      {
+        "text": "眠れない",
+        "characters": 4
+      },
+      {
+        "text": "不安や緊張で心が休まらず、",
+        "characters": 13
+      },
+      {
+        "text": "また寝つきが悪くなる",
+        "characters": 10
+      },
+      {
+        "text": "この悪循環が続くと、こんな影響が…",
+        "characters": 17
+      },
+      {
+        "text": "朝の重だるさ",
+        "characters": 6
+      },
+      {
+        "text": "体が重く、やる気が出ない朝に。",
+        "characters": 15
+      },
+      {
+        "text": "仕事や家事の効率低下",
+        "characters": 10
+      },
+      {
+        "text": "集中できず、ミスや後回しが増える。",
+        "characters": 17
+      },
+      {
+        "text": "美容・健康習慣の乱れ",
+        "characters": 10
+      },
+      {
+        "text": "肌あれや食生活の乱れにつながる。",
+        "characters": 16
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 201,
+    "category": "LP",
+    "image_local": "images/201.jpg",
+    "prompt_file": "prompts/201.json",
+    "layout_signals": [
+      "large-type",
+      "serif",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "Luna Resetは",
+        "characters": 10
+      },
+      {
+        "text": "は",
+        "characters": 1
+      },
+      {
+        "text": "“夜の新習慣”に",
+        "characters": 8
+      },
+      {
+        "text": "着目しました。",
+        "characters": 7
+      },
+      {
+        "text": "GABA",
+        "characters": 4
+      },
+      {
+        "text": "休息の質に着目した成分。",
+        "characters": 12
+      },
+      {
+        "text": "すっきりとした",
+        "characters": 7
+      },
+      {
+        "text": "朝をサポートします。",
+        "characters": 10
+      },
+      {
+        "text": "テアニン",
+        "characters": 4
+      },
+      {
+        "text": "夜のリラックスに寄り添い、",
+        "characters": 13
+      },
+      {
+        "text": "穏やかな休息習慣を",
+        "characters": 9
+      },
+      {
+        "text": "サポートします。",
+        "characters": 8
+      },
+      {
+        "text": "トリプトファン",
+        "characters": 7
+      },
+      {
+        "text": "からだのリズムに着目した",
+        "characters": 12
+      },
+      {
+        "text": "アミノ酸。すこやかな",
+        "characters": 10
+      },
+      {
+        "text": "夜のリズムをサポート。",
+        "characters": 11
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 202,
+    "category": "LP",
+    "image_local": "images/202.jpg",
+    "prompt_file": "prompts/202.json",
+    "layout_signals": [
+      "large-type",
+      "serif",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "選ばれる",
+        "characters": 4
+      },
+      {
+        "text": "の理由",
+        "characters": 3
+      },
+      {
+        "text": "3",
+        "characters": 1
+      },
+      {
+        "text": "つ",
+        "characters": 1
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 203,
+    "category": "LP",
+    "image_local": "images/203.jpg",
+    "prompt_file": "prompts/203.json",
+    "layout_signals": [
+      "large-type",
+      "steps",
+      "serif",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "使い方は、",
+        "characters": 5
+      },
+      {
+        "text": "かんたん3ステップ。",
+        "characters": 10
+      },
+      {
+        "text": "3",
+        "characters": 1
+      },
+      {
+        "text": "＼毎日のルーティンに取り入れやすい／",
+        "characters": 18
+      },
+      {
+        "text": "入浴後",
+        "characters": 3
+      },
+      {
+        "text": "ベッドに入る前",
+        "characters": 7
+      },
+      {
+        "text": "読書時間の",
+        "characters": 5
+      },
+      {
+        "text": "おともに",
+        "characters": 4
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 204,
+    "category": "LP",
+    "image_local": "images/204.jpg",
+    "prompt_file": "prompts/204.json",
+    "layout_signals": [
+      "photo-person",
+      "serif",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "ご愛用者さまの声",
+        "characters": 8
+      },
+      {
+        "text": "声",
+        "characters": 1
+      },
+      {
+        "text": "※個人の感想であり、使用感には個人差があります。",
+        "characters": 24
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 205,
+    "category": "LP",
+    "image_local": "images/205.jpg",
+    "prompt_file": "prompts/205.json",
+    "layout_signals": [
+      "faq",
+      "serif",
+      "sans"
+    ],
+    "headline_candidates": [],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 206,
+    "category": "LP",
+    "image_local": "images/206.jpg",
+    "prompt_file": "prompts/206.json",
+    "layout_signals": [
+      "large-type",
+      "offer",
+      "serif"
+    ],
+    "headline_candidates": [
+      {
+        "text": "今なら",
+        "characters": 3
+      },
+      {
+        "text": "初回限定で",
+        "characters": 5
+      },
+      {
+        "text": "お得に",
+        "characters": 3
+      },
+      {
+        "text": "スタート",
+        "characters": 4
+      },
+      {
+        "text": "初回限定",
+        "characters": 4
+      },
+      {
+        "text": "初回限定価格で",
+        "characters": 7
+      },
+      {
+        "text": "申し込む",
+        "characters": 4
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 207,
+    "category": "LP",
+    "image_local": "images/207.jpg",
+    "prompt_file": "prompts/207.json",
+    "layout_signals": [
+      "large-type",
+      "photo-person",
+      "offer",
+      "serif"
+    ],
+    "headline_candidates": [
+      {
+        "text": "朝",
+        "characters": 1
+      },
+      {
+        "text": "の重だるさ、",
+        "characters": 6
+      },
+      {
+        "text": "もう引きずらない。",
+        "characters": 9
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 208,
+    "category": "LP",
+    "image_local": "images/208.jpg",
+    "prompt_file": "prompts/208.json",
+    "layout_signals": [
+      "photo-person",
+      "serif"
+    ],
+    "headline_candidates": [],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 209,
+    "category": "LP",
+    "image_local": "images/209.jpg",
+    "prompt_file": "prompts/209.json",
+    "layout_signals": [
+      "serif",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "その不調、",
+        "characters": 5
+      },
+      {
+        "text": "睡眠の“悪循環”が",
+        "characters": 9
+      },
+      {
+        "text": "原因かもしれません。",
+        "characters": 10
+      },
+      {
+        "text": "悪循環",
+        "characters": 3
+      },
+      {
+        "text": "朝の重だるさ",
+        "characters": 6
+      },
+      {
+        "text": "目覚めても身体が重く、",
+        "characters": 11
+      },
+      {
+        "text": "やる気が出ない。",
+        "characters": 8
+      },
+      {
+        "text": "仕事や家事の",
+        "characters": 6
+      },
+      {
+        "text": "効率低下",
+        "characters": 4
+      },
+      {
+        "text": "集中できず、ミスや",
+        "characters": 9
+      },
+      {
+        "text": "時間ロスが増える。",
+        "characters": 9
+      },
+      {
+        "text": "美容・健康習慣の",
+        "characters": 8
+      },
+      {
+        "text": "乱れ",
+        "characters": 2
+      },
+      {
+        "text": "食生活や運動習慣にも",
+        "characters": 10
+      },
+      {
+        "text": "悪影響が。",
+        "characters": 5
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 210,
+    "category": "LP",
+    "image_local": "images/210.jpg",
+    "prompt_file": "prompts/210.json",
+    "layout_signals": [
+      "serif",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "厳選した3つの成分",
+        "characters": 9
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 211,
+    "category": "LP",
+    "image_local": "images/211.jpg",
+    "prompt_file": "prompts/211.json",
+    "layout_signals": [
+      "steps",
+      "serif",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "選ばれる",
+        "characters": 4
+      },
+      {
+        "text": "の理由",
+        "characters": 3
+      },
+      {
+        "text": "3",
+        "characters": 1
+      },
+      {
+        "text": "つ",
+        "characters": 1
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 212,
+    "category": "LP",
+    "image_local": "images/212.jpg",
+    "prompt_file": "prompts/212.json",
+    "layout_signals": [
+      "steps",
+      "serif"
+    ],
+    "headline_candidates": [
+      {
+        "text": "使い方は、",
+        "characters": 5
+      },
+      {
+        "text": "かんたん3ステップ。",
+        "characters": 10
+      },
+      {
+        "text": "3",
+        "characters": 1
+      },
+      {
+        "text": "おすすめのナイトルーティン",
+        "characters": 13
+      },
+      {
+        "text": "入浴後",
+        "characters": 3
+      },
+      {
+        "text": "ベッドに",
+        "characters": 4
+      },
+      {
+        "text": "入る前",
+        "characters": 3
+      },
+      {
+        "text": "読書時間の",
+        "characters": 5
+      },
+      {
+        "text": "おともに",
+        "characters": 4
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 213,
+    "category": "LP",
+    "image_local": "images/213.jpg",
+    "prompt_file": "prompts/213.json",
+    "layout_signals": [
+      "photo-person",
+      "faq",
+      "serif",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "ご愛用者さまの声",
+        "characters": 8
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 214,
+    "category": "LP",
+    "image_local": "images/214.jpg",
+    "prompt_file": "prompts/214.json",
+    "layout_signals": [
+      "large-type",
+      "offer",
+      "faq",
+      "serif",
+      "sans"
+    ],
+    "headline_candidates": [],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 215,
+    "category": "LP",
+    "image_local": "images/215.jpg",
+    "prompt_file": "prompts/215.json",
+    "layout_signals": [
+      "large-type",
+      "photo-person",
+      "offer",
+      "serif",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "次のステージへ、",
+        "characters": 8
+      },
+      {
+        "text": "キャリアを",
+        "characters": 5
+      },
+      {
+        "text": "広げる。",
+        "characters": 4
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 216,
+    "category": "LP",
+    "image_local": "images/216.jpg",
+    "prompt_file": "prompts/216.json",
+    "layout_signals": [
+      "serif",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "今のキャリアに、",
+        "characters": 8
+      },
+      {
+        "text": "こんな",
+        "characters": 3
+      },
+      {
+        "text": "違和感",
+        "characters": 3
+      },
+      {
+        "text": "はありませんか？",
+        "characters": 8
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 217,
+    "category": "LP",
+    "image_local": "images/217.jpg",
+    "prompt_file": "prompts/217.json",
+    "layout_signals": [
+      "serif",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "迷っているだけでは、",
+        "characters": 10
+      },
+      {
+        "text": "選択肢",
+        "characters": 3
+      },
+      {
+        "text": "は増えません。",
+        "characters": 7
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 218,
+    "category": "LP",
+    "image_local": "images/218.jpg",
+    "prompt_file": "prompts/218.json",
+    "layout_signals": [
+      "offer",
+      "serif"
+    ],
+    "headline_candidates": [
+      {
+        "text": "無料相談",
+        "characters": 4
+      },
+      {
+        "text": "で、",
+        "characters": 2
+      },
+      {
+        "text": "キャリアの",
+        "characters": 5
+      },
+      {
+        "text": "可能性",
+        "characters": 3
+      },
+      {
+        "text": "を",
+        "characters": 1
+      },
+      {
+        "text": "整理できます。",
+        "characters": 7
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 219,
+    "category": "LP",
+    "image_local": "images/219.jpg",
+    "prompt_file": "prompts/219.json",
+    "layout_signals": [
+      "large-type",
+      "speech-bubble",
+      "serif",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "ハイクラス",
+        "characters": 5
+      },
+      {
+        "text": "転職に、",
+        "characters": 4
+      },
+      {
+        "text": "戦略的",
+        "characters": 3
+      },
+      {
+        "text": "な整理を。",
+        "characters": 5
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 220,
+    "category": "LP",
+    "image_local": "images/220.jpg",
+    "prompt_file": "prompts/220.json",
+    "layout_signals": [
+      "large-type",
+      "photo-person",
+      "speech-bubble",
+      "serif",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "相談から応募準備まで、",
+        "characters": 11
+      },
+      {
+        "text": "一人ひとりに合わせて",
+        "characters": 10
+      },
+      {
+        "text": "伴走",
+        "characters": 2
+      },
+      {
+        "text": "。",
+        "characters": 1
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 221,
+    "category": "LP",
+    "image_local": "images/221.jpg",
+    "prompt_file": "prompts/221.json",
+    "layout_signals": [
+      "large-type",
+      "speech-bubble",
+      "steps",
+      "serif",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "次の一手",
+        "characters": 4
+      },
+      {
+        "text": "次",
+        "characters": 1
+      },
+      {
+        "text": "が",
+        "characters": 1
+      },
+      {
+        "text": "見えるまで、",
+        "characters": 6
+      },
+      {
+        "text": "順番に",
+        "characters": 3
+      },
+      {
+        "text": "整理",
+        "characters": 2
+      },
+      {
+        "text": "します。",
+        "characters": 4
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 222,
+    "category": "LP",
+    "image_local": "images/222.jpg",
+    "prompt_file": "prompts/222.json",
+    "layout_signals": [
+      "large-type",
+      "serif",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "こんな方に、",
+        "characters": 6
+      },
+      {
+        "text": "おすすめ",
+        "characters": 4
+      },
+      {
+        "text": "です。",
+        "characters": 3
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 223,
+    "category": "LP",
+    "image_local": "images/223.jpg",
+    "prompt_file": "prompts/223.json",
+    "layout_signals": [
+      "large-type",
+      "speech-bubble",
+      "serif"
+    ],
+    "headline_candidates": [
+      {
+        "text": "相談後に見えてくる、",
+        "characters": 10
+      },
+      {
+        "text": "次の",
+        "characters": 2
+      },
+      {
+        "text": "選択肢",
+        "characters": 3
+      },
+      {
+        "text": "。",
+        "characters": 1
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 224,
+    "category": "LP",
+    "image_local": "images/224.jpg",
+    "prompt_file": "prompts/224.json",
+    "layout_signals": [
+      "large-type",
+      "speech-bubble",
+      "offer",
+      "serif"
+    ],
+    "headline_candidates": [
+      {
+        "text": "プロ",
+        "characters": 2
+      },
+      {
+        "text": "が一人ひとりに",
+        "characters": 7
+      },
+      {
+        "text": "合わせて、",
+        "characters": 5
+      },
+      {
+        "text": "丁寧",
+        "characters": 2
+      },
+      {
+        "text": "に伴走。",
+        "characters": 4
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 225,
+    "category": "LP",
+    "image_local": "images/225.jpg",
+    "prompt_file": "prompts/225.json",
+    "layout_signals": [
+      "large-type",
+      "speech-bubble",
+      "steps",
+      "offer",
+      "serif"
+    ],
+    "headline_candidates": [
+      {
+        "text": "無料相談は、",
+        "characters": 6
+      },
+      {
+        "text": "かんたん",
+        "characters": 4
+      },
+      {
+        "text": "3",
+        "characters": 1
+      },
+      {
+        "text": "ステップ。",
+        "characters": 5
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 226,
+    "category": "LP",
+    "image_local": "images/226.jpg",
+    "prompt_file": "prompts/226.json",
+    "layout_signals": [
+      "large-type",
+      "speech-bubble",
+      "offer",
+      "serif",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "相談前の",
+        "characters": 4
+      },
+      {
+        "text": "不安",
+        "characters": 2
+      },
+      {
+        "text": "に、",
+        "characters": 2
+      },
+      {
+        "text": "お答えします。",
+        "characters": 7
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 227,
+    "category": "LP",
+    "image_local": "images/227.jpg",
+    "prompt_file": "prompts/227.json",
+    "layout_signals": [
+      "large-type",
+      "photo-person",
+      "speech-bubble",
+      "offer",
+      "serif"
+    ],
+    "headline_candidates": [
+      {
+        "text": "次のステージへ",
+        "characters": 7
+      },
+      {
+        "text": "進む一歩を、",
+        "characters": 6
+      },
+      {
+        "text": "進む",
+        "characters": 2
+      },
+      {
+        "text": "一歩",
+        "characters": 2
+      },
+      {
+        "text": "を、",
+        "characters": 2
+      },
+      {
+        "text": "今日から。",
+        "characters": 5
+      },
+      {
+        "text": "簡単",
+        "characters": 2
+      },
+      {
+        "text": "60秒",
+        "characters": 3
+      },
+      {
+        "text": "無料で相談する",
+        "characters": 7
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 228,
+    "category": "LP",
+    "image_local": "images/228.jpg",
+    "prompt_file": "prompts/228.json",
+    "layout_signals": [
+      "large-type",
+      "photo-person",
+      "product-hero",
+      "offer",
+      "serif",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "くすみに、",
+        "characters": 5
+      },
+      {
+        "text": "光を。",
+        "characters": 3
+      },
+      {
+        "text": "光",
+        "characters": 1
+      },
+      {
+        "text": "を。",
+        "characters": 2
+      },
+      {
+        "text": "初回限定",
+        "characters": 4
+      },
+      {
+        "text": "2,980円",
+        "characters": 6
+      },
+      {
+        "text": "円",
+        "characters": 1
+      },
+      {
+        "text": "（税込）",
+        "characters": 4
+      },
+      {
+        "text": "今すぐお得に試す",
+        "characters": 8
+      },
+      {
+        "text": "お得",
+        "characters": 2
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 229,
+    "category": "LP",
+    "image_local": "images/229.jpg",
+    "prompt_file": "prompts/229.json",
+    "layout_signals": [
+      "large-type",
+      "photo-person",
+      "product-hero",
+      "serif"
+    ],
+    "headline_candidates": [
+      {
+        "text": "こんな",
+        "characters": 3
+      },
+      {
+        "text": "お悩み、",
+        "characters": 4
+      },
+      {
+        "text": "ありませんか？",
+        "characters": 7
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 230,
+    "category": "LP",
+    "image_local": "images/230.jpg",
+    "prompt_file": "prompts/230.json",
+    "layout_signals": [
+      "large-type",
+      "product-hero",
+      "serif"
+    ],
+    "headline_candidates": [
+      {
+        "text": "うるおい×",
+        "characters": 5
+      },
+      {
+        "text": "うるおい",
+        "characters": 4
+      },
+      {
+        "text": "×",
+        "characters": 1
+      },
+      {
+        "text": "透明感ケアで。",
+        "characters": 7
+      },
+      {
+        "text": "透明感",
+        "characters": 3
+      },
+      {
+        "text": "ケア",
+        "characters": 2
+      },
+      {
+        "text": "で。",
+        "characters": 2
+      },
+      {
+        "text": "1",
+        "characters": 1
+      },
+      {
+        "text": "角層までうるおい補給",
+        "characters": 10
+      },
+      {
+        "text": "うるおい補給",
+        "characters": 6
+      },
+      {
+        "text": "美容成分が角層のすみずみまで",
+        "characters": 14
+      },
+      {
+        "text": "浸透。乾燥でごわついた肌を",
+        "characters": 13
+      },
+      {
+        "text": "うるおいで満たし、やわらかく",
+        "characters": 14
+      },
+      {
+        "text": "整えます。",
+        "characters": 5
+      },
+      {
+        "text": "（角層イメージ図）",
+        "characters": 9
+      },
+      {
+        "text": "2",
+        "characters": 1
+      },
+      {
+        "text": "キメを整えて、",
+        "characters": 7
+      },
+      {
+        "text": "光を反射しやすい肌印象へ",
+        "characters": 12
+      },
+      {
+        "text": "肌のキメをなめらかに整え、",
+        "characters": 13
+      },
+      {
+        "text": "光を均一に反射する肌印象へ。",
+        "characters": 14
+      },
+      {
+        "text": "透明感を引き出します。",
+        "characters": 11
+      },
+      {
+        "text": "3",
+        "characters": 1
+      },
+      {
+        "text": "毎日のケアで、",
+        "characters": 7
+      },
+      {
+        "text": "明るく見えるツヤ感をサポート",
+        "characters": 14
+      },
+      {
+        "text": "うるおいとツヤを与え、",
+        "characters": 11
+      },
+      {
+        "text": "乾燥によるくすみをケア。",
+        "characters": 12
+      },
+      {
+        "text": "使い続けるほどに、明るく",
+        "characters": 12
+      },
+      {
+        "text": "ツヤのある肌印象へ導きます。",
+        "characters": 14
+      },
+      {
+        "text": "毎日心地よく使える、こだわりの処方設計",
+        "characters": 19
+      },
+      {
+        "text": "高保湿",
+        "characters": 3
+      },
+      {
+        "text": "うるおいを",
+        "characters": 5
+      },
+      {
+        "text": "しっかりキープ",
+        "characters": 7
+      },
+      {
+        "text": "透明感ケア",
+        "characters": 5
+      },
+      {
+        "text": "つややかで",
+        "characters": 5
+      },
+      {
+        "text": "澄んだ印象へ",
+        "characters": 6
+      },
+      {
+        "text": "ベタつきにくい",
+        "characters": 7
+      },
+      {
+        "text": "みずみずしい",
+        "characters": 6
+      },
+      {
+        "text": "使用感",
+        "characters": 3
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 231,
+    "category": "LP",
+    "image_local": "images/231.jpg",
+    "prompt_file": "prompts/231.json",
+    "layout_signals": [
+      "large-type",
+      "product-hero",
+      "serif"
+    ],
+    "headline_candidates": [
+      {
+        "text": "選ばれる3つの理由",
+        "characters": 9
+      },
+      {
+        "text": "3",
+        "characters": 1
+      },
+      {
+        "text": "理由",
+        "characters": 2
+      },
+      {
+        "text": "1",
+        "characters": 1
+      },
+      {
+        "text": "2",
+        "characters": 1
+      },
+      {
+        "text": "透明感印象を支える",
+        "characters": 9
+      },
+      {
+        "text": "美容成分へ",
+        "characters": 5
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 232,
+    "category": "LP",
+    "image_local": "images/232.jpg",
+    "prompt_file": "prompts/232.json",
+    "layout_signals": [
+      "product-hero",
+      "serif"
+    ],
+    "headline_candidates": [
+      {
+        "text": "美容成分",
+        "characters": 4
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 233,
+    "category": "LP",
+    "image_local": "images/233.jpg",
+    "prompt_file": "prompts/233.json",
+    "layout_signals": [
+      "product-hero",
+      "comparison",
+      "serif"
+    ],
+    "headline_candidates": [
+      {
+        "text": "だから、毎日使いやすい",
+        "characters": 11
+      },
+      {
+        "text": "ベタつきにくい",
+        "characters": 7
+      },
+      {
+        "text": "肌にすっとなじみ、べたつかず快適。",
+        "characters": 17
+      },
+      {
+        "text": "メイク前にも使いやすい",
+        "characters": 11
+      },
+      {
+        "text": "肌表面がなめらかに整い、メイクのりもサポート。",
+        "characters": 23
+      },
+      {
+        "text": "肌なじみのよい保湿感",
+        "characters": 10
+      },
+      {
+        "text": "うるおいをしっかり届けて、しっとりうるおう。",
+        "characters": 22
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 234,
+    "category": "LP",
+    "image_local": "images/234.jpg",
+    "prompt_file": "prompts/234.json",
+    "layout_signals": [
+      "photo-person",
+      "product-hero",
+      "steps",
+      "serif"
+    ],
+    "headline_candidates": [
+      {
+        "text": "ご使用方法",
+        "characters": 5
+      },
+      {
+        "text": "朝のおすすめ",
+        "characters": 6
+      },
+      {
+        "text": "メイクのりをサポートし、",
+        "characters": 12
+      },
+      {
+        "text": "うるおいに満ちた",
+        "characters": 8
+      },
+      {
+        "text": "明るい印象の肌へ。",
+        "characters": 9
+      },
+      {
+        "text": "夜のおすすめ",
+        "characters": 6
+      },
+      {
+        "text": "日中の乾燥ダメージを",
+        "characters": 10
+      },
+      {
+        "text": "うるおいで満たし、",
+        "characters": 9
+      },
+      {
+        "text": "透明感のある肌へ導きます。",
+        "characters": 13
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 235,
+    "category": "LP",
+    "image_local": "images/235.jpg",
+    "prompt_file": "prompts/235.json",
+    "layout_signals": [
+      "photo-person",
+      "faq",
+      "serif"
+    ],
+    "headline_candidates": [
+      {
+        "text": "お客様の声",
+        "characters": 5
+      },
+      {
+        "text": "満足度の高いポイント",
+        "characters": 10
+      },
+      {
+        "text": "うるおい感",
+        "characters": 5
+      },
+      {
+        "text": "使いやすさ",
+        "characters": 5
+      },
+      {
+        "text": "ツヤ印象",
+        "characters": 4
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 236,
+    "category": "LP",
+    "image_local": "images/236.jpg",
+    "prompt_file": "prompts/236.json",
+    "layout_signals": [
+      "product-hero",
+      "faq",
+      "serif"
+    ],
+    "headline_candidates": [
+      {
+        "text": "よくあるご質問",
+        "characters": 7
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 237,
+    "category": "LP",
+    "image_local": "images/237.jpg",
+    "prompt_file": "prompts/237.json",
+    "layout_signals": [
+      "large-type",
+      "photo-person",
+      "product-hero",
+      "speech-bubble",
+      "offer",
+      "serif"
+    ],
+    "headline_candidates": [
+      {
+        "text": "まずは",
+        "characters": 3
+      },
+      {
+        "text": "初回限定で",
+        "characters": 5
+      },
+      {
+        "text": "初回限定",
+        "characters": 4
+      },
+      {
+        "text": "で",
+        "characters": 1
+      },
+      {
+        "text": "お試しください",
+        "characters": 7
+      },
+      {
+        "text": "通常価格",
+        "characters": 4
+      },
+      {
+        "text": "5,980円",
+        "characters": 6
+      },
+      {
+        "text": "（税込）",
+        "characters": 4
+      },
+      {
+        "text": "2,980円",
+        "characters": 6
+      },
+      {
+        "text": "円",
+        "characters": 1
+      },
+      {
+        "text": "送料",
+        "characters": 2
+      },
+      {
+        "text": "無料",
+        "characters": 2
+      },
+      {
+        "text": "今すぐ申し込む",
+        "characters": 7
+      },
+      {
+        "text": "LINEで相談する",
+        "characters": 9
+      },
+      {
+        "text": "30日間",
+        "characters": 4
+      },
+      {
+        "text": "返金保証",
+        "characters": 4
+      },
+      {
+        "text": "30日間返金保証",
+        "characters": 8
+      },
+      {
+        "text": "お肌に合うか不安な方のために、30日間の返金保証を",
+        "characters": 25
+      },
+      {
+        "text": "ご用意しています。万が一ご満足いただけない場合は、",
+        "characters": 25
+      },
+      {
+        "text": "商品代金を全額返金いたします。",
+        "characters": 15
+      },
+      {
+        "text": "※返金保証の詳細は特定商取引法に基づく表記をご確認ください。",
+        "characters": 30
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 238,
+    "category": "LP",
+    "image_local": "images/238.jpg",
+    "prompt_file": "prompts/238.json",
+    "layout_signals": [
+      "large-type",
+      "photo-person",
+      "speech-bubble",
+      "offer",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "全国対応",
+        "characters": 4
+      },
+      {
+        "text": "全国主要都市に対応",
+        "characters": 9
+      },
+      {
+        "text": "相談無料",
+        "characters": 4
+      },
+      {
+        "text": "査定・相談すべて0円",
+        "characters": 10
+      },
+      {
+        "text": "¥0",
+        "characters": 2
+      },
+      {
+        "text": "秘密厳守",
+        "characters": 4
+      },
+      {
+        "text": "個人情報を厳格に管理",
+        "characters": 10
+      },
+      {
+        "text": "まずは無料査定で",
+        "characters": 8
+      },
+      {
+        "text": "無料査定",
+        "characters": 4
+      },
+      {
+        "text": "相場を確認",
+        "characters": 5
+      },
+      {
+        "text": "査定・相談",
+        "characters": 5
+      },
+      {
+        "text": "0円",
+        "characters": 2
+      },
+      {
+        "text": "0",
+        "characters": 1
+      },
+      {
+        "text": "円",
+        "characters": 1
+      },
+      {
+        "text": "完全無料",
+        "characters": 4
+      },
+      {
+        "text": "納得売却",
+        "characters": 4
+      },
+      {
+        "text": "複数社を比較して納得売却",
+        "characters": 12
+      },
+      {
+        "text": "査定額は",
+        "characters": 4
+      },
+      {
+        "text": "会社によって",
+        "characters": 6
+      },
+      {
+        "text": "差が出ることも",
+        "characters": 7
+      },
+      {
+        "text": "最短",
+        "characters": 2
+      },
+      {
+        "text": "60秒入力で",
+        "characters": 6
+      },
+      {
+        "text": "カンタン依頼",
+        "characters": 6
+      },
+      {
+        "text": "60秒",
+        "characters": 3
+      },
+      {
+        "text": "最大6社の",
+        "characters": 5
+      },
+      {
+        "text": "査定価格を",
+        "characters": 5
+      },
+      {
+        "text": "まとめて比較",
+        "characters": 6
+      },
+      {
+        "text": "6",
+        "characters": 1
+      },
+      {
+        "text": "入力完了！",
+        "characters": 5
+      },
+      {
+        "text": "無料で査定を始める",
+        "characters": 9
+      },
+      {
+        "text": "まずは相談する（無料）",
+        "characters": 11
+      },
+      {
+        "text": "（無料）",
+        "characters": 4
+      },
+      {
+        "text": "相談実績",
+        "characters": 4
+      },
+      {
+        "text": "12,000件",
+        "characters": 7
+      },
+      {
+        "text": "以上",
+        "characters": 2
+      },
+      {
+        "text": "※2024年4月時点 当社調べ",
+        "characters": 14
+      },
+      {
+        "text": "対応エリア",
+        "characters": 5
+      },
+      {
+        "text": "全国主要都市",
+        "characters": 6
+      },
+      {
+        "text": "幅広く対応",
+        "characters": 5
+      },
+      {
+        "text": "売却相談満足度",
+        "characters": 7
+      },
+      {
+        "text": "94%",
+        "characters": 3
+      },
+      {
+        "text": "※当社アンケート調べ",
+        "characters": 10
+      },
+      {
+        "text": "当日で",
+        "characters": 3
+      },
+      {
+        "text": "当日",
+        "characters": 2
+      },
+      {
+        "text": "査定結果の",
+        "characters": 5
+      },
+      {
+        "text": "ご案内",
+        "characters": 3
+      },
+      {
+        "text": "住み替え",
+        "characters": 4
+      },
+      {
+        "text": "今のうちに",
+        "characters": 5
+      },
+      {
+        "text": "相場を知りたい",
+        "characters": 7
+      },
+      {
+        "text": "相続",
+        "characters": 2
+      },
+      {
+        "text": "相続した不動産の",
+        "characters": 8
+      },
+      {
+        "text": "売却を検討中",
+        "characters": 6
+      },
+      {
+        "text": "空き家",
+        "characters": 3
+      },
+      {
+        "text": "管理や維持費の",
+        "characters": 7
+      },
+      {
+        "text": "負担を減らしたい",
+        "characters": 8
+      },
+      {
+        "text": "離婚",
+        "characters": 2
+      },
+      {
+        "text": "早く・公平に",
+        "characters": 6
+      },
+      {
+        "text": "売却したい",
+        "characters": 5
+      },
+      {
+        "text": "資産整理",
+        "characters": 4
+      },
+      {
+        "text": "資産を見直して",
+        "characters": 7
+      },
+      {
+        "text": "現金化したい",
+        "characters": 6
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 239,
+    "category": "LP",
+    "image_local": "images/239.jpg",
+    "prompt_file": "prompts/239.json",
+    "layout_signals": [
+      "large-type",
+      "speech-bubble",
+      "offer",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "こんな",
+        "characters": 3
+      },
+      {
+        "text": "お悩み",
+        "characters": 3
+      },
+      {
+        "text": "ありませんか？",
+        "characters": 7
+      },
+      {
+        "text": "不動産売却で損しないために、",
+        "characters": 14
+      },
+      {
+        "text": "損しない",
+        "characters": 4
+      },
+      {
+        "text": "まず不安を整理",
+        "characters": 7
+      },
+      {
+        "text": "相場を知らずに売り出すと、",
+        "characters": 13
+      },
+      {
+        "text": "安く売ってしまう可能性も。",
+        "characters": 13
+      },
+      {
+        "text": "安く売ってしまう",
+        "characters": 8
+      },
+      {
+        "text": "その不安、まとめて解決！",
+        "characters": 12
+      },
+      {
+        "text": "無料査定と比較で、",
+        "characters": 9
+      },
+      {
+        "text": "無料査定",
+        "characters": 4
+      },
+      {
+        "text": "価格・進め方・売り時を整理できます。",
+        "characters": 18
+      },
+      {
+        "text": "価格・進め方・売り時",
+        "characters": 10
+      },
+      {
+        "text": "カンタン",
+        "characters": 4
+      },
+      {
+        "text": "60秒",
+        "characters": 3
+      },
+      {
+        "text": "入力完了！",
+        "characters": 5
+      },
+      {
+        "text": "無料で査定してみる",
+        "characters": 9
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 240,
+    "category": "LP",
+    "image_local": "images/240.jpg",
+    "prompt_file": "prompts/240.json",
+    "layout_signals": [
+      "large-type",
+      "photo-person",
+      "steps",
+      "offer",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "なぜ複数社比較が必要なのか？",
+        "characters": 14
+      },
+      {
+        "text": "複数社比較",
+        "characters": 5
+      },
+      {
+        "text": "査定額も提案内容も、会社によって変わります",
+        "characters": 21
+      },
+      {
+        "text": "変わります",
+        "characters": 5
+      },
+      {
+        "text": "1社だけで進める場合",
+        "characters": 10
+      },
+      {
+        "text": "複数社を比較した場合",
+        "characters": 10
+      },
+      {
+        "text": "比較",
+        "characters": 2
+      },
+      {
+        "text": "査定額の妥当性が不明",
+        "characters": 10
+      },
+      {
+        "text": "高いのか安いのか",
+        "characters": 8
+      },
+      {
+        "text": "判断できず、損する可能性も。",
+        "characters": 14
+      },
+      {
+        "text": "地域に合わない会社かも",
+        "characters": 11
+      },
+      {
+        "text": "エリアに弱い会社だと、",
+        "characters": 11
+      },
+      {
+        "text": "買主に届かないことも。",
+        "characters": 11
+      },
+      {
+        "text": "提案内容を比較できない",
+        "characters": 11
+      },
+      {
+        "text": "販売戦略やサポート内容を",
+        "characters": 12
+      },
+      {
+        "text": "比べられず、選択肢が狭まる。",
+        "characters": 14
+      },
+      {
+        "text": "価格交渉で不利になることも",
+        "characters": 13
+      },
+      {
+        "text": "他社の査定がないと、",
+        "characters": 10
+      },
+      {
+        "text": "交渉材料がなく不利に。",
+        "characters": 11
+      },
+      {
+        "text": "簡単3ステップで、納得の比較",
+        "characters": 14
+      },
+      {
+        "text": "STEP 1",
+        "characters": 5
+      },
+      {
+        "text": "依頼",
+        "characters": 2
+      },
+      {
+        "text": "物件情報を入力して",
+        "characters": 9
+      },
+      {
+        "text": "まとめて査定依頼",
+        "characters": 8
+      },
+      {
+        "text": "STEP 2",
+        "characters": 5
+      },
+      {
+        "text": "最大6社の査定額や",
+        "characters": 9
+      },
+      {
+        "text": "提案内容を比較",
+        "characters": 7
+      },
+      {
+        "text": "STEP 3",
+        "characters": 5
+      },
+      {
+        "text": "納得して相談",
+        "characters": 6
+      },
+      {
+        "text": "気になる会社に相談して",
+        "characters": 11
+      },
+      {
+        "text": "売却を前向きに検討",
+        "characters": 9
+      },
+      {
+        "text": "最大",
+        "characters": 2
+      },
+      {
+        "text": "6社比較",
+        "characters": 4
+      },
+      {
+        "text": "多くの選択肢から",
+        "characters": 8
+      },
+      {
+        "text": "最適な1社が見つかる！",
+        "characters": 11
+      },
+      {
+        "text": "最短",
+        "characters": 2
+      },
+      {
+        "text": "60秒",
+        "characters": 3
+      },
+      {
+        "text": "入力はカンタン！",
+        "characters": 8
+      },
+      {
+        "text": "すぐに依頼が完了！",
+        "characters": 9
+      },
+      {
+        "text": "完全",
+        "characters": 2
+      },
+      {
+        "text": "無料",
+        "characters": 2
+      },
+      {
+        "text": "費用は一切かかりません",
+        "characters": 11
+      },
+      {
+        "text": "安心してご利用ください",
+        "characters": 11
+      },
+      {
+        "text": "カンタン60秒で最大6社の査定額・提案を比較！",
+        "characters": 23
+      },
+      {
+        "text": "6社",
+        "characters": 2
+      },
+      {
+        "text": "無料で",
+        "characters": 3
+      },
+      {
+        "text": "カンタン！",
+        "characters": 5
+      },
+      {
+        "text": "比較しながら査定を受ける",
+        "characters": 12
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 241,
+    "category": "LP",
+    "image_local": "images/241.jpg",
+    "prompt_file": "prompts/241.json",
+    "layout_signals": [
+      "large-type",
+      "photo-person",
+      "speech-bubble",
+      "offer",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "売却で",
+        "characters": 3
+      },
+      {
+        "text": "損する人の",
+        "characters": 5
+      },
+      {
+        "text": "損する人",
+        "characters": 4
+      },
+      {
+        "text": "の",
+        "characters": 1
+      },
+      {
+        "text": "共通点",
+        "characters": 3
+      },
+      {
+        "text": "ひとつでも",
+        "characters": 5
+      },
+      {
+        "text": "当てはまると…",
+        "characters": 7
+      },
+      {
+        "text": "数十万円～",
+        "characters": 5
+      },
+      {
+        "text": "数百万円",
+        "characters": 4
+      },
+      {
+        "text": "損につながる",
+        "characters": 6
+      },
+      {
+        "text": "可能性も！",
+        "characters": 5
+      },
+      {
+        "text": "1つでも当てはまったら、",
+        "characters": 12
+      },
+      {
+        "text": "無料査定と相談で早めに整理！",
+        "characters": 14
+      },
+      {
+        "text": "無料査定",
+        "characters": 4
+      },
+      {
+        "text": "相談",
+        "characters": 2
+      },
+      {
+        "text": "売却前に確認したい3つのこと",
+        "characters": 14
+      },
+      {
+        "text": "3つ",
+        "characters": 2
+      },
+      {
+        "text": "相場",
+        "characters": 2
+      },
+      {
+        "text": "売り時",
+        "characters": 3
+      },
+      {
+        "text": "進め方",
+        "characters": 3
+      },
+      {
+        "text": "今の価格を知ることが",
+        "characters": 10
+      },
+      {
+        "text": "損しない第一歩",
+        "characters": 7
+      },
+      {
+        "text": "市場や状況に合わせた",
+        "characters": 10
+      },
+      {
+        "text": "ベストなタイミングを",
+        "characters": 10
+      },
+      {
+        "text": "見極める",
+        "characters": 4
+      },
+      {
+        "text": "段取りと準備で",
+        "characters": 7
+      },
+      {
+        "text": "結果が大きく変わる",
+        "characters": 9
+      },
+      {
+        "text": "地域・物件ごとの実勢価格を",
+        "characters": 13
+      },
+      {
+        "text": "正確に把握することが重要です",
+        "characters": 14
+      },
+      {
+        "text": "季節・金利・需要などを踏まえ",
+        "characters": 14
+      },
+      {
+        "text": "高く売れる時期を逃さない！",
+        "characters": 13
+      },
+      {
+        "text": "住み替え・税金・手続きまで",
+        "characters": 13
+      },
+      {
+        "text": "計画的に進めることがカギ！",
+        "characters": 13
+      },
+      {
+        "text": "プロと一緒なら、損しない売却ができます！",
+        "characters": 20
+      },
+      {
+        "text": "無料",
+        "characters": 2
+      },
+      {
+        "text": "損しない売却準備を始める",
+        "characters": 12
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 242,
+    "category": "LP",
+    "image_local": "images/242.jpg",
+    "prompt_file": "prompts/242.json",
+    "layout_signals": [
+      "large-type",
+      "offer",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "査定価格は何で決まる？",
+        "characters": 11
+      },
+      {
+        "text": "査定価格",
+        "characters": 4
+      },
+      {
+        "text": "は何で決まる？",
+        "characters": 7
+      },
+      {
+        "text": "価格差が出やすい主なポイントをチェック",
+        "characters": 19
+      },
+      {
+        "text": "主なポイント",
+        "characters": 6
+      },
+      {
+        "text": "エリア・立地",
+        "characters": 6
+      },
+      {
+        "text": "築年数",
+        "characters": 3
+      },
+      {
+        "text": "駅距離・周辺環境",
+        "characters": 8
+      },
+      {
+        "text": "建物の状態・管理状況",
+        "characters": 10
+      },
+      {
+        "text": "土地の広さ・形状",
+        "characters": 8
+      },
+      {
+        "text": "周辺の成約事例・市場動向",
+        "characters": 12
+      },
+      {
+        "text": "人気エリア・ブランド力",
+        "characters": 11
+      },
+      {
+        "text": "再開発・将来性",
+        "characters": 7
+      },
+      {
+        "text": "周辺の利便性",
+        "characters": 6
+      },
+      {
+        "text": "築年数が浅いほど高評価",
+        "characters": 11
+      },
+      {
+        "text": "耐震基準・法改正の影響",
+        "characters": 11
+      },
+      {
+        "text": "リフォーム履歴も評価",
+        "characters": 10
+      },
+      {
+        "text": "駅までの距離・徒歩分数",
+        "characters": 11
+      },
+      {
+        "text": "商業施設・学校・病院など",
+        "characters": 12
+      },
+      {
+        "text": "治安・街のイメージ",
+        "characters": 9
+      },
+      {
+        "text": "室内のきれいさ・設備の状態",
+        "characters": 13
+      },
+      {
+        "text": "修繕履歴・メンテナンス",
+        "characters": 11
+      },
+      {
+        "text": "管理体制・管理費の水準",
+        "characters": 11
+      },
+      {
+        "text": "土地面積の広さ",
+        "characters": 7
+      },
+      {
+        "text": "整形地か不整形地か",
+        "characters": 9
+      },
+      {
+        "text": "接道状況・間口の広さ",
+        "characters": 10
+      },
+      {
+        "text": "近隣の成約価格・相場推移",
+        "characters": 12
+      },
+      {
+        "text": "売却需要・在庫数のバランス",
+        "characters": 13
+      },
+      {
+        "text": "金利・経済動向の影響",
+        "characters": 10
+      },
+      {
+        "text": "同じ物件でも、見方や販売戦略で",
+        "characters": 15
+      },
+      {
+        "text": "査定額が変わることがあります",
+        "characters": 14
+      },
+      {
+        "text": "査定額が変わる",
+        "characters": 7
+      },
+      {
+        "text": "同じ",
+        "characters": 2
+      },
+      {
+        "text": "物件",
+        "characters": 2
+      },
+      {
+        "text": "だからこそ",
+        "characters": 5
+      },
+      {
+        "text": "複数社比較",
+        "characters": 5
+      },
+      {
+        "text": "がおすすめ",
+        "characters": 5
+      },
+      {
+        "text": "より高く売れる可能性が広がる",
+        "characters": 14
+      },
+      {
+        "text": "不動産会社の強み・提案力がわかる",
+        "characters": 16
+      },
+      {
+        "text": "安心して任せられる会社を選べる",
+        "characters": 15
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 243,
+    "category": "LP",
+    "image_local": "images/243.jpg",
+    "prompt_file": "prompts/243.json",
+    "layout_signals": [
+      "large-type",
+      "speech-bubble",
+      "steps",
+      "offer",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "まとめてサポート",
+        "characters": 8
+      },
+      {
+        "text": "売却の準備から成約まで、まとめてサポート",
+        "characters": 20
+      },
+      {
+        "text": "不動産売却のすべてをワンストップでサポートする5つのサービス",
+        "characters": 30
+      },
+      {
+        "text": "売却完了",
+        "characters": 4
+      },
+      {
+        "text": "お問い合わせから売却完了までの流れ",
+        "characters": 17
+      },
+      {
+        "text": "査定依頼",
+        "characters": 4
+      },
+      {
+        "text": "Webフォームまたはお電話で",
+        "characters": 14
+      },
+      {
+        "text": "物件情報をご入力ください。",
+        "characters": 13
+      },
+      {
+        "text": "ヒアリング",
+        "characters": 5
+      },
+      {
+        "text": "担当者がご連絡し、物件やご希望条件を",
+        "characters": 18
+      },
+      {
+        "text": "ヒアリングします。",
+        "characters": 9
+      },
+      {
+        "text": "査定結果・比較",
+        "characters": 7
+      },
+      {
+        "text": "査定結果をご提示し、相場や売却プランを",
+        "characters": 19
+      },
+      {
+        "text": "比較・ご説明します。",
+        "characters": 10
+      },
+      {
+        "text": "販売活動",
+        "characters": 4
+      },
+      {
+        "text": "販売戦略に基づいて、購入希望者への",
+        "characters": 17
+      },
+      {
+        "text": "アプローチを開始します。",
+        "characters": 12
+      },
+      {
+        "text": "契約・引き渡し",
+        "characters": 7
+      },
+      {
+        "text": "条件合意後、契約手続きを行い、",
+        "characters": 15
+      },
+      {
+        "text": "お引き渡し・決済で売却完了です。",
+        "characters": 16
+      },
+      {
+        "text": "最短60秒で入力完了",
+        "characters": 10
+      },
+      {
+        "text": "しつこい営業は一切なし",
+        "characters": 11
+      },
+      {
+        "text": "ご希望の売却時期・価格・",
+        "characters": 12
+      },
+      {
+        "text": "ご事情を丁寧にお伺い",
+        "characters": 10
+      },
+      {
+        "text": "複数社比較で納得の売却",
+        "characters": 11
+      },
+      {
+        "text": "疑問・不安もその場で解消",
+        "characters": 12
+      },
+      {
+        "text": "広告・内覧・交渉まで",
+        "characters": 10
+      },
+      {
+        "text": "すべてお任せ",
+        "characters": 6
+      },
+      {
+        "text": "専門家が最後までサポート",
+        "characters": 12
+      },
+      {
+        "text": "安心してお任せください",
+        "characters": 11
+      },
+      {
+        "text": "流れを確認して無料相談する",
+        "characters": 13
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 244,
+    "category": "LP",
+    "image_local": "images/244.jpg",
+    "prompt_file": "prompts/244.json",
+    "layout_signals": [
+      "large-type",
+      "offer",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "数字でわかる、選ばれている理由",
+        "characters": 15
+      },
+      {
+        "text": "選ばれている理由",
+        "characters": 8
+      },
+      {
+        "text": "相談実績",
+        "characters": 4
+      },
+      {
+        "text": "12,000件",
+        "characters": 7
+      },
+      {
+        "text": "件",
+        "characters": 1
+      },
+      {
+        "text": "以上",
+        "characters": 2
+      },
+      {
+        "text": "※2024年4月時点 当社調べ",
+        "characters": 14
+      },
+      {
+        "text": "売却相談満足度",
+        "characters": 7
+      },
+      {
+        "text": "94%",
+        "characters": 3
+      },
+      {
+        "text": "%",
+        "characters": 1
+      },
+      {
+        "text": "※当社アンケート調べ",
+        "characters": 10
+      },
+      {
+        "text": "対応エリア",
+        "characters": 5
+      },
+      {
+        "text": "全国主要都市",
+        "characters": 6
+      },
+      {
+        "text": "幅広く対応",
+        "characters": 5
+      },
+      {
+        "text": "最短",
+        "characters": 2
+      },
+      {
+        "text": "当日で",
+        "characters": 3
+      },
+      {
+        "text": "当日",
+        "characters": 2
+      },
+      {
+        "text": "で",
+        "characters": 1
+      },
+      {
+        "text": "査定結果の",
+        "characters": 5
+      },
+      {
+        "text": "ご案内",
+        "characters": 3
+      },
+      {
+        "text": "こんな方に利用されています",
+        "characters": 13
+      },
+      {
+        "text": "住み替えを検討中の方",
+        "characters": 10
+      },
+      {
+        "text": "今のうちに相場を知って、",
+        "characters": 12
+      },
+      {
+        "text": "最適なタイミングで売却したい",
+        "characters": 14
+      },
+      {
+        "text": "最適なタイミング",
+        "characters": 8
+      },
+      {
+        "text": "相続不動産を",
+        "characters": 6
+      },
+      {
+        "text": "整理したい方",
+        "characters": 6
+      },
+      {
+        "text": "相続した不動産の",
+        "characters": 8
+      },
+      {
+        "text": "売却を検討中の方",
+        "characters": 8
+      },
+      {
+        "text": "売却",
+        "characters": 2
+      },
+      {
+        "text": "空き家の売却を",
+        "characters": 7
+      },
+      {
+        "text": "考えている方",
+        "characters": 6
+      },
+      {
+        "text": "管理や維持費の負担を減らし、",
+        "characters": 14
+      },
+      {
+        "text": "安心して手放したい",
+        "characters": 9
+      },
+      {
+        "text": "安心",
+        "characters": 2
+      },
+      {
+        "text": "急ぎで",
+        "characters": 3
+      },
+      {
+        "text": "現金化したい方",
+        "characters": 7
+      },
+      {
+        "text": "早く・確実に売却して、",
+        "characters": 11
+      },
+      {
+        "text": "資金を確保したい",
+        "characters": 8
+      },
+      {
+        "text": "資金",
+        "characters": 2
+      },
+      {
+        "text": "安心してご相談いただけます",
+        "characters": 13
+      },
+      {
+        "text": "秘密厳守",
+        "characters": 4
+      },
+      {
+        "text": "個人情報を",
+        "characters": 5
+      },
+      {
+        "text": "厳格に管理",
+        "characters": 5
+      },
+      {
+        "text": "オンライン相談OK",
+        "characters": 9
+      },
+      {
+        "text": "ご自宅から",
+        "characters": 5
+      },
+      {
+        "text": "お気軽に相談可能",
+        "characters": 8
+      },
+      {
+        "text": "お電話相談OK",
+        "characters": 7
+      },
+      {
+        "text": "お電話での",
+        "characters": 5
+      },
+      {
+        "text": "ご相談も大歓迎",
+        "characters": 7
+      },
+      {
+        "text": "簡単",
+        "characters": 2
+      },
+      {
+        "text": "60秒",
+        "characters": 3
+      },
+      {
+        "text": "入力完了！",
+        "characters": 5
+      },
+      {
+        "text": "実績を見て無料査定する",
+        "characters": 11
+      },
+      {
+        "text": "無料査定",
+        "characters": 4
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 245,
+    "category": "LP",
+    "image_local": "images/245.jpg",
+    "prompt_file": "prompts/245.json",
+    "layout_signals": [
+      "large-type",
+      "offer",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "実際のご相談事例",
+        "characters": 8
+      },
+      {
+        "text": "ご相談事例",
+        "characters": 5
+      },
+      {
+        "text": "さまざまなご事情・物件に対応した解決事例をご紹介します。",
+        "characters": 28
+      },
+      {
+        "text": "自分のケースも相談してみる",
+        "characters": 13
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 246,
+    "category": "LP",
+    "image_local": "images/246.jpg",
+    "prompt_file": "prompts/246.json",
+    "layout_signals": [
+      "large-type",
+      "photo-person",
+      "speech-bubble",
+      "offer",
+      "faq",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "よくあるご質問",
+        "characters": 7
+      },
+      {
+        "text": "よくある",
+        "characters": 4
+      },
+      {
+        "text": "ご質問",
+        "characters": 3
+      },
+      {
+        "text": "安心して",
+        "characters": 4
+      },
+      {
+        "text": "ご相談",
+        "characters": 3
+      },
+      {
+        "text": "ください",
+        "characters": 4
+      },
+      {
+        "text": "ほかにも気になることがあれば、",
+        "characters": 15
+      },
+      {
+        "text": "お気軽にご相談ください",
+        "characters": 11
+      },
+      {
+        "text": "秘密厳守",
+        "characters": 4
+      },
+      {
+        "text": "個人情報を厳格に管理",
+        "characters": 10
+      },
+      {
+        "text": "相談無料",
+        "characters": 4
+      },
+      {
+        "text": "しつこい営業なし",
+        "characters": 8
+      },
+      {
+        "text": "全国対応",
+        "characters": 4
+      },
+      {
+        "text": "主要都市に対応",
+        "characters": 7
+      },
+      {
+        "text": "FAQで不安を解消して相談する",
+        "characters": 15
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 247,
+    "category": "LP",
+    "image_local": "images/247.jpg",
+    "prompt_file": "prompts/247.json",
+    "layout_signals": [
+      "large-type",
+      "speech-bubble",
+      "offer",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "不動産売却を考え始めたら、",
+        "characters": 13
+      },
+      {
+        "text": "まずはお気軽にご相談ください",
+        "characters": 14
+      },
+      {
+        "text": "お気軽にご相談ください",
+        "characters": 11
+      },
+      {
+        "text": "価格を知ることが、納得のいく売却への第一歩です。",
+        "characters": 24
+      },
+      {
+        "text": "最短",
+        "characters": 2
+      },
+      {
+        "text": "60秒",
+        "characters": 3
+      },
+      {
+        "text": "で完了！",
+        "characters": 4
+      },
+      {
+        "text": "無料で査定を申し込む",
+        "characters": 10
+      },
+      {
+        "text": "まずは相談する（無料）",
+        "characters": 11
+      },
+      {
+        "text": "（無料）",
+        "characters": 4
+      },
+      {
+        "text": "お電話でのご相談も受付中！",
+        "characters": 13
+      },
+      {
+        "text": "0120-123-456",
+        "characters": 12
+      },
+      {
+        "text": "スマートフォンの方はタップで発信できます",
+        "characters": 20
+      },
+      {
+        "text": "受付時間",
+        "characters": 4
+      },
+      {
+        "text": "9:00〜18:00",
+        "characters": 10
+      },
+      {
+        "text": "（年中無休）",
+        "characters": 6
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 378,
+    "category": "広告バナー",
+    "image_local": "images/378.jpg",
+    "prompt_file": "prompts/378.json",
+    "layout_signals": [
+      "large-type",
+      "offer",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "AI",
+        "characters": 2
+      },
+      {
+        "text": "業務を、",
+        "characters": 4
+      },
+      {
+        "text": "前へ。",
+        "characters": 3
+      },
+      {
+        "text": "前",
+        "characters": 1
+      },
+      {
+        "text": "へ",
+        "characters": 1
+      },
+      {
+        "text": "。",
+        "characters": 1
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 379,
+    "category": "広告バナー",
+    "image_local": "images/379.jpg",
+    "prompt_file": "prompts/379.json",
+    "layout_signals": [
+      "large-type",
+      "photo-person",
+      "offer",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "次の",
+        "characters": 2
+      },
+      {
+        "text": "仕事を、",
+        "characters": 4
+      },
+      {
+        "text": "選び直す。",
+        "characters": 5
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 380,
+    "category": "広告バナー",
+    "image_local": "images/380.jpg",
+    "prompt_file": "prompts/380.json",
+    "layout_signals": [
+      "large-type",
+      "serif",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "軽いのに、",
+        "characters": 5
+      },
+      {
+        "text": "うるおう。",
+        "characters": 5
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 381,
+    "category": "広告バナー",
+    "image_local": "images/381.jpg",
+    "prompt_file": "prompts/381.json",
+    "layout_signals": [
+      "large-type",
+      "serif",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "幸せ。",
+        "characters": 3
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 382,
+    "category": "広告バナー",
+    "image_local": "images/382.jpg",
+    "prompt_file": "prompts/382.json",
+    "layout_signals": [
+      "large-type",
+      "sans",
+      "handwritten"
+    ],
+    "headline_candidates": [
+      {
+        "text": "ラクうま",
+        "characters": 4
+      },
+      {
+        "text": "ラ",
+        "characters": 1
+      },
+      {
+        "text": "ク",
+        "characters": 1
+      },
+      {
+        "text": "う",
+        "characters": 1
+      },
+      {
+        "text": "ま",
+        "characters": 1
+      },
+      {
+        "text": "初心者",
+        "characters": 3
+      },
+      {
+        "text": "OK",
+        "characters": 2
+      },
+      {
+        "text": "予約する",
+        "characters": 4
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 383,
+    "category": "広告バナー",
+    "image_local": "images/383.jpg",
+    "prompt_file": "prompts/383.json",
+    "layout_signals": [
+      "large-type",
+      "photo-person",
+      "offer",
+      "serif",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "眠りを、整える。",
+        "characters": 8
+      },
+      {
+        "text": "60分オンライン相談",
+        "characters": 10
+      },
+      {
+        "text": "60",
+        "characters": 2
+      },
+      {
+        "text": "分オンライン相談",
+        "characters": 8
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 384,
+    "category": "広告バナー",
+    "image_local": "images/384.jpg",
+    "prompt_file": "prompts/384.json",
+    "layout_signals": [
+      "large-type",
+      "photo-person",
+      "offer",
+      "serif",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "考えを、形にする。",
+        "characters": 9
+      },
+      {
+        "text": "考えを、",
+        "characters": 4
+      },
+      {
+        "text": "形にする。",
+        "characters": 5
+      },
+      {
+        "text": "無料で相談する",
+        "characters": 7
+      },
+      {
+        "text": "無料",
+        "characters": 2
+      },
+      {
+        "text": "で相談する",
+        "characters": 5
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 385,
+    "category": "広告バナー",
+    "image_local": "images/385.jpg",
+    "prompt_file": "prompts/385.json",
+    "layout_signals": [
+      "large-type",
+      "product-hero",
+      "serif"
+    ],
+    "headline_candidates": [
+      {
+        "text": "透明感、",
+        "characters": 4
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 386,
+    "category": "広告バナー",
+    "image_local": "images/386.jpg",
+    "prompt_file": "prompts/386.json",
+    "layout_signals": [
+      "large-type",
+      "serif",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "静けさを、",
+        "characters": 5
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 387,
+    "category": "広告バナー",
+    "image_local": "images/387.jpg",
+    "prompt_file": "prompts/387.json",
+    "layout_signals": [
+      "large-type",
+      "offer",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "SUMMER LESSON",
+        "characters": 12
+      },
+      {
+        "text": "最大",
+        "characters": 2
+      },
+      {
+        "text": "最",
+        "characters": 1
+      },
+      {
+        "text": "大",
+        "characters": 1
+      },
+      {
+        "text": "30",
+        "characters": 2
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 388,
+    "category": "広告バナー",
+    "image_local": "images/388.jpg",
+    "prompt_file": "prompts/388.json",
+    "layout_signals": [
+      "large-type",
+      "offer",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "300",
+        "characters": 3
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 389,
+    "category": "広告バナー",
+    "image_local": "images/389.jpg",
+    "prompt_file": "prompts/389.json",
+    "layout_signals": [
+      "large-type",
+      "offer",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "無料相談",
+        "characters": 4
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 390,
+    "category": "広告バナー",
+    "image_local": "images/390.jpg",
+    "prompt_file": "prompts/390.json",
+    "layout_signals": [
+      "large-type",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "初回限定",
+        "characters": 4
+      },
+      {
+        "text": "おためし半額",
+        "characters": 6
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 391,
+    "category": "広告バナー",
+    "image_local": "images/391.jpg",
+    "prompt_file": "prompts/391.json",
+    "layout_signals": [
+      "large-type",
+      "offer",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "APP COUPON",
+        "characters": 9
+      },
+      {
+        "text": "最大",
+        "characters": 2
+      },
+      {
+        "text": "最",
+        "characters": 1
+      },
+      {
+        "text": "大",
+        "characters": 1
+      },
+      {
+        "text": "1,000",
+        "characters": 5
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 392,
+    "category": "広告バナー",
+    "image_local": "images/392.jpg",
+    "prompt_file": "prompts/392.json",
+    "layout_signals": [
+      "large-type",
+      "offer",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "無料相談",
+        "characters": 4
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 393,
+    "category": "広告バナー",
+    "image_local": "images/393.jpg",
+    "prompt_file": "prompts/393.json",
+    "layout_signals": [
+      "large-type",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "初回限定",
+        "characters": 4
+      },
+      {
+        "text": "おためし半額",
+        "characters": 6
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 394,
+    "category": "広告バナー",
+    "image_local": "images/394.jpg",
+    "prompt_file": "prompts/394.json",
+    "layout_signals": [
+      "large-type",
+      "speech-bubble",
+      "offer",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "初月",
+        "characters": 2
+      },
+      {
+        "text": "0",
+        "characters": 1
+      },
+      {
+        "text": "今すぐ始める",
+        "characters": 6
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 395,
+    "category": "広告バナー",
+    "image_local": "images/395.jpg",
+    "prompt_file": "prompts/395.json",
+    "layout_signals": [
+      "large-type",
+      "speech-bubble",
+      "offer",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "相談",
+        "characters": 2
+      },
+      {
+        "text": "0",
+        "characters": 1
+      },
+      {
+        "text": "無料相談する",
+        "characters": 6
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 396,
+    "category": "広告バナー",
+    "image_local": "images/396.jpg",
+    "prompt_file": "prompts/396.json",
+    "layout_signals": [
+      "large-type",
+      "speech-bubble",
+      "offer",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "体験",
+        "characters": 2
+      },
+      {
+        "text": "0",
+        "characters": 1
+      },
+      {
+        "text": "体験予約する",
+        "characters": 6
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 397,
+    "category": "広告バナー",
+    "image_local": "images/397.jpg",
+    "prompt_file": "prompts/397.json",
+    "layout_signals": [
+      "large-type",
+      "speech-bubble",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "時給",
+        "characters": 2
+      },
+      {
+        "text": "UP",
+        "characters": 2
+      },
+      {
+        "text": "応募する",
+        "characters": 4
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 398,
+    "category": "広告バナー",
+    "image_local": "images/398.jpg",
+    "prompt_file": "prompts/398.json",
+    "layout_signals": [
+      "large-type",
+      "speech-bubble",
+      "offer",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "診断",
+        "characters": 2
+      },
+      {
+        "text": "0",
+        "characters": 1
+      },
+      {
+        "text": "今すぐ診断する",
+        "characters": 7
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 399,
+    "category": "広告バナー",
+    "image_local": "images/399.jpg",
+    "prompt_file": "prompts/399.json",
+    "layout_signals": [
+      "large-type",
+      "photo-person",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "伝わる",
+        "characters": 3
+      },
+      {
+        "text": "デザインを、",
+        "characters": 6
+      },
+      {
+        "text": "学ぶ。",
+        "characters": 3
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 400,
+    "category": "広告バナー",
+    "image_local": "images/400.jpg",
+    "prompt_file": "prompts/400.json",
+    "layout_signals": [
+      "large-type",
+      "photo-person",
+      "speech-bubble",
+      "offer",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "次の仕事を、",
+        "characters": 6
+      },
+      {
+        "text": "選び直す。",
+        "characters": 5
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 401,
+    "category": "広告バナー",
+    "image_local": "images/401.jpg",
+    "prompt_file": "prompts/401.json",
+    "layout_signals": [
+      "large-type",
+      "photo-person",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "似合う色を",
+        "characters": 5
+      },
+      {
+        "text": "を",
+        "characters": 1
+      },
+      {
+        "text": "見つける日",
+        "characters": 5
+      },
+      {
+        "text": "見つける",
+        "characters": 4
+      },
+      {
+        "text": "日",
+        "characters": 1
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 402,
+    "category": "広告バナー",
+    "image_local": "images/402.jpg",
+    "prompt_file": "prompts/402.json",
+    "layout_signals": [
+      "large-type",
+      "photo-person",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "体が",
+        "characters": 2
+      },
+      {
+        "text": "軽く",
+        "characters": 2
+      },
+      {
+        "text": "なる朝",
+        "characters": 3
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 403,
+    "category": "広告バナー",
+    "image_local": "images/403.jpg",
+    "prompt_file": "prompts/403.json",
+    "layout_signals": [
+      "large-type",
+      "photo-person",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "写真が",
+        "characters": 3
+      },
+      {
+        "text": "うまくなる",
+        "characters": 5
+      },
+      {
+        "text": "週末",
+        "characters": 2
+      },
+      {
+        "text": "参加予約する",
+        "characters": 6
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 404,
+    "category": "広告バナー",
+    "image_local": "images/404.jpg",
+    "prompt_file": "prompts/404.json",
+    "layout_signals": [
+      "large-type",
+      "photo-person",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "動画が",
+        "characters": 3
+      },
+      {
+        "text": "週末",
+        "characters": 2
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 405,
+    "category": "広告バナー",
+    "image_local": "images/405.jpg",
+    "prompt_file": "prompts/405.json",
+    "layout_signals": [
+      "large-type",
+      "photo-person",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "料理が",
+        "characters": 3
+      },
+      {
+        "text": "週末",
+        "characters": 2
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 406,
+    "category": "広告バナー",
+    "image_local": "images/406.jpg",
+    "prompt_file": "prompts/406.json",
+    "layout_signals": [
+      "large-type",
+      "speech-bubble",
+      "offer",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "経理のモヤモヤ、見える化。",
+        "characters": 13
+      },
+      {
+        "text": "経理のモヤモヤ、",
+        "characters": 8
+      },
+      {
+        "text": "見える化。",
+        "characters": 5
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 407,
+    "category": "広告バナー",
+    "image_local": "images/407.jpg",
+    "prompt_file": "prompts/407.json",
+    "layout_signals": [
+      "large-type",
+      "offer",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "割れた画面を、今日中に。",
+        "characters": 12
+      },
+      {
+        "text": "割れた画面を",
+        "characters": 6
+      },
+      {
+        "text": "、",
+        "characters": 1
+      },
+      {
+        "text": "今日中に。",
+        "characters": 5
+      },
+      {
+        "text": "今日中",
+        "characters": 3
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 408,
+    "category": "広告バナー",
+    "image_local": "images/408.jpg",
+    "prompt_file": "prompts/408.json",
+    "layout_signals": [
+      "large-type",
+      "photo-person",
+      "steps",
+      "sans",
+      "handwritten"
+    ],
+    "headline_candidates": [
+      {
+        "text": "アルバイト応募、",
+        "characters": 8
+      },
+      {
+        "text": "3ステップで完了。",
+        "characters": 9
+      },
+      {
+        "text": "3ステップ",
+        "characters": 5
+      },
+      {
+        "text": "で完了。",
+        "characters": 4
+      },
+      {
+        "text": "条件を選ぶ",
+        "characters": 5
+      },
+      {
+        "text": "面談日を確認",
+        "characters": 6
+      },
+      {
+        "text": "応募完了",
+        "characters": 4
+      },
+      {
+        "text": "応募する",
+        "characters": 4
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 409,
+    "category": "広告バナー",
+    "image_local": "images/409.jpg",
+    "prompt_file": "prompts/409.json",
+    "layout_signals": [
+      "large-type",
+      "photo-person",
+      "speech-bubble",
+      "steps",
+      "offer",
+      "sans",
+      "handwritten"
+    ],
+    "headline_candidates": [
+      {
+        "text": "ホームページ制作、",
+        "characters": 9
+      },
+      {
+        "text": "3ステップで公開。",
+        "characters": 9
+      },
+      {
+        "text": "3ステップ",
+        "characters": 5
+      },
+      {
+        "text": "で公開。",
+        "characters": 4
+      },
+      {
+        "text": "内容を送る",
+        "characters": 5
+      },
+      {
+        "text": "構成を確認",
+        "characters": 5
+      },
+      {
+        "text": "公開までサポート",
+        "characters": 8
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 410,
+    "category": "広告バナー",
+    "image_local": "images/410.jpg",
+    "prompt_file": "prompts/410.json",
+    "layout_signals": [
+      "large-type",
+      "photo-person",
+      "speech-bubble",
+      "steps",
+      "offer",
+      "sans",
+      "handwritten"
+    ],
+    "headline_candidates": [
+      {
+        "text": "確定申告、",
+        "characters": 5
+      },
+      {
+        "text": "3ステップで完了。",
+        "characters": 9
+      },
+      {
+        "text": "3ステップ",
+        "characters": 5
+      },
+      {
+        "text": "で完了。",
+        "characters": 4
+      },
+      {
+        "text": "資料を送る",
+        "characters": 5
+      },
+      {
+        "text": "内容を確認",
+        "characters": 5
+      },
+      {
+        "text": "申告までサポート",
+        "characters": 8
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 411,
+    "category": "広告バナー",
+    "image_local": "images/411.jpg",
+    "prompt_file": "prompts/411.json",
+    "layout_signals": [
+      "large-type",
+      "photo-person",
+      "speech-bubble",
+      "steps",
+      "sans",
+      "handwritten"
+    ],
+    "headline_candidates": [
+      {
+        "text": "英会話体験、",
+        "characters": 6
+      },
+      {
+        "text": "3ステップで予約。",
+        "characters": 9
+      },
+      {
+        "text": "3ステップ",
+        "characters": 5
+      },
+      {
+        "text": "で予約。",
+        "characters": 4
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 412,
+    "category": "広告バナー",
+    "image_local": "images/412.jpg",
+    "prompt_file": "prompts/412.json",
+    "layout_signals": [
+      "large-type",
+      "photo-person",
+      "product-hero",
+      "serif"
+    ],
+    "headline_candidates": [],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 413,
+    "category": "広告バナー",
+    "image_local": "images/413.jpg",
+    "prompt_file": "prompts/413.json",
+    "layout_signals": [
+      "large-type",
+      "photo-person",
+      "serif"
+    ],
+    "headline_candidates": [],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 414,
+    "category": "広告バナー",
+    "image_local": "images/414.jpg",
+    "prompt_file": "prompts/414.json",
+    "layout_signals": [
+      "large-type",
+      "photo-person",
+      "serif"
+    ],
+    "headline_candidates": [],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 415,
+    "category": "広告バナー",
+    "image_local": "images/415.jpg",
+    "prompt_file": "prompts/415.json",
+    "layout_signals": [
+      "large-type",
+      "photo-person",
+      "speech-bubble",
+      "offer",
+      "sans",
+      "handwritten"
+    ],
+    "headline_candidates": [
+      {
+        "text": "領収書、",
+        "characters": 4
+      },
+      {
+        "text": "領収書",
+        "characters": 3
+      },
+      {
+        "text": "見るだけで",
+        "characters": 5
+      },
+      {
+        "text": "止まってない？",
+        "characters": 7
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 416,
+    "category": "広告バナー",
+    "image_local": "images/416.jpg",
+    "prompt_file": "prompts/416.json",
+    "layout_signals": [
+      "large-type",
+      "photo-person",
+      "speech-bubble",
+      "sans",
+      "handwritten"
+    ],
+    "headline_candidates": [
+      {
+        "text": "「レシピ通りなのに、",
+        "characters": 10
+      },
+      {
+        "text": "レシピ",
+        "characters": 3
+      },
+      {
+        "text": "通りなのに、",
+        "characters": 6
+      },
+      {
+        "text": "なぜか決まらない。",
+        "characters": 9
+      },
+      {
+        "text": "なぜか",
+        "characters": 3
+      },
+      {
+        "text": "決まらない。",
+        "characters": 6
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 417,
+    "category": "広告バナー",
+    "image_local": "images/417.jpg",
+    "prompt_file": "prompts/417.json",
+    "layout_signals": [
+      "large-type",
+      "photo-person",
+      "speech-bubble",
+      "sans",
+      "handwritten"
+    ],
+    "headline_candidates": [
+      {
+        "text": "「英語、",
+        "characters": 4
+      },
+      {
+        "text": "英語",
+        "characters": 2
+      },
+      {
+        "text": "また始めても",
+        "characters": 6
+      },
+      {
+        "text": "いいかも。",
+        "characters": 5
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 418,
+    "category": "広告バナー",
+    "image_local": "images/418.jpg",
+    "prompt_file": "prompts/418.json",
+    "layout_signals": [
+      "large-type",
+      "product-hero",
+      "offer",
+      "sans",
+      "handwritten"
+    ],
+    "headline_candidates": [
+      {
+        "text": "朝",
+        "characters": 1
+      },
+      {
+        "text": "スムージー",
+        "characters": 5
+      },
+      {
+        "text": "980",
+        "characters": 3
+      },
+      {
+        "text": "円",
+        "characters": 1
+      },
+      {
+        "text": "初回",
+        "characters": 2
+      },
+      {
+        "text": "限定",
+        "characters": 2
+      },
+      {
+        "text": "今すぐ試す",
+        "characters": 5
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 419,
+    "category": "広告バナー",
+    "image_local": "images/419.jpg",
+    "prompt_file": "prompts/419.json",
+    "layout_signals": [
+      "large-type",
+      "product-hero",
+      "offer",
+      "serif",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "白い歯ケア",
+        "characters": 5
+      },
+      {
+        "text": "980",
+        "characters": 3
+      },
+      {
+        "text": "円",
+        "characters": 1
+      },
+      {
+        "text": "初回",
+        "characters": 2
+      },
+      {
+        "text": "限定",
+        "characters": 2
+      },
+      {
+        "text": "試してみる",
+        "characters": 5
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 420,
+    "category": "広告バナー",
+    "image_local": "images/420.jpg",
+    "prompt_file": "prompts/420.json",
+    "layout_signals": [
+      "large-type",
+      "product-hero",
+      "offer",
+      "serif",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "透明肌",
+        "characters": 3
+      },
+      {
+        "text": "トライアル",
+        "characters": 5
+      },
+      {
+        "text": "初回",
+        "characters": 2
+      },
+      {
+        "text": "980",
+        "characters": 3
+      },
+      {
+        "text": "円",
+        "characters": 1
+      },
+      {
+        "text": "試してみる",
+        "characters": 5
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 421,
+    "category": "広告バナー",
+    "image_local": "images/421.jpg",
+    "prompt_file": "prompts/421.json",
+    "layout_signals": [
+      "large-type",
+      "photo-person",
+      "offer",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "AI活用研修の",
+        "characters": 7
+      },
+      {
+        "text": "の",
+        "characters": 1
+      },
+      {
+        "text": "設計方法と",
+        "characters": 5
+      },
+      {
+        "text": "と",
+        "characters": 1
+      },
+      {
+        "text": "定着づくり",
+        "characters": 5
+      },
+      {
+        "text": "りく",
+        "characters": 2
+      },
+      {
+        "text": "10/22",
+        "characters": 5
+      },
+      {
+        "text": "木",
+        "characters": 1
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 422,
+    "category": "広告バナー",
+    "image_local": "images/422.jpg",
+    "prompt_file": "prompts/422.json",
+    "layout_signals": [
+      "large-type",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "地域の暮らしを",
+        "characters": 7
+      },
+      {
+        "text": "チームで支える仕事",
+        "characters": 9
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 423,
+    "category": "広告バナー",
+    "image_local": "images/423.jpg",
+    "prompt_file": "prompts/423.json",
+    "layout_signals": [
+      "large-type",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "デザインを学んで",
+        "characters": 8
+      },
+      {
+        "text": "仕事につながる力へ",
+        "characters": 9
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 424,
+    "category": "広告バナー",
+    "image_local": "images/424.jpg",
+    "prompt_file": "prompts/424.json",
+    "layout_signals": [
+      "large-type",
+      "speech-bubble",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "人に寄り添う",
+        "characters": 6
+      },
+      {
+        "text": "チームへ",
+        "characters": 4
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  },
+  {
+    "id": 425,
+    "category": "広告バナー",
+    "image_local": "images/425.jpg",
+    "prompt_file": "prompts/425.json",
+    "layout_signals": [
+      "large-type",
+      "speech-bubble",
+      "offer",
+      "sans"
+    ],
+    "headline_candidates": [
+      {
+        "text": "不安",
+        "characters": 2
+      },
+      {
+        "text": "をほどく",
+        "characters": 4
+      },
+      {
+        "text": "相談",
+        "characters": 2
+      },
+      {
+        "text": "チーム",
+        "characters": 3
+      }
+    ],
+    "interpretation": "Automatic signals from the source prompt, not a visual judgment or a verified headline transcription."
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "status": "generated",
+  "purpose": "BarkCore事業紹介PC版FV改訂初版",
+  "image": "fv.png",
+  "description": "design-notes.md",
+  "attempts": 1,
+  "verification": "主見出し・会社名・補足の文字を目視確認。文字切れや架空の実績なし。ヒラギノ角ゴシックの厳密なフォント再現は未検証。"
+}

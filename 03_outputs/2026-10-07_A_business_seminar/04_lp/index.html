@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WORK SHIFT｜AIで仕事を整える90分（練習用デモLP）</title>
+<meta name="description" content="制作練習用の架空案件のデモLPです。実在のサービスではなく、登録・送信はできません。">
+<style>
+:root{--navy:#0B1F4B;--blue:#1F6BFF;--pale:#EEF3FB;--line:#D5E0F5;--text:#0B1F4B;--sub:#4a5b80}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Noto Sans JP","Hiragino Sans","Hiragino Kaku Gothic ProN",Meiryo,sans-serif;color:var(--text);line-height:1.8;background:#fff;-webkit-text-size-adjust:100%}
+img,svg{max-width:100%}
+.wrap{width:min(1080px,100% - 40px);margin-inline:auto}
+.notice{background:var(--navy);color:#fff;text-align:center;font-size:13px;padding:8px 12px;line-height:1.6}
+header.top{padding:16px 0;border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.logo{white-space:nowrap;font-weight:900;letter-spacing:.12em;color:var(--blue);font-size:20px}
+.logo span{color:var(--navy);font-weight:700;letter-spacing:.02em;font-size:14px;margin-left:10px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;background:var(--blue);color:#fff;font-weight:900;text-decoration:none;border-radius:16px;min-height:64px;padding:12px 32px;font-size:20px;letter-spacing:.04em;box-shadow:0 4px 0 #1450c4;transition:transform .1s}
+.btn:hover{transform:translateY(2px);box-shadow:0 2px 0 #1450c4}
+.btn.small{min-height:44px;font-size:14px;padding:8px 18px;border-radius:12px;box-shadow:none;white-space:nowrap}
+.btn.white{background:#fff;color:var(--blue);box-shadow:0 4px 0 rgba(0,0,0,.25)}
+/* FV */
+.fv{background:linear-gradient(180deg,#fff,var(--pale));padding:56px 0 64px}
+.fv .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+.tag{display:inline-block;background:#E3ECFF;font-weight:700;font-size:15px;padding:6px 14px;border-radius:8px;margin-bottom:16px}
+h1{font-size:clamp(44px,8vw,88px);line-height:1.12;font-weight:900;letter-spacing:-.01em}
+h1 em{font-style:normal;color:var(--blue)}
+.fv p.lead{font-size:20px;font-weight:700;margin:24px 0 8px}
+.fv p.lead b{color:var(--blue);font-size:1.5em}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 28px;list-style:none}
+.chips li{background:#fff;border:2px solid var(--line);border-radius:12px;padding:6px 16px;font-weight:800;font-size:16px}
+.fv .ctawrap small{display:block;margin-top:10px;font-size:13px;color:var(--sub)}
+/* docs */
+.docs{position:relative;min-height:520px}
+.doc{background:#fff;border-radius:16px;box-shadow:0 14px 36px rgba(11,31,75,.2);border:2px solid var(--line);overflow:hidden;width:100%}
+.doc h3{background:var(--navy);color:#fff;font-size:18px;font-weight:800;padding:12px 20px;letter-spacing:.05em}
+.doc .row{padding:10px 20px;border-bottom:2px dashed var(--line)}
+.doc .row:last-child{border:0}
+.doc small{display:block;font-size:13px;font-weight:700;color:var(--blue);line-height:1.5}
+.doc p{font-size:17px;font-weight:700;line-height:1.5}
+.docs .d1{position:absolute;left:0;top:0;width:88%;transform:rotate(-3deg)}
+.docs .d2{position:absolute;right:0;top:250px;width:88%;transform:rotate(3deg)}
+.imgnote{font-size:12px;color:var(--sub);margin-top:6px}
+/* sections */
+section{padding:72px 0}
+section.alt{background:var(--pale)}
+h2{font-size:clamp(28px,4.4vw,44px);line-height:1.35;font-weight:900;margin-bottom:12px}
+h2 em{font-style:normal;color:var(--blue)}
+.eyebrow{color:var(--blue);font-weight:800;letter-spacing:.14em;font-size:14px;margin-bottom:8px}
+.lead2{color:var(--sub);font-size:17px;margin-bottom:36px;max-width:42em}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;list-style:none}
+.card{background:#fff;border:2px solid var(--line);border-radius:18px;padding:24px}
+.card .q{font-size:20px;font-weight:900;line-height:1.5;margin-bottom:8px}
+.card p{font-size:16px;color:var(--sub)}
+.steps{display:grid;gap:18px;list-style:none;counter-reset:s}
+.step{display:grid;grid-template-columns:96px 1fr;gap:20px;background:#fff;border:2px solid var(--line);border-radius:18px;padding:22px 24px;align-items:center}
+.num{background:var(--navy);color:#fff;border-radius:14px;text-align:center;padding:10px 0;font-weight:900;line-height:1.1}
+.num small{display:block;font-size:12px;letter-spacing:.14em;color:#9fb8ff}
+.num b{font-size:40px}
+.step h3{font-size:22px;font-weight:900;line-height:1.4}
+.step p{color:var(--sub);font-size:16px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.two .doc{width:100%}
+.two h3.t{font-size:20px;font-weight:900;margin:18px 0 6px}
+.two p.d{font-size:16px;color:var(--sub)}
+.check{list-style:none;display:grid;gap:12px}
+.check li{padding-left:36px;position:relative;font-size:18px;font-weight:700}
+.check li:before{content:"";position:absolute;left:0;top:5px;width:22px;height:22px;border:3px solid var(--blue);border-radius:6px}
+.check li:after{content:"";position:absolute;left:7px;top:8px;width:6px;height:11px;border:solid var(--blue);border-width:0 3px 3px 0;transform:rotate(40deg)}
+table.spec{width:100%;border-collapse:collapse;background:#fff;border-radius:14px;overflow:hidden;border:2px solid var(--line)}
+table.spec th,table.spec td{padding:14px 18px;text-align:left;border-bottom:2px solid var(--line);font-size:16px;vertical-align:top}
+table.spec th{width:9em;background:#E3ECFF;font-weight:800}
+details{background:#fff;border:2px solid var(--line);border-radius:14px;padding:4px 20px;margin-bottom:12px}
+summary{cursor:pointer;font-weight:800;font-size:18px;padding:14px 0;min-height:44px;list-style:none;position:relative;padding-right:28px}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"＋";position:absolute;right:0;color:var(--blue)}
+details[open] summary:after{content:"－"}
+details p{padding:0 0 16px;color:var(--sub);font-size:16px}
+/* CTA */
+.final{background:var(--navy);color:#fff}
+.final h2{color:#fff}
+.final .lead2{color:#c9d6f5}
+.demo{background:#fff;color:var(--text);border-radius:20px;padding:28px;margin-top:28px}
+.demo h3{font-size:20px;font-weight:900;margin-bottom:8px}
+.demo p{font-size:16px;color:var(--sub);margin-bottom:12px}
+.demo .stop{background:#FFF6D6;border:2px solid #F2D77A;border-radius:12px;padding:12px 16px;font-size:15px;font-weight:700;color:#5a4500}
+footer{background:#08163a;color:#9fb0d6;padding:28px 0;font-size:13px;line-height:1.8;text-align:center}
+.stickycta{display:none}
+@media (max-width:820px){
+ .fv{padding:32px 0 40px}
+ .fv .wrap{grid-template-columns:1fr;gap:28px}
+ .docs{min-height:520px}
+ .btn.small{font-size:12px;padding:8px 12px}
+ .logo{font-size:17px}
+ .cards{grid-template-columns:1fr}
+ .two{grid-template-columns:1fr}
+ .step{grid-template-columns:72px 1fr;gap:14px;padding:18px}
+ .num b{font-size:30px}
+ section{padding:52px 0}
+ .btn{width:100%;font-size:18px;padding:12px 16px}
+ .btn.small{width:auto}
+ .logo span{display:none}
+ table.spec th{width:6.5em}
+ .stickycta{display:block;position:fixed;left:0;right:0;bottom:0;background:rgba(255,255,255,.96);padding:10px 16px calc(10px + env(safe-area-inset-bottom));border-top:1px solid var(--line);z-index:10}
+ .stickycta .btn{min-height:52px;font-size:16px}
+ body{padding-bottom:76px}
+}
+@media (max-width:420px){
+ h1{font-size:44px}
+ .docs{min-height:520px}
+}
+</style>
+</head>
+<body>
+<div class="notice">これは制作練習用の架空の案件（デモLP）です。実在のサービスではなく、登録・申込・送信はできません。</div>
+<header class="top"><div class="wrap">
+ <div class="logo">WORK SHIFT<span>AIで仕事を整える90分</span></div>
+ <a class="btn small" href="#detail">セミナーの内容を確認する</a>
+</div></header>
+
+<main>
+<!-- FV -->
+<div class="fv"><div class="wrap">
+ <div>
+  <span class="tag">個人事業主のAI、指示の出し方に迷う方へ</span>
+  <h1>指示文を、<br><em>仕事で</em>試す。</h1>
+  <p class="lead"><b>90</b>分の無料セミナー（動画）</p>
+  <p>身近な仕事を題材に、整理シートと指示文テンプレートを使って、AIへの指示を試します。</p>
+  <ul class="chips"><li>無料</li><li>90分</li><li>動画で視聴</li><li>持ち帰れる教材つき</li></ul>
+  <div class="ctawrap"><a class="btn" href="#detail">セミナーの内容を確認する <span aria-hidden="true">→</span></a>
+  <small>内容の説明ページへ移動します（登録・送信はありません）</small></div>
+ </div>
+ <div>
+  <div class="docs" role="img" aria-label="指示文テンプレートと業務整理シートのイメージ図">
+   <div class="doc d1"><h3>業務整理シート</h3>
+    <div class="row"><small>毎週やっている仕事</small><p>メールの返信</p></div>
+    <div class="row"><small>時間がかかる仕事</small><p>資料の構成づくり</p></div>
+    <div class="row"><small>AIに頼んでみたい仕事</small><p>下書き</p></div></div>
+   <div class="doc d2"><h3>指示文テンプレート</h3>
+    <div class="row"><small>お願いしたいこと</small><p>お客様へのお礼メールを書く</p></div>
+    <div class="row"><small>相手と場面</small><p>初めて購入された方へ</p></div>
+    <div class="row"><small>ほしい形</small><p>3段落・やさしい言葉</p></div></div>
+  </div>
+  <p class="imgnote">※教材のイメージ図です。実際の教材の項目とは異なる場合があります。</p>
+ </div>
+</div></div>
+
+<!-- 共感 -->
+<section id="why"><div class="wrap">
+ <p class="eyebrow">こんな「困った」はありませんか</p>
+ <h2>AIは気になる。でも、<br>指示を<em>何て書けばいいか</em>迷う。</h2>
+ <p class="lead2">WORK SHIFT は、AIを仕事で試したい個人事業主のための、初心者向けの動画セミナーです。難しい開発の知識は前提にしません。</p>
+ <ul class="cards">
+  <li class="card"><p class="q">指示の出し方に迷う</p><p>入力欄を開いても、何から書けばよいか分からない。そんなときの書き出しを、テンプレートで試せます。</p></li>
+  <li class="card"><p class="q">入力欄の前で手が止まる</p><p>白紙の状態から、「お願いしたいこと」「相手と場面」「ほしい形」のように整理して書き出します。</p></li>
+  <li class="card"><p class="q">学んだ後に手元に残したい</p><p>業務整理シートと指示文テンプレートは持ち帰れます。仕事の合間に、くり返し使えます。</p></li>
+ </ul>
+</div></section>
+
+<!-- 流れ -->
+<section class="alt" id="flow"><div class="wrap">
+ <p class="eyebrow">90分の流れ</p>
+ <h2>身近な仕事で、<em>手を動かして</em>学びます</h2>
+ <p class="lead2">動画なので、自分のペースで見られます。一時停止して、手元のシートに書き込みながら進められます。</p>
+ <ol class="steps">
+  <li class="step"><div class="num"><small>STEP</small><b>1</b></div><div><h3>仕事の棚卸し</h3><p>いつもの仕事を書き出して、AIに頼めそうなものを整理します。（業務整理シートを使用）</p></div></li>
+  <li class="step"><div class="num"><small>STEP</small><b>2</b></div><div><h3>指示の組み立て方</h3><p>指示文を、いくつかのパーツに分けて組み立てる考え方を学びます。（指示文テンプレートを使用）</p></div></li>
+  <li class="step"><div class="num"><small>STEP</small><b>3</b></div><div><h3>メール下書きと資料構成の練習</h3><p>身近な業務を題材に、メールの下書きと資料の構成を、実際に試します。</p></div></li>
+ </ol>
+</div></section>
+
+<!-- 教材 -->
+<section id="tools"><div class="wrap">
+ <p class="eyebrow">持ち帰れる教材</p>
+ <h2>整理シートと、<em>指示文テンプレート。</em></h2>
+ <p class="lead2">どちらも、セミナーで使って、そのまま持ち帰れます。</p>
+ <div class="two">
+  <div>
+   <div class="doc"><h3>業務整理シート</h3>
+    <div class="row"><small>毎週やっている仕事</small><p>メールの返信</p></div>
+    <div class="row"><small>時間がかかる仕事</small><p>資料の構成づくり</p></div>
+    <div class="row"><small>AIに頼んでみたい仕事</small><p>下書き</p></div></div>
+   <h3 class="t">仕事を見える形にする</h3>
+   <p class="d">自分の仕事を書き出して、AIに頼めそうなことを見つけるためのシートです。</p>
+  </div>
+  <div>
+   <div class="doc"><h3>指示文テンプレート</h3>
+    <div class="row"><small>お願いしたいこと</small><p>お客様へのお礼メールを書く</p></div>
+    <div class="row"><small>相手と場面</small><p>初めて購入された方へ</p></div>
+    <div class="row"><small>ほしい形</small><p>3段落・やさしい言葉</p></div></div>
+   <h3 class="t">書き出しに迷わない</h3>
+   <p class="d">AIへの指示を、空欄を埋めるように書いて試せるテンプレートです。</p>
+  </div>
+ </div>
+ <p class="imgnote">※上の図はイメージです。実際の教材の項目とは異なる場合があります。</p>
+</div></section>
+
+<!-- こんな方に -->
+<section class="alt" id="for"><div class="wrap">
+ <p class="eyebrow">こんな方に</p>
+ <h2>身近な業務に、<em>AIを使ってみたい</em>方へ</h2>
+ <ul class="check" style="margin-top:24px">
+  <li>個人事業主として、メールや資料づくりに時間がかかっている</li>
+  <li>AIを試したいが、指示の出し方が分からない</li>
+  <li>難しい勉強は後回しにして、まず仕事で試してみたい</li>
+  <li>自分のペースで、動画で学びたい</li>
+ </ul>
+</div></section>
+
+<!-- 形式・FAQ -->
+<section id="faq"><div class="wrap">
+ <p class="eyebrow">セミナーの概要</p>
+ <h2>形式をかんたんに確認</h2>
+ <table class="spec" style="margin:24px 0 40px">
+  <tr><th>名称</th><td>WORK SHIFT / AIで仕事を整える90分</td></tr>
+  <tr><th>形式</th><td>初心者向けのオンデマンド動画セミナー（登録後に視聴できる想定）</td></tr>
+  <tr><th>時間</th><td>90分</td></tr>
+  <tr><th>料金</th><td>無料</td></tr>
+  <tr><th>持ち帰り</th><td>業務整理シート／指示文テンプレート</td></tr>
+ </table>
+ <h2 style="font-size:clamp(24px,3.4vw,32px)">よくある質問</h2>
+ <div style="margin-top:20px">
+  <details><summary>AIを使ったことがなくても大丈夫ですか？</summary><p>初心者向けの内容です。難しい開発の知識は前提にせず、身近な業務を題材に進めます。</p></details>
+  <details><summary>自分のペースで見られますか？</summary><p>動画のセミナーなので、自分のペースで視聴できます。</p></details>
+  <details><summary>教材は持ち帰れますか？</summary><p>はい。業務整理シートと指示文テンプレートを持ち帰れます。</p></details>
+  <details><summary>料金はかかりますか？</summary><p>このセミナーは無料の設定です。</p></details>
+ </div>
+</div></section>
+
+<!-- CTA -->
+<section class="final" id="detail"><div class="wrap">
+ <p class="eyebrow" style="color:#8fb2ff">セミナーの内容を確認する</p>
+ <h2>指示文を、<span style="color:#8fb2ff">仕事で</span>試してみませんか。</h2>
+ <p class="lead2">WORK SHIFT / AIで仕事を整える90分は、無料の動画セミナーです。身近な仕事を題材に、整理シートと指示文テンプレートを使って進めます。</p>
+ <a class="btn white" href="#demo">無料セミナーを見る <span aria-hidden="true">→</span></a>
+ <div class="demo" id="demo">
+  <h3>デモ案内（登録・送信はできません）</h3>
+  <p>これは制作練習用の架空案件です。実際の視聴ページや登録フォームは設定されていません。本番では、このボタンの先に視聴の案内が表示される想定です。</p>
+  <div class="stop">個人情報を入力する欄や、外部へ送信する機能はありません。</div>
+ </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+ WORK SHIFT は、制作練習用の架空の案件です。実在のサービス・団体・人物とは関係ありません。<br>
+ 掲載の教材図はイメージです。
+</div></footer>
+
+<div class="stickycta"><a class="btn" href="#detail">セミナーの内容を確認する <span aria-hidden="true">→</span></a></div>
+</body>
+</html>
