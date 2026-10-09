@@ -39,7 +39,7 @@ AIは作業を始める前に、必ずこのファイルと 01_knowledge/ の中
 - 共通方針は01_knowledge、案件の回答とデザイン指示書は02_projects、成果物は03_outputs。料金の仮案を確定条件にしない。
 
 ## 審美眼の実施タイミング
-- HPではデザイン案から1案を選んだあと、自社サービスでは提案したUIUX1案を確認したあと、実装前の案を `04_skills/barkcore-design-improve/SKILL.md` で診断・最優先3点修正・前後比較・45項目再診断する。改善案の本人確認後に実装へ進む。実装後の表示・動作確認は別に行う。
+- HPではデザイン案から1案を選んだあと、自社サービスでは提案したUIUX1案を確認したあと、先に制作物（画像または画面として見られるデザイン案）を作り、その案を `04_skills/barkcore-design-improve/SKILL.md` で診断・最優先3点修正・前後比較・45項目再診断する。改善案の本人確認後に実装へ進む。実装後の表示・動作確認は別に行う。
 
 ## 品質スキルの自動呼び出し
 - HP・LP・サービスデモ・アプリのUIを実装するときは、`01_knowledge/06_workflow/quality-skills.md` の表に従い、frontend-design・barkcore-design-improve・baseline-ui・fixing-motion-performance・fixing-accessibility を場面に応じて自動で使う。依頼されなくても行い、使ったスキルを報告に書く。案件の指示書が優先。

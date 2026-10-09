@@ -10,7 +10,7 @@ description: BarkCoreのナレッジを使って会社HP・コーポレートサ
 2. **構成・主要原稿を作る。** 先に `06_workflow/design-basics.md`（まず1〜3章）と `05_winning_feedback/checklists/visual-quality.md`（まず2章）を開く。章の指定は最低限で、他の章も必要になったら読む。セクションごとの役割表を作り、構成と主要原稿を示して確認を待つ。商品条件が絡むときは `02_product/offer/hp-plan.md` を開く。
 3. **参考を探して2〜3方向を提案する。** 先に `04_assets_references/inspiration_moodboard/index.md` と `research-rules.md`、`design-basics.md`（5章）を開く。一覧に合うものがなければ、research-rulesの4サイトを調べる。理由・取り入れる部分・画像方向を添える。色違いだけの案にしない。
 4. **デザイン案を画像で作る。** 先に `04_skills/frontend-design/SKILL.md`、`05_winning_feedback/checklists/ai-look-avoidance.md`、`visual-quality.md`（4〜6章）、`01_brand/colors_fonts/rules.md`、`01_brand/tone_voice/rules.md` を開く。設計メモを作り、定番になっていないか自己点検する。提示前に visual-quality の品質条件で確認し、問題があれば直してから見せる。
-5. **本人が1案を選んだら、実装前に審美眼。** 先に `04_skills/barkcore-design-improve/SKILL.md` を開く。45項目診断→最優先3点修正→前後比較→再診断を一巡し、本人に見せて確認を受ける（下の「審美眼」参照）。
+5. **本人が1案を選んだら、先に制作物を作ってから審美眼。** 審美眼は見られる制作物がないと診断できない。まず選ばれた1案を、PC・スマホの画面または画像（FV・代表的な本文・ページ全体）として実際に作る。作れたら `04_skills/barkcore-design-improve/SKILL.md` を開く。45項目診断→最優先3点修正→前後比較→再診断を一巡し、本人に見せて確認を受ける（下の「審美眼」参照）。
 6. **詳細指示書を作る。** 先に `06_workflow/design-spec.md` を開く。選ばれた参考を画面で確認し、注釈スクショと寸法・文字・動き・スマホの具体指示を `02_projects/案件名/design-direction.md` へ。観察と提案を分け、確認後に実装へ進む。
 7. **トップから実装する。** 先に `06_workflow/quality-skills.md` を開く。トップだけをまずPC・スマホで動く形にし、確認後に残りを作る。実装の依頼がある場合は画像だけで完成にしない。既存リポジトリならその構成に従う。
    実装直後に `04_skills/baseline-ui/SKILL.md` を開いて点検。動きを入れたら `fixing-motion-performance/SKILL.md`、ボタン・フォーム・メニューがあれば `fixing-accessibility/SKILL.md` も開く。
@@ -22,6 +22,6 @@ description: BarkCoreのナレッジを使って会社HP・コーポレートサ
 ## デザイン案が決まった後の審美眼
 全候補に一律で修正をかけず、選択・方向確認済みの1案を対象にする。
 HPはデザイン案2〜3案から本人が選んだ1案、自社サービスは提案するUIUX1案を本人が確認した後。
-実装前に画像または画面として見られるデザイン案を作り、`04_skills/barkcore-design-improve/SKILL.md` で45項目診断→最優先3点修正→前後比較→45項目再診断を一巡する。
+**審美眼の前に、必ず制作物（画像または画面として見られるデザイン案）を先に作る。** 制作物ができてから、`04_skills/barkcore-design-improve/SKILL.md` で45項目診断→最優先3点修正→前後比較→45項目再診断を一巡する。
 結果と改善後の案を本人に見せ、確認後に詳細指示書を実装用に整えて実装へ進む。実装後の表示・動作チェックは別に行う。
 デザイン画像がないのに文章だけで採点しない。具体的な画像・画面を用意できない場合は未実施と説明する。既存ファイルの上書き・外部公開の許可条件は変わらない。
