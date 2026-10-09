@@ -8,7 +8,9 @@ description: BarkCoreの自社サービス・業務システム・アプリ案�
 01_knowledgeは**全ファイルを最初に読む**（`brand_summary.md` は入口であって、それだけで済ませない）。そのうえで、各工程は**作り始める前に、指定のファイルを実際に開く**。工程の終わりに「読んだ資料：…」を1行で報告する。案件固有の回答は02_projectsを優先する。
 1. **現状を確認する。** 先に `06_workflow/service-workflow.md`、`06_workflow/intake/service.md`、`02_product/offer/service-models.md`、`03_customer/customer_summary.md` を開く。誰が・どの作業で・何に困るか、残す部分、端末、目指す変化を確認し、不足だけ1つずつ質問。基本はITに不慣れな人にも小学生にも分かる言葉と操作。
 2. **類似サービスを調べる。** 先に `04_assets_references/references_summary.md` を開く。既存でできることと作る意味を説明し、MVPの機能と作らない範囲を確認。
-3. **UIUXを1案提案する。** 先に `06_workflow/design-basics.md`（特に6章）、`05_winning_feedback/checklists/ai-look-avoidance.md`、`04_skills/frontend-design/SKILL.md` を開く。重視点を質問してから、画面イメージ・通常とエラー等の状態・操作の流れを提案。戻る・訂正も設計。
+3. **UIUXを1案提案する。** 先に `06_workflow/design-basics.md`（特に6章）、`05_winning_feedback/checklists/ai-look-avoidance.md`、`04_skills/frontend-design/SKILL.md`、`04_skills/ui-ux-pro-max/SKILL.md` を開く。重視点を質問してから、画面イメージ・通常とエラー等の状態・操作の流れを提案。戻る・訂正も設計。
+   - ui-ux-pro-max は、画面の部品・配色・文字・グラフ・使いやすさの候補探しに使う（デモ制作専用。HP・LPの工程では使わない）。`python3 04_skills/ui-ux-pro-max/scripts/search.py "<英語のキーワード>" --design-system -p "<名前>"` で候補を出す。日本語だと外れやすいので、業種・用途を英語で足す。
+   - 出た候補は参考であり、決定ではない。案件の指示書・01_knowledgeが優先。日本語に使うフォントは別に選ぶ。`--persist`（ファイルを書き出す指定）は本人の許可を取ってから使う。
 4. **本人が確認したら、実装前に審美眼。** 先に `04_skills/barkcore-design-improve/SKILL.md` を開く（下の「審美眼」参照）。確認後、`06_workflow/design-spec.md` を開いて詳細指示書を作り、確認を受けてから実装。
 5. **実装する。** 先に `06_workflow/quality-skills.md` を開く。仮データで入力→保存→一覧・集計など必要な流れが動くデモを作る。保存方法・限界を説明。本番の認証・運用・外部連携を完了したとしない。実装直後に `baseline-ui`、動きがあれば `fixing-motion-performance`、操作部品があれば `fixing-accessibility` の各SKILL.mdを開いて点検。
 6. **確認して渡す。** 先に `05_winning_feedback/checklists/review.md` と `06_workflow/sales-handoff.md` を開く。操作を実際に試し、試し方・動く範囲・未検証・本番不可の部分、営業用説明メモを渡す。反応は案件へ記録、共通の学びは本人確認後に05へ。
