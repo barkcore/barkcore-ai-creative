@@ -9,7 +9,7 @@ description: BarkCoreの自社サービス・業務システム・アプリ案�
 1. **現状を確認する。** 先に `06_workflow/service-workflow.md`、`06_workflow/intake/service.md`、`02_product/offer/service-models.md`、`03_customer/customer_summary.md` を開く。誰が・どの作業で・何に困るか、残す部分、端末、目指す変化を確認し、不足だけ1つずつ質問。基本はITに不慣れな人にも小学生にも分かる言葉と操作。
 2. **類似サービスを調べる。** 先に `04_assets_references/references_summary.md` を開く。既存でできることと作る意味を説明し、MVPの機能と作らない範囲を確認。
 3. **UIUXを1案提案する。** 先に `06_workflow/design-basics.md`（特に6章）、`05_winning_feedback/checklists/ai-look-avoidance.md`、`04_skills/frontend-design/SKILL.md` を開く。重視点を質問してから、画面イメージ・通常とエラー等の状態・操作の流れを提案。戻る・訂正も設計。
-4. **本人が確認したら、実装前に審美眼。** 先に `04_skills/barkcore-design-improve/SKILL.md` を開く（下の「審美眼」参照）。確認後、`06_workflow/design-spec.md` を開いて詳細指示書を作り、確認を受けてから実装。
+4. **本人が確認したら、先に制作物を作ってから審美眼。** 審美眼は見られる制作物がないと診断できない。まず確認済みのUIUX1案を、主要画面（通常・エラー等の状態を含む）の画像または画面として実際に作る。作れたら先に `04_skills/barkcore-design-improve/SKILL.md` を開く（下の「審美眼」参照）。確認後、`06_workflow/design-spec.md` を開いて詳細指示書を作り、確認を受けてから実装。
 5. **実装する。** 先に `06_workflow/quality-skills.md` を開く。仮データで入力→保存→一覧・集計など必要な流れが動くデモを作る。保存方法・限界を説明。本番の認証・運用・外部連携を完了したとしない。実装直後に `baseline-ui`、動きがあれば `fixing-motion-performance`、操作部品があれば `fixing-accessibility` の各SKILL.mdを開いて点検。
 6. **確認して渡す。** 先に `05_winning_feedback/checklists/review.md` と `06_workflow/sales-handoff.md` を開く。操作を実際に試し、試し方・動く範囲・未検証・本番不可の部分、営業用説明メモを渡す。反応は案件へ記録、共通の学びは本人確認後に05へ。
 自社サービスの公開前に顧客の納品確認は要求しない。個別受託は顧客確認が必要。外部公開・送信・既存ファイル変更の本人許可は別。許可なく実会社のデータを使わない。確認待ちは回答が来るまで待つ。
@@ -18,6 +18,6 @@ description: BarkCoreの自社サービス・業務システム・アプリ案�
 ## デザイン案が決まった後の審美眼
 全候補に一律で修正をかけず、選択・方向確認済みの1案を対象にする。
 HPはデザイン案2〜3案から本人が選んだ1案、自社サービスは提案するUIUX1案を本人が確認した後。
-実装前に画像または画面として見られるデザイン案を作り、`04_skills/barkcore-design-improve/SKILL.md` で45項目診断→最優先3点修正→前後比較→45項目再診断を一巡する。
+**審美眼の前に、必ず制作物（画像または画面として見られるデザイン案）を先に作る。** 制作物ができてから、`04_skills/barkcore-design-improve/SKILL.md` で45項目診断→最優先3点修正→前後比較→45項目再診断を一巡する。
 結果と改善後の案を本人に見せ、確認後に詳細指示書を実装用に整えて実装へ進む。実装後の表示・動作チェックは別に行う。
 デザイン画像がないのに文章だけで採点しない。具体的な画像・画面を用意できない場合は未実施と説明する。既存ファイルの上書き・外部公開の許可条件は変わらない。
