@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>紙・FAX入出庫 Excel化デモ</title>
+<style>
+:root{
+  --ink:#0F172A; --ink-2:#475569; --bg:#F8FAFC; --line:#CBD5E1;
+  --main:#1E293B; --accent:#2563EB; --accent-ink:#fff; --err:#B91C1C; --ok:#166534;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic","Noto Sans JP",Meiryo,sans-serif;font-size:16px;line-height:1.8}
+.page{max-width:980px;margin:0 auto;padding:32px 16px 96px}
+header{margin-bottom:56px}
+.brand{font-size:14px;color:var(--ink-2);margin:0 0 8px}
+h1{font-size:clamp(24px,4vw,34px);line-height:1.4;margin:0 0 16px;font-weight:700;color:var(--main)}
+.lead{margin:0;max-width:38em}
+.notice{margin:24px 0 0;padding-left:14px;border-left:3px solid var(--main);color:var(--ink);max-width:44em}
+section{margin-top:72px}
+h2{font-size:22px;line-height:1.5;margin:0 0 8px;color:var(--main)}
+.hint{margin:0 0 24px;color:var(--ink-2);max-width:40em}
+.pick{display:grid;gap:32px}
+@media(min-width:760px){.pick{grid-template-columns:minmax(0,5fr) minmax(0,6fr);align-items:start}}
+fieldset{border:0;padding:0;margin:0 0 24px}
+legend{padding:0;font-weight:700;margin-bottom:8px}
+.radio{display:flex;gap:10px;align-items:flex-start;padding:8px 0;cursor:pointer}
+.radio input{margin-top:7px;width:18px;height:18px;accent-color:var(--accent)}
+button{font:inherit;cursor:pointer;min-height:44px;padding:8px 22px;border-radius:6px;border:2px solid var(--main);background:transparent;color:var(--main);font-weight:600}
+button.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+button.danger{border-color:var(--err);color:var(--err)}
+button.link{border:0;min-height:36px;padding:4px 8px;text-decoration:underline;font-weight:500}
+button:disabled{opacity:.45;cursor:not-allowed}
+button:hover:not(:disabled){filter:brightness(.93)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:24px}
+.paper{background:#fff;border:1px solid var(--line);padding:0;line-height:0}
+.paper svg{width:100%;height:auto;display:block}
+.cap{margin:8px 0 0;font-size:14px;color:var(--ink-2);line-height:1.6}
+.status{min-height:1.8em;margin:0 0 16px;font-weight:600}
+.status.ok{color:var(--ok)} .status.bad{color:var(--err)}
+.empty{color:var(--ink-2);padding:24px 0}
+.summary{margin:0 0 24px;padding:12px 0 12px 14px;border-left:3px solid var(--err)}
+.summary h3{margin:0 0 4px;font-size:16px;color:var(--err)}
+.summary ul{margin:0;padding-left:1.2em}
+.summary a{color:var(--err)}
+.head-fields{display:grid;gap:20px;margin-bottom:32px}
+@media(min-width:760px){.head-fields{grid-template-columns:1fr 1fr 2fr}}
+label.f{display:block;font-weight:700;margin-bottom:4px}
+input[type=text],select{font:inherit;width:100%;min-height:44px;padding:6px 10px;border:1px solid var(--ink-2);border-radius:4px;background:#fff;color:var(--ink)}
+input[aria-invalid=true]{border:2px solid var(--err)}
+.err{color:var(--err);font-size:14px;line-height:1.5;margin:4px 0 0}
+.tablewrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:640px}
+th{text-align:left;font-size:14px;color:var(--ink-2);font-weight:600;padding:0 8px 8px 0}
+td{padding:6px 8px 6px 0;vertical-align:top;border-top:1px solid var(--line)}
+td.n{width:48px;color:var(--ink-2);padding-top:14px}
+td.qty{width:190px}
+td.unit{width:120px}
+td.del{width:96px}
+.saved table{min-width:520px}
+.saved td{padding:10px 8px 10px 0}
+.small{font-size:14px;color:var(--ink-2);max-width:42em}
+dialog{border:2px solid var(--main);border-radius:8px;padding:24px;max-width:420px;width:calc(100% - 32px)}
+dialog::backdrop{background:rgba(15,23,42,.5)}
+dialog p{margin-top:0}
+@media(max-width:640px){
+  .saved table{min-width:0}
+  .saved td,.saved th{padding-right:6px;font-size:15px}
+  #check .tablewrap{overflow:visible}
+  #check table{min-width:0}
+  #check thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  #check tbody tr{display:grid;grid-template-columns:1fr 1fr;gap:4px 12px;padding:16px 0;border-top:1px solid var(--line)}
+  #check tbody td{display:block;border:0;padding:0;width:auto}
+  #check td.n{grid-column:1/-1;font-weight:700;color:var(--ink)}
+  #check td.n::before{content:"明細 "}
+  #check td.name{grid-column:1/-1}
+  #check td.del{grid-column:1/-1}
+  #check td[data-l]::before{content:attr(data-l);display:block;font-size:14px;color:var(--ink-2)}
+}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+</style>
+</head>
+<body>
+<div class="page">
+<header>
+  <p class="brand">BarkCore デモ</p>
+  <h1>紙・FAXの入出庫伝票を、Excelの表にする</h1>
+  <p class="lead">紙を選んで、読み取り結果を見て、まちがいを直して、保存します。保存した伝票は、Excelで開ける形で取り出せます。</p>
+  <p class="notice">これは動きを確かめるためのデモです。紙の文字を実際に読み取る機能はまだつないでいません。「読み取り結果」は、あらかじめ用意した仮のデータです。伝票も架空のものです。</p>
+</header>
+
+<main>
+<section aria-labelledby="h-pick">
+  <h2 id="h-pick">1. 紙を選ぶ</h2>
+  <p class="hint">サンプルの伝票を選んで、「この紙を読み取る」を押してください。</p>
+  <div class="pick">
+    <div>
+      <fieldset>
+        <legend>サンプルの伝票</legend>
+        <label class="radio"><input type="radio" name="sample" value="A" checked><span>サンプルA：入庫の伝票<br><span class="small">読み取りに、ほぼ問題がない例</span></span></label>
+        <label class="radio"><input type="radio" name="sample" value="B"><span>サンプルB：出庫の伝票<br><span class="small">読みまちがいがある例（直す練習）</span></span></label>
+      </fieldset>
+      <button type="button" class="primary" id="btn-read">この紙を読み取る</button>
+    </div>
+    <div>
+      <div class="paper" id="paper" role="img" aria-label="選んだサンプルの伝票の画像"></div>
+      <p class="cap">架空の伝票です。実在の会社・取引とは関係ありません。</p>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="h-check">
+  <h2 id="h-check">2. 読み取り結果を確認する</h2>
+  <p class="hint">赤い枠は、直したほうがよい場所です。文字は、その場で書き直せます。</p>
+  <p class="status" id="status" role="status" aria-live="polite"></p>
+  <div id="errsum" tabindex="-1"></div>
+  <div id="check"><p class="empty">まだ読み取っていません。1で紙を選んで、「この紙を読み取る」を押してください。</p></div>
+</section>
+
+<section class="saved" aria-labelledby="h-saved">
+  <h2 id="h-saved" tabindex="-1">3. 保存した伝票</h2>
+  <p class="hint">保存した伝票の一覧です。ここから、Excelで開けるファイルを取り出せます。</p>
+  <div id="saved"></div>
+  <p class="small">保存先は、いま使っているこのブラウザの中だけです。ほかのパソコンやブラウザには出ません。ブラウザの履歴を消すと、保存した伝票も消えます。</p>
+</section>
+</main>
+</div>
+
+<dialog id="dlg" aria-labelledby="dlg-t">
+  <p id="dlg-t"><strong>保存した伝票をすべて削除しますか？</strong></p>
+  <p>削除すると、もとに戻せません。先に「Excel用ファイルをダウンロード」しておくと安心です。</p>
+  <div class="actions">
+    <button type="button" id="dlg-no">やめる</button>
+    <button type="button" class="danger" id="dlg-yes">すべて削除する</button>
+  </div>
+</dialog>
+
+<script>
+(function(){
+  var KEY='barkcore-demo-slips';
+  // 仮データ：紙に書いてある内容(truth)と、仮の読み取り結果(ocr)
+  var SAMPLES={
+    A:{ truth:{kind:'入庫',date:'2026/10/05',shipper:'サンプル商事',rows:[['ミネラルウォーター 500ml','48','ケース'],['食用油 1.5L','24','ケース'],['米 5kg','30','袋']]},
+        ocr:{kind:'入庫',date:'2026/10/05',shipper:'サンプル商事',rows:[['ミネラルウォーター 500ml','48','ケース'],['食用油 1.5L','24','ケース'],['米 5kg','30','袋']]} },
+    B:{ truth:{kind:'出庫',date:'2026/10/07',shipper:'サンプル商事',rows:[['段ボール箱 M','200','枚'],['緩衝材ロール','12','本'],['ガムテープ','60','巻']]},
+        ocr:{kind:'出庫',date:'2026/1O/07',shipper:'サンプル商事',rows:[['段ボール箱 M','2OO','枚'],['緩衝材ロール','12','本'],['ガムテープ','','巻']]} }
+  };
+  var $=function(id){return document.getElementById(id)};
+  var current=null; // 確認中の読み取り結果
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||[]}catch(e){return []}}
+  function store(v){try{localStorage.setItem(KEY,JSON.stringify(v));return true}catch(e){return false}}
+
+  // ---- 紙の絵 ----
+  function paperSvg(t){
+    var s='<svg viewBox="0 0 420 300" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">'+
+    '<rect width="420" height="300" fill="#fff"/>'+
+    '<text x="24" y="38" font-size="18" font-weight="700" fill="#334155">入 出 庫 伝 票</text>'+
+    '<text x="300" y="38" font-size="11" fill="#64748B">FAX受信 / 架空</text>'+
+    '<line x1="24" y1="48" x2="396" y2="48" stroke="#94A3B8"/>'+
+    '<text x="24" y="72" font-size="12" fill="#64748B">区分</text><text x="64" y="72" font-size="15" fill="#1e293b" font-style="italic">'+esc(t.kind)+'</text>'+
+    '<text x="130" y="72" font-size="12" fill="#64748B">日付</text><text x="168" y="72" font-size="15" fill="#1e293b" font-style="italic">'+esc(t.date)+'</text>'+
+    '<text x="270" y="72" font-size="12" fill="#64748B">荷主</text><text x="306" y="72" font-size="15" fill="#1e293b" font-style="italic">'+esc(t.shipper)+'</text>'+
+    '<line x1="24" y1="86" x2="396" y2="86" stroke="#CBD5E1"/>'+
+    '<text x="24" y="106" font-size="11" fill="#64748B">品名</text><text x="270" y="106" font-size="11" fill="#64748B">数量</text><text x="340" y="106" font-size="11" fill="#64748B">単位</text>';
+    t.rows.forEach(function(r,i){var y=136+i*40;
+      s+='<line x1="24" y1="'+(y-26)+'" x2="396" y2="'+(y-26)+'" stroke="#E2E8F0"/>'+
+      '<text x="24" y="'+y+'" font-size="15" fill="#1e293b" font-style="italic">'+esc(r[0])+'</text>'+
+      '<text x="270" y="'+y+'" font-size="15" fill="#1e293b" font-style="italic">'+esc(r[1])+'</text>'+
+      '<text x="340" y="'+y+'" font-size="15" fill="#1e293b" font-style="italic">'+esc(r[2])+'</text>';});
+    return s+'<line x1="24" y1="276" x2="396" y2="276" stroke="#94A3B8"/></svg>';
+  }
+  function showPaper(){var id=document.querySelector('input[name=sample]:checked').value;$('paper').innerHTML=paperSvg(SAMPLES[id].truth);$('paper').setAttribute('aria-label','サンプル'+id+'の伝票。区分は'+SAMPLES[id].truth.kind+'、日付は'+SAMPLES[id].truth.date+'、品目は'+SAMPLES[id].truth.rows.length+'行。')}
+
+  // ---- チェック ----
+  function norm(s){return String(s).replace(/[０-９]/g,function(c){return String.fromCharCode(c.charCodeAt(0)-65248)}).replace(/\s+/g,'').trim()}
+  function validDate(s){var m=/^(\d{4})\/(\d{1,2})\/(\d{1,2})$/.exec(norm(s));if(!m)return false;var d=new Date(+m[1],+m[2]-1,+m[3]);return d.getFullYear()==+m[1]&&d.getMonth()==+m[2]-1&&d.getDate()==+m[3]}
+  function errors(c){
+    var e=[];
+    if(!validDate(c.date))e.push({id:'f-date',msg:'日付は「2026/10/05」の形で、実在する日にちを入れてください。'});
+    if(!c.shipper.trim())e.push({id:'f-shipper',msg:'荷主を入れてください。'});
+    if(!c.rows.length)e.push({id:'btn-add',msg:'明細が1行もありません。「行を追加」を押してください。'});
+    c.rows.forEach(function(r,i){var n=i+1;
+      if(!r[0].trim())e.push({id:'r-'+i+'-0',msg:n+'行目：品名を入れてください。'});
+      if(!/^[0-9]+$/.test(norm(r[1]))||+norm(r[1])<1)e.push({id:'r-'+i+'-1',msg:n+'行目：数量は1以上の数字だけで入れてください（英字の「O」は数字の「0」に直します）。'});
+      if(!r[2].trim())e.push({id:'r-'+i+'-2',msg:n+'行目：単位を入れてください。'});
+    });
+    return e;
+  }
+  function errFor(list,id){for(var i=0;i<list.length;i++)if(list[i].id===id)return list[i].msg;return ''}
+
+  // ---- 確認画面 ----
+  function renderCheck(showSummary){
+    if(!current){$('check').innerHTML='<p class="empty">まだ読み取っていません。1で紙を選んで、「この紙を読み取る」を押してください。</p>';$('errsum').innerHTML='';return}
+    var list=errors(current);
+    function fld(id,label,val,extra){var m=errFor(list,id);
+      return '<div><label class="f" for="'+id+'">'+label+'</label>'+extra.replace('%V',esc(val)).replace('%I',id).replace('%A',m?' aria-invalid="true" aria-describedby="'+id+'-e"':'')+(m?'<p class="err" id="'+id+'-e">'+esc(m)+'</p>':'')+'</div>';}
+    var h='<div class="head-fields">'+
+      '<div><label class="f" for="f-kind">区分</label><select id="f-kind"><option'+(current.kind==='入庫'?' selected':'')+'>入庫</option><option'+(current.kind==='出庫'?' selected':'')+'>出庫</option></select></div>'+
+      fld('f-date','日付',current.date,'<input type="text" id="%I" value="%V" inputmode="numeric" autocomplete="off" aria-required="true"%A>')+
+      fld('f-shipper','荷主',current.shipper,'<input type="text" id="%I" value="%V" autocomplete="off" aria-required="true"%A>')+
+    '</div>';
+    h+='<div class="tablewrap"><table><caption class="sr">読み取った明細</caption><thead><tr><th scope="col">行</th><th scope="col">品名</th><th scope="col">数量</th><th scope="col">単位</th><th scope="col"><span class="sr">操作</span></th></tr></thead><tbody>';
+    current.rows.forEach(function(r,i){
+      function cell(j,cls,mode){var id='r-'+i+'-'+j,m=errFor(list,id);
+        var short=['品名を入れてください。','1以上の数字だけで入れてください。','単位を入れてください。'][j];
+        return '<td class="'+cls+'" data-l="'+['品名','数量','単位'][j]+'"><input type="text" id="'+id+'" value="'+esc(r[j])+'" aria-label="'+(i+1)+'行目 '+['品名','数量','単位'][j]+'"'+(mode?' inputmode="numeric"':'')+(m?' aria-invalid="true" aria-describedby="'+id+'-e"':'')+' autocomplete="off" aria-required="true">'+(m?'<p class="err" id="'+id+'-e">'+esc(short)+'</p>':'')+'</td>';}
+      h+='<tr><td class="n">'+(i+1)+'</td>'+cell(0,'name',0)+cell(1,'qty',1)+cell(2,'unit',0)+'<td class="del"><button type="button" class="link" data-del="'+i+'" aria-label="'+(i+1)+'行目を削除">削除</button></td></tr>';
+    });
+    h+='</tbody></table></div><div class="actions"><button type="button" id="btn-add">行を追加</button><button type="button" id="btn-reread">もう一度読み取る（直した内容は消えます）</button></div>'+
+       '<div class="actions"><button type="button" class="primary" id="btn-save">この内容で保存する</button></div>';
+    $('check').innerHTML=h;
+    if(showSummary&&list.length){
+      $('errsum').innerHTML='<div class="summary" role="alert"><h3>保存する前に、'+list.length+'か所を直してください</h3><ul>'+list.map(function(x){return '<li><a href="#'+x.id+'" data-jump="'+x.id+'">'+esc(x.msg)+'</a></li>'}).join('')+'</ul></div>';
+      $('errsum').focus();
+    } else $('errsum').innerHTML='';
+  }
+  function syncFromDom(){
+    if(!current)return;
+    var k=$('f-kind');if(!k)return;
+    current.kind=k.value;current.date=$('f-date').value;current.shipper=$('f-shipper').value;
+    current.rows.forEach(function(r,i){for(var j=0;j<3;j++){var el=$('r-'+i+'-'+j);if(el)r[j]=el.value}});
+  }
+  function say(msg,cls){var s=$('status');s.textContent=msg;s.className='status'+(cls?' '+cls:'')}
+
+  // ---- 保存一覧 ----
+  function renderSaved(){
+    var v=load(),h='';
+    if(!v.length){h='<p class="empty">まだ保存した伝票はありません。2で内容を確認して、「この内容で保存する」を押すと、ここに出ます。</p>'}
+    else{
+      h='<div class="tablewrap"><table><caption class="sr">保存した伝票の一覧</caption><thead><tr><th scope="col">日付</th><th scope="col">区分</th><th scope="col">荷主</th><th scope="col">明細の行数</th></tr></thead><tbody>'+
+        v.map(function(s){return '<tr><td>'+esc(s.date)+'</td><td>'+esc(s.kind)+'</td><td>'+esc(s.shipper)+'</td><td>'+s.rows.length+'行</td></tr>'}).join('')+'</tbody></table></div>';
+    }
+    h+='<div class="actions"><button type="button" class="primary" id="btn-csv"'+(v.length?'':' disabled')+'>Excel用ファイルをダウンロード</button>'+
+       '<button type="button" id="btn-undo"'+(v.length?'':' disabled')+'>最後の保存を取り消す</button>'+
+       '<button type="button" class="danger" id="btn-clear"'+(v.length?'':' disabled')+'>すべて削除</button></div>';
+    $('saved').innerHTML=h;
+  }
+  function csv(){
+    var q=function(x){x=String(x);return /[",\n]/.test(x)?'"'+x.replace(/"/g,'""')+'"':x};
+    var out=[['日付','区分','荷主','品名','数量','単位']];
+    load().forEach(function(s){s.rows.forEach(function(r){out.push([s.date,s.kind,s.shipper,r[0],norm(r[1]),r[2]])})});
+    return '﻿'+out.map(function(r){return r.map(q).join(',')}).join('\r\n');
+  }
+
+  // ---- 操作 ----
+  document.querySelectorAll('input[name=sample]').forEach(function(r){r.addEventListener('change',showPaper)});
+  function read(){
+    var id=document.querySelector('input[name=sample]:checked').value,b=$('btn-read');
+    b.disabled=true;say('読み取り中です…');$('errsum').innerHTML='';
+    setTimeout(function(){
+      var o=SAMPLES[id].ocr;current={kind:o.kind,date:o.date,shipper:o.shipper,rows:o.rows.map(function(r){return r.slice()})};
+      b.disabled=false;renderCheck(false);
+      var n=errors(current).length;
+      say(n?'読み取りました。直したほうがよい場所が'+n+'か所あります。':'読み取りました。内容を見て、まちがいがなければ保存してください。',n?'bad':'ok');
+    },700);
+  }
+  $('btn-read').addEventListener('click',read);
+  document.addEventListener('click',function(e){
+    var t=e.target.closest('button,a');if(!t)return;
+    if(t.dataset&&t.dataset.jump){e.preventDefault();var el=$(t.dataset.jump);if(el)el.focus();return}
+    if(t.id==='btn-reread'){read();return}
+    if(t.id==='btn-add'){syncFromDom();current.rows.push(['','','']);renderCheck(false);$('r-'+(current.rows.length-1)+'-0').focus();return}
+    if(t.dataset&&t.dataset.del!==undefined){syncFromDom();var i=+t.dataset.del;current.rows.splice(i,1);renderCheck(false);say((i+1)+'行目を削除しました。','');return}
+    if(t.id==='btn-save'){
+      syncFromDom();var list=errors(current);
+      if(list.length){renderCheck(true);say('保存できませんでした。'+list.length+'か所を直してください。','bad');return}
+      var v=load();v.push({kind:current.kind,date:norm(current.date),shipper:current.shipper.trim(),rows:current.rows.map(function(r){return [r[0].trim(),norm(r[1]),r[2].trim()]})});
+      if(!store(v)){say('保存できませんでした。このブラウザでは保存が許可されていません。','bad');return}
+      current=null;renderCheck(false);renderSaved();say('保存しました。3の一覧に追加されています。','ok');return}
+    if(t.id==='btn-csv'){
+      var url=URL.createObjectURL(new Blob([csv()],{type:'text/csv;charset=utf-8'}));var a=document.createElement('a');a.href=url;a.download='入出庫一覧_デモ.csv';document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(url);say('ダウンロードしました。Excelで開けます。','ok');return}
+    if(t.id==='btn-undo'){var v2=load();var last=v2.pop();store(v2);renderSaved();$('h-saved').focus();say('最後に保存した伝票（'+last.date+' '+last.kind+'）を取り消しました。','');return}
+    if(t.id==='btn-clear'){$('dlg').showModal();return}
+  });
+  $('dlg-no').addEventListener('click',function(){$('dlg').close();$('btn-clear')&&$('btn-clear').focus()});
+  $('dlg-yes').addEventListener('click',function(){store([]);$('dlg').close();renderSaved();$('h-saved').focus();say('保存した伝票をすべて削除しました。','')});
+
+  showPaper();renderSaved();
+})();
+</script>
+</body>
+</html>
