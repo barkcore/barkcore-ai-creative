@@ -16,3 +16,14 @@
 - p-office.jpg: photo-1524758631624-e2822e304c36
 - p-hall.jpg: photo-1497366216548-37526070297c
 ※上の hero1/2/3・about・team は人物が写っているため使用中止（ファイルは残置）。desk.jpg は人が写っていない。
+
+## 2026-10-12 差し替え（建築・設備・夜景。人物・椅子なし／現在使用中）
+- a-towers.jpg: photo-1486406146926-c627a92ad1ab
+- a-curve.jpg: photo-1511818966892-d7d671e672a2
+- a-white.jpg: photo-1487958449943-2429e8be8625
+- a-server.jpg: photo-1558494949-ef010cbdcc31
+- a-board.jpg: photo-1518770660439-4636190af475
+- a-circuit.jpg: photo-1550751827-4bd374c3f58b
+- a-earth.jpg: photo-1451187580459-43490279c0fa
+- a-corner.jpg: photo-1518005020951-eccb494ad742
+※作者名・個別条件は未確認。公開前に確認して記録すること。
