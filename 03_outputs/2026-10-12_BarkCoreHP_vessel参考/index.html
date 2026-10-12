@@ -7,16 +7,16 @@
 <meta name="description" content="業務システムとスマホアプリの相談・制作。日々の仕事をもっと楽にしたい、思い描いたサービスを形にしたい。その思いを聞くところから始めます。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Elms+Sans:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Elms+Sans:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;600&family=Noto+Serif+JP:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--base:#14bbc3;--deep:#0e9aa1;--ink:#000;--paper:#fff;--en:"Elms Sans",sans-serif;--ja:"Noto Sans JP","Hiragino Kaku Gothic ProN",sans-serif}
+:root{--base:#0f3f45;--deep:#0a2d32;--ink:#16201f;--paper:#f5f2ec;--brass:#b9a272;--brassd:#8a7440;--serif:"Noto Serif JP","Hiragino Mincho ProN",serif;--en:"Elms Sans",sans-serif;--ja:"Noto Sans JP","Hiragino Kaku Gothic ProN",sans-serif}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:var(--ja);color:#fff;background:var(--base);line-height:2;letter-spacing:.06em;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{font-family:var(--ja);color:#f5f2ec;background:var(--base);line-height:2;letter-spacing:.06em;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{color:inherit;text-decoration:none}
 img{display:block;max-width:100%}
 .en{font-family:var(--en);font-weight:500;letter-spacing:.08em}
-a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid #ffda00;outline-offset:3px}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid #b9a272;outline-offset:3px}
 
 /* header */
 header{position:fixed;inset:0 0 auto 0;z-index:30;display:flex;justify-content:space-between;align-items:center;padding:28px 40px;pointer-events:none}
@@ -34,7 +34,7 @@ header nav a:hover::after,header nav a:focus-visible::after{transform:scaleX(1)}
 .kv{position:relative;height:100svh;min-height:600px;overflow:hidden;background:var(--base)}
 .kv-photo{position:absolute;inset:0 5.7% 0 5.7%;overflow:hidden}
 .kv-photo::after{content:"";position:absolute;inset:0;background:var(--base);mix-blend-mode:multiply;opacity:.35;z-index:2;pointer-events:none}
-.kv-photo::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,187,195,.4),rgba(20,187,195,.1));z-index:3}
+.kv-photo::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,45,50,.55),rgba(10,45,50,.15));z-index:3}
 .slide{position:absolute;inset:0;opacity:0;animation:fade 18s infinite;filter:grayscale(.55) contrast(1.05)}
 .slide img{width:100%;height:100%;object-fit:cover}
 .slide:nth-child(2){animation-delay:6s}.slide:nth-child(3){animation-delay:12s}
@@ -54,14 +54,14 @@ header nav a:hover::after,header nav a:focus-visible::after{transform:scaleX(1)}
 
 /* sections */
 .sec{position:relative;padding:150px 0 130px}
-.t{background-color:var(--base);color:#fff;background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.07) 0 2px,transparent 2px 28px),radial-gradient(circle at 100% 0,rgba(255,255,255,.12) 0 160px,transparent 161px),radial-gradient(circle at 0 100%,rgba(255,255,255,.1) 0 220px,transparent 221px)}
-.w{background-color:#fff;color:#000}
+.t{background-color:var(--base);color:#f5f2ec;background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.045) 0 1px,transparent 1px 160px),linear-gradient(180deg,rgba(255,255,255,.04),transparent 40%)}
+.w{background-color:var(--paper);color:var(--ink)}
 .cv{position:absolute;left:0;top:1px;width:100%;height:clamp(50px,8vw,120px);transform:translateY(-100%);display:block;pointer-events:none}
-.t .cv path{fill:var(--base)}.w .cv path{fill:#fff}
+.t .cv path{fill:var(--base)}.w .cv path{fill:var(--paper)}
 .in{width:min(86%,1260px);margin:0 auto}
 .label{font-family:var(--en);font-weight:500;font-size:clamp(40px,6vw,88px);line-height:1.1;letter-spacing:.04em}
 .label small{display:block;font:500 15px var(--ja);margin-top:12px;letter-spacing:.14em}
-.w .label{color:var(--base)}
+.w .label{color:var(--base)}.t .label small,.w .label small{color:var(--brass)}.w .label small{color:var(--brassd)}
 .about .in{display:grid;grid-template-columns:5fr 6fr;gap:6vw;align-items:center}
 .about h2{font-size:clamp(30px,3.8vw,56px);font-weight:600;line-height:1.3;margin:36px 0 36px;letter-spacing:.08em}
 .about p{font-size:17px;max-width:30em}
@@ -94,7 +94,7 @@ header nav a:hover::after,header nav a:focus-visible::after{transform:scaleX(1)}
 .way .circle{display:flex;justify-content:center;gap:10px;margin:36px 0}
 .way .circle svg{width:50px;height:50px;animation:spin 6s linear infinite}
 .way h2{font-size:clamp(26px,3.6vw,48px);line-height:1.6;font-weight:600;margin-bottom:30px}
-.keys{display:flex;flex-wrap:wrap;justify-content:center;gap:12px 36px;font-family:var(--en);font-weight:500;font-size:clamp(18px,2vw,26px);margin:50px 0 30px;color:var(--base)}
+.keys{display:flex;flex-wrap:wrap;justify-content:center;gap:12px 36px;font-family:var(--en);font-weight:500;font-size:clamp(18px,2vw,26px);margin:50px 0 30px;color:var(--brassd)}
 .keys span{display:flex;align-items:center;gap:12px}
 .keys span::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor}
 .way p.b{max-width:34em;margin:0 auto;font-size:17px}
@@ -126,10 +126,10 @@ footer .addr{font-size:13px;line-height:2}
 .copy{width:min(86%,1260px);margin:70px auto 0;font:400 12px var(--en)}
 
 /* 画面の絵（写真の代わり） */
-.mk{position:relative;width:100%;height:100%;display:grid;place-items:center;background:linear-gradient(160deg,#0e9aa1,#14bbc3 70%,#5fd3d8);overflow:hidden}
+.mk{position:relative;width:100%;height:100%;display:grid;place-items:center;background:linear-gradient(160deg,#0e9aa1,#0f3f45 70%,#5fd3d8);overflow:hidden}
 .win{width:78%;background:#fff;color:#000;border-radius:1em;box-shadow:0 1em 2.6em rgba(0,0,0,.2);overflow:hidden;font:500 .8em var(--en)}
 .win .bar{display:flex;gap:.4em;padding:.7em .9em;background:#e6f8f9}
-.win .bar i{width:.6em;height:.6em;border-radius:50%;background:#14bbc3;opacity:.7}
+.win .bar i{width:.6em;height:.6em;border-radius:50%;background:#0f3f45;opacity:.7}
 .win .body{padding:1em;display:grid;gap:.7em}
 .chart{display:flex;align-items:flex-end;gap:.5em;height:5em}
 .chart b{flex:1;background:var(--base);border-radius:.3em .3em 0 0}
@@ -146,7 +146,7 @@ footer .addr{font-size:13px;line-height:2}
 .phone .it span{display:block;flex:1}
 .phone .btnx{margin-top:.4em;height:2em;border-radius:1em;background:#000}
 .web{width:80%;background:#fff;color:#000;border-radius:1em;box-shadow:0 1em 2.6em rgba(0,0,0,.2);overflow:hidden;font-size:.8em}
-.web .hero{height:6em;background:linear-gradient(135deg,#14bbc3,#7fe0e4);display:grid;place-items:center;font:600 1.1em var(--ja);color:#fff;letter-spacing:.1em}
+.web .hero{height:6em;background:linear-gradient(135deg,#0f3f45,#7fe0e4);display:grid;place-items:center;font:600 1.1em var(--ja);color:#fff;letter-spacing:.1em}
 .web .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:.6em;padding:.9em}
 .web .cols i{display:block;height:3em;border-radius:.6em;background:#e1f4f5}
 .scene{display:flex;gap:4%;align-items:center;justify-content:center;width:100%}
@@ -224,21 +224,36 @@ img[data-p]{transform:scale(1.18);will-change:transform}
  .sv .ph,.sv:nth-child(2) .ph{border-radius:100px 100px 20px 20px}
  .badge{margin:0}
 }
+.about h2,.service .lead,.way h2,.contact h2,.sv h3,.jr h3,.kv-sp h1{font-family:var(--serif);font-weight:500;letter-spacing:.1em}
+.kv-text text{font-family:var(--serif);font-weight:500}
+.label{font-weight:400;letter-spacing:.06em}
+.en{font-weight:400}
+.slide{filter:grayscale(.75) contrast(1.05)}
+.about-ph::after,.sv .ph::after,.jr .th::after{opacity:.22}
+.sv .tag,.jr .meta b{border-color:rgba(245,242,236,.55)}
+.pill,.arrow-link i{border-color:currentColor}
+.contact input,.contact textarea{background:#fff;border:1px solid #d9d3c5}
+.contact button{border-radius:99px;letter-spacing:.2em;font-weight:500}
+.scroll .dots{opacity:.7}
+.ring{position:absolute;z-index:1;border:1px solid rgba(185,162,114,.55);border-radius:50%;animation:fl var(--d,10s) ease-in-out infinite}
+.w .ring{border-color:rgba(138,116,64,.35)}
+.t .ring{border-color:rgba(245,242,236,.22)}
+@media (prefers-reduced-motion:reduce){.ring{animation:none}}
 </style>
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
  <defs>
-  <symbol id="dog1" viewBox="0 0 60 60"><circle cx="30" cy="30" r="28" fill="#ff7a6b"/><path d="M8 18c-2 10 2 16 8 14l-2-14zM52 18c2 10-2 16-8 14l2-14z" fill="#c44f43"/><circle cx="22" cy="28" r="3" fill="#000"/><circle cx="38" cy="28" r="3" fill="#000"/><ellipse cx="30" cy="38" rx="5" ry="3.6" fill="#000"/></symbol>
-  <symbol id="dog2" viewBox="0 0 60 60"><circle cx="30" cy="30" r="28" fill="#ffda00"/><path d="M10 14c-4 10 0 18 8 16l-2-16zM50 14c4 10 0 18-8 16l2-16z" fill="#c9a600"/><circle cx="22" cy="28" r="3" fill="#000"/><circle cx="38" cy="28" r="3" fill="#000"/><ellipse cx="30" cy="38" rx="5" ry="3.6" fill="#000"/></symbol>
-  <symbol id="dog3" viewBox="0 0 60 60"><circle cx="30" cy="30" r="28" fill="#6c63d6"/><path d="M8 20c-2 9 3 15 9 12l-3-13zM52 20c2 9-3 15-9 12l3-13z" fill="#4a43a8"/><circle cx="22" cy="28" r="3" fill="#fff"/><circle cx="38" cy="28" r="3" fill="#fff"/><ellipse cx="30" cy="38" rx="5" ry="3.6" fill="#fff"/></symbol>
-  <symbol id="dog4" viewBox="0 0 60 60"><circle cx="30" cy="30" r="28" fill="#2f8f5b"/><path d="M9 16c-3 10 1 17 8 15l-2-15zM51 16c3 10-1 17-8 15l2-15z" fill="#1f6b42"/><circle cx="22" cy="28" r="3" fill="#fff"/><circle cx="38" cy="28" r="3" fill="#fff"/><ellipse cx="30" cy="38" rx="5" ry="3.6" fill="#fff"/></symbol>
-  <symbol id="dog5" viewBox="0 0 60 60"><circle cx="30" cy="30" r="28" fill="#5aa9e6"/><path d="M8 18c-2 10 2 16 8 14l-2-14zM52 18c2 10-2 16-8 14l2-14z" fill="#3a82b8"/><circle cx="22" cy="28" r="3" fill="#000"/><circle cx="38" cy="28" r="3" fill="#000"/><ellipse cx="30" cy="38" rx="5" ry="3.6" fill="#000"/></symbol>
+  <symbol id="dog1" viewBox="0 0 60 60"><circle cx="30" cy="30" r="28" fill="#b9a272"/><path d="M8 18c-2 10 2 16 8 14l-2-14zM52 18c2 10-2 16-8 14l2-14z" fill="#8a7440"/><circle cx="22" cy="28" r="3" fill="#000"/><circle cx="38" cy="28" r="3" fill="#000"/><ellipse cx="30" cy="38" rx="5" ry="3.6" fill="#000"/></symbol>
+  <symbol id="dog2" viewBox="0 0 60 60"><circle cx="30" cy="30" r="28" fill="#e9e4d8"/><path d="M10 14c-4 10 0 18 8 16l-2-16zM50 14c4 10 0 18-8 16l2-16z" fill="#bdb6a3"/><circle cx="22" cy="28" r="3" fill="#000"/><circle cx="38" cy="28" r="3" fill="#000"/><ellipse cx="30" cy="38" rx="5" ry="3.6" fill="#000"/></symbol>
+  <symbol id="dog3" viewBox="0 0 60 60"><circle cx="30" cy="30" r="28" fill="#4f8f95"/><path d="M8 20c-2 9 3 15 9 12l-3-13zM52 20c2 9-3 15-9 12l3-13z" fill="#356c72"/><circle cx="22" cy="28" r="3" fill="#10272a"/><circle cx="38" cy="28" r="3" fill="#10272a"/><ellipse cx="30" cy="38" rx="5" ry="3.6" fill="#10272a"/></symbol>
+  <symbol id="dog4" viewBox="0 0 60 60"><circle cx="30" cy="30" r="28" fill="#1d5057"/><path d="M9 16c-3 10 1 17 8 15l-2-15zM51 16c3 10-1 17-8 15l2-15z" fill="#143a40"/><circle cx="22" cy="28" r="3" fill="#10272a"/><circle cx="38" cy="28" r="3" fill="#10272a"/><ellipse cx="30" cy="38" rx="5" ry="3.6" fill="#10272a"/></symbol>
+  <symbol id="dog5" viewBox="0 0 60 60"><circle cx="30" cy="30" r="28" fill="#8fb8bb"/><path d="M8 18c-2 10 2 16 8 14l-2-14zM52 18c2 10-2 16-8 14l2-14z" fill="#6a9699"/><circle cx="22" cy="28" r="3" fill="#000"/><circle cx="38" cy="28" r="3" fill="#000"/><ellipse cx="30" cy="38" rx="5" ry="3.6" fill="#000"/></symbol>
  </defs>
 </svg>
 
 <div class="op" aria-hidden="true"><div class="box">
- <svg class="mas" viewBox="0 0 60 60"><circle cx="30" cy="30" r="28" fill="#ffda00"/><path d="M10 14c-4 10 0 18 8 16l-2-16zM50 14c4 10 0 18-8 16l2-16z" fill="#c9a600"/><g class="eyes"><circle cx="22" cy="28" r="3.2" fill="#000"/><circle cx="38" cy="28" r="3.2" fill="#000"/></g><ellipse cx="30" cy="38" rx="5" ry="3.6" fill="#000"/></svg>
+ <svg class="mas" viewBox="0 0 60 60"><circle cx="30" cy="30" r="28" fill="#b9a272"/><path d="M10 14c-4 10 0 18 8 16l-2-16zM50 14c4 10 0 18-8 16l2-16z" fill="#8a7440"/><g class="eyes"><circle cx="22" cy="28" r="3.2" fill="#000"/><circle cx="38" cy="28" r="3.2" fill="#000"/></g><ellipse cx="30" cy="38" rx="5" ry="3.6" fill="#000"/></svg>
  <div class="cnt"><span id="cnt">0</span><small>%</small></div><p class="nm">BARKCORE</p></div></div>
 <header>
  <a class="brand" href="#top">BarkCore</a>
@@ -255,7 +270,7 @@ img[data-p]{transform:scale(1.18);will-change:transform}
   <div class="slide"><img src="assets/p-office.jpg" alt="明るいオフィスの打ち合わせスペースのイメージ写真"></div>
   <div class="slide"><img src="assets/p-laptop.jpg" alt="机の上のノートパソコンのイメージ写真"></div>
  </div>
- <svg class="kv-wave" viewBox="0 0 1440 280" preserveAspectRatio="none" aria-hidden="true"><path fill="#14bbc3" d="M0 90H260C470 90 520 215 720 215S970 90 1180 90H1440V280H0Z"/></svg>
+ <svg class="kv-wave" viewBox="0 0 1440 280" preserveAspectRatio="none" aria-hidden="true"><path fill="#0f3f45" d="M0 90H260C470 90 520 215 720 215S970 90 1180 90H1440V280H0Z"/></svg>
  <svg class="kv-text" viewBox="0 0 1440 280" aria-hidden="true">
   <defs><path id="curve" d="M-40 62C170 62 260 62 380 120C500 178 580 190 720 190C860 190 940 178 1060 120C1180 62 1270 62 1480 62"/></defs>
   <text font-size="54"><textPath href="#curve" startOffset="50%" text-anchor="middle"><tspan class="ch" style="--i:0">こ</tspan><tspan class="ch" style="--i:1">ん</tspan><tspan class="ch" style="--i:2">な</tspan><tspan class="ch" style="--i:3">こ</tspan><tspan class="ch" style="--i:4">と</tspan><tspan class="ch" style="--i:5">、</tspan><tspan class="ch" style="--i:6">で</tspan><tspan class="ch" style="--i:7">き</tspan><tspan class="ch" style="--i:8">た</tspan><tspan class="ch" style="--i:9">ら</tspan><tspan class="ch" style="--i:10">。</tspan><tspan class="ch" style="--i:11">を</tspan><tspan class="ch" style="--i:12">、</tspan><tspan class="ch" style="--i:13">つ</tspan><tspan class="ch" style="--i:14">く</tspan><tspan class="ch" style="--i:15">る</tspan><tspan class="ch" style="--i:16">。</tspan></textPath></text>
@@ -272,8 +287,7 @@ img[data-p]{transform:scale(1.18);will-change:transform}
 </div>
 
 <section class="sec w about" id="about">
- <svg class="fl" style="left:4%;top:18%;--d:7s" aria-hidden="true"><use href="#dog2"/></svg><svg class="fl" style="right:8%;bottom:10%;--d:9s" aria-hidden="true"><use href="#dog5"/></svg>
- <svg class="cv" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 120V70C260 -10 520 -10 760 50S1200 120 1440 30V120Z"/></svg>
+ <span class="ring" style="width:120px;height:120px;left:3%;top:14%;--d:11s"></span><span class="ring" style="width:60px;height:60px;right:10%;bottom:8%;--d:9s"></span>
  <div class="in">
   <div class="rv">
    <p class="label">About us<small>私たちについて</small></p>
@@ -286,8 +300,7 @@ img[data-p]{transform:scale(1.18);will-change:transform}
 </section>
 
 <section class="sec t service" id="service">
- <svg class="fl" style="right:5%;top:12%;--d:8s" aria-hidden="true"><use href="#dog1"/></svg><svg class="fl" style="left:3%;bottom:14%;--d:10s" aria-hidden="true"><use href="#dog3"/></svg>
- <svg class="cv" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40C260 130 520 110 760 50S1200 -10 1440 70V120H0Z"/></svg>
+ <span class="ring" style="width:150px;height:150px;right:4%;top:10%;--d:12s"></span><span class="ring" style="width:70px;height:70px;left:5%;bottom:12%;--d:9s"></span>
  <div class="in">
   <div class="head rv">
    <p class="label">Service<small>できること</small></p>
@@ -309,8 +322,7 @@ img[data-p]{transform:scale(1.18);will-change:transform}
 </section>
 
 <section class="sec w way" id="way">
- <svg class="fl" style="left:14%;top:26%;--d:7s" aria-hidden="true"><use href="#dog4"/></svg><svg class="fl" style="right:12%;top:34%;--d:9s" aria-hidden="true"><use href="#dog1"/></svg><svg class="fl" style="right:26%;bottom:12%;--d:6.5s" aria-hidden="true"><use href="#dog3"/></svg>
- <svg class="cv" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 120V50C180 10 360 10 540 50S900 110 1080 60S1330 10 1440 40V120Z"/></svg>
+ <span class="ring" style="width:110px;height:110px;left:12%;top:24%;--d:10s"></span><span class="ring" style="width:80px;height:80px;right:12%;top:36%;--d:12s"></span>
  <div class="in">
   <p class="label rv">Way<small>私たちのつくり方</small></p>
   <div class="circle" aria-hidden="true"><svg><use href="#dog1"/></svg><svg><use href="#dog2"/></svg><svg><use href="#dog3"/></svg><svg><use href="#dog4"/></svg><svg><use href="#dog5"/></svg></div>
@@ -322,8 +334,7 @@ img[data-p]{transform:scale(1.18);will-change:transform}
 </section>
 
 <section class="sec t journal" id="journal">
- <svg class="fl" style="left:46%;top:8%;--d:8s" aria-hidden="true"><use href="#dog2"/></svg><svg class="fl" style="right:4%;bottom:10%;--d:7.5s" aria-hidden="true"><use href="#dog5"/></svg>
- <svg class="cv" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 120V70C260 -10 520 -10 760 50S1200 120 1440 30V120Z"/></svg>
+ <span class="ring" style="width:90px;height:90px;left:48%;top:8%;--d:10s"></span><span class="ring" style="width:130px;height:130px;right:3%;bottom:8%;--d:13s"></span>
  <div class="in">
   <div class="top rv"><p class="label">Consult<small>こんなとき、ご相談ください</small></p><a class="arrow-link" href="#contact">相談してみる<i><svg viewBox="0 0 24 24"><path d="M3 12h17m-6-6 6 6-6 6"/></svg></i></a></div>
   <div class="jr">
