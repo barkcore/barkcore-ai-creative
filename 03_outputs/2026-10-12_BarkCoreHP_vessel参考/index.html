@@ -35,10 +35,10 @@ header nav a:hover::after,header nav a:focus-visible::after{transform:scaleX(1)}
 .kv-photo{position:absolute;inset:0 5.7% 0 5.7%;overflow:hidden}
 .kv-photo::after{content:"";position:absolute;inset:0;background:var(--base);mix-blend-mode:multiply;opacity:.35;z-index:2;pointer-events:none}
 .kv-photo::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,187,195,.4),rgba(20,187,195,.1));z-index:3}
-.slide{position:absolute;inset:0;opacity:0;animation:fade 12s infinite;filter:grayscale(.55) contrast(1.05)}
+.slide{position:absolute;inset:0;opacity:0;animation:fade 18s infinite;filter:grayscale(.55) contrast(1.05)}
 .slide img{width:100%;height:100%;object-fit:cover}
-.slide:nth-child(2){animation-delay:6s}.slide.sc{filter:none}.slide.sc .mk{font-size:clamp(11px,1.25vw,19px)}
-@keyframes fade{0%{opacity:0}8%{opacity:1}50%{opacity:1}58%{opacity:0}100%{opacity:0}}
+.slide:nth-child(2){animation-delay:6s}.slide:nth-child(3){animation-delay:12s}
+@keyframes fade{0%{opacity:0;transform:scale(1.08)}6%{opacity:1}33%{opacity:1}40%{opacity:0;transform:scale(1)}100%{opacity:0}}
 .kv-wave{position:absolute;left:0;bottom:-1px;width:100%;height:auto;z-index:5;display:block}
 .kv-text{position:absolute;left:0;bottom:0;width:100%;z-index:6;pointer-events:none}
 .kv-text text{fill:#fff;font-family:var(--ja);font-weight:600;letter-spacing:.1em}
@@ -55,7 +55,7 @@ header nav a:hover::after,header nav a:focus-visible::after{transform:scaleX(1)}
 /* sections */
 .sec{position:relative;padding:150px 0 130px}
 .t{background-color:var(--base);color:#fff;background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.07) 0 2px,transparent 2px 28px),radial-gradient(circle at 100% 0,rgba(255,255,255,.12) 0 160px,transparent 161px),radial-gradient(circle at 0 100%,rgba(255,255,255,.1) 0 220px,transparent 221px)}
-.w{background-color:#fff;color:#000;background-image:radial-gradient(circle,#c9f0f2 1.6px,transparent 2px);background-size:28px 28px}
+.w{background-color:#fff;color:#000}
 .cv{position:absolute;left:0;top:1px;width:100%;height:clamp(50px,8vw,120px);transform:translateY(-100%);display:block;pointer-events:none}
 .t .cv path{fill:var(--base)}.w .cv path{fill:#fff}
 .in{width:min(86%,1260px);margin:0 auto}
@@ -153,6 +153,55 @@ footer .addr{font-size:13px;line-height:2}
 .scene .win{width:46%;transform:rotate(-3deg)}
 .scene .phone{width:17%;transform:rotate(4deg)}
 
+
+/* オープニング（eightdesign風：カウンター＋キャラクター） */
+.op{position:fixed;inset:0;z-index:100;background:var(--base);color:#fff;display:grid;place-items:center;transition:transform 1s cubic-bezier(.77,0,.18,1)}
+.op::after{content:"";position:absolute;left:-10%;right:-10%;top:calc(100% - 1px);height:16vw;background:var(--base);border-radius:0 0 50% 50%/0 0 100% 100%}
+.op.out{transform:translateY(calc(-100% - 16vw))}
+.op .box{display:grid;justify-items:center;gap:10px}
+.op .mas{width:clamp(90px,12vw,150px);height:auto;animation:hop .9s ease-in-out infinite}
+.op .eyes{transform-origin:30px 28px;animation:blink 2.2s infinite}
+@keyframes hop{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+@keyframes blink{0%,92%,100%{transform:scaleY(1)}96%{transform:scaleY(.1)}}
+.op .cnt{font:600 clamp(54px,10vw,130px)/1 var(--en);letter-spacing:.02em}
+.op .cnt small{font-size:.45em;margin-left:.1em}
+.op .nm{font:500 14px var(--en);letter-spacing:.3em}
+.op-lock{overflow:hidden}
+header,.scroll,.kv-chars{opacity:0;transition:opacity .8s .4s}
+.go header,.go .scroll,.go .kv-chars{opacity:1}
+.kv-text .ch{opacity:0}
+.go .kv-text .ch{animation:chIn .9s cubic-bezier(.19,1,.22,1) forwards;animation-delay:calc(var(--i)*.06s + .3s)}
+@keyframes chIn{from{opacity:0}to{opacity:1}}
+.ln2{display:block;overflow:hidden}
+.ln2>span{display:block;transform:translateY(110%);transition:transform 1s cubic-bezier(.19,1,.22,1)}
+.go .ln2>span{transform:none}
+.ln2:nth-child(2)>span{transition-delay:.15s}.ln2:nth-child(3)>span{transition-delay:.3s}
+.in{position:relative;z-index:2}
+.fl{position:absolute;z-index:1;width:clamp(34px,4.6vw,62px);height:clamp(34px,4.6vw,62px);animation:fl var(--d,8s) ease-in-out infinite;opacity:.95}
+@keyframes fl{0%,100%{transform:translate(0,0) rotate(0)}33%{transform:translate(16px,-20px) rotate(10deg)}66%{transform:translate(-12px,10px) rotate(-8deg)}}
+/* 写真：視差とマス目リビール */
+img[data-p]{transform:scale(1.18);will-change:transform}
+.sv .ph img,.jr .th img{width:100%;height:100%;object-fit:cover;filter:grayscale(.35)}
+.sv .ph::after,.jr .th::after{content:"";position:absolute;inset:0;background:var(--base);mix-blend-mode:multiply;opacity:.3}
+.jr .th{background:var(--deep)}
+.tiles{position:absolute;inset:-1px;display:grid;grid-template-rows:repeat(4,1fr);z-index:4;pointer-events:none}
+.tiles i{display:block;background:var(--base);box-shadow:0 0 0 1px var(--base);transition:transform .7s cubic-bezier(.77,0,.18,1)}
+.gr.show .tiles i{transform:scale(0)}
+/* ボタン：色が横から入る */
+.pill{position:relative;overflow:hidden;z-index:0}
+.pill::before{content:"";position:absolute;inset:0;z-index:-1;transform:translateX(-101%);transition:transform .5s cubic-bezier(.19,1,.22,1)}
+.t .pill::before{background:#fff}.w .pill::before{background:var(--base)}
+.pill:hover::before,.pill:focus-visible::before{transform:none}
+.t .pill:hover,.t .pill:focus-visible{background:none;color:var(--base)}
+.w .pill:hover,.w .pill:focus-visible{background:none;color:#fff;border-color:var(--base)}
+/* 矢印リンク：矢印が流れる */
+.arrow-link i{overflow:hidden}
+.arrow-link:hover i{background:none;transform:none}
+.arrow-link:hover i svg{animation:arr 1s cubic-bezier(.19,1,.22,1)}
+.arrow-link:hover i svg,.t .arrow-link:hover i svg{stroke:currentColor}
+@keyframes arr{0%{transform:translateX(0)}45%{transform:translateX(150%)}46%{transform:translateX(-150%)}100%{transform:translateX(0)}}
+@media (prefers-reduced-motion:reduce){.op{display:none}header,.scroll,.kv-chars,.kv-text .ch{opacity:1;animation:none}.ln2>span{transform:none}.fl{animation:none}img[data-p]{transform:none}.tiles{display:none}}
+@media (max-width:800px){.fl{opacity:.8}}
 .rv{opacity:0;transform:translateY(30px);transition:opacity .9s,transform .9s}
 .rv.show{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.slide,.chars-in,.dots,.chars-in svg,.way .circle svg,.badge{animation:none}.slide:first-child{opacity:1}html{scroll-behavior:auto}}
@@ -188,6 +237,9 @@ footer .addr{font-size:13px;line-height:2}
  </defs>
 </svg>
 
+<div class="op" aria-hidden="true"><div class="box">
+ <svg class="mas" viewBox="0 0 60 60"><circle cx="30" cy="30" r="28" fill="#ffda00"/><path d="M10 14c-4 10 0 18 8 16l-2-16zM50 14c4 10 0 18-8 16l2-16z" fill="#c9a600"/><g class="eyes"><circle cx="22" cy="28" r="3.2" fill="#000"/><circle cx="38" cy="28" r="3.2" fill="#000"/></g><ellipse cx="30" cy="38" rx="5" ry="3.6" fill="#000"/></svg>
+ <div class="cnt"><span id="cnt">0</span><small>%</small></div><p class="nm">BARKCORE</p></div></div>
 <header>
  <a class="brand" href="#top">BarkCore</a>
  <nav id="gnav" aria-label="メイン">
@@ -199,18 +251,16 @@ footer .addr{font-size:13px;line-height:2}
 <main id="top">
 <div class="kv">
  <div class="kv-photo">
-  <div class="slide"><img src="assets/desk.jpg" alt="パソコンとデスクランプのある机（イメージ写真）"></div>
-  <div class="slide sc" aria-hidden="true"><div class="mk"><div class="scene">
-   <div class="win"><div class="bar"><i></i><i></i><i></i></div><div class="body"><div class="chart"><b style="height:40%"></b><b style="height:65%"></b><b style="height:50%"></b><b style="height:85%"></b><b style="height:60%"></b><b style="height:95%"></b></div><div class="tbl"><div class="ln"></div><div class="ln"></div><div class="ln"></div><div class="ln"></div><div class="ln"></div><div class="ln"></div></div></div></div>
-   <div class="phone"><div class="hd"></div><div class="it"><i></i><span class="ln"></span></div><div class="it"><i></i><span class="ln"></span></div><div class="it"><i></i><span class="ln"></span></div><div class="btnx"></div></div>
-  </div></div></div>
+  <div class="slide"><img src="assets/p-desk.jpg" alt="ノートパソコンとデスクの上のイメージ写真"></div>
+  <div class="slide"><img src="assets/p-office.jpg" alt="明るいオフィスの打ち合わせスペースのイメージ写真"></div>
+  <div class="slide"><img src="assets/p-laptop.jpg" alt="机の上のノートパソコンのイメージ写真"></div>
  </div>
  <svg class="kv-wave" viewBox="0 0 1440 280" preserveAspectRatio="none" aria-hidden="true"><path fill="#14bbc3" d="M0 90H260C470 90 520 215 720 215S970 90 1180 90H1440V280H0Z"/></svg>
  <svg class="kv-text" viewBox="0 0 1440 280" aria-hidden="true">
   <defs><path id="curve" d="M-40 62C170 62 260 62 380 120C500 178 580 190 720 190C860 190 940 178 1060 120C1180 62 1270 62 1480 62"/></defs>
-  <text font-size="54"><textPath href="#curve" startOffset="50%" text-anchor="middle">こんなこと、できたら。を、つくる。</textPath></text>
+  <text font-size="54"><textPath href="#curve" startOffset="50%" text-anchor="middle"><tspan class="ch" style="--i:0">こ</tspan><tspan class="ch" style="--i:1">ん</tspan><tspan class="ch" style="--i:2">な</tspan><tspan class="ch" style="--i:3">こ</tspan><tspan class="ch" style="--i:4">と</tspan><tspan class="ch" style="--i:5">、</tspan><tspan class="ch" style="--i:6">で</tspan><tspan class="ch" style="--i:7">き</tspan><tspan class="ch" style="--i:8">た</tspan><tspan class="ch" style="--i:9">ら</tspan><tspan class="ch" style="--i:10">。</tspan><tspan class="ch" style="--i:11">を</tspan><tspan class="ch" style="--i:12">、</tspan><tspan class="ch" style="--i:13">つ</tspan><tspan class="ch" style="--i:14">く</tspan><tspan class="ch" style="--i:15">る</tspan><tspan class="ch" style="--i:16">。</tspan></textPath></text>
  </svg>
- <div class="kv-sp"><p class="en" style="font-size:13px">BARKCORE</p><h1>こんなこと、<br>できたら。を、<br>つくる。</h1></div>
+ <div class="kv-sp"><p class="en" style="font-size:13px">BARKCORE</p><h1><span class="ln2"><span>こんなこと、</span></span><span class="ln2"><span>できたら。を、</span></span><span class="ln2"><span>つくる。</span></span></h1></div>
  <a class="scroll" href="#about"><span class="dots"></span>Scroll down</a>
  <a class="kv-chars" href="#service" aria-label="できることを見る">
   <div class="chars" aria-hidden="true"><div class="chars-in">
@@ -222,6 +272,7 @@ footer .addr{font-size:13px;line-height:2}
 </div>
 
 <section class="sec w about" id="about">
+ <svg class="fl" style="left:4%;top:18%;--d:7s" aria-hidden="true"><use href="#dog2"/></svg><svg class="fl" style="right:8%;bottom:10%;--d:9s" aria-hidden="true"><use href="#dog5"/></svg>
  <svg class="cv" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 120V70C260 -10 520 -10 760 50S1200 120 1440 30V120Z"/></svg>
  <div class="in">
   <div class="rv">
@@ -230,11 +281,12 @@ footer .addr{font-size:13px;line-height:2}
    <p>日々の仕事をもっと楽にしたい。思い描いたサービスを形にしたい。私たちは、その思いを聞くところから始めます。</p>
    <a class="arrow-link" href="#way">私たちのつくり方<i><svg viewBox="0 0 24 24"><path d="M3 12h17m-6-6 6 6-6 6"/></svg></i></a>
   </div>
-  <div class="about-ph rv"><img src="assets/desk.jpg" alt="パソコンとデスクランプのある机（イメージ写真）"></div>
+  <div class="about-ph gr"><img data-p src="assets/p-office.jpg" alt="明るいオフィスのイメージ写真"></div>
  </div>
 </section>
 
 <section class="sec t service" id="service">
+ <svg class="fl" style="right:5%;top:12%;--d:8s" aria-hidden="true"><use href="#dog1"/></svg><svg class="fl" style="left:3%;bottom:14%;--d:10s" aria-hidden="true"><use href="#dog3"/></svg>
  <svg class="cv" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40C260 130 520 110 760 50S1200 -10 1440 70V120H0Z"/></svg>
  <div class="in">
   <div class="head rv">
@@ -242,13 +294,13 @@ footer .addr{font-size:13px;line-height:2}
    <p class="lead">仕事を支えるシステムも、暮らしに寄りそうアプリも。</p>
   </div>
   <div class="sv-grid">
-   <a class="sv rv" href="#contact"><div class="ph"><div class="mk" aria-hidden="true"><div class="win"><div class="bar"><i></i><i></i><i></i></div><div class="body"><div class="chart"><b style="height:35%"></b><b style="height:60%"></b><b style="height:48%"></b><b style="height:80%"></b><b style="height:70%"></b><b style="height:92%"></b></div><div class="tbl"><div class="ln"></div><div class="ln"></div><div class="ln"></div><div class="ln"></div><div class="ln"></div><div class="ln"></div></div></div></div></div></div>
+   <a class="sv rv" href="#contact"><div class="ph gr"><img data-p src="assets/p-laptop.jpg" alt="机の上のノートパソコンのイメージ写真"></div>
     <span class="en">01 BUSINESS SYSTEM</span><h3>業務システム</h3>
     <p>集計、入力、日報など、毎日くり返す作業を減らす仕組みをつくります。今のやり方を伺って、使う人に合う形にします。</p><span class="tag">受託</span></a>
-   <a class="sv rv" href="#contact"><div class="ph"><div class="mk" aria-hidden="true"><div class="phone"><div class="hd"></div><div class="it"><i></i><span class="ln"></span></div><div class="it"><i></i><span class="ln"></span></div><div class="it"><i></i><span class="ln"></span></div><div class="btnx"></div></div></div></div>
+   <a class="sv rv" href="#contact"><div class="ph gr"><img data-p src="assets/p-phone.jpg" alt="スマートフォンのイメージ写真"></div>
     <span class="en">02 SMARTPHONE APP</span><h3>スマホアプリ</h3>
     <p>ご依頼のアプリの制作に加えて、私たち自身で企画するアプリも開発しています。開発中のものは、公開時にお知らせします。</p><span class="tag">受託 / 自社企画</span></a>
-   <a class="sv rv" href="#contact"><div class="ph"><div class="mk" aria-hidden="true"><div class="web"><div class="bar" style="display:flex;gap:.4em;padding:.7em .9em;background:#e6f8f9"><i style="width:.6em;height:.6em;border-radius:50%;background:#14bbc3;opacity:.7"></i><i style="width:.6em;height:.6em;border-radius:50%;background:#14bbc3;opacity:.7"></i><i style="width:.6em;height:.6em;border-radius:50%;background:#14bbc3;opacity:.7"></i></div><div class="hero">Your Company</div><div class="cols"><i></i><i></i><i></i></div></div></div></div>
+   <a class="sv rv" href="#contact"><div class="ph gr"><img data-p src="assets/p-desk.jpg" alt="モニターとノートパソコンのある机のイメージ写真"></div>
     <span class="en">03 WEB</span><h3>Web制作</h3>
     <p>会社紹介やサービス紹介のホームページを、会社ごとに合わせてデザインします。パソコンとスマホで確認します。</p><span class="tag">ホームページ</span></a>
   </div>
@@ -257,6 +309,7 @@ footer .addr{font-size:13px;line-height:2}
 </section>
 
 <section class="sec w way" id="way">
+ <svg class="fl" style="left:14%;top:26%;--d:7s" aria-hidden="true"><use href="#dog4"/></svg><svg class="fl" style="right:12%;top:34%;--d:9s" aria-hidden="true"><use href="#dog1"/></svg><svg class="fl" style="right:26%;bottom:12%;--d:6.5s" aria-hidden="true"><use href="#dog3"/></svg>
  <svg class="cv" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 120V50C180 10 360 10 540 50S900 110 1080 60S1330 10 1440 40V120Z"/></svg>
  <div class="in">
   <p class="label rv">Way<small>私たちのつくり方</small></p>
@@ -269,13 +322,14 @@ footer .addr{font-size:13px;line-height:2}
 </section>
 
 <section class="sec t journal" id="journal">
+ <svg class="fl" style="left:46%;top:8%;--d:8s" aria-hidden="true"><use href="#dog2"/></svg><svg class="fl" style="right:4%;bottom:10%;--d:7.5s" aria-hidden="true"><use href="#dog5"/></svg>
  <svg class="cv" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 120V70C260 -10 520 -10 760 50S1200 120 1440 30V120Z"/></svg>
  <div class="in">
   <div class="top rv"><p class="label">Consult<small>こんなとき、ご相談ください</small></p><a class="arrow-link" href="#contact">相談してみる<i><svg viewBox="0 0 24 24"><path d="M3 12h17m-6-6 6 6-6 6"/></svg></i></a></div>
   <div class="jr">
-   <article class="rv"><div class="th"><svg viewBox="0 0 64 64" aria-hidden="true"><rect x="8" y="10" width="48" height="44" rx="5"/><path d="M8 24h48M24 24v30M40 24v30M8 38h48"/></svg></div><div class="meta"><span>CASE 01</span><b>業務システム</b></div><h3>毎月の集計に時間がかかる</h3></article>
-   <article class="rv"><div class="th"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M10 8h22l8 8v28H10zM32 8v8h8"/><path d="M16 24h16M16 32h16M44 50h10M50 44l6 6-6 6"/></svg></div><div class="meta"><span>CASE 02</span><b>業務システム</b></div><h3>紙の情報を何度も入力している</h3></article>
-   <article class="rv"><div class="th"><svg viewBox="0 0 64 64" aria-hidden="true"><rect x="18" y="6" width="28" height="52" rx="6"/><path d="M28 50h8M32 18a8 8 0 0 0-4 15v4h8v-4a8 8 0 0 0-4-15z"/></svg></div><div class="meta"><span>CASE 03</span><b>スマホアプリ</b></div><h3>こんなアプリがあったら、と思っている</h3></article>
+   <article class="rv"><div class="th gr"><img data-p src="assets/p-code.jpg" alt="画面に並ぶ数字やコードのイメージ写真"></div><div class="meta"><span>CASE 01</span><b>業務システム</b></div><h3>毎月の集計に時間がかかる</h3></article>
+   <article class="rv"><div class="th gr"><img data-p src="assets/p-hall.jpg" alt="広いオフィスの廊下のイメージ写真"></div><div class="meta"><span>CASE 02</span><b>業務システム</b></div><h3>紙の情報を何度も入力している</h3></article>
+   <article class="rv"><div class="th gr"><img data-p src="assets/p-phone.jpg" alt="スマートフォンのイメージ写真"></div><div class="meta"><span>CASE 03</span><b>スマホアプリ</b></div><h3>こんなアプリがあったら、と思っている</h3></article>
   </div>
  </div>
 </section>
@@ -291,7 +345,7 @@ footer .addr{font-size:13px;line-height:2}
    <label>メールアドレス<input name="email" type="email" autocomplete="email" required></label>
    <label>ご相談内容<textarea name="body" required></textarea></label>
    <button type="submit">相談してみる</button>
-   <p class="note">※制作中の見本です。送信先は未設定のため、送信されません。机の写真はイメージ（フリー素材）で、画面の絵は説明用の見本です。</p>
+   <p class="note">※制作中の見本です。送信先は未設定のため、送信されません。写真はイメージ（フリー素材）で、当社の場所・画面ではありません。</p>
   </form>
  </div>
 </section>
@@ -311,8 +365,22 @@ footer .addr{font-size:13px;line-height:2}
 const b=document.querySelector('.burger'),n=document.getElementById('gnav');
 b.addEventListener('click',()=>{const o=n.classList.toggle('open');b.setAttribute('aria-expanded',o)});
 n.addEventListener('click',e=>{if(e.target.tagName==='A'){n.classList.remove('open');b.setAttribute('aria-expanded',false)}});
+const root=document.documentElement,RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');io.unobserve(e.target)}}),{threshold:.12});
-document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+document.querySelectorAll('.gr').forEach(el=>{if(RM)return;const g=document.createElement('span');g.className='tiles';const c=5;g.style.gridTemplateColumns='repeat('+c+',1fr)';for(let i=0;i<c*4;i++){const t=document.createElement('i');t.style.transitionDelay=(Math.random()*.6).toFixed(2)+'s';g.appendChild(t)}el.appendChild(g)});
+document.querySelectorAll('.rv,.gr').forEach(el=>io.observe(el));
+const ps=[...document.querySelectorAll('[data-p]')];
+function par(){const vh=innerHeight;ps.forEach(el=>{const r=el.parentElement.getBoundingClientRect();if(r.bottom<0||r.top>vh)return;const p=(r.top+r.height/2-vh/2)/vh;el.style.transform='translate3d(0,'+(-p*36).toFixed(1)+'px,0) scale(1.18)'})}
+if(!RM){addEventListener('scroll',()=>requestAnimationFrame(par),{passive:true});par()}
+const op=document.querySelector('.op'),cnt=document.getElementById('cnt');
+function open(){root.classList.remove('op-lock');root.classList.add('go')}
+if(RM||!op){op&&op.remove();open()}else{
+ root.classList.add('op-lock');let t0=null;const D=2200;
+ const step=ts=>{if(!t0)t0=ts;const p=Math.min((ts-t0)/D,1);cnt.textContent=Math.round((1-Math.pow(1-p,2.2))*100);
+  if(p<1)requestAnimationFrame(step);else{op.classList.add('out');setTimeout(open,550);setTimeout(()=>op.remove(),1600)}};
+ requestAnimationFrame(step);
+ setTimeout(()=>{if(!root.classList.contains('go')){op.remove();open()}},6000);
+}
 </script>
 </body>
 </html>
