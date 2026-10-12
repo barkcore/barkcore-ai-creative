@@ -239,6 +239,15 @@ img[data-p]{transform:scale(1.18);will-change:transform}
 .w .ring{border-color:rgba(138,116,64,.35)}
 .t .ring{border-color:rgba(245,242,236,.22)}
 @media (prefers-reduced-motion:reduce){.ring{animation:none}}
+.co{background-color:#ebe5d9}.co .cv path{fill:#ebe5d9}
+.contact .cv path{fill:var(--paper)}
+.cogrid{display:grid;grid-template-columns:4fr 7fr;gap:6vw;align-items:start}
+.company dl{border-top:1px solid rgba(15,63,69,.35)}
+.company dl>div{display:grid;grid-template-columns:9em 1fr;gap:20px;padding:22px 0;border-bottom:1px solid rgba(15,63,69,.2)}
+.company dt{font-weight:500;color:var(--brassd);font-size:14px;letter-spacing:.14em}
+.company dd{font-size:16px;line-height:1.9}
+.company .sm{font-size:13px;color:#5b6663}
+@media (max-width:800px){.cogrid{grid-template-columns:1fr}.company dl>div{grid-template-columns:1fr;gap:4px}}
 </style>
 </head>
 <body>
@@ -258,7 +267,7 @@ img[data-p]{transform:scale(1.18);will-change:transform}
 <header>
  <a class="brand" href="#top">BarkCore</a>
  <nav id="gnav" aria-label="メイン">
-  <a href="#about">About us</a><a href="#service">Service</a><a href="#way">Way</a><a href="#journal">Consult</a><a href="#contact">Contact</a>
+  <a href="#about">About us</a><a href="#service">Service</a><a href="#way">Way</a><a href="#journal">Consult</a><a href="#company">Company</a><a href="#contact">Contact</a>
  </nav>
  <button class="burger" aria-expanded="false" aria-controls="gnav" aria-label="メニューを開く"><span></span><span></span><span></span></button>
 </header>
@@ -266,9 +275,9 @@ img[data-p]{transform:scale(1.18);will-change:transform}
 <main id="top">
 <div class="kv">
  <div class="kv-photo">
-  <div class="slide"><img src="assets/a-towers.jpg" alt="空にそびえるガラス張りの高層ビルを見上げたイメージ写真"></div>
   <div class="slide"><img src="assets/a-server.jpg" alt="配線されたサーバーラックのイメージ写真"></div>
-  <div class="slide"><img src="assets/a-curve.jpg" alt="曲線を描く建物の外壁を見上げたイメージ写真"></div>
+  <div class="slide"><img src="assets/a-circuit.jpg" alt="光る回路図のイメージ写真"></div>
+  <div class="slide"><img src="assets/p-code.jpg" alt="画面に表示されたプログラムコードのイメージ写真"></div>
  </div>
  <svg class="kv-wave" viewBox="0 0 1440 280" preserveAspectRatio="none" aria-hidden="true"><path fill="#0f3f45" d="M0 90H260C470 90 520 215 720 215S970 90 1180 90H1440V280H0Z"/></svg>
  <svg class="kv-text" viewBox="0 0 1440 280" aria-hidden="true">
@@ -295,7 +304,7 @@ img[data-p]{transform:scale(1.18);will-change:transform}
    <p>日々の仕事をもっと楽にしたい。思い描いたサービスを形にしたい。私たちは、その思いを聞くところから始めます。</p>
    <a class="arrow-link" href="#way">私たちのつくり方<i><svg viewBox="0 0 24 24"><path d="M3 12h17m-6-6 6 6-6 6"/></svg></i></a>
   </div>
-  <div class="about-ph gr"><img data-p src="assets/a-white.jpg" alt="白く幾何学的な現代建築のイメージ写真"></div>
+  <div class="about-ph gr"><img data-p src="assets/a-earth.jpg" alt="夜の地球の街明かりのイメージ写真"></div>
  </div>
 </section>
 
@@ -313,7 +322,7 @@ img[data-p]{transform:scale(1.18);will-change:transform}
    <a class="sv rv" href="#contact"><div class="ph gr"><img data-p src="assets/a-circuit.jpg" alt="光る回路図のイメージ写真"></div>
     <span class="en">02 SMARTPHONE APP</span><h3>スマホアプリ</h3>
     <p>ご依頼のアプリの制作に加えて、私たち自身で企画するアプリも開発しています。開発中のものは、公開時にお知らせします。</p><span class="tag">受託 / 自社企画</span></a>
-   <a class="sv rv" href="#contact"><div class="ph gr"><img data-p src="assets/a-curve.jpg" alt="曲線を描く建物の外壁を見上げたイメージ写真"></div>
+   <a class="sv rv" href="#contact"><div class="ph gr"><img data-p src="assets/p-code.jpg" alt="画面に表示されたプログラムコードのイメージ写真"></div>
     <span class="en">03 WEB</span><h3>Web制作</h3>
     <p>会社紹介やサービス紹介のホームページを、会社ごとに合わせてデザインします。パソコンとスマホで確認します。</p><span class="tag">ホームページ</span></a>
   </div>
@@ -339,9 +348,23 @@ img[data-p]{transform:scale(1.18);will-change:transform}
   <div class="top rv"><p class="label">Consult<small>こんなとき、ご相談ください</small></p><a class="arrow-link" href="#contact">相談してみる<i><svg viewBox="0 0 24 24"><path d="M3 12h17m-6-6 6 6-6 6"/></svg></i></a></div>
   <div class="jr">
    <article class="rv"><div class="th gr"><img data-p src="assets/a-board.jpg" alt="電子基板を接写したイメージ写真"></div><div class="meta"><span>CASE 01</span><b>業務システム</b></div><h3>毎月の集計に時間がかかる</h3></article>
-   <article class="rv"><div class="th gr"><img data-p src="assets/a-corner.jpg" alt="青空を背にした建物の角のイメージ写真"></div><div class="meta"><span>CASE 02</span><b>業務システム</b></div><h3>紙の情報を何度も入力している</h3></article>
+   <article class="rv"><div class="th gr"><img data-p src="assets/a-circuit.jpg" alt="光る回路図のイメージ写真"></div><div class="meta"><span>CASE 02</span><b>業務システム</b></div><h3>紙の情報を何度も入力している</h3></article>
    <article class="rv"><div class="th gr"><img data-p src="assets/a-earth.jpg" alt="夜の地球の街明かりのイメージ写真"></div><div class="meta"><span>CASE 03</span><b>スマホアプリ</b></div><h3>こんなアプリがあったら、と思っている</h3></article>
   </div>
+ </div>
+</section>
+
+<section class="sec w co company" id="company">
+ <svg class="cv" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40C260 130 520 110 760 50S1200 -10 1440 70V120H0Z"/></svg>
+ <div class="in cogrid">
+  <p class="label rv">Company<small>会社概要</small></p>
+  <dl class="rv">
+   <div><dt>会社名</dt><dd>株式会社BarkCore（バークコア）</dd></div>
+   <div><dt>設立</dt><dd>2026年10月2日</dd></div>
+   <div><dt>事業内容</dt><dd>業務システム・スマホアプリの企画、開発、制作<br>Web制作（ホームページ制作）</dd></div>
+   <div><dt>開発担当</dt><dd>森 ゆづき（企画・開発・デザイン）</dd></div>
+   <div><dt>これまでの経験</dt><dd>Web制作 約4年／スマホアプリ開発 約4年／システム開発 約3年<br><span class="sm">※BarkCore設立前の、個人での経験を含みます。</span></dd></div>
+  </dl>
  </div>
 </section>
 
@@ -366,7 +389,7 @@ img[data-p]{transform:scale(1.18);will-change:transform}
  <svg class="cv" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 120V50C180 10 360 10 540 50S900 110 1080 60S1330 10 1440 40V120Z"/></svg>
  <div class="in">
   <div><a class="brand" href="#top">BarkCore</a><p class="addr" style="margin-top:24px">株式会社BarkCore<br>業務システム・スマホアプリ・Web制作</p></div>
-  <nav aria-label="フッター"><a href="#about">About us</a><a href="#service">Service</a><a href="#way">Way</a><a href="#journal">Consult</a><a href="#contact">Contact</a></nav>
+  <nav aria-label="フッター"><a href="#about">About us</a><a href="#service">Service</a><a href="#way">Way</a><a href="#journal">Consult</a><a href="#company">Company</a><a href="#contact">Contact</a></nav>
   <svg class="badge" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="96" fill="#fff"/><use href="#dog1" x="74" y="6" width="52" height="52"/><use href="#dog2" x="140" y="48" width="52" height="52"/><use href="#dog3" x="116" y="128" width="52" height="52"/><use href="#dog4" x="32" y="128" width="52" height="52"/><use href="#dog5" x="8" y="48" width="52" height="52"/></svg>
  </div>
  <p class="copy">©BarkCore 2026</p>
