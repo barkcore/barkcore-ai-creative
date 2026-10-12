@@ -33,12 +33,12 @@ header nav a:hover::after,header nav a:focus-visible::after{transform:scaleX(1)}
 /* hero */
 .kv{position:relative;height:100svh;min-height:600px;overflow:hidden;background:var(--base)}
 .kv-photo{position:absolute;inset:0 5.7% 0 5.7%;overflow:hidden}
-.kv-photo::after{content:"";position:absolute;inset:0;background:var(--base);mix-blend-mode:multiply;opacity:.55;z-index:2}
+.kv-photo::after{content:"";position:absolute;inset:0;background:var(--base);mix-blend-mode:multiply;opacity:.35;z-index:2;pointer-events:none}
 .kv-photo::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,187,195,.4),rgba(20,187,195,.1));z-index:3}
-.slide{position:absolute;inset:0;opacity:0;animation:fade 18s infinite;filter:grayscale(.55) contrast(1.05)}
+.slide{position:absolute;inset:0;opacity:0;animation:fade 12s infinite;filter:grayscale(.55) contrast(1.05)}
 .slide img{width:100%;height:100%;object-fit:cover}
-.slide:nth-child(2){animation-delay:6s}.slide:nth-child(3){animation-delay:12s}
-@keyframes fade{0%{opacity:0;transform:scale(1.06)}6%{opacity:1}33%{opacity:1}39%{opacity:0;transform:scale(1)}100%{opacity:0}}
+.slide:nth-child(2){animation-delay:6s}.slide.sc{filter:none}.slide.sc .mk{font-size:clamp(11px,1.25vw,19px)}
+@keyframes fade{0%{opacity:0}8%{opacity:1}50%{opacity:1}58%{opacity:0}100%{opacity:0}}
 .kv-wave{position:absolute;left:0;bottom:-1px;width:100%;height:auto;z-index:5;display:block}
 .kv-text{position:absolute;left:0;bottom:0;width:100%;z-index:6;pointer-events:none}
 .kv-text text{fill:#fff;font-family:var(--ja);font-weight:600;letter-spacing:.1em}
@@ -53,60 +53,62 @@ header nav a:hover::after,header nav a:focus-visible::after{transform:scaleX(1)}
 @keyframes slide{to{transform:translateX(-50%)}}
 
 /* sections */
-.sec{position:relative;padding:130px 0}
+.sec{position:relative;padding:150px 0 130px}
+.t{background-color:var(--base);color:#fff;background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.07) 0 2px,transparent 2px 28px),radial-gradient(circle at 100% 0,rgba(255,255,255,.12) 0 160px,transparent 161px),radial-gradient(circle at 0 100%,rgba(255,255,255,.1) 0 220px,transparent 221px)}
+.w{background-color:#fff;color:#000;background-image:radial-gradient(circle,#c9f0f2 1.6px,transparent 2px);background-size:28px 28px}
+.cv{position:absolute;left:0;top:1px;width:100%;height:clamp(50px,8vw,120px);transform:translateY(-100%);display:block;pointer-events:none}
+.t .cv path{fill:var(--base)}.w .cv path{fill:#fff}
 .in{width:min(86%,1260px);margin:0 auto}
 .label{font-family:var(--en);font-weight:500;font-size:clamp(40px,6vw,88px);line-height:1.1;letter-spacing:.04em}
 .label small{display:block;font:500 15px var(--ja);margin-top:12px;letter-spacing:.14em}
+.w .label{color:var(--base)}
 .about .in{display:grid;grid-template-columns:5fr 6fr;gap:6vw;align-items:center}
-.about h2{font-size:clamp(34px,5vw,72px);font-weight:600;line-height:1.3;margin:36px 0 36px;letter-spacing:.08em}
+.about h2{font-size:clamp(30px,3.8vw,56px);font-weight:600;line-height:1.3;margin:36px 0 36px;letter-spacing:.08em}
 .about p{font-size:17px;max-width:30em}
 .arrow-link{display:inline-flex;align-items:center;gap:16px;margin-top:40px;font-weight:600;font-size:16px}
-.arrow-link i{width:54px;height:54px;border-radius:50%;border:1px solid #fff;display:grid;place-items:center;transition:background .3s,transform .3s}
-.arrow-link i svg{width:22px;stroke:#fff;fill:none;stroke-width:1.6}
-.arrow-link:hover i{background:#fff;transform:translateX(6px)}
-.arrow-link:hover i svg{stroke:var(--base)}
+.arrow-link i{width:54px;height:54px;border-radius:50%;border:1px solid currentColor;display:grid;place-items:center;transition:background .3s,transform .3s,color .3s}
+.arrow-link i svg{width:22px;stroke:currentColor;fill:none;stroke-width:1.6}
+.arrow-link:hover i{background:currentColor;transform:translateX(6px)}
+.arrow-link:hover i svg{stroke:#fff}
+.t .arrow-link:hover i svg{stroke:var(--base)}
 .about-ph{position:relative;aspect-ratio:1/1.05;border-radius:50% 50% 24px 24px / 38% 38% 24px 24px;overflow:hidden}
 .about-ph img{width:100%;height:100%;object-fit:cover;filter:grayscale(.4)}
-.about-ph::after{content:"";position:absolute;inset:0;background:var(--base);mix-blend-mode:multiply;opacity:.35}
+.about-ph::after{content:"";position:absolute;inset:0;background:var(--base);mix-blend-mode:multiply;opacity:.4}
 
 .service .head{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:24px;margin-bottom:60px}
 .service .lead{font-size:clamp(22px,2.6vw,36px);font-weight:600;line-height:1.6;max-width:22em}
 .sv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
 .sv{display:block}
-.sv .ph{aspect-ratio:4/3;border-radius:200px 200px 24px 24px;overflow:hidden;position:relative;margin-bottom:28px}
+.sv .ph{aspect-ratio:4/3;border-radius:200px 200px 24px 24px;overflow:hidden;position:relative;margin-bottom:28px;font-size:13px}
 .sv:nth-child(2) .ph{border-radius:24px 24px 200px 200px}
-.sv .ph img{width:100%;height:100%;object-fit:cover;filter:grayscale(.4);transition:transform .8s}
-.sv .ph::after{content:"";position:absolute;inset:0;background:var(--base);mix-blend-mode:multiply;opacity:.4}
-.sv:hover .ph img{transform:scale(1.06)}
+.sv .mk{transition:transform .8s}.sv:hover .mk{transform:scale(1.05)}
 .sv .en{font-size:15px}
 .sv h3{font-size:28px;margin:4px 0 10px;letter-spacing:.1em}
 .sv p{font-size:15px;line-height:1.9}
-.sv .tag{display:inline-block;margin-top:14px;font:500 12px var(--en);border:1px solid #fff;border-radius:99px;padding:1px 14px}
-.pill{display:inline-flex;align-items:center;justify-content:center;min-width:220px;margin-top:70px;padding:16px 40px;border:1px solid #fff;border-radius:99px;font-family:var(--en);font-weight:500;font-size:17px;transition:background .3s,color .3s}
-.pill:hover,.pill:focus-visible{background:#fff;color:var(--base)}
+.sv .tag{display:inline-block;margin-top:14px;font:500 12px var(--en);border:1px solid currentColor;border-radius:99px;padding:1px 14px}
+.pill{display:inline-flex;align-items:center;justify-content:center;min-width:220px;margin-top:70px;padding:16px 40px;border:1px solid currentColor;border-radius:99px;font-family:var(--en);font-weight:500;font-size:17px;transition:background .3s,color .3s}
+.t .pill:hover,.t .pill:focus-visible{background:#fff;color:var(--base)}
+.w .pill:hover,.w .pill:focus-visible{background:var(--base);border-color:var(--base);color:#fff}
 
 .way{text-align:center}
 .way .circle{display:flex;justify-content:center;gap:10px;margin:36px 0}
 .way .circle svg{width:50px;height:50px;animation:spin 6s linear infinite}
 .way h2{font-size:clamp(26px,3.6vw,48px);line-height:1.6;font-weight:600;margin-bottom:30px}
-.keys{display:flex;flex-wrap:wrap;justify-content:center;gap:12px 36px;font-family:var(--en);font-weight:500;font-size:clamp(18px,2vw,26px);margin:50px 0 30px}
+.keys{display:flex;flex-wrap:wrap;justify-content:center;gap:12px 36px;font-family:var(--en);font-weight:500;font-size:clamp(18px,2vw,26px);margin:50px 0 30px;color:var(--base)}
 .keys span{display:flex;align-items:center;gap:12px}
-.keys span::before{content:"";width:8px;height:8px;border-radius:50%;background:#fff}
+.keys span::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor}
 .way p.b{max-width:34em;margin:0 auto;font-size:17px}
 
 .journal .top{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:20px;margin-bottom:50px}
 .jr{display:grid;grid-template-columns:repeat(3,1fr);gap:36px 30px}
-.jr .th{aspect-ratio:3/2;overflow:hidden;border-radius:16px;position:relative;margin-bottom:16px}
-.jr .th img{width:100%;height:100%;object-fit:cover;filter:grayscale(.4);transition:transform .6s}
-.jr .th::after{content:"";position:absolute;inset:0;background:var(--base);mix-blend-mode:multiply;opacity:.4}
-.jr article:hover .th img{transform:scale(1.06)}
+.jr .th{aspect-ratio:3/2;overflow:hidden;border-radius:16px;position:relative;margin-bottom:16px;background:#fff;color:var(--base);display:grid;place-items:center}
+.jr .th svg{width:46%;height:70%;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;transition:transform .5s}
+.jr article:hover .th svg{transform:scale(1.08) rotate(-3deg)}
 .jr .meta{font:400 13px var(--en);display:flex;gap:14px;align-items:center}
 .jr .meta b{font-weight:500;border:1px solid #fff;border-radius:99px;padding:0 12px;font-size:12px}
 .jr h3{font-size:19px;line-height:1.7;margin-top:6px}
 
-.contact{background:#fff;color:#000;border-radius:80px 80px 0 0;padding:130px 0}
 .contact .in{max-width:760px}
-.contact .label{color:var(--base)}
 .contact h2{font-size:clamp(24px,3.2vw,40px);line-height:1.6;margin:30px 0 8px}
 .contact form{display:grid;gap:22px;margin-top:40px}
 .contact label{display:grid;gap:8px;font-size:14px;font-weight:600}
@@ -116,12 +118,40 @@ header nav a:hover::after,header nav a:focus-visible::after{transform:scaleX(1)}
 .contact button:hover{background:#000}
 .note{font-size:12px;color:#666}
 
-footer{background:var(--base);padding:100px 0 50px;position:relative}
+footer{padding:150px 0 50px;position:relative}
 footer .in{display:grid;grid-template-columns:1fr 1fr 1fr;gap:40px;align-items:start}
 footer nav{display:grid;gap:8px;font-family:var(--en);font-size:17px}
 footer .addr{font-size:13px;line-height:2}
 .badge{width:200px;height:200px;margin-left:auto;animation:spin 18s linear infinite}
 .copy{width:min(86%,1260px);margin:70px auto 0;font:400 12px var(--en)}
+
+/* 画面の絵（写真の代わり） */
+.mk{position:relative;width:100%;height:100%;display:grid;place-items:center;background:linear-gradient(160deg,#0e9aa1,#14bbc3 70%,#5fd3d8);overflow:hidden}
+.win{width:78%;background:#fff;color:#000;border-radius:1em;box-shadow:0 1em 2.6em rgba(0,0,0,.2);overflow:hidden;font:500 .8em var(--en)}
+.win .bar{display:flex;gap:.4em;padding:.7em .9em;background:#e6f8f9}
+.win .bar i{width:.6em;height:.6em;border-radius:50%;background:#14bbc3;opacity:.7}
+.win .body{padding:1em;display:grid;gap:.7em}
+.chart{display:flex;align-items:flex-end;gap:.5em;height:5em}
+.chart b{flex:1;background:var(--base);border-radius:.3em .3em 0 0}
+.chart b:nth-child(odd){background:#7fe0e4}
+.ln{height:.6em;border-radius:1em;background:#e1f4f5}
+.ln.s{width:60%}.ln.m{width:80%}
+.tbl{display:grid;grid-template-columns:2fr 1fr 1fr;gap:.5em}
+.tbl .ln{height:.55em}
+.phone{width:34%;aspect-ratio:9/17.5;background:#fff;border:.45em solid #0a5f65;border-radius:2em;box-shadow:0 1em 2.4em rgba(0,0,0,.25);padding:1.1em .8em;display:grid;align-content:start;gap:.7em;color:#000;font:600 .75em var(--ja)}
+.phone .hd{height:1.4em;width:55%;border-radius:1em;background:var(--base)}
+.phone .it{display:flex;gap:.6em;align-items:center}
+.phone .it i{width:2em;height:2em;border-radius:.6em;background:#ffda00;flex:none}
+.phone .it:nth-child(3) i{background:#7fe0e4}.phone .it:nth-child(4) i{background:#ff7a6b}
+.phone .it span{display:block;flex:1}
+.phone .btnx{margin-top:.4em;height:2em;border-radius:1em;background:#000}
+.web{width:80%;background:#fff;color:#000;border-radius:1em;box-shadow:0 1em 2.6em rgba(0,0,0,.2);overflow:hidden;font-size:.8em}
+.web .hero{height:6em;background:linear-gradient(135deg,#14bbc3,#7fe0e4);display:grid;place-items:center;font:600 1.1em var(--ja);color:#fff;letter-spacing:.1em}
+.web .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:.6em;padding:.9em}
+.web .cols i{display:block;height:3em;border-radius:.6em;background:#e1f4f5}
+.scene{display:flex;gap:4%;align-items:center;justify-content:center;width:100%}
+.scene .win{width:46%;transform:rotate(-3deg)}
+.scene .phone{width:17%;transform:rotate(4deg)}
 
 .rv{opacity:0;transform:translateY(30px);transition:opacity .9s,transform .9s}
 .rv.show{opacity:1;transform:none}
@@ -140,10 +170,9 @@ footer .addr{font-size:13px;line-height:2}
  .scroll{left:20px;bottom:24px}
  .kv-chars{right:20px;bottom:20px}
  .chars{width:150px}.kv-chars{font-size:11px;white-space:nowrap}
- .sec{padding:80px 0}
+ .sec{padding:100px 0 80px}.sv .ph{font-size:12px}
  .about .in,.sv-grid,.jr,footer .in{grid-template-columns:1fr}
  .sv .ph,.sv:nth-child(2) .ph{border-radius:100px 100px 20px 20px}
- .contact{border-radius:40px 40px 0 0}
  .badge{margin:0}
 }
 </style>
@@ -170,9 +199,11 @@ footer .addr{font-size:13px;line-height:2}
 <main id="top">
 <div class="kv">
  <div class="kv-photo">
-  <div class="slide"><img src="assets/hero1.jpg" alt="机の上でノートパソコンとスマホを使って仕事をする人たち（イメージ写真）"></div>
-  <div class="slide"><img src="assets/hero2.jpg" alt="パソコンの画面を見ながら相談する二人（イメージ写真）"></div>
-  <div class="slide"><img src="assets/hero3.jpg" alt="打ち合わせで話をする人たち（イメージ写真）"></div>
+  <div class="slide"><img src="assets/desk.jpg" alt="パソコンとデスクランプのある机（イメージ写真）"></div>
+  <div class="slide sc" aria-hidden="true"><div class="mk"><div class="scene">
+   <div class="win"><div class="bar"><i></i><i></i><i></i></div><div class="body"><div class="chart"><b style="height:40%"></b><b style="height:65%"></b><b style="height:50%"></b><b style="height:85%"></b><b style="height:60%"></b><b style="height:95%"></b></div><div class="tbl"><div class="ln"></div><div class="ln"></div><div class="ln"></div><div class="ln"></div><div class="ln"></div><div class="ln"></div></div></div></div>
+   <div class="phone"><div class="hd"></div><div class="it"><i></i><span class="ln"></span></div><div class="it"><i></i><span class="ln"></span></div><div class="it"><i></i><span class="ln"></span></div><div class="btnx"></div></div>
+  </div></div></div>
  </div>
  <svg class="kv-wave" viewBox="0 0 1440 280" preserveAspectRatio="none" aria-hidden="true"><path fill="#14bbc3" d="M0 90H260C470 90 520 215 720 215S970 90 1180 90H1440V280H0Z"/></svg>
  <svg class="kv-text" viewBox="0 0 1440 280" aria-hidden="true">
@@ -190,7 +221,8 @@ footer .addr{font-size:13px;line-height:2}
  </a>
 </div>
 
-<section class="sec about" id="about">
+<section class="sec w about" id="about">
+ <svg class="cv" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 120V70C260 -10 520 -10 760 50S1200 120 1440 30V120Z"/></svg>
  <div class="in">
   <div class="rv">
    <p class="label">About us<small>私たちについて</small></p>
@@ -198,24 +230,25 @@ footer .addr{font-size:13px;line-height:2}
    <p>日々の仕事をもっと楽にしたい。思い描いたサービスを形にしたい。私たちは、その思いを聞くところから始めます。</p>
    <a class="arrow-link" href="#way">私たちのつくり方<i><svg viewBox="0 0 24 24"><path d="M3 12h17m-6-6 6 6-6 6"/></svg></i></a>
   </div>
-  <div class="about-ph rv"><img src="assets/about.jpg" alt="ノートパソコンを見ながら話し合う二人（イメージ写真）"></div>
+  <div class="about-ph rv"><img src="assets/desk.jpg" alt="パソコンとデスクランプのある机（イメージ写真）"></div>
  </div>
 </section>
 
-<section class="sec service" id="service">
+<section class="sec t service" id="service">
+ <svg class="cv" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40C260 130 520 110 760 50S1200 -10 1440 70V120H0Z"/></svg>
  <div class="in">
   <div class="head rv">
    <p class="label">Service<small>できること</small></p>
    <p class="lead">仕事を支えるシステムも、暮らしに寄りそうアプリも。</p>
   </div>
   <div class="sv-grid">
-   <a class="sv rv" href="#contact"><div class="ph"><img src="assets/desk.jpg" alt="パソコンの画面で作業する机（イメージ写真）"></div>
+   <a class="sv rv" href="#contact"><div class="ph"><div class="mk" aria-hidden="true"><div class="win"><div class="bar"><i></i><i></i><i></i></div><div class="body"><div class="chart"><b style="height:35%"></b><b style="height:60%"></b><b style="height:48%"></b><b style="height:80%"></b><b style="height:70%"></b><b style="height:92%"></b></div><div class="tbl"><div class="ln"></div><div class="ln"></div><div class="ln"></div><div class="ln"></div><div class="ln"></div><div class="ln"></div></div></div></div></div></div>
     <span class="en">01 BUSINESS SYSTEM</span><h3>業務システム</h3>
     <p>集計、入力、日報など、毎日くり返す作業を減らす仕組みをつくります。今のやり方を伺って、使う人に合う形にします。</p><span class="tag">受託</span></a>
-   <a class="sv rv" href="#contact"><div class="ph"><img src="assets/hero1.jpg" alt="机の上のスマホとノートパソコン（イメージ写真）"></div>
+   <a class="sv rv" href="#contact"><div class="ph"><div class="mk" aria-hidden="true"><div class="phone"><div class="hd"></div><div class="it"><i></i><span class="ln"></span></div><div class="it"><i></i><span class="ln"></span></div><div class="it"><i></i><span class="ln"></span></div><div class="btnx"></div></div></div></div>
     <span class="en">02 SMARTPHONE APP</span><h3>スマホアプリ</h3>
     <p>ご依頼のアプリの制作に加えて、私たち自身で企画するアプリも開発しています。開発中のものは、公開時にお知らせします。</p><span class="tag">受託 / 自社企画</span></a>
-   <a class="sv rv" href="#contact"><div class="ph"><img src="assets/team.jpg" alt="テーブルを囲んで作業するチーム（イメージ写真）"></div>
+   <a class="sv rv" href="#contact"><div class="ph"><div class="mk" aria-hidden="true"><div class="web"><div class="bar" style="display:flex;gap:.4em;padding:.7em .9em;background:#e6f8f9"><i style="width:.6em;height:.6em;border-radius:50%;background:#14bbc3;opacity:.7"></i><i style="width:.6em;height:.6em;border-radius:50%;background:#14bbc3;opacity:.7"></i><i style="width:.6em;height:.6em;border-radius:50%;background:#14bbc3;opacity:.7"></i></div><div class="hero">Your Company</div><div class="cols"><i></i><i></i><i></i></div></div></div></div>
     <span class="en">03 WEB</span><h3>Web制作</h3>
     <p>会社紹介やサービス紹介のホームページを、会社ごとに合わせてデザインします。パソコンとスマホで確認します。</p><span class="tag">ホームページ</span></a>
   </div>
@@ -223,7 +256,8 @@ footer .addr{font-size:13px;line-height:2}
  </div>
 </section>
 
-<section class="sec way" id="way">
+<section class="sec w way" id="way">
+ <svg class="cv" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 120V50C180 10 360 10 540 50S900 110 1080 60S1330 10 1440 40V120Z"/></svg>
  <div class="in">
   <p class="label rv">Way<small>私たちのつくり方</small></p>
   <div class="circle" aria-hidden="true"><svg><use href="#dog1"/></svg><svg><use href="#dog2"/></svg><svg><use href="#dog3"/></svg><svg><use href="#dog4"/></svg><svg><use href="#dog5"/></svg></div>
@@ -234,18 +268,20 @@ footer .addr{font-size:13px;line-height:2}
  </div>
 </section>
 
-<section class="sec journal" id="journal">
+<section class="sec t journal" id="journal">
+ <svg class="cv" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 120V70C260 -10 520 -10 760 50S1200 120 1440 30V120Z"/></svg>
  <div class="in">
   <div class="top rv"><p class="label">Consult<small>こんなとき、ご相談ください</small></p><a class="arrow-link" href="#contact">相談してみる<i><svg viewBox="0 0 24 24"><path d="M3 12h17m-6-6 6 6-6 6"/></svg></i></a></div>
   <div class="jr">
-   <article class="rv"><div class="th"><img src="assets/desk.jpg" alt="パソコンで集計をする机（イメージ写真）"></div><div class="meta"><span>CASE 01</span><b>業務システム</b></div><h3>毎月の集計に時間がかかる</h3></article>
-   <article class="rv"><div class="th"><img src="assets/hero3.jpg" alt="書類とパソコンを見ながら話す人（イメージ写真）"></div><div class="meta"><span>CASE 02</span><b>業務システム</b></div><h3>紙の情報を何度も入力している</h3></article>
-   <article class="rv"><div class="th"><img src="assets/hero1.jpg" alt="スマホを手にする人（イメージ写真）"></div><div class="meta"><span>CASE 03</span><b>スマホアプリ</b></div><h3>こんなアプリがあったら、と思っている</h3></article>
+   <article class="rv"><div class="th"><svg viewBox="0 0 64 64" aria-hidden="true"><rect x="8" y="10" width="48" height="44" rx="5"/><path d="M8 24h48M24 24v30M40 24v30M8 38h48"/></svg></div><div class="meta"><span>CASE 01</span><b>業務システム</b></div><h3>毎月の集計に時間がかかる</h3></article>
+   <article class="rv"><div class="th"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M10 8h22l8 8v28H10zM32 8v8h8"/><path d="M16 24h16M16 32h16M44 50h10M50 44l6 6-6 6"/></svg></div><div class="meta"><span>CASE 02</span><b>業務システム</b></div><h3>紙の情報を何度も入力している</h3></article>
+   <article class="rv"><div class="th"><svg viewBox="0 0 64 64" aria-hidden="true"><rect x="18" y="6" width="28" height="52" rx="6"/><path d="M28 50h8M32 18a8 8 0 0 0-4 15v4h8v-4a8 8 0 0 0-4-15z"/></svg></div><div class="meta"><span>CASE 03</span><b>スマホアプリ</b></div><h3>こんなアプリがあったら、と思っている</h3></article>
   </div>
  </div>
 </section>
 
-<section class="sec contact" id="contact">
+<section class="sec w contact" id="contact">
+ <svg class="cv" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40C260 130 520 110 760 50S1200 -10 1440 70V120H0Z"/></svg>
  <div class="in">
   <p class="label rv">Contact<small>お問い合わせ</small></p>
   <h2 class="rv">まだ、うまく説明できなくても大丈夫です。</h2>
@@ -255,13 +291,14 @@ footer .addr{font-size:13px;line-height:2}
    <label>メールアドレス<input name="email" type="email" autocomplete="email" required></label>
    <label>ご相談内容<textarea name="body" required></textarea></label>
    <button type="submit">相談してみる</button>
-   <p class="note">※制作中の見本です。送信先は未設定のため、送信されません。写真はイメージ（フリー素材）で、当社の人物・場所ではありません。</p>
+   <p class="note">※制作中の見本です。送信先は未設定のため、送信されません。机の写真はイメージ（フリー素材）で、画面の絵は説明用の見本です。</p>
   </form>
  </div>
 </section>
 </main>
 
-<footer>
+<footer class="t">
+ <svg class="cv" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 120V50C180 10 360 10 540 50S900 110 1080 60S1330 10 1440 40V120Z"/></svg>
  <div class="in">
   <div><a class="brand" href="#top">BarkCore</a><p class="addr" style="margin-top:24px">株式会社BarkCore<br>業務システム・スマホアプリ・Web制作</p></div>
   <nav aria-label="フッター"><a href="#about">About us</a><a href="#service">Service</a><a href="#way">Way</a><a href="#journal">Consult</a><a href="#contact">Contact</a></nav>
