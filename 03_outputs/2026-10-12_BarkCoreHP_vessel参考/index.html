@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>株式会社BarkCore｜こんなこと、できたら。を、つくる。</title>
+<meta name="description" content="業務システムとスマホアプリの相談・制作。日々の仕事をもっと楽にしたい、思い描いたサービスを形にしたい。その思いを聞くところから始めます。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Elms+Sans:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--base:#14bbc3;--ink:#000;--paper:#fff;--soft:#f5f5f5;--yellow:#ffda00;--en:"Elms Sans",sans-serif;--ja:"Noto Sans JP","Hiragino Kaku Gothic ProN",sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--ja);color:var(--ink);background:var(--base);line-height:1.9;letter-spacing:.04em;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.en{font-family:var(--en);font-weight:500;letter-spacing:.08em}
+.wrap{width:min(80%,1200px);margin:0 auto}
+
+/* header */
+header{position:fixed;inset:0 0 auto 0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:20px 4vw;color:#fff;mix-blend-mode:normal}
+header .name{font-weight:600;font-size:15px}
+header nav{display:flex;gap:28px;font-family:var(--en);font-size:14px;font-weight:500}
+header nav a{position:relative;padding:2px 0}
+header nav a::after{content:"";position:absolute;left:0;bottom:-2px;width:100%;height:1px;background:#fff;transform:scaleX(0);transform-origin:left;transition:transform .3s}
+header nav a:hover::after,header nav a:focus-visible::after{transform:scaleX(1)}
+.menu-btn{display:none;background:none;border:1px solid #fff;color:#fff;border-radius:99px;padding:6px 16px;font:500 13px var(--en);cursor:pointer}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+
+/* hero */
+.kv{position:relative;height:100svh;min-height:620px;background:var(--base);overflow:hidden}
+.kv-img{position:absolute;inset:80px 6.3% 30px;border-radius:24px;overflow:hidden;background:linear-gradient(160deg,#0a6f76,#14bbc3 70%,#5fd3d8)}
+.kv-img svg{position:absolute;inset:0;width:100%;height:100%}
+.kv-copy{position:absolute;left:0;right:0;bottom:0;z-index:3;padding:0 calc(6.3% + 32px) 10vw;color:#fff}
+.kv-copy .small{font-weight:600;font-size:clamp(15px,2vw,26px);letter-spacing:.12em;margin-bottom:10px}
+.kv-copy h1{font-family:var(--en);font-weight:600;font-size:clamp(30px,6vw,92px);line-height:1.15;letter-spacing:.02em}
+.kv-copy h1 span{white-space:nowrap}
+.kv::after{content:"";position:absolute;left:0;bottom:-1px;width:100%;height:12vw;background:var(--base);z-index:2;clip-path:path("M0 0")}
+.wave{position:absolute;left:0;bottom:-1px;width:100%;height:12vw;z-index:2;display:block}
+.chars{position:absolute;right:7%;bottom:3vw;z-index:4;display:flex;gap:14px;border-left:1px solid #fff;border-right:1px solid #fff;padding:0 12px}
+.chars i{display:block;width:30px;height:30px;background:#fff;animation:spin 4.4s linear infinite reverse}
+.chars i:nth-child(1){border-radius:50%}
+.chars i:nth-child(2){border-radius:4px}
+.chars i:nth-child(3){clip-path:polygon(50% 0,100% 100%,0 100%)}
+.chars i:nth-child(4){border-radius:50% 50% 0 50%}
+.chars i:nth-child(5){clip-path:polygon(50% 0,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)}
+@keyframes spin{to{transform:rotate(360deg)}}
+.scroll{position:absolute;left:50%;bottom:20px;z-index:4;color:#fff;font:500 12px var(--en);transform:translateX(-50%);display:none}
+
+/* sections */
+section{position:relative}
+.sec-head{display:flex;align-items:baseline;gap:18px;margin-bottom:40px}
+.sec-head .en{font-size:clamp(34px,5vw,64px);line-height:1}
+.sec-head small{font-size:14px;font-weight:500}
+.about{color:#fff;padding:60px 0 120px}
+.about .wrap{display:grid;grid-template-columns:5fr 6fr;gap:7vw;align-items:center}
+.about h2{font-size:clamp(28px,4vw,52px);line-height:1.4;font-weight:600;margin-bottom:28px}
+.about p{font-size:16px}
+.about .link,.btn{display:inline-flex;align-items:center;gap:14px;margin-top:32px;font-weight:600}
+.about .link::after{content:"";width:46px;height:46px;border-radius:50%;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2314bbc3' stroke-width='2'%3E%3Cpath d='M5 12h14m-6-6 6 6-6 6'/%3E%3C/svg%3E") center/20px no-repeat;transition:transform .3s}
+.about .link:hover::after{transform:translateX(6px)}
+.about-visual{aspect-ratio:4/3;border-radius:24px;background:linear-gradient(160deg,#0c7f86,#0a5f65);position:relative;overflow:hidden}
+.about-visual b{position:absolute;display:block;background:#fff}
+.about-visual b:nth-child(1){width:34%;aspect-ratio:1;border-radius:50%;left:10%;top:14%}
+.about-visual b:nth-child(2){width:26%;aspect-ratio:1;background:var(--yellow);border-radius:6px;right:12%;top:30%;transform:rotate(12deg)}
+.about-visual b:nth-child(3){width:40%;height:18%;border-radius:99px;left:24%;bottom:12%;background:#7fe0e4}
+
+.service{background:var(--paper);border-radius:60px 60px 0 0;padding:110px 0 120px}
+.service .sec-head{color:var(--ink)}
+.service .lead{font-size:clamp(20px,2.4vw,30px);font-weight:600;line-height:1.6;margin-bottom:56px}
+.keys{display:flex;gap:10px 28px;flex-wrap:wrap;font-family:var(--en);font-weight:600;margin-bottom:40px;color:var(--base);font-size:14px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{background:var(--soft);border-radius:24px;padding:36px 30px 40px;transition:transform .35s,background .35s}
+.card:hover{transform:translateY(-6px);background:#e8fafb}
+.card .ico{width:56px;height:56px;border-radius:50%;background:var(--base);margin-bottom:24px;display:grid;place-items:center}
+.card .ico svg{width:28px;height:28px;stroke:#fff;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.card h3{font-size:22px;margin-bottom:12px}
+.card p{font-size:15px}
+.card .tag{display:inline-block;margin-top:18px;font:500 12px var(--en);border:1px solid var(--ink);border-radius:99px;padding:2px 12px}
+.btn{background:var(--ink);color:#fff;border-radius:99px;padding:16px 36px;margin-top:48px;transition:background .3s,color .3s}
+.btn:hover,.btn:focus-visible{background:var(--base)}
+
+.trigger{background:var(--paper);padding:0 0 120px}
+.trigger .sec-head{color:var(--ink)}
+.list{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;list-style:none}
+.list li{border-top:2px solid var(--ink);padding-top:20px}
+.list .num{font:600 14px var(--en);color:var(--base)}
+.list p{font-size:18px;font-weight:600;line-height:1.7;margin-top:8px}
+
+.way{background:var(--base);color:#fff;padding:110px 0}
+.way .wrap{display:grid;grid-template-columns:1fr 1fr;gap:7vw;align-items:center}
+.way h2{font-size:clamp(26px,3.4vw,44px);line-height:1.45;margin-bottom:24px}
+.steps{list-style:none;counter-reset:s}
+.steps li{counter-increment:s;display:flex;gap:18px;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.6);font-weight:600}
+.steps li::before{content:counter(s,decimal-leading-zero);font:500 14px var(--en);padding-top:4px}
+
+.contact{background:var(--ink);color:#fff;padding:120px 0;text-align:center;border-radius:60px 60px 0 0}
+.contact h2{font-size:clamp(26px,3.6vw,46px);line-height:1.5;margin-bottom:16px}
+.contact form{width:min(92%,640px);margin:44px auto 0;text-align:left;display:grid;gap:18px}
+.contact label{font-size:14px;font-weight:600;display:grid;gap:6px}
+.contact input,.contact textarea{font:inherit;color:#fff;background:transparent;border:1px solid #777;border-radius:12px;padding:14px 16px}
+.contact textarea{min-height:140px;resize:vertical}
+.contact button{font:600 16px var(--ja);background:var(--base);color:#000;border:0;border-radius:99px;padding:18px;cursor:pointer;transition:background .3s}
+.contact button:hover{background:var(--yellow)}
+.note{font-size:12px;color:#aaa;text-align:center}
+
+footer{background:var(--ink);color:#fff;padding:0 0 40px;border-top:1px solid #333}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;padding-top:40px;font-size:13px}
+footer nav{display:flex;gap:24px;font-family:var(--en)}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.chars i{animation:none}html{scroll-behavior:auto}}
+
+@media (max-width:800px){
+ .wrap{width:88%}
+ header nav{display:none;position:fixed;inset:0;background:var(--base);flex-direction:column;justify-content:center;align-items:center;font-size:24px}
+ header nav.open{display:flex}
+ .menu-btn{display:block;position:relative;z-index:30}
+ .kv-img{inset:70px 0 110px;border-radius:0}
+ .kv-copy{padding:0 7% 34vw}.kv-copy h1{font-size:6.2vw}
+ .wave{height:24vw}
+ .chars{right:50%;transform:translateX(50%);bottom:28px}
+ .about .wrap,.way .wrap{grid-template-columns:1fr}
+ .cards,.list{grid-template-columns:1fr}
+ .service,.contact{border-radius:32px 32px 0 0}
+}
+</style>
+</head>
+<body>
+<header>
+ <a class="name" href="#top">株式会社BarkCore</a>
+ <button class="menu-btn" aria-expanded="false" aria-controls="gnav">Menu</button>
+ <nav id="gnav" aria-label="メイン">
+  <a href="#about">About Us</a><a href="#service">Service</a><a href="#way">Way</a><a href="#contact">Contact</a>
+ </nav>
+</header>
+
+<main id="top">
+<div class="kv">
+ <div class="kv-img" role="img" aria-label="ティール色の背景に、円・四角・角丸の図形が浮かぶ抽象的なイメージ">
+  <svg viewBox="0 0 1200 700" preserveAspectRatio="xMaxYMin slice" aria-hidden="true">
+   <circle cx="930" cy="170" r="80" fill="#ffda00"/>
+   <rect x="640" y="90" width="130" height="130" rx="18" fill="#fff" transform="rotate(14 705 155)"/>
+   <path d="M1010 330a70 70 0 0 1 140 0z" fill="#fff"/>
+   <circle cx="520" cy="260" r="44" fill="#7fe0e4"/>
+   <rect x="780" y="300" width="170" height="60" rx="30" fill="#fff" opacity=".9"/>
+  </svg>
+ </div>
+ <div class="kv-copy">
+  <p class="small">BarkCore — 業務システム・スマホアプリ</p>
+  <h1>こんなこと、<br><span>できたら。を、つくる。</span></h1>
+ </div>
+ <svg class="wave" viewBox="0 0 1500 180" preserveAspectRatio="none" aria-hidden="true"><path fill="#14bbc3" d="M0 110C250 20 450 20 750 100S1250 170 1500 60V180H0Z"/></svg>
+ <div class="chars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+</div>
+
+<section class="about" id="about">
+ <div class="wrap">
+  <div class="rv">
+   <div class="sec-head"><h2 class="en" style="font-size:clamp(34px,5vw,64px);margin:0">About Us</h2></div>
+   <h2>思いを聞くところから、<br>始めます。</h2>
+   <p>日々の仕事をもっと楽にしたい。思い描いたサービスを形にしたい。私たちは、その思いを聞くところから始めます。</p>
+   <a class="link" href="#way">私たちのつくり方</a>
+  </div>
+  <div class="about-visual rv" aria-hidden="true"><b></b><b></b><b></b></div>
+ </div>
+</section>
+
+<section class="service" id="service">
+ <div class="wrap">
+  <div class="sec-head rv"><h2 class="en">Service</h2><small>できること</small></div>
+  <p class="lead rv">仕事を支えるシステムも、<br>暮らしに寄りそうアプリも。</p>
+  <div class="keys en rv" aria-hidden="true"><span>BUSINESS SYSTEM</span><span>SMARTPHONE APP</span><span>WEB</span></div>
+  <div class="cards">
+   <article class="card rv">
+    <div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3M7 12l3-3 3 2 4-4"/></svg></div>
+    <h3>業務システム</h3>
+    <p>集計、入力、日報など、毎日くり返す作業を減らす仕組みをつくります。今のやり方を伺って、使う人に合う形にします。</p>
+    <span class="tag">受託</span>
+   </article>
+   <article class="card rv">
+    <div class="ico"><svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg></div>
+    <h3>スマホアプリ</h3>
+    <p>ご依頼のアプリの制作に加えて、私たち自身で企画するアプリも開発しています。開発中のものは、公開時にお知らせします。</p>
+    <span class="tag">受託 / 自社企画</span>
+   </article>
+   <article class="card rv">
+    <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg></div>
+    <h3>Web制作</h3>
+    <p>会社紹介やサービス紹介のホームページを、会社ごとに合わせてデザインします。パソコンとスマホで確認します。</p>
+    <span class="tag">ホームページ</span>
+   </article>
+  </div>
+  <a class="btn rv" href="#contact">相談してみる</a>
+ </div>
+</section>
+
+<section class="trigger">
+ <div class="wrap">
+  <div class="sec-head rv"><h2 class="en" style="font-size:clamp(28px,4vw,48px)">Consult</h2><small>こんなとき、ご相談ください</small></div>
+  <ul class="list">
+   <li class="rv"><span class="num">01</span><p>毎月の集計に時間がかかる</p></li>
+   <li class="rv"><span class="num">02</span><p>紙の情報を何度も入力している</p></li>
+   <li class="rv"><span class="num">03</span><p>こんなアプリがあったら、と思っている</p></li>
+  </ul>
+ </div>
+</section>
+
+<section class="way" id="way">
+ <div class="wrap">
+  <div class="rv">
+   <div class="sec-head"><h2 class="en" style="font-size:clamp(34px,5vw,64px)">Way</h2></div>
+   <h2>私たちのつくり方</h2>
+   <p>今のやり方や、実現したいことを一緒に整理し、使う人に合う形を考えます。</p>
+  </div>
+  <ol class="steps rv">
+   <li>お話を聞く</li>
+   <li>今のやり方と、やりたいことを整理する</li>
+   <li>使う人に合う形を考える</li>
+   <li>つくって、見ていただく</li>
+  </ol>
+ </div>
+</section>
+
+<section class="contact" id="contact">
+ <div class="wrap">
+  <h2 class="rv">まだ、うまく説明できなくても<br>大丈夫です。</h2>
+  <p class="rv">気になっていることから、聞かせてください。</p>
+  <form class="rv" onsubmit="event.preventDefault();this.querySelector('.note').textContent='これは見本です。まだ送信されません。';">
+   <label>お名前<input name="name" autocomplete="name" required></label>
+   <label>メールアドレス<input name="email" type="email" autocomplete="email" required></label>
+   <label>ご相談内容<textarea name="body" required></textarea></label>
+   <button type="submit">相談してみる</button>
+   <p class="note">※制作中の見本です。送信先は未設定のため、送信されません。</p>
+  </form>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="wrap">
+  <small>©BarkCore 2026</small>
+  <nav aria-label="フッター"><a href="#about">About Us</a><a href="#service">Service</a><a href="#contact">Contact</a><a href="#top">Top ↑</a></nav>
+ </div>
+</footer>
+
+<script>
+const btn=document.querySelector('.menu-btn'),nav=document.getElementById('gnav');
+btn.addEventListener('click',()=>{const o=nav.classList.toggle('open');btn.setAttribute('aria-expanded',o)});
+nav.addEventListener('click',e=>{if(e.target.tagName==='A'){nav.classList.remove('open');btn.setAttribute('aria-expanded',false)}});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
