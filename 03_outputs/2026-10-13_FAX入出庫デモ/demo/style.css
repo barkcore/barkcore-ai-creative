@@ -104,8 +104,8 @@ tr.whyrow td{border-top:0;padding:0 8px 14px}
 .spin{width:30px;height:30px;border:4px solid var(--line);border-top-color:var(--ink);border-radius:50%;animation:spin .9s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
 @media (prefers-reduced-motion:reduce){.spin{animation:none;border-top-color:var(--line);border-right-color:var(--ink)}}
-dialog{border:2px solid var(--ink);border-radius:12px;padding:32px;max-width:560px;width:calc(100% - 32px);color:var(--ink);font-family:var(--font)}
-dialog::backdrop{background:rgba(31,45,61,.45)}
+dialog{max-height:calc(100dvh - 32px);overflow:auto;background:#fff;border:2px solid var(--ink);border-radius:12px;padding:32px;max-width:560px;width:calc(100% - 32px);color:var(--ink);font-family:var(--font)}
+dialog::backdrop{background:rgba(20,30,42,.8)}
 dialog h2{margin:0 0 12px;font-size:24px}
 dialog p{margin:0 0 28px}
 .dlg-actions{display:flex;gap:16px;flex-wrap:wrap}
@@ -148,3 +148,15 @@ dialog p{margin:0 0 28px}
 .pick-item img{width:62px;height:80px;object-fit:cover;object-position:top;border:1px solid var(--line);flex:none}
 .pi-text{display:flex;flex-direction:column;gap:2px}
 .pi-text b{font-size:17px}
+
+.pickdlg h2{font-size:26px}
+.pickdlg p{font-size:18px}
+.pi-text b{font-size:18px}
+@media (max-width:900px){
+  dialog{padding:20px}
+  dialog h2,.pickdlg h2{font-size:22px;margin-bottom:8px}
+  dialog p{margin-bottom:16px}
+  .pickdlg ul{gap:10px;margin-bottom:16px}
+  .pick-item{min-height:80px;gap:14px;font-size:18px;padding:8px 12px 8px 8px}
+  .pick-item img{width:48px;height:64px}
+}
