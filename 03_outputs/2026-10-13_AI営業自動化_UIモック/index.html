@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>営業アシスタント UIモック（仮データ）</title>
+<style>
+:root{
+  --bg:#F6F7F6; --ink:#1C2430; --sub:#566170; --line:#DDE1E0;
+  --main:#1F5C5A; --main-d:#164644; --warn:#8A5A00; --warn-bg:#FBF1D9; --err:#B3261E; --err-bg:#FBE9E7; --ok:#2B6B3F;
+  --sp:8px;
+}
+*{box-sizing:border-box}
+html{font-size:16px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Hiragino Sans","Noto Sans JP","Yu Gothic",Meiryo,sans-serif;line-height:1.75;-webkit-text-size-adjust:100%}
+h1,h2,h3,p{margin:0}
+a{color:var(--main)}
+button{font:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--main);outline-offset:2px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.mock-bar{background:#E8ECEB;color:var(--sub);font-size:.8125rem;padding:6px 16px;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.mock-bar select{font:inherit;padding:2px 6px}
+header.top{display:flex;align-items:center;gap:32px;padding:16px 32px;max-width:1120px;margin:0 auto}
+header.top .name{font-weight:700;font-size:1.0625rem;letter-spacing:.02em}
+nav.main{display:flex;gap:24px;flex:1}
+nav.main a{color:var(--sub);text-decoration:none;padding:8px 0;border-bottom:3px solid transparent;font-weight:600;min-height:44px;display:inline-flex;align-items:center}
+nav.main a[aria-current="page"]{color:var(--ink);border-bottom-color:var(--main)}
+.quota{font-size:.875rem;color:var(--sub);text-align:right;font-variant-numeric:tabular-nums}
+.quota b{color:var(--ink);font-size:1.0625rem}
+main{max-width:1120px;margin:0 auto;padding:24px 32px 96px}
+.screen{display:none}
+.screen.on{display:block}
+h1{font-size:1.75rem;line-height:1.4;font-weight:700;margin-bottom:8px}
+.lead{color:var(--sub);margin-bottom:48px}
+section.group{margin-bottom:64px}
+section.group h2{font-size:1.1875rem;font-weight:700;margin-bottom:4px}
+section.group h2 small{font-size:.9375rem;font-weight:400;color:var(--sub);margin-left:8px}
+.empty{color:var(--sub);padding:16px 0}
+ul.rows{list-style:none;margin:16px 0 0;padding:0}
+ul.rows li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 24px;align-items:center;padding:16px 0;border-top:1px solid var(--line)}
+ul.rows li:last-child{border-bottom:1px solid var(--line)}
+.co{font-weight:700}
+.why{color:var(--sub);font-size:.9375rem}
+.tag{font-size:.875rem;font-weight:700;margin-right:8px}
+.tag.hi{color:var(--main)} .tag.mid{color:var(--warn)}
+.btn{border:2px solid var(--main);background:#fff;color:var(--main);border-radius:6px;padding:10px 20px;min-height:44px;font-weight:700}
+.btn.primary{background:var(--main);color:#fff}
+.btn.primary:hover{background:var(--main-d)}
+.btn.plain{border-color:transparent;background:transparent;color:var(--sub);text-decoration:underline}
+.btn[disabled]{opacity:.55;cursor:not-allowed}
+.notice{padding:16px 24px;margin:0 0 40px;border-radius:6px;font-weight:600}
+.notice.err{background:var(--err-bg);color:var(--err)}
+.notice.warn{background:var(--warn-bg);color:var(--warn)}
+.notice.ok{background:#E3F1E8;color:var(--ok)}
+.notice a{color:inherit}
+/* review */
+.back{display:inline-block;margin-bottom:24px;color:var(--sub)}
+.split{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:64px}
+.split h2{font-size:1.0625rem;margin:32px 0 8px}
+.split h2:first-child{margin-top:0}
+dl.facts{margin:0;display:grid;grid-template-columns:7em 1fr;gap:4px 16px;font-size:.9375rem}
+dl.facts dt{color:var(--sub)} dl.facts dd{margin:0}
+.memo{padding-left:1.2em;margin:8px 0}
+.memo li{margin-bottom:6px}
+label{display:block;font-weight:700;margin:16px 0 4px}
+input[type=text],textarea,select.f{width:100%;font:inherit;padding:10px 12px;border:2px solid #9AA5A3;border-radius:6px;background:#fff;color:var(--ink)}
+textarea{min-height:15em;line-height:1.8;resize:vertical}
+.hint{font-size:.875rem;color:var(--sub);margin-top:4px}
+.actions{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-top:24px}
+.saved{font-size:.875rem;color:var(--sub)}
+.state{display:none}
+.state.on{display:block}
+.spin{display:inline-block;width:1em;height:1em;border:3px solid var(--line);border-top-color:var(--main);border-radius:50%;vertical-align:-.15em;margin-right:8px;animation:sp 1s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.spin{animation:none;border-top-color:var(--line);border-right-color:var(--main)}}
+dialog{border:0;border-radius:8px;padding:32px;max-width:560px;width:calc(100% - 32px);box-shadow:0 8px 40px rgba(0,0,0,.25)}
+dialog::backdrop{background:rgba(20,28,36,.45)}
+dialog h2{font-size:1.25rem;margin-bottom:16px}
+dialog pre{white-space:pre-wrap;font:inherit;background:var(--bg);padding:16px;border-radius:6px;max-height:220px;overflow:auto;margin:12px 0 0}
+.kind{display:inline-block;font-weight:700;padding:2px 0;margin-right:8px}
+.compose{margin-top:40px}
+.inbound{color:var(--ink);white-space:pre-wrap;margin:8px 0 0;padding-left:16px;border-left:3px solid var(--line)}
+.setrow{display:grid;grid-template-columns:14em 1fr;gap:8px 24px;padding:16px 0;border-top:1px solid var(--line)}
+.setrow:last-of-type{border-bottom:1px solid var(--line)}
+.tabbar{display:none}
+@media (max-width:760px){
+  header.top{padding:12px 16px;gap:12px;flex-wrap:wrap}
+  nav.main{display:none}
+  main{padding:16px 16px 112px}
+  h1{font-size:1.5rem}
+  .split{grid-template-columns:1fr;gap:32px}
+  ul.rows li{grid-template-columns:1fr}
+  ul.rows li .btn{width:100%}
+  .setrow{grid-template-columns:1fr}
+  .tabbar{display:flex;position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid var(--line);z-index:5}
+  .tabbar a{flex:1;text-align:center;padding:12px 4px;min-height:56px;color:var(--sub);text-decoration:none;font-size:.8125rem;font-weight:700;display:flex;align-items:center;justify-content:center}
+  .tabbar a[aria-current="page"]{color:var(--main);box-shadow:inset 0 3px 0 var(--main)}
+  .actions .btn.primary{width:100%}
+  .quota{text-align:left;width:100%}
+}
+</style>
+</head>
+<body>
+<div class="mock-bar" role="region" aria-label="モック用の切り替え">
+  <span>仮データのモックです（実在の会社ではありません・送信はされません）</span>
+  <label style="display:inline;margin:0;font-weight:400">状態の切り替え：
+    <select id="stateSel" aria-label="画面の状態">
+      <option value="normal">通常</option>
+      <option value="empty">今日はやることなし（今日の画面）</option>
+      <option value="limit">今日の上限に達した（今日の画面）</option>
+      <option value="stopped">エラー返しが多く自動停止（今日の画面）</option>
+      <option value="researching">調査中（承認の画面）</option>
+      <option value="unreadable">サイトが読めない（承認の画面）</option>
+      <option value="nocontact">連絡先が見つからない（承認の画面）</option>
+      <option value="sendfail">送信に失敗（承認の画面）</option>
+    </select>
+  </label>
+</div>
+<header class="top">
+  <div class="name">営業アシスタント</div>
+  <nav class="main" aria-label="メニュー">
+    <a href="#today" data-nav="today">今日</a>
+    <a href="#review" data-nav="review">承認</a>
+    <a href="#reply" data-nav="reply">返信</a>
+    <a href="#add" data-nav="add">営業先の追加</a>
+    <a href="#settings" data-nav="settings">設定</a>
+  </nav>
+  <div class="quota" id="quota" aria-live="polite">本日の送信 <b>3</b> / 10通 ・ エラー返し 0件</div>
+</header>
+
+<main id="main" tabindex="-1">
+
+<!-- 今日 -->
+<section class="screen" id="s-today" aria-labelledby="h-today">
+  <h1 id="h-today">今日やること</h1>
+  <p class="lead">上から順に、返信、承認、フォローの順で並んでいます。</p>
+
+  <div class="notice err state" data-for="stopped" role="alert">
+    ！ 送信を止めました。宛先不明のエラー返しが続いたためです。<a href="#settings">理由と再開のしかたを見る</a>
+  </div>
+  <div class="notice warn state" data-for="limit">
+    今日の送信は上限（10通）までです。明日の朝からまた送れます。残りの承認待ちは明日に回せます。
+  </div>
+
+  <section class="group" aria-labelledby="g1">
+    <h2 id="g1">返信が来ています<small>2件</small></h2>
+    <p class="empty state" data-for="empty">いまはありません。</p>
+    <ul class="rows hide-empty">
+      <li><div><span class="co">サンプル運送</span><br><span class="why"><span class="tag hi">資料希望</span>「サービスの資料を送ってください」・1時間前</span></div><a class="btn primary" href="#reply">返信案を見る</a></li>
+      <li><div><span class="co">サンプル製作所</span><br><span class="why"><span class="tag mid">今は不要</span>「今は必要ありません」・昨日</span></div><a class="btn" href="#reply">終了にする</a></li>
+    </ul>
+  </section>
+
+  <section class="group" aria-labelledby="g2">
+    <h2 id="g2">承認する<small>5件</small></h2>
+    <p class="empty state" data-for="empty">いまはありません。営業先を追加すると、AIが調べて下書きを作ります。</p>
+    <ul class="rows hide-empty">
+      <li><div><span class="co">サンプル商店</span><br><span class="why"><span class="tag hi">優先度：高</span>サイトが古く、問い合わせが電話だけです</span></div><a class="btn primary" href="#review">承認する</a></li>
+      <li><div><span class="co">サンプル建材</span><br><span class="why"><span class="tag hi">優先度：高</span>複数の拠点があり、採用を強化しています</span></div><a class="btn" href="#review">承認する</a></li>
+      <li><div><span class="co">サンプル梱包</span><br><span class="why"><span class="tag mid">優先度：中</span>求人ページに「手作業の入力」と書かれています</span></div><a class="btn" href="#review">承認する</a></li>
+    </ul>
+    <p class="why hide-empty" style="margin-top:12px">ほか2件は「営業先の追加」の一覧から開けます。</p>
+  </section>
+
+  <section class="group" aria-labelledby="g3">
+    <h2 id="g3">フォローする<small>3件</small></h2>
+    <p class="empty state" data-for="empty">いまはありません。</p>
+    <ul class="rows hide-empty">
+      <li><div><span class="co">サンプル鉄工</span><br><span class="why">3日前に送りました。返信はまだありません</span></div><a class="btn" href="#review">フォロー文を作る</a></li>
+    </ul>
+  </section>
+  <a class="btn primary" href="#add">営業先を追加する</a>
+</section>
+
+<!-- 承認 -->
+<section class="screen" id="s-review" aria-labelledby="h-review">
+  <a class="back" href="#today">← 今日にもどる</a>
+  <h1 id="h-review">サンプル商店 を承認する</h1>
+  <p class="lead">内容を読んで、必要なら文章を直してください。「承認して送る」を押すまで、メールは送られません。</p>
+
+  <div class="notice warn state" data-for="researching" role="status"><span class="spin" aria-hidden="true"></span>調べています（約1分）。ほかの会社は、いまのまま見られます。</div>
+  <div class="notice err state" data-for="unreadable" role="alert">！ この会社のサイトを読めませんでした。手で情報を入れるか、見送ってください。</div>
+  <div class="notice warn state" data-for="nocontact" role="alert">！ メールアドレスが見つかりません。問い合わせフォームか電話の候補に回せます。</div>
+  <div class="notice err state" data-for="sendfail" role="alert">！ 送れませんでした（相手のサーバーが応答しませんでした）。内容は残っています。もう一度送れます。</div>
+  <div class="notice ok state" data-for="sent" role="status">送りました。次は「サンプル建材」です。</div>
+
+  <div class="split">
+    <div>
+      <h2>この会社</h2>
+      <dl class="facts">
+        <dt>業種</dt><dd>日用品の小売（店舗2か所）</dd>
+        <dt>所在地</dt><dd>関東地方</dd>
+        <dt>規模</dt><dd>従業員10〜30名くらい</dd>
+        <dt>連絡先</dt><dd>info@sample-shoten.example</dd>
+      </dl>
+      <h2>営業する理由 <span class="tag hi">優先度：高</span></h2>
+      <ul class="memo">
+        <li>サイトの表示がスマホに合っていません。</li>
+        <li>問い合わせの方法が電話だけです。</li>
+        <li>最近、2店舗目を出したことがお知らせに載っています。</li>
+      </ul>
+      <h2>AIが見た場所</h2>
+      <ul class="memo">
+        <li><a href="#" onclick="return false">トップページ</a></li>
+        <li><a href="#" onclick="return false">会社概要</a></li>
+        <li><a href="#" onclick="return false">お知らせ（2店舗目の開店）</a></li>
+      </ul>
+      <p class="hint">調査メモは公開されているページだけから作っています。間違いがあれば、右の文章を直してください。</p>
+    </div>
+    <div>
+      <h2>営業メールの下書き</h2>
+      <label for="subj">件名</label>
+      <input type="text" id="subj" value="2店舗目のご開店おめでとうございます（お問い合わせ窓口のご提案）">
+      <label for="body">本文</label>
+      <textarea id="body">サンプル商店 ご担当者様
+
+はじめてご連絡いたします。株式会社BarkCoreの森と申します。
+お知らせで、2店舗目をご開店されたことを拝見しました。おめでとうございます。
+
+ホームページを拝見したところ、お問い合わせが電話のみで、
+スマホでは少し見づらい表示になっていました。店舗が増えると、
+お客様からのご質問も増えると思い、ご連絡しました。
+
+私たちは、HPや業務システム、スマホアプリの制作を、
+ITが苦手な会社の方にも相談しやすい形で行っています。
+もしご興味があれば、10分ほどお話しできればうれしいです。
+
+お忙しいところ恐れ入ります。
+今後のご連絡が不要でしたら、このメールにその旨をご返信ください。
+
+株式会社BarkCore 森
+（住所・電話・配信停止の案内がここに入ります）</textarea>
+      <p class="saved" id="saved" role="status">自動で保存しています。</p>
+      <div class="actions">
+        <button class="btn primary" id="approve">承認して送る</button>
+        <button class="btn" id="redo">AIにやり直させる</button>
+        <button class="btn plain" id="skip">見送る</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 返信 -->
+<section class="screen" id="s-reply" aria-labelledby="h-reply">
+  <a class="back" href="#today">← 今日にもどる</a>
+  <h1 id="h-reply">サンプル運送 からの返信</h1>
+  <p class="lead">AIが内容を分けました。違っていたら直せます。</p>
+  <div class="split">
+    <div>
+      <h2>届いた返信 <small class="why">1時間前</small></h2>
+      <p class="inbound">ご連絡ありがとうございます。
+サービスの資料を送っていただけますか。</p>
+      <h2>AIの分類</h2>
+      <label for="kind" class="sr">分類</label>
+      <select id="kind" class="f"><option>資料希望</option><option>興味あり</option><option>打ち合わせ希望</option><option>今は不要</option><option>営業拒否</option><option>自動返信</option></select>
+      <p class="hint">「営業拒否」にすると、この会社には以後メールを送りません。</p>
+      <h2>次にすること</h2>
+      <p>資料を添えて返信し、3日後に打ち合わせの日程を聞く。</p>
+    </div>
+    <div>
+      <h2>返信の下書き</h2>
+      <label for="rbody">本文</label>
+      <textarea id="rbody">サンプル運送 ご担当者様
+
+ご返信ありがとうございます。BarkCoreの森です。
+サービスの資料を添付いたします。
+
+業務の手入力を減らす方法を中心にまとめています。
+気になる点があれば、お気軽にお知らせください。
+
+株式会社BarkCore 森</textarea>
+      <div class="actions">
+        <button class="btn primary" id="approveR">承認して送る</button>
+        <button class="btn plain">終了にする</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 営業先の追加 -->
+<section class="screen" id="s-add" aria-labelledby="h-add">
+  <a class="back" href="#today">← 今日にもどる</a>
+  <h1 id="h-add">営業先を追加する</h1>
+  <p class="lead">方法をひとつ選んでください。</p>
+  <div class="split">
+    <div>
+      <h2>文章で探す</h2>
+      <label for="aud">どんな会社に営業したいですか</label>
+      <textarea id="aud" style="min-height:8em">関東の物流会社。従業員10〜100名くらい。手作業が多そうな会社。</textarea>
+      <label for="cp">AIへの追加のお願い（なくても大丈夫です）</label>
+      <textarea id="cp" style="min-height:5em">サイトが古い、または問い合わせが電話だけの会社を高く評価してください。</textarea>
+      <div class="actions"><button class="btn primary">この条件で探す</button></div>
+    </div>
+    <div>
+      <h2>CSVを読み込む</h2>
+      <label for="csv">会社名・サイト・メールアドレスが入った表（CSV）</label>
+      <input type="file" id="csv" accept=".csv">
+      <p class="hint">読み込むと、同じ会社と配信停止済みの相手は自動でのぞきます。</p>
+      <h2>ひとつだけ入れる</h2>
+      <label for="url">会社のサイトのアドレス</label>
+      <input type="text" id="url" placeholder="https://">
+      <div class="actions"><button class="btn">追加して調べる</button></div>
+    </div>
+  </div>
+</section>
+
+<!-- 設定 -->
+<section class="screen" id="s-settings" aria-labelledby="h-set">
+  <a class="back" href="#today">← 今日にもどる</a>
+  <h1 id="h-set">設定</h1>
+  <p class="lead">変更は「保存する」を押すと反映されます。</p>
+  <div class="setrow"><div><b>営業用のメールボックス</b><p class="hint">ふだんのメールとは分けています</p></div><div>sales@（会社のドメイン）<br><span class="why">状態：つながっています</span></div></div>
+  <div class="setrow"><div><b>1日に送る数の上限</b></div><div><label for="lim" class="sr">上限</label><input type="text" id="lim" value="10" style="max-width:6em"> 通 <p class="hint">はじめは5〜10通をおすすめします。</p></div></div>
+  <div class="setrow"><div><b>自動で止める条件</b></div><div>エラー返しが全体の3%を超えたとき<br>配信停止の希望があったとき</div></div>
+  <div class="setrow"><div><b>メールの最後の文</b></div><div>会社名・連絡先・配信停止の案内を、すべてのメールに入れます。</div></div>
+  <div class="actions"><button class="btn primary">保存する</button></div>
+</section>
+</main>
+
+<nav class="tabbar" aria-label="メニュー（スマホ）">
+  <a href="#today" data-nav="today">今日</a>
+  <a href="#review" data-nav="review">承認</a>
+  <a href="#reply" data-nav="reply">返信</a>
+  <a href="#add" data-nav="add">追加</a>
+  <a href="#settings" data-nav="settings">設定</a>
+</nav>
+
+<dialog id="dlg" aria-labelledby="dh">
+  <h2 id="dh">この内容で送りますか</h2>
+  <p><b>宛先</b>　info@sample-shoten.example</p>
+  <p><b>件名</b>　<span id="dsub"></span></p>
+  <pre id="dbody"></pre>
+  <div class="actions">
+    <button class="btn primary" id="doSend">この内容で送る</button>
+    <button class="btn plain" id="cancel">もどって直す</button>
+  </div>
+</dialog>
+
+<script>
+(function(){
+  var screens=['today','review','reply','add','settings'];
+  var sel=document.getElementById('stateSel');
+  var state=sel.value;
+  function showState(){
+    document.querySelectorAll('.state').forEach(function(e){
+      var f=e.getAttribute('data-for'); e.classList.toggle('on', f===state);
+    });
+    var empty=state==='empty';
+    document.querySelectorAll('.hide-empty').forEach(function(e){e.style.display=empty?'none':''});
+    var stopped=state==='stopped', limit=state==='limit';
+    document.getElementById('quota').innerHTML = limit
+      ? '本日の送信 <b>10</b> / 10通（上限）'
+      : stopped ? '送信は停止中です' : '本日の送信 <b>3</b> / 10通 ・ エラー返し 0件';
+    var blocked = ['researching','unreadable','nocontact'].indexOf(state)>-1;
+    var ap=document.getElementById('approve');
+    ap.disabled = blocked || limit || stopped;
+    ap.title = ap.disabled ? '今は送れません。上のメッセージを確認してください' : '';
+    document.getElementById('body').disabled = state==='researching' || state==='unreadable';
+    var hint = ap.disabled ? '今は送れません（上のメッセージを確認してください）' : '';
+    document.getElementById('saved').textContent = hint || '自動で保存しています。';
+  }
+  sel.addEventListener('change',function(){
+    state=sel.value;
+    var t = ['researching','unreadable','nocontact','sendfail'].indexOf(state)>-1 ? 'review' : (['empty','limit','stopped'].indexOf(state)>-1 ? 'today' : null);
+    if(t && location.hash!=='#'+t) location.hash=t;
+    showState();
+  });
+  function route(){
+    var h=(location.hash||'#today').slice(1); if(screens.indexOf(h)<0) h='today';
+    screens.forEach(function(s){document.getElementById('s-'+s).classList.toggle('on',s===h)});
+    document.querySelectorAll('[data-nav]').forEach(function(a){
+      if(a.getAttribute('data-nav')===h) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current');
+    });
+    document.title=({today:'今日',review:'承認',reply:'返信',add:'営業先の追加',settings:'設定'})[h]+'｜営業アシスタント（モック）';
+    window.scrollTo(0,0);
+  }
+  window.addEventListener('hashchange',route);
+  var dlg=document.getElementById('dlg');
+  function openDlg(){
+    document.getElementById('dsub').textContent=document.getElementById('subj').value;
+    document.getElementById('dbody').textContent=document.getElementById('body').value;
+    dlg.showModal();
+  }
+  document.getElementById('approve').addEventListener('click',openDlg);
+  document.getElementById('cancel').addEventListener('click',function(){dlg.close()});
+  var send=document.getElementById('doSend');
+  send.addEventListener('click',function(){
+    send.disabled=true; send.textContent='送信中…';
+    setTimeout(function(){
+      dlg.close(); send.disabled=false; send.textContent='この内容で送る';
+      if(state==='sendfail'){ return; }
+      state='sent'; showState();
+      document.getElementById('approve').disabled=true;
+    },700);
+  });
+  document.getElementById('redo').addEventListener('click',function(){
+    document.getElementById('saved').textContent='AIが書き直しています…';
+    setTimeout(function(){document.getElementById('saved').textContent='書き直しました。内容を確認してください。'},800);
+  });
+  document.getElementById('skip').addEventListener('click',function(){
+    document.getElementById('saved').textContent='見送りにしました。「今日」にもどると、一覧から消えています。';
+  });
+  document.getElementById('approveR').addEventListener('click',function(){
+    this.textContent='送りました'; this.disabled=true;
+  });
+  var t; document.getElementById('body').addEventListener('input',function(){
+    var s=document.getElementById('saved'); s.textContent='保存しています…'; clearTimeout(t);
+    t=setTimeout(function(){s.textContent='保存しました。'},500);
+  });
+  showState(); route();
+})();
+</script>
+</body>
+</html>
