@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FAX入出庫 読み取りデモ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">本文へ移動</a>
+<div class="demo-note">これはデモです。読み取り結果は仮のデータで、保存はこのパソコンのこのブラウザの中だけです。</div>
+<header>
+  <div class="name">FAX入出庫 読み取りデモ</div>
+  <nav aria-label="メニュー">
+    <a href="#pick" id="nav-import">FAXを取り込む</a>
+    <a href="#stock" id="nav-stock">在庫を見る</a>
+  </nav>
+</header>
+<div class="live" id="live" role="status" aria-live="polite"></div>
+<main id="main">
+
+  <!-- 1. FAXを選ぶ -->
+  <section class="screen" id="screen-pick" hidden>
+    <ol class="steps" aria-label="作業の3つの段階"><li aria-current="step"><b>1</b>FAXを選ぶ</li><li><b>2</b>確かめて直す</li><li><b>3</b>保存してExcelへ</li></ol>
+    <h1 tabindex="-1">FAXのPDFを選んでください</h1>
+    <p class="lead">選ぶだけで、日付・入庫か出庫か・荷主名・商品名・数量を表にします。</p>
+    <div class="err" id="pick-error" role="alert" hidden><strong id="pick-error-title"></strong><span id="pick-error-body"></span></div>
+    <p class="note" id="pick-note" hidden></p>
+    <div class="drop" id="drop">
+      <input type="file" id="file" accept="application/pdf,.pdf" hidden>
+      <button class="btn xl" type="button" id="btn-pick">PDFを選ぶ</button>
+      <p id="drop-help">またはここにPDFをドラッグしてください。読み取りのまちがいは、次の画面で直せます。</p>
+    </div>
+    <div class="samples">
+      <h2>デモ用のサンプルFAXで試す</h2>
+      <ul id="sample-list"></ul>
+    </div>
+  </section>
+
+  <!-- 読み取り中 -->
+  <section class="screen" id="screen-reading" hidden>
+    <ol class="steps" aria-label="作業の3つの段階"><li aria-current="step"><b>1</b>FAXを選ぶ</li><li><b>2</b>確かめて直す</li><li><b>3</b>保存してExcelへ</li></ol>
+    <h1 tabindex="-1">FAXのPDFを選んでください</h1>
+    <p class="lead">選ぶだけで、日付・入庫か出庫か・荷主名・商品名・数量を表にします。</p>
+    <div class="loading"><span class="spin" aria-hidden="true"></span>読み取っています…</div>
+    <p class="note" id="reading-file"></p>
+    <div class="drop is-disabled"><button class="btn xl" type="button" disabled>PDFを選ぶ</button><p>読み取りが終わるまで、ほかのPDFは選べません。</p></div>
+  </section>
+
+  <!-- 2. 確かめて直す -->
+  <section class="screen" id="screen-review" hidden>
+    <ol class="steps" aria-label="作業の3つの段階"><li><b>1</b>FAXを選ぶ</li><li aria-current="step"><b>2</b>確かめて直す</li><li><b>3</b>保存してExcelへ</li></ol>
+    <div class="split">
+      <div class="stick">
+        <p class="cap" id="fax-cap"></p>
+        <div class="fax"><img id="fax-img" alt="届いたFAXの画像"></div>
+      </div>
+      <form id="review-form" novalidate>
+        <h1 class="m" tabindex="-1">読み取り結果を確かめてください</h1>
+        <p class="note" id="review-note" hidden></p>
+        <div class="fields">
+          <label class="f" for="f-date">日付<input class="t" id="f-date" aria-required="true" inputmode="numeric" autocomplete="off" placeholder="2026/10/09" style="width:170px"></label>
+          <fieldset class="kind"><legend>区分（入庫か出庫か）</legend>
+            <div class="seg">
+              <input type="radio" name="kind" id="k-in" value="入庫"><label for="k-in" class="in">入庫</label>
+              <input type="radio" name="kind" id="k-out" value="出庫"><label for="k-out" class="out">出庫</label>
+            </div>
+          </fieldset>
+          <label class="f grow" for="f-shipper">荷主名<input class="t" id="f-shipper" aria-required="true" autocomplete="off" style="width:100%"></label>
+        </div>
+        <p class="attn" id="attn" hidden><i>要確認</i><span id="attn-text"></span></p>
+        <p class="formerr" id="form-error" role="alert" hidden></p>
+        <table>
+          <thead><tr><th scope="col">商品名</th><th scope="col" class="num" style="width:150px">数量</th><th scope="col" class="rowdel"><span class="sr">操作</span></th></tr></thead>
+          <tbody id="rows"></tbody>
+        </table>
+        <div class="bar">
+          <button class="link" type="button" id="btn-add">＋ 行を足す</button>
+          <button class="btn" type="submit" id="btn-save">この内容で保存</button>
+        </div>
+        <p class="below"><button class="link muted" type="button" id="btn-back">別のFAXを選びなおす</button></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- 3. 保存後 -->
+  <section class="screen" id="screen-saved" hidden>
+    <ol class="steps" aria-label="作業の3つの段階"><li><b>1</b>FAXを選ぶ</li><li><b>2</b>確かめて直す</li><li aria-current="step"><b>3</b>保存してExcelへ</li></ol>
+    <h1 tabindex="-1">保存しました</h1>
+    <p class="lead" id="saved-lead"></p>
+    <div class="after">
+      <button class="btn" type="button" id="btn-next">次のFAXを選ぶ</button>
+      <button class="btn ghost s" type="button" id="btn-xlsx">Excelでダウンロード</button>
+    </div>
+    <p class="below"><button class="link muted" type="button" id="btn-undo"></button></p>
+    <p class="tbl-cap" id="saved-cap"></p>
+    <div class="tablewrap"><table>
+      <thead><tr><th scope="col">日付</th><th scope="col">区分</th><th scope="col">荷主名</th><th scope="col">商品名</th><th scope="col" class="num">数量</th></tr></thead>
+      <tbody id="saved-rows"></tbody>
+    </table></div>
+  </section>
+
+  <!-- 在庫 -->
+  <section class="screen" id="screen-stock" hidden>
+    <h1 tabindex="-1">いまの在庫</h1>
+    <p class="lead" id="stock-lead"></p>
+    <p class="attn" id="stock-attn" hidden><i>要確認</i><span id="stock-attn-text"></span></p>
+    <div class="empty" id="stock-empty" hidden>
+      <p>まだ保存されたFAXがありません。まずFAXを選んでください。</p>
+      <button class="btn" type="button" id="btn-stock-start">FAXを選ぶ</button>
+    </div>
+    <div id="stock-body" hidden>
+      <div class="tablewrap"><table>
+        <thead><tr><th scope="col">商品名</th><th scope="col" class="num">入庫の合計</th><th scope="col" class="num">出庫の合計</th><th scope="col" class="num">在庫</th></tr></thead>
+        <tbody id="stock-rows"></tbody>
+      </table></div>
+      <div class="after"><button class="btn ghost s" type="button" id="btn-stock-xlsx">在庫をExcelでダウンロード</button></div>
+      <p class="below"><button class="link muted" type="button" id="btn-reset">デモの記録をすべて消す</button></p>
+    </div>
+  </section>
+
+</main>
+
+<dialog id="dlg" aria-labelledby="dlg-title">
+  <form method="dialog">
+    <h2 id="dlg-title"></h2>
+    <p id="dlg-body"></p>
+    <div class="dlg-actions">
+      <button class="btn s" value="ok" id="dlg-ok"></button>
+      <button class="btn ghost s" value="cancel" id="dlg-cancel"></button>
+    </div>
+  </form>
+</dialog>
+
+<script src="vendor/pdf.min.js"></script>
+<script src="vendor/pdf.worker.min.js"></script>
+<script src="vendor/xlsx.full.min.js"></script>
+<script src="samples-data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
