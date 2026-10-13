@@ -268,7 +268,23 @@ svg[role="img"]{display:block;width:100%;height:100%}
 .jr article:hover .th svg{transform:scale(1.04)}
 .jr .th{border-radius:16px}
 @media (max-width:800px){.kv{padding:110px 0 120px}.kv-in{grid-template-columns:1fr;gap:44px}.hero-ill{max-width:440px;margin:0 auto;width:100%}}
-.about-ph{box-shadow:0 0 0 1px rgba(15,63,69,.18),0 24px 60px rgba(15,63,69,.12)}</style>
+.about-ph{box-shadow:0 0 0 1px rgba(15,63,69,.18),0 24px 60px rgba(15,63,69,.12)}
+/* 枠：半円をやめて、画面（ウィンドウ）の形に */
+.hero-ill{border-radius:18px;display:flex;flex-direction:column;aspect-ratio:1/1.02}
+.hero-ill .tb{flex:none;height:40px;display:flex;align-items:center;gap:8px;padding:0 16px;background:#e6dfd0}
+.hero-ill .tb i{width:11px;height:11px;border-radius:50%;background:#b9a272}
+.hero-ill .tb i:nth-child(2){background:#8fb8bb}.hero-ill .tb i:nth-child(3){background:#cfc8b8}
+.hero-ill .tb span{margin-left:14px;flex:1;max-width:260px;height:22px;border-radius:11px;background:#f5f2ec;color:#5b6663;font:500 11px/22px var(--en);text-align:center;letter-spacing:.1em}
+.hero-ill>svg{flex:1;min-height:0}
+.about-ph{border-radius:24px}
+.sv .ph,.sv:nth-child(2) .ph{border-radius:20px}
+@media (max-width:800px){.sv .ph,.sv:nth-child(2) .ph{border-radius:20px}}
+/* お問い合わせ：準備中 */
+.soon{margin-top:44px;padding:56px 44px;border:1px solid rgba(15,63,69,.25);border-radius:24px;background:#fff;text-align:center}
+.badge-soon{display:inline-block;font:500 13px var(--en);letter-spacing:.2em;color:#fff;background:var(--base);border-radius:99px;padding:4px 18px}
+.soon h2{margin:22px 0 10px}
+.soon p{font-size:16px}
+.kv{padding-bottom:250px}.scroll{bottom:clamp(120px,10vw,150px)}.kv-chars{bottom:clamp(110px,9vw,140px)}@media (max-width:800px){.kv{padding-bottom:210px}.scroll{bottom:90px}.kv-chars{bottom:80px}}</style>
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
@@ -305,8 +321,15 @@ svg[role="img"]{display:block;width:100%;height:100%}
    <p class="lede">日々の仕事をもっと楽にしたい。思い描いたサービスを形にしたい。私たちは、その思いを聞くところから始めます。</p>
    <a class="pill" href="#contact">相談してみる</a>
   </div>
-  <div class="kv-r hero-ill"><svg viewBox="0 0 640 640" preserveAspectRatio="xMidYMid slice" role="img" aria-label="相談する人と、話を聞く人のイラスト。背景には業務システムの画面とスマホの画面。"><rect width="640" height="640" fill="#f5f2ec"/><circle cx="397" cy="461" r="256" fill="#e6dfd0"/><circle cx="550" cy="102" r="64" fill="none" stroke="#b9a272" stroke-width="1.5"/><circle cx="64" cy="128" r="19" fill="#8fb8bb"/><rect x="0" y="600" width="640" height="60" fill="#ebe5d8"/><rect x="250" y="110" width="330" height="230" rx="16" fill="#ffffff" stroke="#e6dfd0"/><rect x="250" y="110" width="330" height="26" rx="16" fill="#0f3f45"/><rect x="250" y="124" width="330" height="12" fill="#0f3f45"/><circle cx="266" cy="123" r="3.5" fill="#b9a272"/><circle cx="280" cy="123" r="3.5" fill="#8fb8bb"/><circle cx="294" cy="123" r="3.5" fill="#8fb8bb"/><rect x="274" y="152" width="99" height="8" rx="4" fill="#0f3f45"/><rect x="274.0" y="240.0" width="40.3" height="20.0" rx="3" fill="#8fb8bb"/><rect x="322.3" y="227.5" width="40.3" height="32.5" rx="3" fill="#1d5a61"/><rect x="370.7" y="235.0" width="40.3" height="25.0" rx="3" fill="#8fb8bb"/><rect x="419.0" y="217.5" width="40.3" height="42.5" rx="3" fill="#1d5a61"/><rect x="467.3" y="230.0" width="40.3" height="30.0" rx="3" fill="#8fb8bb"/><rect x="515.7" y="212.5" width="40.3" height="47.5" rx="3" fill="#1d5a61"/><rect x="274" y="278" width="254" height="6" rx="3" fill="#e6dfd0"/><rect x="274" y="292" width="197" height="6" rx="3" fill="#e6dfd0"/><rect x="274" y="306" width="141" height="6" rx="3" fill="#e6dfd0"/><g transform="rotate(6 520.0 385.0)"><rect x="470" y="290" width="100" height="190" rx="16" fill="#0f3f45"/><rect x="477" y="298" width="86" height="174" rx="12" fill="#ffffff"/><rect x="486" y="310" width="40" height="10" rx="5" fill="#0f3f45"/><rect x="486" y="342" width="68" height="23" rx="8" fill="#e6dfd0"/><circle cx="500" cy="353" r="8" fill="#b9a272"/><rect x="486" y="374" width="68" height="23" rx="8" fill="#e6dfd0"/><circle cx="500" cy="386" r="8" fill="#8fb8bb"/><rect x="486" y="407" width="68" height="23" rx="8" fill="#e6dfd0"/><circle cx="500" cy="418" r="8" fill="#1d5a61"/><rect x="486" y="434" width="68" height="22" rx="11" fill="#1d5a61"/></g><path d="M180 245C205 245 215 232 246 228" fill="none" stroke="#b9a272" stroke-width="2" stroke-dasharray="6 6"/><path d="M240 222l10 5-9 8" fill="none" stroke="#b9a272" stroke-width="2"/><rect x="40" y="190" width="140" height="90" rx="35" fill="#ffffff" stroke="#b9a272" stroke-width="1.5"/><path d="M64 279l-10 18 24-18z" fill="#ffffff" stroke="#b9a272" stroke-width="1.5"/><rect x="43" y="276" width="40" height="6" fill="#ffffff" transform="translate(0,0)"/><circle cx="92.0" cy="235.0" r="5" fill="#8a7440"/><circle cx="110.0" cy="235.0" r="5" fill="#8a7440"/><circle cx="128.0" cy="235.0" r="5" fill="#8a7440"/><g transform="translate(70,335) scale(1.3,1.3)" style="--sh:#b9a272;--pn:#16201f;--hr:#1b1b1b;--sk:#e9c7a8"><use href="#pl" width="100" height="230"/><path d="M22 72L12 124l10 4 12-54z M78 72l10 52-10 4-12-54z" style="fill:var(--sh)"/><circle cx="17" cy="129" r="6" style="fill:var(--sk)"/><circle cx="83" cy="129" r="6" style="fill:var(--sk)"/></g><g transform="translate(200,335) scale(1.3,1.3)" style="--sh:#1d5a61;--pn:#0f3f45;--hr:#1b1b1b;--sk:#e9c7a8"><use href="#pb" width="100" height="230"/><path d="M22 72l-4 36 32 10 4-10-24-10 4-24z M78 72l4 36-32 10-4-10 24-10-4-24z" style="fill:var(--sh)"/><rect x="40" y="96" width="28" height="36" rx="3" transform="rotate(-8 54 114)" fill="#b9a272"/><circle cx="49" cy="116" r="6" style="fill:var(--sk)"/><circle cx="62" cy="114" r="6" style="fill:var(--sk)"/></g></svg></div>
+  <div class="kv-r hero-ill"><div class="tb" aria-hidden="true"><i></i><i></i><i></i><span>BarkCore — ご相談</span></div><svg viewBox="0 0 640 640" preserveAspectRatio="xMidYMid slice" role="img" aria-label="相談する人と、話を聞く人のイラスト。背景には業務システムの画面とスマホの画面。"><rect width="640" height="640" fill="#f5f2ec"/><circle cx="397" cy="461" r="256" fill="#e6dfd0"/><circle cx="550" cy="102" r="64" fill="none" stroke="#b9a272" stroke-width="1.5"/><circle cx="64" cy="128" r="19" fill="#8fb8bb"/><rect x="0" y="600" width="640" height="60" fill="#ebe5d8"/><rect x="250" y="110" width="330" height="230" rx="16" fill="#ffffff" stroke="#e6dfd0"/><rect x="250" y="110" width="330" height="26" rx="16" fill="#0f3f45"/><rect x="250" y="124" width="330" height="12" fill="#0f3f45"/><circle cx="266" cy="123" r="3.5" fill="#b9a272"/><circle cx="280" cy="123" r="3.5" fill="#8fb8bb"/><circle cx="294" cy="123" r="3.5" fill="#8fb8bb"/><rect x="274" y="152" width="99" height="8" rx="4" fill="#0f3f45"/><rect x="274.0" y="240.0" width="40.3" height="20.0" rx="3" fill="#8fb8bb"/><rect x="322.3" y="227.5" width="40.3" height="32.5" rx="3" fill="#1d5a61"/><rect x="370.7" y="235.0" width="40.3" height="25.0" rx="3" fill="#8fb8bb"/><rect x="419.0" y="217.5" width="40.3" height="42.5" rx="3" fill="#1d5a61"/><rect x="467.3" y="230.0" width="40.3" height="30.0" rx="3" fill="#8fb8bb"/><rect x="515.7" y="212.5" width="40.3" height="47.5" rx="3" fill="#1d5a61"/><rect x="274" y="278" width="254" height="6" rx="3" fill="#e6dfd0"/><rect x="274" y="292" width="197" height="6" rx="3" fill="#e6dfd0"/><rect x="274" y="306" width="141" height="6" rx="3" fill="#e6dfd0"/><g transform="rotate(6 520.0 385.0)"><rect x="470" y="290" width="100" height="190" rx="16" fill="#0f3f45"/><rect x="477" y="298" width="86" height="174" rx="12" fill="#ffffff"/><rect x="486" y="310" width="40" height="10" rx="5" fill="#0f3f45"/><rect x="486" y="342" width="68" height="23" rx="8" fill="#e6dfd0"/><circle cx="500" cy="353" r="8" fill="#b9a272"/><rect x="486" y="374" width="68" height="23" rx="8" fill="#e6dfd0"/><circle cx="500" cy="386" r="8" fill="#8fb8bb"/><rect x="486" y="407" width="68" height="23" rx="8" fill="#e6dfd0"/><circle cx="500" cy="418" r="8" fill="#1d5a61"/><rect x="486" y="434" width="68" height="22" rx="11" fill="#1d5a61"/></g><path d="M180 245C205 245 215 232 246 228" fill="none" stroke="#b9a272" stroke-width="2" stroke-dasharray="6 6"/><path d="M240 222l10 5-9 8" fill="none" stroke="#b9a272" stroke-width="2"/><rect x="40" y="190" width="140" height="90" rx="35" fill="#ffffff" stroke="#b9a272" stroke-width="1.5"/><path d="M64 279l-10 18 24-18z" fill="#ffffff" stroke="#b9a272" stroke-width="1.5"/><rect x="43" y="276" width="40" height="6" fill="#ffffff" transform="translate(0,0)"/><circle cx="92.0" cy="235.0" r="5" fill="#8a7440"/><circle cx="110.0" cy="235.0" r="5" fill="#8a7440"/><circle cx="128.0" cy="235.0" r="5" fill="#8a7440"/><g transform="translate(70,335) scale(1.3,1.3)" style="--sh:#b9a272;--pn:#16201f;--hr:#1b1b1b;--sk:#e9c7a8"><use href="#pl" width="100" height="230"/><path d="M22 72L12 124l10 4 12-54z M78 72l10 52-10 4-12-54z" style="fill:var(--sh)"/><circle cx="17" cy="129" r="6" style="fill:var(--sk)"/><circle cx="83" cy="129" r="6" style="fill:var(--sk)"/></g><g transform="translate(200,335) scale(1.3,1.3)" style="--sh:#1d5a61;--pn:#0f3f45;--hr:#1b1b1b;--sk:#e9c7a8"><use href="#pb" width="100" height="230"/><path d="M22 72l-4 36 32 10 4-10-24-10 4-24z M78 72l4 36-32 10-4-10 24-10-4-24z" style="fill:var(--sh)"/><rect x="40" y="96" width="28" height="36" rx="3" transform="rotate(-8 54 114)" fill="#b9a272"/><circle cx="49" cy="116" r="6" style="fill:var(--sk)"/><circle cx="62" cy="114" r="6" style="fill:var(--sk)"/></g></svg></div>
  </div>
+ <a class="kv-chars" href="#service" aria-label="できることを見る">
+  <div class="chars" aria-hidden="true"><div class="chars-in">
+   <svg><use href="#dog1"/></svg><svg><use href="#dog2"/></svg><svg><use href="#dog3"/></svg><svg><use href="#dog4"/></svg><svg><use href="#dog5"/></svg>
+   <svg><use href="#dog1"/></svg><svg><use href="#dog2"/></svg><svg><use href="#dog3"/></svg><svg><use href="#dog4"/></svg><svg><use href="#dog5"/></svg>
+  </div></div>
+  BARKCORE SERVICE →
+ </a>
  <a class="scroll" href="#about"><span class="dots"></span>Scroll down</a>
 </div>
 
@@ -377,8 +400,6 @@ svg[role="img"]{display:block;width:100%;height:100%}
    <div><dt>会社名</dt><dd>株式会社BarkCore（バークコア）</dd></div>
    <div><dt>設立</dt><dd>2026年10月2日</dd></div>
    <div><dt>事業内容</dt><dd>業務システム・スマホアプリの企画、開発、制作<br>Web制作（ホームページ制作）</dd></div>
-   <div><dt>開発担当</dt><dd>森 ゆづき（企画・開発・デザイン）</dd></div>
-   <div><dt>これまでの経験</dt><dd>Web制作 約4年／スマホアプリ開発 約4年／システム開発 約3年<br><span class="sm">※BarkCore設立前の、個人での経験を含みます。</span></dd></div>
   </dl>
  </div>
 </section>
@@ -387,15 +408,11 @@ svg[role="img"]{display:block;width:100%;height:100%}
  <svg class="cv" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40C260 130 520 110 760 50S1200 -10 1440 70V120H0Z"/></svg>
  <div class="in">
   <p class="label rv">Contact<small>お問い合わせ</small></p>
-  <h2 class="rv">まだ、うまく説明できなくても大丈夫です。</h2>
-  <p class="rv">気になっていることから、聞かせてください。</p>
-  <form class="rv" onsubmit="event.preventDefault();this.querySelector('.note').textContent='これは見本です。まだ送信されません。';">
-   <label>お名前<input name="name" autocomplete="name" required></label>
-   <label>メールアドレス<input name="email" type="email" autocomplete="email" required></label>
-   <label>ご相談内容<textarea name="body" required></textarea></label>
-   <button type="submit">相談してみる</button>
-   <p class="note">※制作中の見本です。送信先は未設定のため、送信されません。写真はイメージ（フリー素材）で、当社の場所・画面ではありません。</p>
-  </form>
+  <div class="soon rv">
+   <span class="badge-soon">準備中</span>
+   <h2>お問い合わせフォームは、準備中です。</h2>
+   <p>まだ、うまく説明できなくても大丈夫です。気になっていることから、聞かせてください。</p>
+  </div>
  </div>
 </section>
 </main>
