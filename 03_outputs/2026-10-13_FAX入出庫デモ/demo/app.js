@@ -101,56 +101,18 @@ async function go(target) {
   }
 }
 function toPick(opts = {}) {
-  $('pick-error').hidden = true;
   const note = $('pick-note');
   note.hidden = !opts.note; note.textContent = opts.note || '';
-  $('file').value = '';
   show('pick');
   if (opts.note) setLive(opts.note);
 }
 
 /* ---------- 1. FAXを選ぶ ---------- */
-function showPickError(title, body) {
-  $('pick-note').hidden = true;
-  $('pick-error-title').textContent = title;
-  $('pick-error-body').textContent = body;
-  $('pick-error').hidden = false;
-  show('pick');
-}
-const baseName = (n) => n.replace(/\.pdf$/i, '');
 let cur = null;
 
-async function handleFile(file) {
-  const name = file.name;
-  if (!/\.pdf$/i.test(name) && file.type !== 'application/pdf') {
-    showPickError('うまく読み込めませんでした', `選ばれたファイル「${name}」はPDFではありません。FAXをPDFにしたファイルを選んでください。`);
-    return;
-  }
-  const key = baseName(name);
-  if (window.SAMPLES && window.SAMPLES[key]) return startReading(name, window.SAMPLES[key], null);
-  $('reading-file').textContent = `${name}　少しお待ちください。`;
-  $('pick-error').hidden = true; show('reading'); setLive('読み取っています');
-  try {
-    const buf = await file.arrayBuffer();
-    const pdf = await window.pdfjsLib.getDocument({ data: buf }).promise;
-    const page = await pdf.getPage(1);
-    const vp = page.getViewport({ scale: 1.4 });
-    const canvas = document.createElement('canvas');
-    canvas.width = vp.width; canvas.height = vp.height;
-    await page.render({ canvasContext: canvas.getContext('2d'), viewport: vp }).promise;
-    const notes = ['このデモでは、用意したサンプルFAX以外は自動で読み取れません。FAXを見ながら、手で入力してみてください。'];
-    if (pdf.numPages > 1) notes.push(`このPDFは${pdf.numPages}ページあります。デモでは1ページ目だけ表示します。`);
-    openReview({
-      fileName: name, img: canvas.toDataURL('image/png'), date: '', kind: '', shipper: '',
-      rows: [{ name: '', qty: '', flag: null, why: '' }], note: notes.join(' ')
-    });
-  } catch (e) {
-    showPickError('うまく読み込めませんでした', `「${name}」を開けませんでした。壊れているか、パスワードが付いているかもしれません。別のPDFを選んでください。`);
-  }
-}
 function startReading(fileName, sample) {
   $('reading-file').textContent = `${fileName}　少しお待ちください。`;
-  $('pick-error').hidden = true; show('reading'); setLive('読み取っています');
+  show('reading'); setLive('読み取っています');
   setTimeout(() => {
     const d = sample.data;
     openReview({
@@ -378,22 +340,18 @@ function exportXlsx(first) {
 $('btn-xlsx').addEventListener('click', () => exportXlsx('moves'));
 $('btn-stock-xlsx').addEventListener('click', () => exportXlsx('stock'));
 
-/* ---------- ファイル選択・ドラッグ ---------- */
-$('btn-pick').addEventListener('click', () => $('file').click());
-$('file').addEventListener('change', (e) => { const f = e.target.files[0]; if (f) handleFile(f); });
-const drop = $('drop');
-['dragenter', 'dragover'].forEach((t) => drop.addEventListener(t, (e) => { e.preventDefault(); drop.classList.add('over'); }));
-['dragleave', 'drop'].forEach((t) => drop.addEventListener(t, (e) => { e.preventDefault(); drop.classList.remove('over'); }));
-drop.addEventListener('drop', (e) => { const f = e.dataTransfer.files[0]; if (f) handleFile(f); });
-['dragover', 'drop'].forEach((t) => window.addEventListener(t, (e) => e.preventDefault()));
-
-const ul = $('sample-list');
+/* ---------- サンプルFAXの選択（ファイルは選ばない） ---------- */
+const pdlg = $('pick-dlg');
 Object.keys(window.SAMPLES || {}).forEach((key) => {
   const [kind, label] = SAMPLE_LABELS[key] || [window.SAMPLES[key].data.kind, key];
-  const b = el('button', { class: 'link', type: 'button', text: label });
-  b.addEventListener('click', () => startReading(key + '.pdf', window.SAMPLES[key]));
-  ul.append(el('li', {}, el('span', { class: 'k ' + (kind === '入庫' ? 'in' : 'out'), text: kind }), b));
+  const b = el('button', { class: 'pick-item', type: 'button' },
+    el('img', { src: window.SAMPLES[key].img, alt: '' }),
+    el('span', { class: 'pi-text' }, el('b', { class: kind === '入庫' ? 'in-t' : 'out-t', text: kind }), el('span', { text: label })));
+  b.addEventListener('click', () => { pdlg.close(); startReading(key + '.pdf', window.SAMPLES[key]); });
+  $('pick-list').append(el('li', {}, b));
 });
+$('btn-pick').addEventListener('click', () => pdlg.showModal());
+$('pick-cancel').addEventListener('click', () => pdlg.close());
 
 /* ---------- メニュー ---------- */
 $('nav-import').addEventListener('click', (e) => { e.preventDefault(); go('pick'); });

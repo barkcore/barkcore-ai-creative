@@ -140,3 +140,11 @@ dialog p{margin:0 0 28px}
   .steps li+li::before{display:none}
   .steps{gap:16px}
 }
+
+.pickdlg{max-width:680px}
+.pickdlg ul{list-style:none;margin:0 0 24px;padding:0;display:grid;gap:12px}
+.pick-item{display:flex;align-items:center;gap:20px;width:100%;min-height:96px;padding:10px 16px 10px 10px;border:2px solid var(--edge);border-radius:10px;background:#fff;color:var(--ink);font:500 19px var(--font);text-align:left;cursor:pointer}
+.pick-item:hover{background:var(--wash);border-color:var(--ink)}
+.pick-item img{width:62px;height:80px;object-fit:cover;object-position:top;border:1px solid var(--line);flex:none}
+.pi-text{display:flex;flex-direction:column;gap:2px}
+.pi-text b{font-size:17px}

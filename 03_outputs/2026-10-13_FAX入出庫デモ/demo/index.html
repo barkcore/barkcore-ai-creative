@@ -26,16 +26,10 @@
     <ol class="steps" aria-label="作業の3つの段階"><li aria-current="step"><b>1</b>FAXを選ぶ</li><li><b>2</b>確かめて直す</li><li><b>3</b>保存してExcelへ</li></ol>
     <h1 tabindex="-1">FAXのPDFを選んでください</h1>
     <p class="lead">選ぶだけで、日付・入庫か出庫か・荷主名・商品名・数量を表にします。</p>
-    <div class="err" id="pick-error" role="alert" hidden><strong id="pick-error-title"></strong><span id="pick-error-body"></span></div>
     <p class="note" id="pick-note" hidden></p>
     <div class="drop" id="drop">
-      <input type="file" id="file" accept="application/pdf,.pdf" hidden>
       <button class="btn xl" type="button" id="btn-pick">PDFを選ぶ</button>
-      <p id="drop-help">またはここにPDFをドラッグしてください。読み取りのまちがいは、次の画面で直せます。</p>
-    </div>
-    <div class="samples">
-      <h2>デモ用のサンプルFAXで試す</h2>
-      <ul id="sample-list"></ul>
+      <p id="drop-help">デモでは、用意したサンプルFAX4枚から選びます。読み取りのまちがいは、次の画面で直せます。</p>
     </div>
   </section>
 
@@ -46,7 +40,7 @@
     <p class="lead">選ぶだけで、日付・入庫か出庫か・荷主名・商品名・数量を表にします。</p>
     <div class="loading"><span class="spin" aria-hidden="true"></span>読み取っています…</div>
     <p class="note" id="reading-file"></p>
-    <div class="drop is-disabled"><button class="btn xl" type="button" disabled>PDFを選ぶ</button><p>読み取りが終わるまで、ほかのPDFは選べません。</p></div>
+    <div class="drop is-disabled"><button class="btn xl" type="button" disabled>PDFを選ぶ</button><p>読み取りが終わるまで、ほかのFAXは選べません。</p></div>
   </section>
 
   <!-- 2. 確かめて直す -->
@@ -123,6 +117,13 @@
 
 </main>
 
+<dialog id="pick-dlg" class="pickdlg" aria-labelledby="pick-title">
+  <h2 id="pick-title">サンプルFAXを選んでください</h2>
+  <p>デモ用に作った架空のFAXです。実在の会社のものではありません。</p>
+  <ul id="pick-list"></ul>
+  <button class="btn ghost s" type="button" id="pick-cancel">やめる</button>
+</dialog>
+
 <dialog id="dlg" aria-labelledby="dlg-title">
   <form method="dialog">
     <h2 id="dlg-title"></h2>
@@ -134,8 +135,6 @@
   </form>
 </dialog>
 
-<script src="vendor/pdf.min.js"></script>
-<script src="vendor/pdf.worker.min.js"></script>
 <script src="vendor/xlsx.full.min.js"></script>
 <script src="samples-data.js"></script>
 <script src="app.js"></script>
