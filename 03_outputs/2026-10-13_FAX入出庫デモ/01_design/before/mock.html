@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FAX入出庫 読み取りデモ｜デザイン案（修正前）</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1F2D3D; --sub:#5B6773; --paper:#FFFFFF; --wash:#F3F5F6; --line:#D5DADE;
+  --in:#0F7A6B; --out:#A8471A; --warn:#FFE08A; --warn-ink:#6A4A00; --err:#8A2E0E;
+  --font:"Noto Sans JP","Yu Gothic UI","Meiryo",sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 18px/1.7 var(--font)}
+.demo-note{background:var(--wash);color:var(--sub);font-size:16px;padding:8px 48px}
+header{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:72px;border-bottom:1px solid var(--line)}
+header .name{font-size:22px;font-weight:700;letter-spacing:.02em}
+nav{display:flex;gap:32px}
+nav a{display:block;padding:22px 2px 18px;font-size:18px;font-weight:500;color:var(--sub);text-decoration:none;border-bottom:3px solid transparent}
+nav a[aria-current]{color:var(--ink);font-weight:700;border-color:var(--ink)}
+main{max-width:1280px;margin:0 auto;padding:40px 48px 120px}
+.steps{display:flex;gap:0;align-items:center;margin:0 0 48px;font-size:17px;color:var(--sub);list-style:none;padding:0}
+.steps li{display:flex;align-items:center;gap:10px}
+.steps li+li::before{content:"";width:48px;height:1px;background:var(--line);margin:0 16px}
+.steps b{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;border:1.5px solid var(--sub);font-size:15px}
+.steps li[aria-current]{color:var(--ink);font-weight:700}
+.steps li[aria-current] b{background:var(--ink);border-color:var(--ink);color:#fff}
+h1{margin:0 0 16px;font-size:44px;line-height:1.3;font-weight:700;letter-spacing:.01em}
+h1.m{font-size:32px}
+.lead{margin:0 0 40px;font-size:20px;color:var(--ink);max-width:36em}
+.btn{display:inline-flex;align-items:center;justify-content:center;height:72px;padding:0 56px;border-radius:10px;border:2px solid var(--ink);background:var(--ink);color:#fff;font:700 22px var(--font);cursor:pointer}
+.btn.ghost{background:#fff;color:var(--ink)}
+.btn.s{height:56px;padding:0 36px;font-size:19px}
+.link{background:none;border:0;padding:0;color:var(--ink);font:500 18px var(--font);text-decoration:underline;text-underline-offset:4px;cursor:pointer}
+.drop{border:2px dashed #8F9BA6;border-radius:14px;padding:72px 48px;display:flex;flex-direction:column;align-items:flex-start;gap:20px;max-width:880px}
+.drop p{margin:0;color:var(--sub)}
+.samples{margin-top:56px;max-width:880px}
+.samples h2{font-size:18px;font-weight:700;margin:0 0 12px}
+.samples ul{list-style:none;margin:0;padding:0}
+.samples li{display:flex;gap:24px;padding:6px 0;align-items:baseline}
+.k{font-weight:700;width:3.2em}
+.k.in{color:var(--in)} .k.out{color:var(--out)}
+.err{border-left:5px solid var(--err);padding:4px 0 4px 20px;margin:0 0 32px;max-width:880px}
+.err strong{display:block;color:var(--err);font-size:22px;margin-bottom:4px}
+.err span{display:block}
+.split{display:grid;grid-template-columns:5fr 7fr;gap:56px;align-items:start}
+.fax{border:1px solid var(--line)}
+.fax img{display:block;width:100%;height:auto}
+.cap{font-size:16px;color:var(--sub);margin:0 0 8px}
+.fields{display:flex;gap:32px;flex-wrap:wrap;margin:24px 0 8px;align-items:flex-end}
+label.f{display:flex;flex-direction:column;gap:6px;font-size:16px;color:var(--sub);font-weight:500}
+input.t{height:52px;border:1.5px solid #8F9BA6;border-radius:8px;padding:0 14px;font:500 20px var(--font);color:var(--ink);background:#fff}
+.seg{display:inline-flex;border:1.5px solid #8F9BA6;border-radius:8px;overflow:hidden;height:52px}
+.seg span{display:grid;place-items:center;padding:0 28px;font-weight:700;font-size:19px;color:var(--sub)}
+.seg span.on.in{background:var(--in);color:#fff} .seg span.on.out{background:var(--out);color:#fff}
+.attn{margin:20px 0 12px;font-weight:700;color:var(--warn-ink)}
+.attn i{font-style:normal;background:var(--warn);padding:2px 10px;border-radius:4px;margin-right:8px}
+table{border-collapse:collapse;width:100%}
+th{font-size:16px;font-weight:500;color:var(--sub);text-align:left;padding:8px 8px;border-bottom:1.5px solid var(--ink)}
+td{padding:10px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+td input{width:100%;height:48px;border:1.5px solid transparent;border-radius:6px;padding:0 10px;font:500 20px var(--font);color:var(--ink);background:transparent}
+td input.cell{border-color:#8F9BA6;background:#fff}
+td.num input{text-align:right}
+td.flag input{background:var(--warn);border-color:#C9A227}
+.why{font-size:16px;color:var(--warn-ink);margin:4px 0 0;font-weight:500}
+.why b{background:var(--warn);padding:1px 8px;border-radius:4px;margin-right:6px}
+.rowdel{width:44px;text-align:center}
+.rowdel button{background:none;border:0;color:var(--sub);font-size:16px;text-decoration:underline;cursor:pointer;font-family:var(--font)}
+.bar{display:flex;justify-content:space-between;align-items:center;margin-top:32px}
+.after{display:flex;gap:20px;align-items:center;margin:32px 0 16px;flex-wrap:wrap}
+.tbl-cap{margin:48px 0 8px;font-size:18px;font-weight:700}
+.in-t{color:var(--in);font-weight:700} .out-t{color:var(--out);font-weight:700}
+.neg td{color:var(--err);font-weight:700}
+.loading{display:flex;align-items:center;gap:20px;font-size:26px;font-weight:700;margin:24px 0 8px}
+.spin{width:30px;height:30px;border:4px solid var(--line);border-top-color:var(--ink);border-radius:50%}
+section.screen{display:none}
+body[data-screen="pick"] #pick,body[data-screen="error"] #pick,body[data-screen="reading"] #reading,body[data-screen="review"] #review,body[data-screen="saved"] #saved,body[data-screen="stock"] #stock{display:block}
+body:not([data-screen="error"]) .err{display:none}
+body[data-screen="pick"] .steps .s1,body[data-screen="error"] .steps .s1,body[data-screen="reading"] .steps .s1{}
+</style>
+</head>
+<body data-screen="pick">
+<div class="demo-note">これはデモです。読み取り結果は仮のデータで、保存はこのパソコンのこのブラウザの中だけです。</div>
+<header>
+  <div class="name">FAX入出庫 読み取りデモ</div>
+  <nav><a href="#" id="nav1" aria-current="page">FAXを取り込む</a><a href="#" id="nav2">在庫を見る</a></nav>
+</header>
+<main>
+
+<!-- 1. 選ぶ -->
+<section class="screen" id="pick">
+  <ol class="steps"><li class="s1" aria-current="step"><b>1</b>FAXを選ぶ</li><li><b>2</b>確かめて直す</li><li><b>3</b>保存してExcelへ</li></ol>
+  <h1>FAXのPDFを選んでください</h1>
+  <p class="lead">選ぶだけで、日付・入庫か出庫か・荷主名・商品名・数量を表にします。</p>
+  <div class="err" role="alert"><strong>うまく読み込めませんでした</strong><span>選ばれたファイル「会議資料.docx」はPDFではありません。</span><span>FAXをPDFにしたファイルを選んでください。</span></div>
+  <div class="drop">
+    <button class="btn" type="button">PDFを選ぶ</button>
+    <p>または、ここにPDFをドラッグしてください。</p>
+  </div>
+  <div class="samples">
+    <h2>試してみる（サンプルFAX）</h2>
+    <ul>
+      <li><span class="k in">入庫</span><button class="link">山川物産（手書き）</button></li>
+      <li><span class="k out">出庫</span><button class="link">青空食品（手書き・訂正線あり）</button></li>
+      <li><span class="k in">入庫</span><button class="link">北原商事（印字されたFAX）</button></li>
+      <li><span class="k out">出庫</span><button class="link">みどり製菓（書式がちがう手書き）</button></li>
+    </ul>
+  </div>
+</section>
+
+<!-- 読み取り中 -->
+<section class="screen" id="reading">
+  <ol class="steps"><li aria-current="step"><b>1</b>FAXを選ぶ</li><li><b>2</b>確かめて直す</li><li><b>3</b>保存してExcelへ</li></ol>
+  <h1>FAXのPDFを選んでください</h1>
+  <p class="lead">選ぶだけで、日付・入庫か出庫か・荷主名・商品名・数量を表にします。</p>
+  <div class="loading" role="status"><span class="spin"></span>読み取っています…</div>
+  <p class="cap" style="font-size:18px">FAX_入庫_手書き_山川物産.pdf　少しお待ちください。</p>
+  <div class="drop" style="opacity:.45"><button class="btn" type="button" disabled>PDFを選ぶ</button><p>読み取りが終わるまで、ほかのPDFは選べません。</p></div>
+</section>
+
+<!-- 2. 確かめて直す -->
+<section class="screen" id="review">
+  <ol class="steps"><li><b>1</b>FAXを選ぶ</li><li aria-current="step"><b>2</b>確かめて直す</li><li><b>3</b>保存してExcelへ</li></ol>
+  <div class="split">
+    <div>
+      <p class="cap">届いたFAX（FAX_入庫_手書き_山川物産.pdf）</p>
+      <div class="fax"><img src="../../sample_fax/FAX_入庫_手書き_山川物産.png" alt="届いた入庫のFAX"></div>
+    </div>
+    <div>
+      <h1 class="m">読み取り結果を確かめてください</h1>
+      <div class="fields">
+        <label class="f">日付<input class="t" value="2026年10月9日" style="width:200px"></label>
+        <div><div class="cap" style="margin:0 0 6px">区分</div><div class="seg"><span class="on in">入庫</span><span>出庫</span></div></div>
+        <label class="f">荷主名<input class="t" value="山川物産" style="width:240px"></label>
+      </div>
+      <p class="attn"><i>要確認</i>確認が必要な所が1つあります。</p>
+      <table>
+        <thead><tr><th>商品名</th><th class="num" style="width:150px">数量</th><th class="rowdel"></th></tr></thead>
+        <tbody>
+          <tr><td><input class="cell" value="米 5kg"></td><td class="num"><input class="cell" value="40"></td><td class="rowdel"><button>消す</button></td></tr>
+          <tr><td><input class="cell" value="小麦粉 1kg"></td><td class="num flag"><input class="cell" value="120"><p class="why"><b>要確認</b>数字がにじんでいます。「120」で合っていますか？</p></td><td class="rowdel"><button>消す</button></td></tr>
+          <tr><td><input class="cell" value="上白糖 1kg"></td><td class="num"><input class="cell" value="60"></td><td class="rowdel"><button>消す</button></td></tr>
+          <tr><td><input class="cell" value="食用油 1.5L"></td><td class="num"><input class="cell" value="24"></td><td class="rowdel"><button>消す</button></td></tr>
+        </tbody>
+      </table>
+      <div class="bar">
+        <button class="link">＋ 行を足す</button>
+        <button class="btn" type="button">この内容で保存</button>
+      </div>
+      <p style="margin:24px 0 0"><button class="link" style="color:var(--sub)">別のFAXを選びなおす</button></p>
+    </div>
+  </div>
+</section>
+
+<!-- 3. 保存後 -->
+<section class="screen" id="saved">
+  <ol class="steps"><li><b>1</b>FAXを選ぶ</li><li><b>2</b>確かめて直す</li><li aria-current="step"><b>3</b>保存してExcelへ</li></ol>
+  <h1>保存しました</h1>
+  <p class="lead">山川物産の入庫 4件を保存しました。</p>
+  <div class="after">
+    <button class="btn" type="button">Excelでダウンロード</button>
+    <button class="btn ghost" type="button">次のFAXを選ぶ</button>
+  </div>
+  <p style="margin:0"><button class="link" style="color:var(--sub)">いま保存した4件を取り消す</button></p>
+  <p class="tbl-cap">Excelに入る内容（このとおりに出力されます）</p>
+  <table style="max-width:880px">
+    <thead><tr><th>日付</th><th>区分</th><th>荷主名</th><th>商品名</th><th class="num">数量</th></tr></thead>
+    <tbody>
+      <tr><td>2026/10/09</td><td class="in-t">入庫</td><td>山川物産</td><td>米 5kg</td><td class="num">40</td></tr>
+      <tr><td>2026/10/09</td><td class="in-t">入庫</td><td>山川物産</td><td>小麦粉 1kg</td><td class="num">120</td></tr>
+      <tr><td>2026/10/09</td><td class="in-t">入庫</td><td>山川物産</td><td>上白糖 1kg</td><td class="num">60</td></tr>
+      <tr><td>2026/10/09</td><td class="in-t">入庫</td><td>山川物産</td><td>食用油 1.5L</td><td class="num">24</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- 在庫 -->
+<section class="screen" id="stock">
+  <h1>いまの在庫</h1>
+  <p class="lead">保存したFAX 2枚（10月9日分）の合計です。在庫は「入庫の合計 − 出庫の合計」です。</p>
+  <p class="attn"><i>要確認</i>在庫がマイナスの商品が1つあります。入庫のFAXがまだ保存されていないかもしれません。</p>
+  <table style="max-width:880px">
+    <thead><tr><th>商品名</th><th class="num">入庫の合計</th><th class="num">出庫の合計</th><th class="num">在庫</th></tr></thead>
+    <tbody>
+      <tr><td>米 5kg</td><td class="num">40</td><td class="num">15</td><td class="num"><b>25</b></td></tr>
+      <tr><td>小麦粉 1kg</td><td class="num">120</td><td class="num">0</td><td class="num"><b>120</b></td></tr>
+      <tr><td>上白糖 1kg</td><td class="num">60</td><td class="num">0</td><td class="num"><b>60</b></td></tr>
+      <tr><td>食用油 1.5L</td><td class="num">24</td><td class="num">10</td><td class="num"><b>14</b></td></tr>
+      <tr class="neg"><td>しょうゆ 1L</td><td class="num">0</td><td class="num">8</td><td class="num">−8　マイナス</td></tr>
+    </tbody>
+  </table>
+  <div class="after"><button class="btn ghost s" type="button">在庫をExcelでダウンロード</button></div>
+</section>
+
+</main>
+<script>
+const q=new URLSearchParams(location.search).get('screen')||'pick';
+document.body.dataset.screen=q;
+const stock=q==='stock';
+document.getElementById('nav1').toggleAttribute('aria-current',!stock);
+document.getElementById('nav2').toggleAttribute('aria-current',stock);
+</script>
+</body>
+</html>
