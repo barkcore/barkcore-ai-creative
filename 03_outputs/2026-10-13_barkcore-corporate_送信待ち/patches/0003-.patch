@@ -1,0 +1,33 @@
+From 7ad5c235e5865c18d94d9937633ee062cf51ebd0 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Tue, 13 Oct 2026 04:25:25 +0000
+Subject: [PATCH 3/3] =?UTF-8?q?=E3=83=97=E3=83=A9=E3=82=A4=E3=83=90?=
+ =?UTF-8?q?=E3=82=B7=E3=83=BC=E3=83=9D=E3=83=AA=E3=82=B7=E3=83=BC=E3=81=AE?=
+ =?UTF-8?q?=E7=AA=93=E5=8F=A3=E3=81=8B=E3=82=89=E4=BB=A3=E8=A1=A8=E8=80=85?=
+ =?UTF-8?q?=E5=90=8D=E3=82=92=E5=89=8A=E9=99=A4?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01X9YS4yZv3twmCgsrsDMKgg
+---
+ privacy.html | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/privacy.html b/privacy.html
+index 0839b92..bdd717a 100644
+--- a/privacy.html
++++ b/privacy.html
+@@ -10,7 +10,7 @@
+ <button class="burger" aria-expanded="false" aria-controls="gnav" aria-label="メニューを開く"><span></span><span></span><span></span></button></header>
+ <main id="main">
+ <section class="sub-hero t"><div class="in"><p class="en eyebrow">PRIVACY POLICY</p><h1>プライバシーポリシー</h1><p class="lede">お問い合わせを通じてお預かりする個人情報の取り扱いについて。</p></div></section>
+-<section class="sec w policy"><svg class="cv" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 120V70C260 -10 520 -10 760 50S1200 120 1440 30V120Z"/></svg><div class="in"><p>株式会社BarkCore（以下「当社」）は、お問い合わせに際して提供いただく個人情報について、以下の方針に従い取り扱います。</p><h2>1. 取得する情報</h2><p>メールやお電話でのお問い合わせを通じて、氏名、会社名、メールアドレス、電話番号、ご相談内容など、ご本人から提供いただいた情報を取得します。ご相談に必要な範囲の情報をお知らせください。</p><h2>2. 利用目的</h2><ul><li>お問い合わせの内容確認および回答</li><li>ご相談いただいた開発業務、自社サービス、提携・協業に関する連絡や提案</li><li>お問い合わせへの対応履歴の管理</li></ul><h2>3. 第三者への提供</h2><p>ご本人の同意がある場合や法令に基づく場合などを除き、個人情報を第三者に提供しません。</p><h2>4. 取り扱いの委託</h2><p>お問い合わせの受付・管理のために外部サービスを利用する場合は、必要な範囲で個人情報の取り扱いを委託することがあります。委託先の選定と管理を適切に行います。</p><h2>5. 安全管理と保存期間</h2><p>個人情報へのアクセスを必要な範囲に制限し、漏えい、紛失等を防ぐための措置を講じます。利用目的に照らして必要な期間保管し、不要となった情報は適切に削除します。</p><h2>6. 開示・訂正・利用停止等</h2><p>ご本人から個人情報の開示、訂正、利用停止、削除等のご希望があった場合は、ご本人確認を行ったうえで、法令に従い適切に対応します。下記窓口までご連絡ください。</p><h2>7. Cookie・アクセス解析等</h2><p>現在のサイトには、当社独自のアクセス解析・広告用タグを設置していません。</p><h2>8. お問い合わせ窓口</h2><dl><div><dt>事業者</dt><dd>株式会社BarkCore</dd></div><div><dt>代表者</dt><dd>森ゆづき</dd></div><div><dt>所在地</dt><dd>〒101-0051 東京都千代田区神田神保町２丁目１０−３１ ＩＷビル</dd></div><div><dt>連絡先</dt><dd><a class="u" href="mailto:info@barkcore.co.jp">info@barkcore.co.jp</a></dd></div></dl><h2>9. 本方針の変更</h2><p>必要に応じて本方針を見直し、変更した内容を本ページに掲載します。</p></div></section>
++<section class="sec w policy"><svg class="cv" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 120V70C260 -10 520 -10 760 50S1200 120 1440 30V120Z"/></svg><div class="in"><p>株式会社BarkCore（以下「当社」）は、お問い合わせに際して提供いただく個人情報について、以下の方針に従い取り扱います。</p><h2>1. 取得する情報</h2><p>メールやお電話でのお問い合わせを通じて、氏名、会社名、メールアドレス、電話番号、ご相談内容など、ご本人から提供いただいた情報を取得します。ご相談に必要な範囲の情報をお知らせください。</p><h2>2. 利用目的</h2><ul><li>お問い合わせの内容確認および回答</li><li>ご相談いただいた開発業務、自社サービス、提携・協業に関する連絡や提案</li><li>お問い合わせへの対応履歴の管理</li></ul><h2>3. 第三者への提供</h2><p>ご本人の同意がある場合や法令に基づく場合などを除き、個人情報を第三者に提供しません。</p><h2>4. 取り扱いの委託</h2><p>お問い合わせの受付・管理のために外部サービスを利用する場合は、必要な範囲で個人情報の取り扱いを委託することがあります。委託先の選定と管理を適切に行います。</p><h2>5. 安全管理と保存期間</h2><p>個人情報へのアクセスを必要な範囲に制限し、漏えい、紛失等を防ぐための措置を講じます。利用目的に照らして必要な期間保管し、不要となった情報は適切に削除します。</p><h2>6. 開示・訂正・利用停止等</h2><p>ご本人から個人情報の開示、訂正、利用停止、削除等のご希望があった場合は、ご本人確認を行ったうえで、法令に従い適切に対応します。下記窓口までご連絡ください。</p><h2>7. Cookie・アクセス解析等</h2><p>現在のサイトには、当社独自のアクセス解析・広告用タグを設置していません。</p><h2>8. お問い合わせ窓口</h2><dl><div><dt>事業者</dt><dd>株式会社BarkCore</dd></div><div><dt>所在地</dt><dd>〒101-0051 東京都千代田区神田神保町２丁目１０−３１ ＩＷビル</dd></div><div><dt>連絡先</dt><dd><a class="u" href="mailto:info@barkcore.co.jp">info@barkcore.co.jp</a></dd></div></dl><h2>9. 本方針の変更</h2><p>必要に応じて本方針を見直し、変更した内容を本ページに掲載します。</p></div></section>
+ </main>
+ <footer class="t"><svg class="cv" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 120V50C180 10 360 10 540 50S900 110 1080 60S1330 10 1440 40V120Z"/></svg>
+ <div class="row"><div><a class="brand" href="index.html">BarkCore</a><p class="addr">株式会社BarkCore<br>業務システム・スマホアプリ・Web制作<br><a href="tel:05088934996">050-8893-4996</a></p></div>
+-- 
+2.43.0
+
