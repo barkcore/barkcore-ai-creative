@@ -8,12 +8,13 @@
 :root{--ink:#1E2A33;--muted:#5B6770;--line:#D5DADF;--accent:#0F5C7A;--warn:#B3261E;--off:#C9D0D5;--bg:#fff;--pad:96px}
 *{box-sizing:border-box}
 html{font-size:16px}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:"Yu Gothic UI","Meiryo","Hiragino Sans","Noto Sans JP",IPAGothic,sans-serif;line-height:1.5;font-variant-numeric:tabular-nums}
+body{margin:0;font-size:16px;background:var(--bg);color:var(--ink);font-family:"Yu Gothic UI","Meiryo","Hiragino Sans","Noto Sans JP",IPAGothic,sans-serif;line-height:1.5;font-variant-numeric:tabular-nums}
 .skip{position:absolute;left:-999px;top:0;background:var(--accent);color:#fff;padding:8px 14px}
 .skip:focus{left:8px;top:8px;z-index:10}
+[hidden]{display:none!important}
 button,input,select,textarea{font:inherit;color:inherit}
 :focus-visible{outline:3px solid var(--accent);outline-offset:2px}
-.top,main,footer{padding-left:var(--pad);padding-right:var(--pad);max-width:1440px;margin-left:auto;margin-right:auto}
+.top,main,footer{padding-left:max(var(--pad),env(safe-area-inset-left,0px));padding-right:max(var(--pad),env(safe-area-inset-right,0px));max-width:1440px;margin-left:auto;margin-right:auto}
 .top{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;padding-top:28px;border-bottom:1px solid var(--line)}
 .brand{font-size:20px;font-weight:700;padding-bottom:20px}
 .brand small{font-weight:400;color:var(--muted);font-size:15px;margin-left:14px}
@@ -81,6 +82,8 @@ td.n.dim{color:var(--muted)}
 .sec h2{font-size:22px;margin:0 0 10px}
 select.pick{font-size:20px;padding:8px 10px;border:1px solid #8a949c;background:#fff;border-radius:0}
 dialog{border:2px solid var(--ink);padding:28px 32px;width:min(560px,92vw);border-radius:0}
+#sheetD{width:min(920px,94vw);max-height:90vh;overflow:auto;padding:24px 28px}
+#sheetD .sheet{background:#fff}
 dialog::backdrop{background:rgba(30,42,51,.45)}
 dialog h2{margin:0 0 6px;font-size:24px}
 .dl{font-size:18px;color:var(--muted);margin:0 0 16px}
@@ -180,12 +183,14 @@ footer{padding-top:24px;padding-bottom:40px;border-top:1px solid var(--line);fon
   </form>
 </dialog>
 <dialog id="ask" role="alertdialog" aria-labelledby="askMsg"><p id="askMsg" style="font-size:20px;margin:0 0 20px"></p><div class="act" style="margin-top:0"><button type="button" class="btn" id="askYes"></button><button type="button" class="btn sub" id="askNo">やめる</button></div></dialog>
+<dialog id="sheetD" aria-labelledby="sheetT"><p id="sheetT" class="note" style="margin:0 0 12px">印刷される内容のプレビューです。</p><div id="sheetBody"></div><div class="act"><button type="button" class="btn" id="sheetPrint">印刷する</button><button type="button" class="btn sub" id="sheetClose">閉じる</button></div><p class="note" id="sheetNote"></p></dialog>
 <div id="live" class="live" role="status" aria-live="polite"></div>
 <div id="printArea" aria-hidden="true"></div>
 
 <script>
 (()=>{
 'use strict';
+const CAN_PRINT=true; /* 公開URL版では false（その画面では印刷が動かない） */
 const KEY='margon-inventory-demo-v1';
 let storageOk=true;
 const $=s=>document.querySelector(s);
@@ -434,11 +439,11 @@ function viewPrep(){
       h+=`</tbody></table><p class="note">合計 ${shipTotal(sh)}本。取消すと引当が外れ、他の出荷に使えるようになります。変更すると引当も自動で変わります。</p>`;
     }
     const has=sh.lines.length>0;
-    h+=`<div class="act"><button type="button" class="btn" data-act="printPick"${has?'':' disabled'}>ピッキング表を印刷</button><a class="btn sub" href="#search" style="text-decoration:none">在庫を探して追加</a><button type="button" class="btn sub" data-act="toConfirm"${has?'':' disabled'}>出庫の確定へ</button></div>
+    h+=`<div class="act"><button type="button" class="btn" data-act="printPick"${has?'':' disabled'}>${CAN_PRINT?'ピッキング表を印刷':'ピッキング表を見る'}</button><a class="btn sub" href="#search" style="text-decoration:none">在庫を探して追加</a><button type="button" class="btn sub" data-act="toConfirm"${has?'':' disabled'}>出庫の確定へ</button></div>
     <div class="act" style="margin-top:10px"><button type="button" class="lnk" data-act="newship">別の出荷を作る</button><button type="button" class="lnk" data-act="shipAsk">この出荷をすべて取り消す</button></div>`;
   }
   const done=S.ships.filter(x=>x.status==='done').slice(-5).reverse();
-  if(done.length)h+=`<section class="sec" aria-labelledby="dn"><h2 id="dn">確定した出荷（直近）</h2><table class="rt pl" style="font-size:18px"><thead><tr><th scope="col">出荷先</th><th scope="col">出荷日</th><th scope="col" class="n">本数</th><th scope="col"><span style="position:absolute;left:-999px">操作</span></th></tr></thead><tbody>${done.map(x=>`<tr><td class="full" data-label="出荷先">${esc(x.dest)}</td><td data-label="出荷日">${jp(x.date)}</td><td class="n" data-label="本数">${shipTotal(x)}</td><td class="full ac"><button type="button" class="lnk" data-act="printNotice" data-id="${x.id}">出荷連絡を印刷</button></td></tr>`).join('')}</tbody></table></section>`;
+  if(done.length)h+=`<section class="sec" aria-labelledby="dn"><h2 id="dn">確定した出荷（直近）</h2><table class="rt pl" style="font-size:18px"><thead><tr><th scope="col">出荷先</th><th scope="col">出荷日</th><th scope="col" class="n">本数</th><th scope="col"><span style="position:absolute;left:-999px">操作</span></th></tr></thead><tbody>${done.map(x=>`<tr><td class="full" data-label="出荷先">${esc(x.dest)}</td><td data-label="出荷日">${jp(x.date)}</td><td class="n" data-label="本数">${shipTotal(x)}</td><td class="full ac"><button type="button" class="lnk" data-act="printNotice" data-id="${x.id}">${CAN_PRINT?'出荷連絡を印刷':'出荷連絡を見る'}</button></td></tr>`).join('')}</tbody></table></section>`;
   main.innerHTML=h;
   renderNav('prep');
 }
@@ -467,8 +472,8 @@ function viewConfirm(id){
     main.innerHTML=`<h1 id="h1" tabindex="-1">出庫を確定しました</h1>
     <p class="hint" style="margin-bottom:24px">${esc(sh.dest)}　${jp(sh.date)}　合計 ${shipTotal(sh)}本。在庫と引当を減らしました。</p>
     ${confirmTable(sh,true)}
-    <div class="act"><button type="button" class="btn" data-act="printNotice" data-id="${sh.id}">出荷連絡用PDFを作る・印刷</button><a class="btn sub" href="#search" style="text-decoration:none">在庫を探す</a></div>
-    <p class="note">印刷の画面で送信先に「PDFに保存」を選ぶと、PDFのファイルになります。</p>`;
+    <div class="act"><button type="button" class="btn" data-act="printNotice" data-id="${sh.id}">${CAN_PRINT?'出荷連絡用PDFを作る・印刷':'出荷連絡の書類を見る'}</button><a class="btn sub" href="#search" style="text-decoration:none">在庫を探す</a></div>
+    <p class="note">${CAN_PRINT?'印刷の画面で送信先に「PDFに保存」を選ぶと、PDFのファイルになります。':'この書類は画面で確認できます。印刷・PDF保存は、PCで index.html を開いて行います。'}</p>`;
     return;
   }
   if(!sh.lines.length){location.hash='#prep';return;}
@@ -509,7 +514,15 @@ function buildNotice(sh){
   <table><thead><tr><th>製品番号</th><th>名前</th><th>採取日</th><th style="text-align:right">本数</th></tr></thead><tbody>${sh.lines.map(l=>{const s=byId(l.stockId);return `<tr><td><b>${esc(s.productNo)}</b></td><td>${esc(s.name)}</td><td>${jp(s.harvest)}</td><td style="text-align:right;font-size:16pt;font-weight:700">${l.qty}</td></tr>`;}).join('')}</tbody></table>
   <p class="foot">この書類は仮データのデモから作成したものです。実際の出荷FAXの様式は未確認のため、項目と並びは仮です。</p></div>`;
 }
-function doPrint(html){$('#printArea').innerHTML=html;window.print();}
+const sheetD=$('#sheetD');
+function doPrint(html){
+  $('#printArea').innerHTML=html;$('#sheetBody').innerHTML=html;
+  $('#sheetPrint').hidden=!CAN_PRINT;
+  $('#sheetNote').textContent=CAN_PRINT?'「印刷する」を押すと印刷の画面が開きます。送信先に「PDFに保存」を選ぶと、PDFのファイルになります。':'このページでは印刷できません。印刷は、ファイル（index.html）をPCのブラウザで開いて行います。';
+  sheetD.showModal();$('#sheetClose').focus();
+}
+$('#sheetPrint').addEventListener('click',()=>{sheetD.close();window.print();});
+$('#sheetClose').addEventListener('click',()=>sheetD.close());
 
 /* ---------- 確認ダイアログ（取り消し・リセットなど戻せない操作） ---------- */
 const askD=$('#ask');
