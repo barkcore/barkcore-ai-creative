@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><title>在庫管理 画面案</title>
+<style>
+:root{--ink:#1E2A33;--muted:#5B6770;--line:#D5DADF;--accent:#0F5C7A;--warn:#B3261E;--bg:#fff}
+*{box-sizing:border-box}
+body{margin:0;background:#e9ecee;font-family:"Hiragino Sans","Noto Sans JP","Yu Gothic",IPAGothic,sans-serif;color:var(--ink)}
+.screen{width:1440px;height:900px;background:var(--bg);margin:0 0 40px;padding:0 96px;position:relative;overflow:hidden}
+header{display:flex;align-items:baseline;justify-content:space-between;padding:28px 0 20px;border-bottom:1px solid var(--line)}
+.brand{font-size:20px;font-weight:700}.brand small{font-weight:400;color:var(--muted);font-size:15px;margin-left:14px}
+nav{display:flex;gap:40px;font-size:18px}nav a{color:var(--muted);padding-bottom:8px}
+nav a.on{color:var(--ink);font-weight:700;border-bottom:3px solid var(--accent)}
+h1{font-size:32px;margin:44px 0 20px;line-height:1.3}
+.search{display:flex;align-items:center;border:2px solid var(--accent);height:72px;padding:0 24px;font-size:28px;width:760px}
+.search .ph{color:#8a949c}.caret{display:inline-block;width:2px;height:34px;background:var(--ink);margin-left:2px;vertical-align:middle}
+.hint{margin-top:14px;font-size:17px;color:var(--muted)}
+.pg{display:grid;grid-template-columns:1fr 300px;gap:72px}
+.prod{margin-top:44px}
+.prod h2{font-size:24px;margin:0 0 6px}.prod h2 span{font-weight:400;color:var(--muted);font-size:18px;margin-left:12px}
+.sum{font-size:18px;color:var(--muted);margin-bottom:12px}.sum b{color:var(--ink)}
+table{border-collapse:collapse;width:100%;font-size:20px}
+th{font-size:15px;font-weight:400;color:var(--muted);text-align:left;padding:8px 0;border-bottom:1px solid var(--ink)}
+td{padding:16px 0;border-bottom:1px solid var(--line)}
+.n{text-align:right;font-variant-numeric:tabular-nums;padding-right:28px}
+th.n{padding-right:28px}
+.can{font-weight:700;color:var(--accent)}
+td.bot{font-size:28px;font-weight:700}
+td.n.can{font-size:28px}
+td.n.dim{color:var(--muted)}
+.legend{margin-top:30px;font-size:17px;color:var(--muted);line-height:1.7}
+.legend b{color:var(--ink)}
+.btn{display:inline-block;background:var(--accent);color:#fff;font-size:18px;padding:11px 22px;border-radius:4px}
+.btn.sub{background:#fff;color:var(--accent);border:1.5px solid var(--accent)}
+.btn.off{background:#C9D0D5;color:#fff}
+.side{margin-top:44px;border-left:1px solid var(--line);padding-left:32px}
+.side h3{font-size:18px;margin:0 0 14px}.side p{margin:0 0 10px;font-size:17px;line-height:1.6}.side .big{font-size:30px;font-weight:700}
+.empty{margin-top:56px;font-size:22px;line-height:1.8}.empty .ex{color:var(--muted);font-size:18px;margin-top:18px}
+.qty{display:flex;align-items:center;gap:14px;padding:6px 0 18px}
+.qty .in{border:2px solid var(--warn);width:110px;height:52px;font-size:26px;padding:0 14px;display:flex;align-items:center;justify-content:flex-end}
+.err{color:var(--warn);font-size:18px;font-weight:700}
+.lbl{font-size:16px;color:var(--muted)}
+.field{display:flex;gap:56px;margin:8px 0 8px;font-size:20px}.field div span{display:block;font-size:15px;color:var(--muted);margin-bottom:4px}
+.field .box{border:1px solid var(--line);padding:10px 18px;min-width:260px}
+.toast{font-size:18px;color:var(--accent);font-weight:700;margin:0 0 30px}
+.act{display:flex;gap:16px;align-items:center;margin-top:36px}
+.note{font-size:17px;color:var(--muted);margin-top:14px}
+.tag{position:absolute;right:40px;bottom:24px;font-size:14px;color:#8a949c}
+.link{color:var(--accent);text-decoration:underline;font-size:17px}
+.ban{margin-top:48px;font-size:20px;font-weight:700}
+</style></head><body>
+
+<!-- 1 通常 -->
+<section class="screen" id="s1">
+<header><div class="brand">在庫管理<small>デモ（仮データ）</small></div><nav><a class="on">在庫を探す</a><a>入庫</a><a>出荷の準備　<b style="color:var(--accent)">2件</b></a></nav></header>
+<div class="pg"><div>
+<h1>どの商品を探しますか？</h1>
+<div class="search"><span>1024</span><i class="caret"></i></div>
+<div class="hint">製品番号か名前の一部を入れると、入力するたびに結果が出ます。</div>
+<div class="legend"><b>引当</b>＝出荷のために取っておいた本数　<b>引当可能</b>＝在庫 − 引当（新しく出荷に使える本数）</div><div class="prod" style="margin-top:22px"><h2>A-1024<span>サンプル牛A</span></h2>
+<div class="sum">合計　在庫 <b>50</b>本　引当 <b>10</b>本　引当可能 <b class="can">40</b>本</div>
+<table><tr><th>瓶</th><th>採取日</th><th class="n">在庫</th><th class="n">引当</th><th class="n">引当可能</th><th></th></tr>
+<tr><td class="bot">B-03</td><td>2025年3月12日</td><td class="n dim">30</td><td class="n dim">10</td><td class="n can">20</td><td><span class="btn">出荷に入れる</span></td></tr>
+<tr><td class="bot">C-07</td><td>2025年6月2日</td><td class="n dim">20</td><td class="n dim">0</td><td class="n can">20</td><td><span class="btn">出荷に入れる</span></td></tr></table></div>
+<div class="prod" style="margin-top:36px"><h2>A-1024-S<span>サンプル牛A（別ロット）</span></h2>
+<div class="sum">合計　在庫 <b>8</b>本　引当 <b>0</b>本　引当可能 <b class="can">8</b>本　<span class="link">瓶を表示（1）</span></div></div>
+</div>
+<aside class="side"><h3>出荷予定</h3><p class="big">2件</p><p>引当中の合計　<b>35</b>本</p><p><span class="link">出荷の準備へ</span></p></aside></div>
+<div class="tag">画面案 1/5　通常（検索結果）</div></section>
+
+<!-- 2 最初 -->
+<section class="screen" id="s2">
+<header><div class="brand">在庫管理<small>デモ（仮データ）</small></div><nav><a class="on">在庫を探す</a><a>入庫</a><a>出荷の準備</a></nav></header>
+<div class="pg"><div>
+<h1>どの商品を探しますか？</h1>
+<div class="search"><span class="ph">製品番号か名前を入れてください</span></div>
+<div class="empty">入力すると、ここに「どの瓶に何本あるか」が出ます。<div class="ex">例：1024 と入れると、A-1024 の瓶ごとの本数が出ます。</div></div>
+</div><aside class="side"><h3>出荷予定</h3><p class="big">0件</p><p>まだありません。</p></aside></div>
+<div class="tag">画面案 2/5　最初（検索前）</div></section>
+
+<!-- 3 エラー -->
+<section class="screen" id="s3">
+<header><div class="brand">在庫管理<small>デモ（仮データ）</small></div><nav><a class="on">在庫を探す</a><a>入庫</a><a>出荷の準備</a></nav></header>
+<div class="pg"><div>
+<h1>どの商品を探しますか？</h1>
+<div class="search"><span>1024</span></div>
+<div class="legend"><b>引当</b>＝出荷のために取っておいた本数　<b>引当可能</b>＝在庫 − 引当（新しく出荷に使える本数）</div><div class="prod" style="margin-top:22px"><h2>A-1024<span>サンプル牛A</span></h2>
+<div class="sum">合計　在庫 <b>50</b>本　引当 <b>10</b>本　引当可能 <b class="can">40</b>本</div>
+<table><tr><th>瓶</th><th>採取日</th><th class="n">在庫</th><th class="n">引当</th><th class="n">引当可能</th><th></th></tr>
+<tr><td class="bot">B-03</td><td>2025年3月12日</td><td class="n dim">30</td><td class="n dim">10</td><td class="n can">20</td><td></td></tr>
+<tr><td colspan="6" style="padding:10px 0 14px"><div class="qty" style="padding:0"><span class="lbl">出荷する本数</span><div class="in">25</div><span class="lbl">本</span><span class="btn off">出荷に入れる</span><span class="btn sub">やめる</span></div><div class="err" style="margin-top:12px">この瓶で引当できるのは最大 20 本です。本数を直してください。</div></td></tr>
+<tr><td class="bot">C-07</td><td>2025年6月2日</td><td class="n dim">20</td><td class="n dim">0</td><td class="n can">20</td><td><span class="btn">出荷に入れる</span></td></tr></table></div>
+</div><aside class="side"><h3>出荷予定</h3><p class="big">2件</p><p>引当中の合計　<b>35</b>本</p></aside></div>
+<div class="tag">画面案 3/5　エラー（引当可能数より多い本数）</div></section>
+
+<!-- 4 出荷の準備 -->
+<section class="screen" id="s4">
+<header><div class="brand">在庫管理<small>デモ（仮データ）</small></div><nav><a>在庫を探す</a><a>入庫</a><a class="on">出荷の準備</a></nav></header>
+<h1>出荷の準備</h1>
+<div class="toast">出荷予定に入れました（A-1024　瓶 B-03　15本）</div>
+<div class="field"><div><span>出荷先</span><div class="box">サンプル商事（仮）</div></div><div><span>出荷日</span><div class="box">2026年10月20日</div></div></div>
+<table style="margin-top:28px"><tr><th>製品</th><th>瓶</th><th>採取日</th><th class="n">本数</th><th></th></tr>
+<tr><td><b>A-1024</b>　サンプル牛A</td><td>B-03</td><td>2025年3月12日</td><td class="n">15</td><td><span class="link">変更</span>　　<span class="link">取消</span></td></tr>
+<tr><td><b>A-2210</b>　サンプル牛D</td><td>E-11</td><td>2025年8月21日</td><td class="n">20</td><td><span class="link">変更</span>　　<span class="link">取消</span></td></tr></table>
+<div class="note">取消すと引当が外れ、他の出荷に使えるようになります。変更すると引当も自動で変わります。</div>
+<div class="act"><span class="btn">ピッキング表を印刷</span><span class="btn sub">在庫を探して追加</span></div>
+<div class="tag">画面案 4/5　出荷の準備</div></section>
+
+<!-- 5 確定 -->
+<section class="screen" id="s5">
+<header><div class="brand">在庫管理<small>デモ（仮データ）</small></div><nav><a>在庫を探す</a><a>入庫</a><a class="on">出荷の準備</a></nav></header>
+<h1>この内容で出庫を確定しますか？</h1>
+<div class="hint" style="margin:0 0 24px">確定すると、在庫と引当が減ります。倉庫で取り出した本数と合っているか確認してください。</div>
+<table><tr><th>製品</th><th>瓶</th><th>採取日</th><th class="n">取り出した本数</th><th class="n">確定後の在庫</th></tr>
+<tr><td><b>A-1024</b>　サンプル牛A</td><td>B-03</td><td>2025年3月12日</td><td class="n">15</td><td class="n">30 → 15</td></tr>
+<tr><td><b>A-2210</b>　サンプル牛D</td><td>E-11</td><td>2025年8月21日</td><td class="n">20</td><td class="n">44 → 24</td></tr></table>
+<div class="act"><span class="btn">この内容で出庫を確定</span><span class="btn sub">戻る</span></div>
+<div class="ban">出荷連絡用PDFは、確定したあとに作れます。PDFを作っただけでは、在庫は減りません。</div>
+<div class="tag">画面案 5/5　出庫の確定（確認画面）</div></section>
+</body></html>
