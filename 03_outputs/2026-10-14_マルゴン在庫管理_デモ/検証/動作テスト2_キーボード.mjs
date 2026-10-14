@@ -1,0 +1,40 @@
+import { chromium } from '/opt/node22/lib/node_modules/playwright/index.mjs';
+const url='file://'+process.argv[2];
+const b=await chromium.launch({executablePath:'/opt/pw-browsers/chromium-1194/chrome-linux/chrome'});
+const p=await (await b.newContext({viewport:{width:1440,height:900}})).newPage();
+const errs=[];p.on('pageerror',e=>errs.push(e.message));
+let n=0,f=0;const ok=(c,m)=>{c?n++:f++;console.log((c?'OK  ':'NG  ')+m)};
+const act=()=>p.evaluate(()=>{const e=document.activeElement;return (e.getAttribute('aria-label')||e.id||e.textContent||e.tagName).trim().slice(0,40)});
+await p.goto(url);
+await p.keyboard.type('3305');
+await p.keyboard.press('Tab');
+ok((await act()).includes('A-3305 瓶 B-04を出荷に入れる'),'Tab1: '+await act());
+await p.keyboard.press('Enter');
+ok((await act())==='qtyIn','Enterで本数欄に移る: '+await act());
+await p.keyboard.type('13');
+await p.keyboard.press('Enter');
+ok((await p.locator('#qtyErr').innerText()).includes('最大 12 本'),'13本は最大12本のエラー');
+await p.fill('#qtyIn','12');await p.keyboard.press('Enter');
+ok((await p.locator('#results').innerText()).includes('出荷予定に入れました'),'キーボードだけで引当できた');
+ok((await p.evaluate(()=>document.activeElement.id))==='q','保存後は検索欄に戻る');
+await p.waitForTimeout(200);ok((await p.locator('#live').textContent())!=='' ,'読み上げ領域に通知: '+await p.locator('#live').textContent());
+// 訂正ダイアログ Esc / focus restore
+await p.fill('#q','3305');
+await p.focus('button[aria-label="A-3305 瓶 F-01の在庫を訂正"]');await p.keyboard.press('Enter');
+ok(await p.locator('#fix').evaluate(d=>d.open),'訂正ダイアログが開く');
+ok((await p.evaluate(()=>document.activeElement.id))==='fixQty','ダイアログ内にフォーカス');
+await p.keyboard.press('Escape');
+ok(!(await p.locator('#fix').evaluate(d=>d.open)),'Escで閉じる');
+ok((await act()).includes('F-01'),'閉じるとボタンに戻る: '+await act());
+// 準備→取消ダイアログ
+await p.goto(url+'#prep');
+await p.focus('button[aria-label="A-3305 瓶 B-04を取消"]');await p.keyboard.press('Enter');
+ok((await p.evaluate(()=>document.activeElement.id))==='askNo','取消ダイアログの初期フォーカスは「やめる」');
+await p.keyboard.press('Shift+Tab');ok((await p.evaluate(()=>document.activeElement.id))==='askYes','ダイアログ内でTab移動');
+await p.keyboard.press('Escape');
+// コントラスト
+const cr=await p.evaluate(()=>{const L=c=>{c=c.map(v=>{v/=255;return v<=.03928?v/12.92:((v+.055)/1.055)**2.4});return .2126*c[0]+.7152*c[1]+.0722*c[2]};const r=(a,b)=>{const x=L(a),y=L(b);return ((Math.max(x,y)+.05)/(Math.min(x,y)+.05)).toFixed(2)};return {ink:r([30,42,51],[255,255,255]),muted:r([91,103,112],[255,255,255]),accent:r([15,92,122],[255,255,255]),warn:r([179,38,30],[255,255,255])}});
+console.log('contrast',JSON.stringify(cr));
+ok(+cr.muted>=4.5&&+cr.accent>=4.5&&+cr.warn>=4.5,'文字色のコントラスト4.5以上');
+console.log('errors',errs.length?errs:'なし','PASS',n,'FAIL',f);
+await b.close();

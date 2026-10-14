@@ -1,0 +1,592 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>在庫管理デモ（仮データ）</title>
+<style>
+:root{--ink:#1E2A33;--muted:#5B6770;--line:#D5DADF;--accent:#0F5C7A;--warn:#B3261E;--off:#C9D0D5;--bg:#fff;--pad:96px}
+*{box-sizing:border-box}
+html{font-size:16px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Yu Gothic UI","Meiryo","Hiragino Sans","Noto Sans JP",IPAGothic,sans-serif;line-height:1.5;font-variant-numeric:tabular-nums}
+.skip{position:absolute;left:-999px;top:0;background:var(--accent);color:#fff;padding:8px 14px}
+.skip:focus{left:8px;top:8px;z-index:10}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.top,main,footer{padding-left:var(--pad);padding-right:var(--pad);max-width:1440px;margin-left:auto;margin-right:auto}
+.top{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;padding-top:28px;border-bottom:1px solid var(--line)}
+.brand{font-size:20px;font-weight:700;padding-bottom:20px}
+.brand small{font-weight:400;color:var(--muted);font-size:15px;margin-left:14px}
+nav{display:flex;gap:40px;font-size:18px}
+nav a{color:var(--muted);text-decoration:none;padding-bottom:17px;border-bottom:3px solid transparent}
+nav a[aria-current=page]{color:var(--ink);font-weight:700;border-bottom-color:var(--accent)}
+nav a:hover{color:var(--ink)}
+nav b{color:var(--accent);margin-left:6px}
+main{padding-top:44px;padding-bottom:64px;min-height:70vh}
+main:focus{outline:none}
+h1{font-size:32px;margin:0 0 20px;line-height:1.3}
+h1:focus{outline:none}
+h1,h2{text-wrap:balance}
+p{text-wrap:pretty}
+.live{position:absolute;left:-999px;width:1px;height:1px;overflow:hidden}
+.pg{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:72px}
+.search{display:block;width:min(760px,100%);height:72px;border:2px solid var(--accent);padding:0 24px;font-size:28px;background:#fff;border-radius:0}
+.hint{margin:14px 0 0;font-size:17px;color:var(--muted)}
+.legend{margin:30px 0 0;font-size:17px;color:var(--muted);line-height:1.7}
+.legend b{color:var(--ink)}
+.prod{margin-top:30px}
+.prod h2{font-size:24px;margin:0 0 6px}
+.prod h2 span{font-weight:400;color:var(--muted);font-size:18px;margin-left:12px}
+.sum{font-size:18px;color:var(--muted);margin-bottom:12px}
+.sum b{color:var(--ink)}
+.sum .can,.can{color:var(--accent);font-weight:700}
+table{border-collapse:collapse;width:100%;font-size:20px}
+caption{text-align:left}
+th{font-size:16px;font-weight:400;color:var(--muted);text-align:left;padding:8px 0;border-bottom:1px solid var(--ink)}
+td{padding:14px 0;border-bottom:1px solid var(--line);vertical-align:middle}
+.n{text-align:right;padding-right:28px}
+td.bot{font-size:28px;font-weight:700}
+td.n.can{font-size:28px}
+td.n.dim{color:var(--muted)}
+.btn{display:inline-block;background:var(--accent);color:#fff;border:1.5px solid var(--accent);font-size:18px;padding:9px 22px;border-radius:4px;cursor:pointer;line-height:1.4}
+.btn.sub{background:#fff;color:var(--accent)}
+.btn[disabled],.btn[aria-disabled=true]{background:var(--off);border-color:var(--off);color:#fff;cursor:not-allowed}
+.btn.sub[disabled]{background:#fff;color:#8a949c;border-color:var(--off)}
+.lnk{background:none;border:0;color:var(--accent);text-decoration:underline;font-size:17px;padding:8px 6px;cursor:pointer}
+.side{border-left:1px solid var(--line);padding-left:32px;align-self:start}
+.side h2{font-size:18px;margin:0 0 14px}
+.side p{margin:0 0 10px;font-size:17px;line-height:1.6}
+.side .big{font-size:30px;font-weight:700}
+.empty{margin-top:48px;font-size:22px;line-height:1.8}
+.empty .ex{color:var(--muted);font-size:18px;margin-top:14px}
+.qty{display:flex;align-items:center;flex-wrap:wrap;gap:14px;padding:6px 0 6px}
+.qty label{font-size:16px;color:var(--muted)}
+.qty input{width:110px;height:52px;border:2px solid var(--accent);font-size:26px;padding:0 14px;text-align:right;border-radius:0;background:#fff}
+.qty input[aria-invalid=true]{border-color:var(--warn)}
+.err{color:var(--warn);font-size:18px;font-weight:700;margin-top:8px}
+.toast{font-size:18px;color:var(--accent);font-weight:700;margin:0 0 30px}
+.toast.bad{color:var(--warn)}
+.fields{display:flex;flex-wrap:wrap;gap:24px 56px;margin:8px 0}
+.f{display:flex;flex-direction:column;gap:4px}
+.f label{font-size:16px;color:var(--muted)}
+.f input,.f select,.f textarea{border:1px solid #8a949c;background:#fff;padding:10px 14px;font-size:20px;min-width:260px;border-radius:0}
+.f input[aria-invalid=true]{border:2px solid var(--warn)}
+.f input[readonly]{background:#F2F4F5}
+.f .help{font-size:15px;color:var(--muted)}
+.f .err{margin-top:2px;font-size:16px}
+.act{display:flex;flex-wrap:wrap;gap:16px;align-items:center;margin-top:36px}
+.note{font-size:17px;color:var(--muted);margin-top:14px}
+.ban{margin-top:48px;font-size:20px;font-weight:700}
+.sec{margin-top:56px}
+.sec h2{font-size:22px;margin:0 0 10px}
+select.pick{font-size:20px;padding:8px 10px;border:1px solid #8a949c;background:#fff;border-radius:0}
+dialog{border:2px solid var(--ink);padding:28px 32px;width:min(560px,92vw);border-radius:0}
+dialog::backdrop{background:rgba(30,42,51,.45)}
+dialog h2{margin:0 0 6px;font-size:24px}
+.dl{font-size:18px;color:var(--muted);margin:0 0 16px}
+#storage-warn{background:#FFF3F2;color:var(--warn);font-weight:700;padding:10px var(--pad);font-size:17px}
+footer{padding-top:24px;padding-bottom:40px;border-top:1px solid var(--line);font-size:15px;color:var(--muted);display:flex;flex-wrap:wrap;gap:12px 32px;align-items:center}
+.cf{display:inline-flex;gap:12px;align-items:center;color:var(--ink);font-size:17px}
+#printArea{display:none}
+@media (max-width:1180px){:root{--pad:48px}.pg{grid-template-columns:minmax(0,1fr);gap:32px}.side{border-left:0;padding-left:0;border-top:1px solid var(--line);padding-top:20px}}
+@media (max-width:760px){:root{--pad:16px}nav{gap:16px;font-size:16px}table{font-size:17px}td.bot,td.n.can{font-size:22px}.n{padding-right:10px}}
+/* 印刷 */
+.sheet{font-size:13pt;color:#000}
+.sheet h1{font-size:22pt;margin:0 0 6mm}
+.sheet .meta{display:flex;gap:14mm;margin-bottom:8mm;font-size:13pt}
+.sheet .meta span{display:block;font-size:10pt;color:#333}
+.sheet table{font-size:13pt;width:100%}
+.sheet th{color:#000;font-size:11pt;border-bottom:2px solid #000}
+.sheet td{padding:5mm 0;border-bottom:1px solid #666}
+.sheet td.pb{font-size:24pt;font-weight:700}
+.sheet .box{display:inline-block;width:8mm;height:8mm;border:1.5px solid #000}
+.sheet .foot{margin-top:10mm;font-size:10pt;color:#333}
+@media print{
+  @page{size:A4;margin:16mm}
+  body>*:not(#printArea){display:none!important}
+  #printArea{display:block!important}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">本文へ移動</a>
+<header class="top"><div class="brand">在庫管理<small>デモ（仮データ）</small></div><nav id="nav" aria-label="メニュー"></nav></header>
+<div id="storage-warn" role="alert" hidden>この環境では保存できません。画面を閉じると入力した内容は消えます。</div>
+<main id="main" tabindex="-1"></main>
+<footer>
+  <span>これはデモです。データは仮のもので、入力した内容はこのPCのこのブラウザにだけ保存されます。</span>
+  <span><button type="button" class="lnk" id="resetBtn">仮データに戻す</button></span>
+</footer>
+
+<dialog id="fix" aria-labelledby="fixTitle">
+  <form method="dialog" id="fixForm" novalidate>
+    <h2 id="fixTitle">在庫の訂正</h2>
+    <p class="dl" id="fixInfo"></p>
+    <div class="fields">
+      <div class="f"><label for="fixQty">訂正後の在庫（本）</label><input id="fixQty" inputmode="numeric" autocomplete="off" aria-describedby="fixQtyHelp fixQtyErr"><span class="help" id="fixQtyHelp"></span><span class="err" id="fixQtyErr" role="alert"></span></div>
+      <div class="f" style="flex:1 1 100%"><label for="fixWhy">訂正の理由（必ず書いてください）</label><input id="fixWhy" required aria-required="true" autocomplete="off" style="width:100%" aria-describedby="fixWhyErr" placeholder="例：数え直したら1本少なかった"><span class="err" id="fixWhyErr" role="alert"></span></div>
+    </div>
+    <div class="act"><button type="submit" class="btn" id="fixGo">訂正する</button><button type="button" class="btn sub" id="fixCancel">やめる</button></div>
+  </form>
+</dialog>
+<dialog id="ask" role="alertdialog" aria-labelledby="askMsg"><p id="askMsg" style="font-size:20px;margin:0 0 20px"></p><div class="act" style="margin-top:0"><button type="button" class="btn" id="askYes"></button><button type="button" class="btn sub" id="askNo">やめる</button></div></dialog>
+<div id="live" class="live" role="status" aria-live="polite"></div>
+<div id="printArea" aria-hidden="true"></div>
+
+<script>
+(()=>{
+'use strict';
+const KEY='margon-inventory-demo-v1';
+let storageOk=true;
+const $=s=>document.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const norm=s=>String(s).normalize('NFKC').toLowerCase().replace(/[\s\-‐−–—]/g,'');
+const jp=iso=>{const m=/^(\d{4})-(\d{2})-(\d{2})$/.exec(iso||'');return m?`${+m[1]}年${+m[2]}月${+m[3]}日`:'';};
+const todayIso=()=>{const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;};
+const stamp=iso=>{const d=new Date(iso);return `${d.getMonth()+1}/${d.getDate()} ${String(d.getHours()).padStart(2,'0')}:${String(d.getMinutes()).padStart(2,'0')}`;};
+const say=html=>{const t=document.createElement('div');t.innerHTML=html;const l=$('#live');l.textContent='';setTimeout(()=>{l.textContent=t.textContent;},50);};
+const focusH1=()=>{const h=$('#h1');if(h)h.focus();};
+const toInt=v=>{const s=String(v).normalize('NFKC').trim();return /^\d+$/.test(s)?parseInt(s,10):NaN;};
+
+/* ---------- データ ---------- */
+function seed(){
+  return {v:1,seq:100,cur:'S1',
+    stock:[
+      {id:'K1',productNo:'A-1024',name:'サンプル牛A',harvest:'2025-03-12',bottle:'B-03',qty:30},
+      {id:'K2',productNo:'A-1024',name:'サンプル牛A',harvest:'2025-06-02',bottle:'C-07',qty:20},
+      {id:'K3',productNo:'A-1024-S',name:'サンプル牛A（別ロット）',harvest:'2025-09-10',bottle:'D-02',qty:8},
+      {id:'K4',productNo:'A-2210',name:'サンプル牛D',harvest:'2025-08-21',bottle:'E-11',qty:44},
+      {id:'K5',productNo:'A-3305',name:'サンプル牛B',harvest:'2025-01-20',bottle:'B-04',qty:12},
+      {id:'K6',productNo:'A-3305',name:'サンプル牛B',harvest:'2025-04-15',bottle:'F-01',qty:25},
+      {id:'K7',productNo:'A-4120',name:'サンプル牛C',harvest:'2025-05-30',bottle:'G-09',qty:16}
+    ],
+    ships:[{id:'S1',dest:'サンプル商事（仮）',date:'2026-10-20',status:'draft',lines:[{id:'L1',stockId:'K1',qty:10},{id:'L2',stockId:'K4',qty:20}]}],
+    log:[]};
+}
+let S=load();
+function load(){
+  try{
+    const raw=localStorage.getItem(KEY);
+    if(raw){const d=JSON.parse(raw);if(d&&d.v===1&&Array.isArray(d.stock)&&Array.isArray(d.ships)&&Array.isArray(d.log))return d;}
+  }catch(e){storageOk=false;}
+  return seed();
+}
+function save(){
+  try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){storageOk=false;}
+  $('#storage-warn').hidden=storageOk;
+}
+const nid=p=>p+(++S.seq);
+const byId=id=>S.stock.find(s=>s.id===id);
+const drafts=()=>S.ships.filter(x=>x.status==='draft');
+const curShip=()=>{const d=drafts();return d.find(x=>x.id===S.cur)||d[0]||null;};
+const allocOf=(sid,ignoreLine)=>{let n=0;for(const sh of drafts())for(const l of sh.lines)if(l.stockId===sid&&l.id!==ignoreLine)n+=l.qty;return n;};
+const availOf=(sid,ignoreLine)=>{const s=byId(sid);return s?s.qty-allocOf(sid,ignoreLine):0;};
+const addLog=(type,text)=>{S.log.unshift({t:new Date().toISOString(),type,text});S.log=S.log.slice(0,60);};
+const label=s=>`${s.productNo} 瓶 ${s.bottle}`;
+const totalAlloc=()=>drafts().reduce((a,sh)=>a+sh.lines.reduce((b,l)=>b+l.qty,0),0);
+const shipTotal=sh=>sh.lines.reduce((a,l)=>a+l.qty,0);
+
+/* ---------- 画面の状態（保存しない） ---------- */
+const ui={q:'',open:null,toast:null,expanded:{},editLine:null,cancelLine:null,cancelShip:false,fixId:null,shipErr:'',inToast:null};
+
+/* ---------- 共通部品 ---------- */
+function renderNav(route){
+  const n=drafts().length;
+  const items=[['search','在庫を探す'],['stock-in','入庫'],['prep','出荷の準備'+(n?`<b>${n}件</b>`:'')]];
+  const active=route==='confirm'?'prep':route;
+  $('#nav').innerHTML=items.map(([k,t])=>`<a href="#${k}"${k===active?' aria-current="page"':''}>${t}</a>`).join('');
+}
+const main=$('#main');
+function setTitle(t){document.title=t+'｜在庫管理デモ（仮データ）';}
+function sidePanel(){
+  const sh=curShip(),n=drafts().length;
+  return `<aside class="side" aria-label="出荷予定"><h2>出荷予定</h2><p class="big">${n}件</p>`+
+    (n?`<p>引当中の合計　<b>${totalAlloc()}</b>本</p><p>追加先：<b>${esc(sh.dest||'（出荷先 未入力）')}</b></p><p><a class="lnk" style="padding:0" href="#prep">出荷の準備へ</a></p>`:`<p>まだありません。</p>`)+`</aside>`;
+}
+
+/* ---------- 在庫を探す ---------- */
+function groups(q){
+  const nq=norm(q);if(!nq)return [];
+  const m=new Map();
+  for(const s of S.stock){
+    if(norm(s.productNo).includes(nq)||norm(s.name).includes(nq)){
+      if(!m.has(s.productNo))m.set(s.productNo,{productNo:s.productNo,name:s.name,rows:[]});
+      m.get(s.productNo).rows.push(s);
+    }
+  }
+  const g=[...m.values()].sort((a,b)=>a.productNo.localeCompare(b.productNo));
+  g.forEach(x=>x.rows.sort((a,b)=>a.harvest.localeCompare(b.harvest)||a.bottle.localeCompare(b.bottle)));
+  return g;
+}
+function viewSearch(){
+  setTitle('在庫を探す');
+  main.innerHTML=`<div class="pg"><div>
+    <h1>どの商品を探しますか？</h1>
+    <label for="q" class="hint" style="display:block;margin:0 0 8px">製品番号か名前（一部でOK）</label>
+    <input id="q" class="search" type="search" autocomplete="off" inputmode="text" placeholder="製品番号か名前を入れてください" value="${esc(ui.q)}" aria-describedby="qhint">
+    <p class="hint" id="qhint">入力するたびに結果が出ます。</p>
+    <p id="qstat" role="status" style="position:absolute;left:-999px"></p><div id="results"></div>
+  </div><div id="sideBox">${sidePanel()}</div></div>`;
+  renderResults();
+}
+function rowHtml(s){
+  const al=allocOf(s.id),av=s.qty-al;
+  let act;
+  if(ui.open===s.id)act='';
+  else if(av<=0)act='<span style="color:var(--muted);font-size:17px">引当可能なし</span>';
+  else act=`<button type="button" class="btn" data-act="open" data-id="${s.id}" aria-label="${esc(label(s))}を出荷に入れる">出荷に入れる</button>`;
+  let h=`<tr><td class="bot">${esc(s.bottle)}</td><td>${jp(s.harvest)}</td><td class="n dim">${s.qty}</td><td class="n dim">${al}</td><td class="n can">${av}</td><td>${act}<button type="button" class="lnk" data-act="fix" data-id="${s.id}" aria-label="${esc(label(s))}の在庫を訂正">訂正</button></td></tr>`;
+  if(ui.open===s.id){
+    const dup=curShip()&&curShip().lines.some(l=>l.stockId===s.id);
+    const av=s.qty-al;
+    h+=`<tr><td colspan="6" style="padding:10px 0 16px">`+
+      (dup?`<div class="err" role="alert">この在庫はすでにこの出荷に入っています。本数を変えるときは<a class="lnk" style="padding:0;font-weight:700" href="#prep">出荷の準備</a>で直してください。</div><div class="qty"><button type="button" class="btn sub" data-act="close">閉じる</button></div>`:
+      `<div class="qty"><label for="qtyIn">出荷する本数</label><input id="qtyIn" inputmode="numeric" autocomplete="off" data-id="${s.id}" aria-describedby="qtyErr"><span style="color:var(--muted);font-size:16px">本</span><button type="button" class="btn" id="qtyGo" data-act="add" data-id="${s.id}" disabled aria-describedby="qtyHelp">出荷に入れる</button><button type="button" class="btn sub" data-act="close">やめる</button></div><div id="qtyHelp" class="note" style="margin:6px 0 0">使えるのは最大 ${av}本です。本数を入れると、ボタンが押せるようになります。</div><div class="err" id="qtyErr" role="alert"></div>`)+
+      `</td></tr>`;
+  }
+  return h;
+}
+function renderResults(){
+  const box=$('#results');if(!box)return;
+  const g=groups(ui.q);
+  let h='';
+  if(ui.toast)h+=`<p class="toast${ui.toast.bad?' bad':''}" style="margin-top:24px" role="status">${ui.toast.html}</p>`;
+  if(!ui.q.trim()){
+    h+=`<div class="empty">入力すると、ここに「どの瓶に何本あるか」が出ます。<div class="ex">例：1024 と入れると、A-1024 の瓶ごとの本数が出ます。</div></div>`;
+  }else if(!g.length){
+    h+=`<div class="empty">見つかりません。番号の入力を確認してください。<div class="act" style="margin-top:20px"><button type="button" class="btn sub" data-act="clear">入力を消す</button></div></div>`;
+  }else{
+    h+=`<p class="legend"><b>引当</b>＝出荷のために取っておいた本数　<b>引当可能</b>＝在庫 − 引当（新しく出荷に使える本数）</p>`;
+    g.forEach((p,i)=>{
+      const tot=p.rows.reduce((a,s)=>a+s.qty,0),al=p.rows.reduce((a,s)=>a+allocOf(s.id),0);
+      const open=g.length===1||i===0||ui.expanded[p.productNo]||p.rows.some(s=>s.id===ui.open);
+      h+=`<section class="prod" aria-label="${esc(p.productNo)}"><h2>${esc(p.productNo)}<span>${esc(p.name)}</span></h2><div class="sum">合計　在庫 <b>${tot}</b>本　引当 <b>${al}</b>本　引当可能 <b class="can">${tot-al}</b>本`;
+      if(!open)h+=`　<button type="button" class="lnk" data-act="expand" data-id="${esc(p.productNo)}">瓶を表示（${p.rows.length}）</button>`;
+      h+=`</div>`;
+      if(open)h+=`<table><caption class="sr" style="position:absolute;left:-999px">${esc(p.productNo)}の瓶ごとの在庫</caption><thead><tr><th scope="col">瓶</th><th scope="col">採取日</th><th scope="col" class="n">在庫</th><th scope="col" class="n">引当</th><th scope="col" class="n">引当可能</th><th scope="col"><span style="position:absolute;left:-999px">操作</span></th></tr></thead><tbody>${p.rows.map(rowHtml).join('')}</tbody></table>`;
+      h+=`</section>`;
+    });
+  }
+  box.innerHTML=h;
+  const st=$('#qstat');if(st)st.textContent=!ui.q.trim()?'':(g.length?`${g.length}件の製品が見つかりました`:'見つかりません');
+  $('#sideBox').innerHTML=sidePanel();
+  renderNav('search');
+}
+function validateAdd(sid,raw){
+  const s=byId(sid),av=availOf(sid);
+  if(String(raw).trim()==='')return {ok:false,msg:''};
+  const v=toInt(raw);
+  if(!(v>=1))return {ok:false,msg:'本数は1以上の数字で入れてください。'};
+  if(v>av)return {ok:false,msg:`この瓶で引当できるのは最大 ${av} 本です。本数を直してください。`};
+  return {ok:true,v};
+}
+function updateQtyRow(){
+  const inp=$('#qtyIn');if(!inp)return;
+  const r=validateAdd(inp.dataset.id,inp.value);
+  $('#qtyErr').textContent=r.msg;
+  inp.setAttribute('aria-invalid',r.msg?'true':'false');
+  $('#qtyGo').disabled=!r.ok;
+}
+function doAdd(sid){
+  const inp=$('#qtyIn');if(!inp||ui.open!==sid)return;
+  const r=validateAdd(sid,inp.value);if(!r.ok){updateQtyRow();return;}
+  const s=byId(sid);
+  let sh=curShip();
+  if(!sh){sh={id:nid('S'),dest:'',date:'',status:'draft',lines:[]};S.ships.push(sh);S.cur=sh.id;}
+  if(sh.lines.some(l=>l.stockId===sid)){ui.open=sid;renderResults();return;}
+  sh.lines.push({id:nid('L'),stockId:sid,qty:r.v});
+  addLog('引当',`${label(s)}（採取日 ${jp(s.harvest)}）${r.v}本を出荷予定に入れた`);
+  save();
+  ui.open=null;
+  ui.toast={html:`出荷予定に入れました（${esc(s.productNo)}　瓶 ${esc(s.bottle)}　${r.v}本）　<a class="lnk" style="padding:0" href="#prep">出荷の準備へ</a>`};
+  renderResults();say(ui.toast.html);
+  const q=$('#q');if(q)q.focus();
+}
+
+/* ---------- 入庫 ---------- */
+function viewStockIn(){
+  setTitle('入庫');
+  const names=[...new Map(S.stock.map(s=>[s.productNo,s.name])).entries()];
+  main.innerHTML=`<h1 id="h1" tabindex="-1">入庫</h1>
+  <div aria-live="polite">${ui.inToast?`<p class="toast">${ui.inToast}</p>`:''}</div>
+  <form id="inForm" novalidate>
+    <div class="fields">
+      <div class="f"><label for="inNo">製品番号</label><input id="inNo" required aria-required="true" list="inList" autocomplete="off" aria-describedby="inNoErr"><datalist id="inList">${names.map(([n,m])=>`<option value="${esc(n)}">${esc(m)}</option>`).join('')}</datalist><span class="err" id="inNoErr" role="alert"></span></div>
+      <div class="f"><label for="inName">精液の名前</label><input id="inName" required aria-required="true" autocomplete="off" aria-describedby="inNameHelp inNameErr"><span class="help" id="inNameHelp"></span><span class="err" id="inNameErr" role="alert"></span></div>
+    </div>
+    <div class="fields">
+      <div class="f"><label for="inDate">採取日</label><input id="inDate" required aria-required="true" type="date" aria-describedby="inDateErr"><span class="err" id="inDateErr" role="alert"></span></div>
+      <div class="f"><label for="inBottle">保管する瓶の番号</label><input id="inBottle" required aria-required="true" autocomplete="off" placeholder="例：B-03" aria-describedby="inBottleErr"><span class="err" id="inBottleErr" role="alert"></span></div>
+      <div class="f"><label for="inQty">本数</label><input id="inQty" required aria-required="true" inputmode="numeric" autocomplete="off" style="min-width:140px" aria-describedby="inQtyErr"><span class="err" id="inQtyErr" role="alert"></span></div>
+    </div>
+    <div class="act"><button type="submit" class="btn">入庫する</button></div>
+    <p class="note">同じ製品・採取日・瓶があるときは、その在庫に本数を足します。採取日は、手書きファイルの「再生年月日」にあたる日付です。</p>
+  </form>
+  <section class="sec" aria-labelledby="hist"><h2 id="hist">最近の記録</h2>${histHtml()}</section>`;
+}
+function histHtml(){
+  if(!S.log.length)return '<p class="note">まだ記録がありません。</p>';
+  return `<table style="font-size:17px"><thead><tr><th scope="col" style="width:120px">日時</th><th scope="col" style="width:110px">種類</th><th scope="col">内容</th></tr></thead><tbody>${S.log.slice(0,15).map(l=>`<tr><td>${stamp(l.t)}</td><td>${esc(l.type)}</td><td>${esc(l.text)}</td></tr>`).join('')}</tbody></table>`;
+}
+function setErr(id,msg){const e=$('#'+id+'Err');if(e)e.textContent=msg;const i=$('#'+id);if(i)i.setAttribute('aria-invalid',msg?'true':'false');}
+function submitIn(){
+  const no=$('#inNo').value.normalize('NFKC').trim().toUpperCase();
+  const nm=$('#inName').value.trim();
+  const dt=$('#inDate').value;
+  const bt=$('#inBottle').value.normalize('NFKC').trim().toUpperCase();
+  const qs=$('#inQty').value;const q=toInt(qs);
+  const known=S.stock.find(s=>s.productNo===no);
+  const name=known?known.name:nm;
+  let first=null;
+  const chk=(id,msg)=>{setErr(id,msg);if(msg&&!first)first=id;};
+  chk('inNo',no?'':'製品番号を入れてください。');
+  chk('inName',name?'':'精液の名前を入れてください。');
+  chk('inDate',/^\d{4}-\d{2}-\d{2}$/.test(dt)?'':'採取日を選んでください。');
+  chk('inBottle',bt?'':'瓶の番号を入れてください。');
+  chk('inQty',q>=1?'':'本数は1以上の数字で入れてください。');
+  if(first){$('#'+first).focus();return;}
+  let row=S.stock.find(s=>s.productNo===no&&s.harvest===dt&&s.bottle===bt);
+  let add='';
+  if(row){row.qty+=q;add='（既存の在庫に足しました。合計 '+row.qty+'本）';}
+  else{row={id:nid('K'),productNo:no,name,harvest:dt,bottle:bt,qty:q};S.stock.push(row);}
+  addLog('入庫',`${label(row)}（採取日 ${jp(dt)}）${q}本${add?'を足した':'を入庫'}`);
+  save();
+  ui.inToast=`入庫しました（${esc(no)}　瓶 ${esc(bt)}　${q}本）${esc(add)}`;
+  viewStockIn();say(ui.inToast);
+  $('#inNo').focus();
+}
+
+/* ---------- 出荷の準備 ---------- */
+function viewPrep(){
+  setTitle('出荷の準備');
+  const d=drafts(),sh=curShip();
+  let h=`<h1 id="h1" tabindex="-1">出荷の準備</h1>`;
+  if(ui.toast&&ui.toast.prep)h+=`<p class="toast" role="status">${ui.toast.html}</p>`;
+  if(!sh){
+    h+=`<div class="empty" style="margin-top:8px">出荷予定はまだありません。<div class="act" style="margin-top:20px"><a class="btn" href="#search" style="text-decoration:none">在庫を探して追加</a><button type="button" class="lnk" data-act="newship">空の出荷を作る</button></div></div>`;
+  }else{
+    if(d.length>1)h+=`<div class="f" style="margin-bottom:16px"><label for="shipPick">作業する出荷（${d.length}件）</label><select id="shipPick" class="pick">${d.map(x=>`<option value="${x.id}"${x.id===sh.id?' selected':''}>${esc(x.dest||'（出荷先 未入力）')}　${jp(x.date)||'日付未入力'}　${shipTotal(x)}本</option>`).join('')}</select></div>`;
+    h+=`<div class="fields"><div class="f"><label for="shDest">出荷先</label><input id="shDest" required aria-required="true" value="${esc(sh.dest)}" autocomplete="off" aria-describedby="shErr"></div><div class="f"><label for="shDate">出荷日</label><input id="shDate" type="date" value="${esc(sh.date)}" aria-describedby="shErr"></div></div>
+    <div class="err" id="shErr" role="alert">${esc(ui.shipErr)}</div>`;
+    if(!sh.lines.length){
+      h+=`<div class="empty" style="margin-top:28px;font-size:20px">まだ在庫が入っていません。「在庫を探して追加」から入れてください。</div>`;
+    }else{
+      h+=`<table style="margin-top:20px"><thead><tr><th scope="col">製品</th><th scope="col">瓶</th><th scope="col">採取日</th><th scope="col" class="n">本数</th><th scope="col"><span style="position:absolute;left:-999px">操作</span></th></tr></thead><tbody>`;
+      for(const l of sh.lines){
+        const s=byId(l.stockId);
+        if(ui.editLine===l.id){
+          const opts=S.stock.filter(x=>x.productNo===s.productNo&&(x.id===s.id||availOf(x.id,l.id)>0));
+          h+=`<tr><td><b>${esc(s.productNo)}</b>　${esc(s.name)}</td><td colspan="4" style="padding:10px 0 14px"><div class="qty"><label for="edBottle">瓶・採取日</label><select id="edBottle" class="pick">${opts.map(x=>`<option value="${x.id}"${x.id===l.stockId?' selected':''}>${esc(x.bottle)}　${jp(x.harvest)}（使える ${availOf(x.id,l.id)}本）</option>`).join('')}</select><label for="edQty">本数</label><input id="edQty" inputmode="numeric" autocomplete="off" value="${l.qty}" aria-describedby="edErr"><button type="button" class="btn" id="edGo" data-act="edsave" data-id="${l.id}">保存</button><button type="button" class="btn sub" data-act="edcancel">やめる</button></div><div class="err" id="edErr" role="alert"></div></td></tr>`;
+        }else{
+          h+=`<tr><td><b>${esc(s.productNo)}</b>　${esc(s.name)}</td><td>${esc(s.bottle)}</td><td>${jp(s.harvest)}</td><td class="n">${l.qty}</td><td><button type="button" class="lnk" data-act="ledit" data-id="${l.id}" aria-label="${esc(label(s))}の本数や瓶を変更">変更</button><button type="button" class="lnk" data-act="lcancel" data-id="${l.id}" aria-label="${esc(label(s))}を取消">取消</button></td></tr>`;
+        }
+      }
+      h+=`</tbody></table><p class="note">合計 ${shipTotal(sh)}本。取消すと引当が外れ、他の出荷に使えるようになります。変更すると引当も自動で変わります。</p>`;
+    }
+    const has=sh.lines.length>0;
+    h+=`<div class="act"><button type="button" class="btn" data-act="printPick"${has?'':' disabled'}>ピッキング表を印刷</button><a class="btn sub" href="#search" style="text-decoration:none">在庫を探して追加</a><button type="button" class="btn sub" data-act="toConfirm"${has?'':' disabled'}>出庫の確定へ</button></div>
+    <div class="act" style="margin-top:10px"><button type="button" class="lnk" data-act="newship">別の出荷を作る</button><button type="button" class="lnk" data-act="shipAsk">この出荷をすべて取り消す</button></div>`;
+  }
+  const done=S.ships.filter(x=>x.status==='done').slice(-5).reverse();
+  if(done.length)h+=`<section class="sec" aria-labelledby="dn"><h2 id="dn">確定した出荷（直近）</h2><table style="font-size:18px"><thead><tr><th scope="col">出荷先</th><th scope="col">出荷日</th><th scope="col" class="n">本数</th><th scope="col"><span style="position:absolute;left:-999px">操作</span></th></tr></thead><tbody>${done.map(x=>`<tr><td>${esc(x.dest)}</td><td>${jp(x.date)}</td><td class="n">${shipTotal(x)}</td><td><button type="button" class="lnk" data-act="printNotice" data-id="${x.id}">出荷連絡を印刷</button></td></tr>`).join('')}</tbody></table></section>`;
+  main.innerHTML=h;
+  renderNav('prep');
+}
+function applyEdit(lineId){
+  const sh=curShip(),l=sh.lines.find(x=>x.id===lineId);
+  const sid=$('#edBottle').value,v=toInt($('#edQty').value),err=$('#edErr'),inp=$('#edQty');
+  const bad=m=>{err.textContent=m;inp.setAttribute('aria-invalid','true');};
+  if(!(v>=1))return bad('本数は1以上の数字で入れてください。');
+  if(sh.lines.some(x=>x.id!==lineId&&x.stockId===sid))return bad('この在庫はすでにこの出荷に入っています。別の行で本数を変えてください。');
+  const av=availOf(sid,lineId);
+  if(v>av)return bad(`この瓶で引当できるのは最大 ${av} 本です。本数を直してください。`);
+  const o=byId(l.stockId),n=byId(sid);
+  addLog('引当変更',`${label(o)} ${l.qty}本 → ${label(n)} ${v}本`);
+  l.stockId=sid;l.qty=v;save();
+  ui.editLine=null;ui.toast={html:`変更しました（${esc(n.productNo)}　瓶 ${esc(n.bottle)}　${v}本）`,prep:true};
+  viewPrep();say(ui.toast.html);focusH1();
+}
+
+/* ---------- 出庫の確定 ---------- */
+function viewConfirm(id){
+  const sh=S.ships.find(x=>x.id===id);
+  if(!sh){location.hash='#prep';return;}
+  renderNav('confirm');
+  if(sh.status==='done'){
+    setTitle('出庫の確定');
+    main.innerHTML=`<h1 id="h1" tabindex="-1">出庫を確定しました</h1>
+    <p class="hint" style="margin-bottom:24px">${esc(sh.dest)}　${jp(sh.date)}　合計 ${shipTotal(sh)}本。在庫と引当を減らしました。</p>
+    ${confirmTable(sh,true)}
+    <div class="act"><button type="button" class="btn" data-act="printNotice" data-id="${sh.id}">出荷連絡用PDFを作る・印刷</button><a class="btn sub" href="#search" style="text-decoration:none">在庫を探す</a></div>
+    <p class="note">印刷の画面で送信先に「PDFに保存」を選ぶと、PDFのファイルになります。</p>`;
+    return;
+  }
+  if(!sh.lines.length){location.hash='#prep';return;}
+  setTitle('出庫の確定');
+  main.innerHTML=`<h1 id="h1" tabindex="-1">この内容で出庫を確定しますか？</h1>
+  <p class="hint" style="margin:0 0 6px">${esc(sh.dest)}　${jp(sh.date)}</p>
+  <p class="hint" style="margin:0 0 24px">確定すると、在庫と引当が減ります。倉庫で取り出した本数と合っているか確認してください。違うときは「戻る」で直せます。</p>
+  ${confirmTable(sh,false)}
+  <div class="err" id="cfErr" role="alert"></div>
+  <div class="act"><button type="button" class="btn" id="cfGo" data-act="confirm" data-id="${sh.id}">この内容で出庫を確定</button><a class="btn sub" href="#prep" style="text-decoration:none">戻る</a></div>
+  <p class="ban">出荷連絡用PDFは、確定したあとに作れます。PDFを作っただけでは、在庫は減りません。</p>`;
+}
+function confirmTable(sh,done){
+  return `<table><thead><tr><th scope="col">製品</th><th scope="col">瓶</th><th scope="col">採取日</th><th scope="col" class="n">取り出した本数</th><th scope="col" class="n">確定後の在庫</th></tr></thead><tbody>${sh.lines.map(l=>{const s=byId(l.stockId);return `<tr><td><b>${esc(s.productNo)}</b>　${esc(s.name)}</td><td>${esc(s.bottle)}</td><td>${jp(s.harvest)}</td><td class="n">${l.qty}</td><td class="n">${done?s.qty:`${s.qty} → ${s.qty-l.qty}`}</td></tr>`;}).join('')}</tbody></table>`;
+}
+function doConfirm(id){
+  const sh=S.ships.find(x=>x.id===id);
+  if(!sh||sh.status!=='draft')return;
+  const bad=sh.lines.find(l=>byId(l.stockId).qty<l.qty);
+  if(bad){const s=byId(bad.stockId);$('#cfGo').disabled=false;$('#cfErr').textContent=`${label(s)}の在庫が足りません（在庫 ${s.qty}本・出荷 ${bad.qty}本）。「戻る」で直してください。`;return;}
+  for(const l of sh.lines){const s=byId(l.stockId);s.qty-=l.qty;addLog('出庫確定',`${label(s)}（採取日 ${jp(s.harvest)}）${l.qty}本　出荷先：${sh.dest}`);}
+  sh.status='done';sh.doneAt=new Date().toISOString();
+  if(S.cur===sh.id)S.cur=(drafts()[0]||{}).id||null;
+  save();
+  viewConfirm(id);
+  const h=$('#h1');if(h)h.focus();
+}
+
+/* ---------- 印刷 ---------- */
+function buildPick(sh){
+  const rows=sh.lines.map(l=>({l,s:byId(l.stockId)})).sort((a,b)=>a.s.bottle.localeCompare(b.s.bottle)||a.s.harvest.localeCompare(b.s.harvest));
+  return `<div class="sheet"><h1>ピッキング表</h1><div class="meta"><div><span>出荷先</span>${esc(sh.dest||'（未入力）')}</div><div><span>出荷日</span>${jp(sh.date)||'（未入力）'}</div><div><span>合計</span>${shipTotal(sh)}本</div></div>
+  <table><thead><tr><th>瓶番号</th><th>製品番号・名前</th><th>採取日</th><th style="text-align:right">本数</th><th style="text-align:center">取り出し済み</th></tr></thead><tbody>${rows.map(({l,s})=>`<tr><td class="pb">${esc(s.bottle)}</td><td><b>${esc(s.productNo)}</b><br>${esc(s.name)}</td><td>${jp(s.harvest)}</td><td style="text-align:right;font-size:20pt;font-weight:700">${l.qty}</td><td style="text-align:center"><span class="box"></span></td></tr>`).join('')}</tbody></table>
+  <p class="foot">この表は仮データのデモから印刷したものです。様式は仮です。</p></div>`;
+}
+function buildNotice(sh){
+  return `<div class="sheet"><h1>出荷のご連絡</h1><div class="meta"><div><span>宛先</span>${esc(sh.dest)}</div><div><span>出荷日</span>${jp(sh.date)}</div><div><span>合計</span>${shipTotal(sh)}本</div></div>
+  <table><thead><tr><th>製品番号</th><th>名前</th><th>採取日</th><th style="text-align:right">本数</th></tr></thead><tbody>${sh.lines.map(l=>{const s=byId(l.stockId);return `<tr><td><b>${esc(s.productNo)}</b></td><td>${esc(s.name)}</td><td>${jp(s.harvest)}</td><td style="text-align:right;font-size:16pt;font-weight:700">${l.qty}</td></tr>`;}).join('')}</tbody></table>
+  <p class="foot">この書類は仮データのデモから作成したものです。実際の出荷FAXの様式は未確認のため、項目と並びは仮です。</p></div>`;
+}
+function doPrint(html){$('#printArea').innerHTML=html;window.print();}
+
+/* ---------- 確認ダイアログ（取り消し・リセットなど戻せない操作） ---------- */
+const askD=$('#ask');
+function ask(msg,yes,fn){
+  $('#askMsg').textContent=msg;$('#askYes').textContent=yes;
+  $('#askYes').onclick=()=>{askD.close();fn();};
+  $('#askNo').onclick=()=>askD.close();
+  askD.showModal();$('#askNo').focus();
+}
+/* ---------- 訂正ダイアログ ---------- */
+const fix=$('#fix');
+function openFix(id){
+  const s=byId(id);if(!s)return;ui.fixId=id;
+  const al=allocOf(id);
+  $('#fixInfo').textContent=`${s.productNo}（${s.name}）　瓶 ${s.bottle}　採取日 ${jp(s.harvest)}　いまの在庫 ${s.qty}本`;
+  $('#fixQty').value=s.qty;$('#fixWhy').value='';
+  $('#fixQtyHelp').textContent=al?`出荷予定で ${al}本 を取ってあるため、${al}本より少なくはできません。`:'';
+  setErr('fixQty','');setErr('fixWhy','');
+  if(fix.showModal)fix.showModal();else fix.setAttribute('open','');
+  $('#fixQty').focus();$('#fixQty').select();
+}
+$('#fixCancel').addEventListener('click',()=>fix.close());
+$('#fixForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const s=byId(ui.fixId);if(!s)return;
+  const v=toInt($('#fixQty').value),al=allocOf(s.id),why=$('#fixWhy').value.trim();
+  let bad=false;
+  if(!(v>=0)){setErr('fixQty','0以上の数字で入れてください。');bad=true;}
+  else if(v<al){setErr('fixQty',`出荷予定で ${al}本 を取ってあるため、${al}本より少なくはできません。先に出荷の準備で直してください。`);bad=true;}
+  else setErr('fixQty','');
+  if(!why){setErr('fixWhy','理由を書いてください。');bad=true;}else setErr('fixWhy','');
+  if(bad){($('#fixQty').getAttribute('aria-invalid')==='true'?$('#fixQty'):$('#fixWhy')).focus();return;}
+  if(v===s.qty){setErr('fixQty','本数が変わっていません。');$('#fixQty').focus();return;}
+  addLog('訂正',`${label(s)} ${s.qty}本 → ${v}本（理由：${why}）`);
+  const old=s.qty;s.qty=v;save();fix.close();
+  ui.toast={html:`訂正しました（${esc(s.productNo)}　瓶 ${esc(s.bottle)}　${old}本 → ${v}本）。履歴は「入庫」の画面で見られます。`};
+  route(true);say(ui.toast.html);{const q=$('#q');if(q)q.focus();}
+});
+
+/* ---------- イベント ---------- */
+main.addEventListener('click',e=>{
+  const b=e.target.closest('[data-act]');if(!b)return;
+  const a=b.dataset.act,id=b.dataset.id;
+  switch(a){
+    case 'open':ui.open=id;ui.toast=null;renderResults();{const i=$('#qtyIn');if(i)i.focus();}break;
+    case 'close':ui.open=null;renderResults();break;
+    case 'expand':ui.expanded[id]=true;renderResults();{const f=[...document.querySelectorAll('#results section')].find(x=>x.getAttribute('aria-label')===id);const bt=f&&f.querySelector('button');if(bt)bt.focus();}break;
+    case 'clear':ui.q='';ui.open=null;$('#q').value='';renderResults();$('#q').focus();break;
+    case 'add':doAdd(id);break;
+    case 'fix':openFix(id);break;
+    case 'ledit':ui.editLine=id;ui.cancelLine=null;viewPrep();{const i=$('#edQty');if(i){i.focus();i.select();}}break;
+    case 'edcancel':ui.editLine=null;viewPrep();focusH1();break;
+    case 'edsave':applyEdit(id);break;
+    case 'lcancel':{
+      const sh=curShip(),l=sh.lines.find(x=>x.id===id),s0=byId(l.stockId);
+      ask(`${s0.productNo} 瓶 ${s0.bottle} の ${l.qty}本を、この出荷から取り消しますか？ 引当が外れます。`,'取り消す',()=>{
+        sh.lines=sh.lines.filter(x=>x.id!==id);addLog('引当取消',`${label(s0)} ${l.qty}本の引当を外した`);save();
+        ui.toast={html:`取り消しました（${esc(s0.productNo)}　瓶 ${esc(s0.bottle)}　${l.qty}本）。引当が外れました。`,prep:true};viewPrep();say(ui.toast.html);focusH1();});
+      break;}
+    case 'shipAsk':{
+      const sh=curShip();
+      ask(`この出荷（${sh.dest||'出荷先 未入力'}　${shipTotal(sh)}本）をすべて取り消しますか？ 引当が外れます。`,'すべて取り消す',()=>{
+        addLog('引当取消',`出荷「${sh.dest||'未入力'}」の引当 ${shipTotal(sh)}本をすべて外した`);
+        S.ships=S.ships.filter(x=>x.id!==sh.id);S.cur=(drafts()[0]||{}).id||null;save();
+        ui.toast={html:'この出荷を取り消しました。引当が外れました。',prep:true};viewPrep();say(ui.toast.html);focusH1();});
+      break;}
+    case 'newship':{
+      const sh={id:nid('S'),dest:'',date:'',status:'draft',lines:[]};S.ships.push(sh);S.cur=sh.id;save();
+      ui.shipErr='';ui.toast=null;viewPrep();const i=$('#shDest');if(i)i.focus();break;}
+    case 'printPick':doPrint(buildPick(curShip()));break;
+    case 'printNotice':doPrint(buildNotice(S.ships.find(x=>x.id===id)));break;
+    case 'toConfirm':{
+      const sh=curShip();
+      if(!sh.dest.trim()){ui.shipErr='出荷先を入れてください。';viewPrep();$('#shDest').setAttribute('aria-invalid','true');$('#shDest').focus();break;}
+      if(!sh.date){ui.shipErr='出荷日を入れてください。';viewPrep();$('#shDate').setAttribute('aria-invalid','true');$('#shDate').focus();break;}
+      ui.shipErr='';location.hash='#confirm/'+sh.id;break;}
+    case 'confirm':b.disabled=true;doConfirm(id);break;
+  }
+});
+main.addEventListener('input',e=>{
+  const t=e.target;
+  if(t.id==='q'){ui.q=t.value;ui.open=null;ui.toast=null;renderResults();}
+  else if(t.id==='qtyIn')updateQtyRow();
+  else if(t.id==='shDest'){curShip().dest=t.value;ui.shipErr='';const er=$('#shErr');if(er)er.textContent='';t.removeAttribute('aria-invalid');save();}
+  else if(t.id==='shDate'){curShip().date=t.value;ui.shipErr='';const er=$('#shErr');if(er)er.textContent='';t.removeAttribute('aria-invalid');save();}
+  else if(t.id==='inNo'){
+    const no=t.value.normalize('NFKC').trim().toUpperCase(),k=S.stock.find(s=>s.productNo===no),n=$('#inName');
+    if(k){n.value=k.name;n.readOnly=true;$('#inNameHelp').textContent='登録済みの製品です。名前は自動で入ります。';}
+    else{if(n.readOnly)n.value='';n.readOnly=false;$('#inNameHelp').textContent='';}
+  }
+});
+main.addEventListener('change',e=>{
+  if(e.target.id==='shipPick'){S.cur=e.target.value;ui.shipErr='';ui.editLine=null;ui.cancelLine=null;save();viewPrep();}
+});
+main.addEventListener('keydown',e=>{
+  if(e.key==='Enter'){
+    if(e.target.id==='qtyIn'){e.preventDefault();doAdd(e.target.dataset.id);}
+    else if(e.target.id==='edQty'){e.preventDefault();applyEdit($('#edGo').dataset.id);}
+  }
+});
+main.addEventListener('submit',e=>{if(e.target.id==='inForm'){e.preventDefault();submitIn();}});
+
+/* リセット */
+$('#resetBtn').addEventListener('click',()=>{
+  ask('仮データに戻しますか？ 入力した内容はすべて消えます。','戻す',()=>{
+    S=seed();save();ui.q='';ui.open=null;ui.toast=null;ui.inToast=null;ui.editLine=null;ui.shipErr='';
+    if(location.hash!=='#search')location.hash='#search';else route(true);
+  });
+});
+
+/* ---------- ルーティング ---------- */
+function route(keepFocus){
+  const h=(location.hash||'#search').slice(1);
+  const [r,arg]=h.split('/');
+  ui.open=null;
+  if(r==='stock-in'){renderNav('stock-in');viewStockIn();if(!keepFocus)$('#h1').focus();}
+  else if(r==='prep'){ui.editLine=null;ui.cancelLine=null;ui.cancelShip=false;viewPrep();if(!keepFocus){const x=$('#h1');if(x)x.focus();}}
+  else if(r==='confirm'){viewConfirm(arg);if(!keepFocus){const x=$('#h1');if(x)x.focus();}}
+  else{renderNav('search');viewSearch();const q=$('#q');if(q)q.focus();}
+  if(!(r==='search'||(r==='prep'&&ui.toast&&ui.toast.prep)))ui.toast=null;
+  window.scrollTo(0,0);
+}
+window.addEventListener('hashchange',()=>{ui.inToast=location.hash==='#stock-in'?ui.inToast:null;route(false);});
+save();
+route(false);
+})();
+</script>
+</body>
+</html>
