@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>営業受注共有ツール 画面案（Apple風・第5版）</title>
+<style>
+:root{--bg:#f2f2f7;--card:#fff;--text:#1d1d1f;--sub:#6e6e73;--line:#d8d8dd;--blue:#0066cc;--tint:#e6f0fa;--red:#d70015;--redbg:#fdecee;--gray:#e5e5ea}
+*{box-sizing:border-box}
+body{margin:0;background:#c9c9ce;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Hiragino Sans","Noto Sans JP","WenQuanYi Zen Hei",sans-serif;color:var(--text);-webkit-font-smoothing:antialiased}
+.row{display:flex;gap:24px;padding:24px;align-items:flex-start}
+.screen{width:390px;min-height:880px;background:var(--bg);position:relative;flex:none;padding:0 16px 96px;border-radius:0}
+.status{height:44px}
+.back{color:var(--blue);font-size:17px;height:36px;line-height:36px}
+.large{font-size:32px;font-weight:700;letter-spacing:-.01em;margin:4px 0 4px;line-height:1.2}
+.sub{font-size:14px;color:var(--sub);margin:0 0 14px;line-height:1.5}
+.card{background:var(--card);border-radius:14px;padding:16px;margin-bottom:12px}
+.card.over{box-shadow:inset 0 0 0 1.5px var(--red)}
+.due{font-size:14px;font-weight:600;color:var(--sub);margin-bottom:4px}
+.due.r{color:var(--red)}
+h3{margin:0;font-size:19px;font-weight:700;line-height:1.35}
+.meta{font-size:14px;color:var(--sub);line-height:1.5}
+.note{font-size:14px;color:var(--blue);margin-top:8px}
+.btn{display:flex;align-items:center;justify-content:center;gap:6px;min-height:48px;border-radius:12px;font-size:16px;font-weight:600;background:var(--tint);color:var(--blue);margin-top:10px}
+.btn.p{background:var(--blue);color:#fff}
+.btn.g{background:var(--gray);color:var(--text)}
+.two{display:flex;gap:10px}.two .btn{flex:1}
+.tab{position:absolute;left:0;right:0;bottom:0;height:84px;background:rgba(249,249,251,.94);border-top:.5px solid var(--line);display:flex;padding-top:8px}
+.tab div{flex:1;text-align:center;font-size:12px;color:var(--sub)}
+.tab div.a{color:var(--blue);font-weight:600}
+.tab svg{display:block;margin:0 auto 3px;width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.group{background:var(--card);border-radius:14px;margin-bottom:12px;overflow:hidden}
+.li{display:flex;justify-content:space-between;gap:12px;padding:12px 16px;border-top:.5px solid var(--line);font-size:16px;line-height:1.45}
+.li:first-child{border-top:0}
+.li .k{color:var(--sub);font-size:15px;flex:none;width:92px}
+.li .v{flex:1;text-align:right}
+.field{padding:12px 16px;border-top:.5px solid var(--line)}.field:first-child{border-top:0}
+.field label{display:block;font-size:13px;color:var(--sub);margin-bottom:4px}
+.field .in{font-size:17px;line-height:1.5}
+.field .in.ta{min-height:96px}
+.sec{font-size:13px;font-weight:600;color:var(--sub);margin:18px 6px 8px;letter-spacing:.02em}
+.pill{display:inline-block;font-size:13px;font-weight:600;border-radius:20px;padding:4px 10px;background:var(--tint);color:var(--blue)}
+.pill.s{background:var(--text);color:#fff}
+.f{display:inline-block;min-height:40px;line-height:22px;padding:8px 10px;font-size:14px;border-radius:20px;background:var(--gray);color:var(--text);margin:0 2px 8px 0}
+.f.on{background:var(--text);color:#fff;font-weight:600}
+.log{padding:12px 16px;border-top:.5px solid var(--line);font-size:15px;line-height:1.6}.log:first-child{border-top:0}
+.log b{display:block;font-size:13px;color:var(--sub);font-weight:500}
+.slot{display:inline-block;background:var(--tint);color:var(--blue);font-size:13px;font-weight:600;padding:10px 8px;border-radius:10px;margin:0 3px 8px 0;white-space:nowrap}
+.tel{display:flex;gap:8px}.tel div{flex:1;white-space:nowrap;min-height:48px;border-radius:12px;background:var(--tint);color:var(--blue);font-size:15px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:4px}
+</style></head><body>
+<svg width="0" height="0" style="position:absolute"><defs>
+<symbol id="i-t" viewBox="0 0 26 26"><circle cx="13" cy="13" r="9.5"/><path d="M8.8 13.2l3 3 5.4-6"/></symbol>
+<symbol id="i-c" viewBox="0 0 26 26"><rect x="5" y="4" width="16" height="18" rx="2"/><path d="M9 9h2M15 9h2M9 13h2M15 13h2M11 22v-4h4v4"/></symbol>
+<symbol id="i-d" viewBox="0 0 26 26"><rect x="3.5" y="8" width="19" height="13" rx="2.5"/><path d="M9.5 8V6.5A1.5 1.5 0 0 1 11 5h4a1.5 1.5 0 0 1 1.5 1.5V8M3.5 14h19"/></symbol>
+</defs></svg>
+<div class="row">
+
+<section class="screen" id="s1"><div class="status"></div>
+<div class="large">今日のタスク</div>
+<p class="sub">すだまの分・3件</p>
+<div class="card over"><div class="due r">⚠ 期限切れ　10/12（2日すぎ）</div><h3>見積書を送る</h3><div class="meta">株式会社サンプル商事 ／ 倉庫管理アプリ</div><div class="note">✉ 10:32 にメールを開いた</div>
+<div class="btn">✉ メール</div><div class="btn p">✓ 完了</div></div>
+<div class="card over"><div class="due r">⚠ 期限切れ　10/13（1日すぎ）</div><h3>日程を調整する</h3><div class="meta">ひまわり運送 ／ 配車システム</div>
+<div class="btn">✉ メール</div><div class="btn p">✓ 完了</div></div>
+<div class="card"><div class="due">今日　10/14</div><h3>お礼のメールを送る</h3><div class="meta">あおば製作所 ／ HP制作</div>
+<div class="btn">✉ メール</div><div class="btn p">✓ 完了</div></div>
+<div class="meta" style="margin:0 6px;color:var(--blue)">旦那さんの分（2件）を見る ›</div>
+<div class="tab"><div class="a"><svg><use href="#i-t"/></svg>今日</div><div><svg><use href="#i-c"/></svg>会社</div><div><svg><use href="#i-d"/></svg>案件</div></div></section>
+
+<section class="screen" id="s2"><div class="status"></div><div class="back">‹ 戻る</div>
+<div class="large">完了の記録</div>
+<p class="sub">見積書を送る ／ 倉庫管理アプリ</p>
+<div class="group">
+<div class="field"><label>やりとりの種類</label><div class="in">メール　▾</div></div>
+<div class="field"><label>やりとりのログ（長文OK）</label><div class="in ta">見積書を送付。来週の役員会で検討するとの返事。次は電話で確認する。</div></div></div>
+<div class="sec">次にやること</div>
+<div class="group">
+<div class="field"><label>次にやること</label><div class="in">電話でフォローする</div></div>
+<div class="field"><label>期限</label><div class="in">2026年10月21日（火）</div></div></div>
+<div class="btn p">保存して閉じる</div><div class="btn g">あとで</div>
+<div class="tab"><div class="a"><svg><use href="#i-t"/></svg>今日</div><div><svg><use href="#i-c"/></svg>会社</div><div><svg><use href="#i-d"/></svg>案件</div></div></section>
+
+<section class="screen" id="s3"><div class="status"></div><div class="back">‹ 案件</div>
+<div class="large">倉庫管理アプリ</div>
+<p class="sub"><span class="pill s">購入見込みあり</span></p>
+<div class="group">
+<div class="li"><span class="k">会社</span><span class="v">株式会社サンプル商事</span></div>
+<div class="li"><span class="k">金額</span><span class="v">1,200,000円</span></div>
+<div class="li"><span class="k">検討内容</span><span class="v">在庫表をスマホで管理したい</span></div>
+<div class="li"><span class="k">次にやること</span><span class="v">見積書を送る</span></div>
+<div class="li"><span class="k">期限</span><span class="v" style="color:var(--red);font-weight:600">⚠ 2日すぎ（10/12）</span></div>
+<div class="li"><span class="k">提案サービス</span><span class="v">業務システム</span></div>
+<div class="li"><span class="k">社内担当</span><span class="v">すだま</span></div></div>
+<div class="two"><div class="btn">段階を変える</div><div class="btn">編集</div></div>
+<div class="sec">先方の担当者</div>
+<div class="card"><div style="font-size:17px;font-weight:600">佐藤 一郎<span class="meta">（総務課長）</span></div>
+<div class="tel" style="margin-top:10px"><div>📞 電話</div><div>✉ メール</div><div>🎥 会議リンク</div></div></div>
+<div class="sec">やりとりのログ</div>
+<div><span class="f on">すべて</span><span class="f">電話</span><span class="f">メール</span><span class="f">対面</span><span class="f">オンライン</span></div>
+<div class="group"><div class="log"><b>10/09 すだま ・ 対面</b>現場を見学。在庫表は紙とExcelの二重管理。担当の佐藤さんが困っている。</div><div class="log"><b>10/03 すだま ・ 電話</b>初回の電話。来週お会いする約束。</div></div>
+<div class="btn p">＋ ログを書く</div>
+<div class="tab"><div><svg><use href="#i-t"/></svg>今日</div><div><svg><use href="#i-c"/></svg>会社</div><div class="a"><svg><use href="#i-d"/></svg>案件</div></div></section>
+
+<section class="screen" id="s4"><div class="status"></div><div class="back">‹ 会社</div>
+<div class="large">株式会社サンプル商事</div>
+<p class="sub"><span class="pill">プロスペクト</span> <span class="pill">卸売業</span></p>
+<div class="sec" style="margin-top:4px">案件</div>
+<div class="group">
+<div class="li" style="display:block"><b>倉庫管理アプリ</b> <span class="pill s" style="margin-left:6px">購入見込みあり</span><div class="meta">次：見積書を送る ／ 10/12</div></div>
+<div class="li" style="display:block"><b>HP更新</b> <span class="pill s" style="margin-left:6px">アポイント設定済み</span><div class="meta">次：電話する ／ 10/25</div></div></div>
+<div class="sec">先方の担当者</div>
+<div class="card"><div style="font-size:17px;font-weight:600">佐藤 一郎<span class="meta">（総務課長）</span></div><div class="meta">在庫の件で頼れる人</div>
+<div class="tel" style="margin-top:10px"><div>📞 電話</div><div>✉ メール</div><div>🎥 会議リンク</div></div></div>
+<div class="sec">やりとりのログ（全案件）</div>
+<div><span class="f">案件：すべて ▾</span><span class="f">種類：すべて ▾</span></div>
+<div class="group"><div class="log"><b>10/09 すだま ・ 対面 ・ 倉庫管理アプリ</b>現場を見学。在庫表は紙とExcelの二重管理。</div><div class="log"><b>10/05 旦那さん ・ 電話 ・ HP更新</b>ホームページの文字を直したいとのこと。</div></div>
+<div class="tab"><div><svg><use href="#i-t"/></svg>今日</div><div class="a"><svg><use href="#i-c"/></svg>会社</div><div><svg><use href="#i-d"/></svg>案件</div></div></section>
+
+<section class="screen" id="s5"><div class="status"></div><div class="back">‹ 戻る</div>
+<div class="large">メール</div>
+<p class="sub">見積書を送る ／ 倉庫管理アプリ</p>
+<div class="group">
+<div class="field"><label>メールの種類</label><div class="in">見積送付　▾</div></div>
+<div class="field"><label>宛先</label><div class="in">sato@example.com</div></div>
+<div class="field"><label>件名</label><div class="in">お見積書のご送付（倉庫管理アプリ）</div></div>
+<div class="field"><label>本文</label><div class="in" style="font-size:15px;min-height:104px">佐藤様<br>お世話になっております。<br>BarkCoreの○○です。<br>お見積書をお送りします。<br>ご不明な点があればお知らせください。</div></div></div>
+<div class="sec">日程の候補（仮の空き時間）</div>
+<div><span class="slot">10/16 木 10:00</span><span class="slot">10/17 金 14:00</span><span class="slot">10/20 月 11:00</span></div>
+<div class="btn">🎥 会議リンクを作る</div>
+<div class="meta" style="margin:6px 6px 0;font-size:13px">資料リンク：業務システムの資料</div>
+<div class="btn p">メールを書く</div>
+<div class="tab"><div class="a"><svg><use href="#i-t"/></svg>今日</div><div><svg><use href="#i-c"/></svg>会社</div><div><svg><use href="#i-d"/></svg>案件</div></div></section>
+
+</div></body></html>
